@@ -1,5 +1,5 @@
 "use client";
-/** Small interactive primitives: Counter, Marquee, Faq accordion, SplitText heading. */
+/** Small interactive primitives: Counter, Marquee, Faq accordion. */
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { Plus } from "lucide-react";
 import { shared } from "@/lib/gl-store";
@@ -76,36 +76,5 @@ export function FaqItem({ q, children, defaultOpen = false }: { q: string; child
         <div className="overflow-hidden"><div className="rich max-w-[70ch] pb-6 text-mid">{children}</div></div>
       </div>
     </div>
-  );
-}
-
-/**
- * Split-text reveal. The text is server-rendered as real words (screen readers get the aria-label),
- * and each character animates with a slight 3D rotateX when the heading enters the viewport.
- */
-export function SplitText({ text, className, delay = 0 }: { text: string; className?: string; delay?: number }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const { reduced } = useApp();
-  useEffect(() => {
-    const el = ref.current; if (!el || reduced) return;
-    const chars = el.querySelectorAll<HTMLElement>(".split-char");
-    let ctx: { revert: () => void } | undefined, dead = false;
-    import("gsap").then(({ gsap }) => {
-      if (dead) return;
-      ctx = gsap.context(() => {
-        gsap.fromTo(chars, { opacity: 0, yPercent: 60, rotateX: -80 }, { opacity: 1, yPercent: 0, rotateX: 0, duration: 1.1, ease: "expo.out", stagger: 0.022, delay, scrollTrigger: undefined });
-      }, el);
-    });
-    return () => { dead = true; ctx?.revert(); };
-  }, [reduced, delay, text]);
-  return (
-    <span ref={ref} className={className} aria-label={text} style={{ perspective: 800 }}>
-      {text.split(" ").map((w, i) => (
-        <span key={i} className="split-word" aria-hidden>
-          {[...w].map((c, j) => <span key={j} className="split-char">{c}</span>)}
-          {" "}
-        </span>
-      ))}
-    </span>
   );
 }

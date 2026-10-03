@@ -28,7 +28,8 @@ export function ReadingProgress() {
   useEffect(() => {
     const on = () => { const a = document.getElementById("article"); if (!a) return; const r = a.getBoundingClientRect(); setP(Math.min(1, Math.max(0, -r.top / Math.max(1, r.height - innerHeight)))); };
     on(); window.addEventListener("scroll", on, { passive: true });
-    return () => window.removeEventListener("scroll", on);
+    document.documentElement.dataset.article = "1"; // the page-level scroll line steps aside (see .scroll-progress)
+    return () => { window.removeEventListener("scroll", on); delete document.documentElement.dataset.article; };
   }, []);
   return <div className="reading-progress fixed inset-x-0 top-0 z-[110] h-[3px]" role="progressbar" aria-label="Reading progress" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(p * 100)}><div className="h-full origin-left" style={{ transform: `scaleX(${p})`, background: "var(--grad)" }} /></div>;
 }

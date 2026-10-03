@@ -7,13 +7,13 @@
 import { useMemo, useRef } from "react";
 import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
-import { Glow, Studio, damp, glowBlend, readNum, useView, usePalette } from "../kit";
+import { Glow, Studio, damp, glowBlend, readNum, useView, useLineAlpha, usePalette } from "../kit";
 import { shared } from "@/lib/gl-store";
 import type { SceneProps } from "../GLRoot";
 
 const MAX = 36;
 export default function CloudDiorama({ state }: SceneProps) {
-  const HEX = usePalette();
+  const HEX = usePalette(), A = useLineAlpha();
   const boxes = useRef<THREE.InstancedMesh>(null), commits = useRef<THREE.InstancedMesh>(null), needle = useRef<THREE.Group>(null), root = useRef<THREE.Group>(null);
   const dummy = useMemo(() => new THREE.Object3D(), []);
   const viewport = useView();
@@ -49,7 +49,7 @@ export default function CloudDiorama({ state }: SceneProps) {
       <Studio />
       <Glow color={HEX.champagne} scale={4.4} opacity={0.25} />
       <group ref={root} rotation={[0.55, -0.75, 0]} position-y={-0.3}>
-        <mesh rotation-x={-Math.PI / 2}><planeGeometry args={[8, 6.4, 16, 12]} /><meshBasicMaterial color={HEX.gold} wireframe transparent opacity={0.16} /></mesh>
+        <mesh rotation-x={-Math.PI / 2}><planeGeometry args={[8, 6.4, 16, 12]} /><meshBasicMaterial color={HEX.gold} wireframe transparent opacity={A(0.16)} /></mesh>
         <instancedMesh ref={boxes} args={[undefined, undefined, MAX]}>
           <boxGeometry args={[0.36, 0.36, 0.36]} /><meshPhysicalMaterial color={HEX.gold} metalness={0.5} roughness={0.25} clearcoat={1} emissive={HEX.gold} emissiveIntensity={0.3} />
         </instancedMesh>
@@ -67,7 +67,7 @@ export default function CloudDiorama({ state }: SceneProps) {
         <instancedMesh ref={commits} args={[undefined, undefined, 6]}><boxGeometry args={[0.22, 0.22, 0.22]} /><meshBasicMaterial color={HEX.white} toneMapped={false} blending={glowBlend()} transparent opacity={0.9} /></instancedMesh>
         {/* cost meter */}
         <group position={[2.4, 1.3, 0.6]} rotation-y={0.75}>
-          <mesh><torusGeometry args={[0.7, 0.04, 8, 40, Math.PI]} /><meshBasicMaterial color={HEX.white} transparent opacity={0.5} /></mesh>
+          <mesh><torusGeometry args={[0.7, 0.04, 8, 40, Math.PI]} /><meshBasicMaterial color={HEX.white} transparent opacity={A(0.5)} /></mesh>
           <group ref={needle}><mesh position={[0, 0.32, 0]}><boxGeometry args={[0.035, 0.64, 0.035]} /><meshBasicMaterial color={HEX.amber} toneMapped={false} /></mesh></group>
           <mesh><sphereGeometry args={[0.07, 12, 12]} /><meshBasicMaterial color={HEX.amber} /></mesh>
         </group>

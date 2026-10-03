@@ -46,6 +46,13 @@ export function useShaderArgs<U extends Record<string, { value: unknown }>>(unif
   return useMemo(() => [{ uniforms, vertexShader, fragmentShader }] as [THREE.ShaderMaterialParameters], [uniforms, vertexShader, fragmentShader]);
 }
 
+/**
+ * Opacity for thin geometry (lines, wireframes, points). The values in the scenes are tuned for the dark theme,
+ * where gold adds up on black. On a white page a hairline at 25% all but disappears, so the light theme draws the
+ * same geometry about two and a half times stronger: `opacity={A(0.28)}` with `const A = useLineAlpha()`.
+ */
+export const useLineAlpha = () => { const light = useLight(); return (a: number) => (light ? Math.min(1, a * 2.5) : a); };
+
 /** Additive in dark theme, normal in light (additive washes out on white). */
 export const glowBlend = () => (shared.light ? THREE.NormalBlending : THREE.AdditiveBlending);
 

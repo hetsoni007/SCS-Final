@@ -3,12 +3,12 @@
 import { useMemo, useRef } from "react";
 import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
-import { Glow, Rig, Studio, glowBlend, rng, usePalette } from "../kit";
+import { Glow, Rig, Studio, glowBlend, rng, useLineAlpha, usePalette } from "../kit";
 import type { SceneProps } from "../GLRoot";
 
 const LAYERS = [1, 3, 4, 3, 2]; // client → edge → services → data → infra
 export default function NodeGraph({ tier }: SceneProps) {
-  const HEX = usePalette();
+  const HEX = usePalette(), A = useLineAlpha();
   const packets = useRef<THREE.InstancedMesh>(null);
   const { nodes, edges, lineGeo } = useMemo(() => {
     const rand = rng(11), nodes: THREE.Vector3[] = [], idx: number[][] = [];
@@ -41,7 +41,7 @@ export default function NodeGraph({ tier }: SceneProps) {
     <Rig strength={0.35} spin={0.05}>
       <Studio />
       <Glow color={HEX.champagne} scale={4.4} opacity={0.3} />
-      <lineSegments geometry={lineGeo}><lineBasicMaterial color={HEX.gold} transparent opacity={0.45} /></lineSegments>
+      <lineSegments geometry={lineGeo}><lineBasicMaterial color={HEX.gold} transparent opacity={A(0.45)} /></lineSegments>
       {nodes.map((p, i) => (
         <mesh key={i} position={p}>
           <boxGeometry args={[0.34, 0.2, 0.34]} />

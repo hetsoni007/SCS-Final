@@ -4,7 +4,7 @@ import { useMemo, useRef } from "react";
 import * as THREE from "three";
 import { useFrame, useThree } from "@react-three/fiber";
 import { snoise } from "../shaders/noise";
-import { Glow, damp, glowBlend, readNum, useLight, useShaderArgs, useView, usePalette } from "../kit";
+import { Glow, damp, glowBlend, readNum, useLight, useLineAlpha, useShaderArgs, useView, usePalette } from "../kit";
 import { shared } from "@/lib/gl-store";
 import type { SceneProps } from "../GLRoot";
 
@@ -23,7 +23,7 @@ void main(){
 }`;
 const vert = /* glsl */ `varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.); }`;
 export default function Portal({ state }: SceneProps) {
-  const HEX = usePalette();
+  const HEX = usePalette(), A = useLineAlpha();
   const { camera } = useThree();
   const viewport = useView();
   const ring = useRef<THREE.Group>(null), z = useRef(0);
@@ -43,9 +43,9 @@ export default function Portal({ state }: SceneProps) {
       <Glow color={HEX.gold} scale={R * 2.4} opacity={0.3} position={[0, 0, -0.5]} />
       {/* the vortex is a light effect: on a light page it would read as a smudge, so only the rings remain */}
       <mesh visible={!light}><circleGeometry args={[R, 72]} /><shaderMaterial args={shader} transparent depthWrite={false} blending={glowBlend()} /></mesh>
-      <mesh><torusGeometry args={[R, 0.012, 10, 160]} /><meshBasicMaterial color={light ? HEX.gold : HEX.champagne} toneMapped={false} transparent opacity={0.85} /></mesh>
+      <mesh><torusGeometry args={[R, 0.012, 10, 160]} /><meshBasicMaterial color={light ? HEX.gold : HEX.champagne} toneMapped={false} transparent opacity={A(0.85)} /></mesh>
       <mesh rotation-z={1}><torusGeometry args={[R + 0.14, 0.008, 8, 160, Math.PI * 1.3]} /><meshBasicMaterial color={light ? HEX.bronze : HEX.gold} toneMapped={false} /></mesh>
-      <mesh rotation-z={3.4}><torusGeometry args={[R + 0.28, 0.005, 8, 160, Math.PI * 0.8]} /><meshBasicMaterial color={light ? HEX.gold : HEX.white} transparent opacity={0.5} /></mesh>
+      <mesh rotation-z={3.4}><torusGeometry args={[R + 0.28, 0.005, 8, 160, Math.PI * 0.8]} /><meshBasicMaterial color={light ? HEX.gold : HEX.white} transparent opacity={A(0.5)} /></mesh>
     </group>
   );
 }

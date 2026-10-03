@@ -87,10 +87,14 @@ page back. The hero entrance (CSS) starts when the intro hands over.
 
 Every `data-reveal` element inside a page section is tied to its own position in the viewport with CSS scroll-driven
 animations (`animation-timeline: view()` in `app/globals.css`): it rises out of depth as it enters, sits flat while
-it is read and tilts back as it leaves. Headings flip up, cards fan in from alternate sides, media drifts. It runs
-on the compositor, needs no JavaScript and reverses with the scroll. Browsers without scroll-driven animations
-(Firefox today) get a one-time fade-and-rise from an IntersectionObserver; reduced motion switches both off.
-Three details worth knowing before changing it:
+it is read and tilts back as it leaves. Headings flip up, cards fan in from alternate sides, media drifts. The
+movement runs on the compositor and reverses with the scroll. Browsers without scroll-driven animations (Firefox
+today) get a one-time fade-and-rise from an IntersectionObserver; reduced motion switches both off.
+Four details worth knowing before changing it:
+
+- **Opacity is never tied to the scroll position.** The fade-in is a one-time transition that plays when the reveal
+  observer adds `.in`; only the movement is scroll-linked. Text on screen is therefore either not shown yet or at
+  full strength, never half-faded at the edge of the viewport (which fails contrast checks and is hard to read).
 
 - The animations use the individual `translate` / `rotate` / `scale` properties, so a card's pointer tilt (which
   uses `transform`; classes `spot` and `tilt-3d`) composes with them.
@@ -98,8 +102,7 @@ Three details worth knowing before changing it:
   `AppProviders.tsx` and only fades in. Tilting it would push its near edge past the screen edge and fade it while
   it is still in use.
 - A gold hairline at the top of every page shows scroll progress (`.scroll-progress`; blog posts use the article's
-  own `ReadingProgress` instead), the home page's values fill in as they scroll into view (`.manifesto-line`) and
-  the footer wordmark rises into place (`.footer-mark`).
+  own `ReadingProgress` instead) and the home page's values fill in as they scroll into view (`.manifesto-line`).
 
 ### Interactive sections
 
@@ -349,7 +352,7 @@ Each of these was a deliberate trade, not an omission.
 | Brief | Built | Why |
 |---|---|---|
 | `@react-three/postprocessing` bloom, depth of field | Additive glow sprites, shader grain as a CSS layer | Post-processing does not compose with one canvas shared by many scissored views, and a full-screen composer costs most on the phones the budget protects. The package is not installed. |
-| GSAP ScrollTrigger for scroll choreography | CSS `position: sticky` plus a small `useProgress` hook; GSAP drives the text reveals | Native sticky pinning cannot fight Lenis or cause layout jumps, and it keeps ScrollTrigger out of the first-load bundle. All scroll effects are still scroll-linked and reversible. |
+| GSAP ScrollTrigger for scroll choreography | CSS `position: sticky` plus a small `useProgress` hook for the pinned sections; CSS scroll-driven animations (`animation-timeline: view()`) for the reveals; GSAP only runs the Lenis ticker | Native sticky pinning cannot fight Lenis or cause layout jumps, the reveals run on the compositor without JavaScript, and ScrollTrigger stays out of the first-load bundle. All scroll effects are still scroll-linked and reversible. |
 | `detect-gpu` | A local heuristic in `lib/gpu-tier.ts` | `detect-gpu` downloads its benchmark tables from a CDN at runtime. |
 | `next-sitemap` | Next's built-in `app/sitemap.ts` and `app/robots.ts` | Same output, one less dependency, URLs come from the content files. |
 | GLSL noise-dissolve route transition, 3D objects morphing between pages | React `<ViewTransition>` cross-fade with blur; shared-element morph from a work card to its case-study device | A full-screen shader wipe needs a second render pass on every navigation. The View Transitions API gives the continuity without it. |

@@ -3,12 +3,12 @@
 import { useMemo, useRef } from "react";
 import * as THREE from "three";
 import { useFrame, useThree } from "@react-three/fiber";
-import { Glow, damp, glowBlend, readNum, rng, usePalette } from "../kit";
+import { Glow, damp, glowBlend, readNum, rng, useLineAlpha, usePalette } from "../kit";
 import { shared } from "@/lib/gl-store";
 import type { SceneProps } from "../GLRoot";
 
 export default function Constellation({ state, count = 12 }: SceneProps) {
-  const HEX = usePalette();
+  const HEX = usePalette(), A = useLineAlpha();
   const n = count as number;
   const { camera } = useThree();
   const g = useRef<THREE.Group>(null), meshes = useRef<(THREE.Mesh | null)[]>([]);
@@ -33,9 +33,9 @@ export default function Constellation({ state, count = 12 }: SceneProps) {
   return (
     <group ref={g}>
       <Glow color={HEX.gold} scale={5} opacity={0.6} />
-      <mesh><icosahedronGeometry args={[0.42, 2]} /><meshBasicMaterial color={HEX.gold} wireframe transparent opacity={0.6} /></mesh>
-      <lineSegments geometry={lines}><lineBasicMaterial color={HEX.gold} transparent opacity={0.3} blending={glowBlend()} /></lineSegments>
-      <points geometry={dust}><pointsMaterial color={HEX.champagne} size={0.03} transparent opacity={0.5} /></points>
+      <mesh><icosahedronGeometry args={[0.42, 2]} /><meshBasicMaterial color={HEX.gold} wireframe transparent opacity={A(0.6)} /></mesh>
+      <lineSegments geometry={lines}><lineBasicMaterial color={HEX.gold} transparent opacity={A(0.3)} blending={glowBlend()} /></lineSegments>
+      <points geometry={dust}><pointsMaterial color={HEX.champagne} size={0.03} transparent opacity={A(0.5)} /></points>
       {nodes.map((p, i) => (
         <group key={i} position={p}>
           <mesh ref={(m) => { meshes.current[i] = m; }}><sphereGeometry args={[0.11, 16, 16]} /><meshBasicMaterial color={i % 2 ? HEX.champagne : HEX.white} toneMapped={false} /></mesh>

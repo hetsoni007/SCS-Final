@@ -456,25 +456,30 @@ html[data-intro="live"] [data-loc="hero"] [data-reveal] { animation-name: none; 
 .js .spot[data-reveal].in { transform: rotateX(calc(var(--py, 0) * -7deg)) rotateY(calc(var(--px, 0) * 9deg)); }
 /* ───────────────────────── Scroll-linked 3D (every page) ─────────────────────────
    Where the browser supports scroll-driven animations (Chrome/Edge 115+, Safari 26+), every revealed element in a
-   page section is tied to its own position in the viewport: it rises out of depth as it enters, sits flat while
-   it is read, and tilts back into the page as it leaves at the top. Headings flip up, cards fan in from alternate
+   page section is tied to its own position in the viewport: it fades in once, rises out of depth as it enters, sits
+   flat while it is read, and tilts back into the page as it leaves at the top. Headings flip up, cards fan in from alternate
    sides, media drifts in parallax. It is scroll-linked and reversible, runs on the compositor (no JavaScript), and
    animates the individual translate/rotate/scale properties so hover tilts (which use `transform`) still compose.
    Other browsers keep the IntersectionObserver reveal above; reduced motion switches all of it off. */
 @supports (animation-timeline: view()) {
   /* depth: every container of revealed content gets a perspective */
   .js main section:not([data-loc="hero"]) :has(> [data-reveal]) { perspective: 1600px; }
+  /* Only the movement is tied to the scroll position. The fade is the one-time transition that plays when the
+     reveal observer adds .in, so text on screen is always at full strength: nothing is left half-faded (and below
+     contrast) at the edge of the viewport, it is either not shown yet or fully shown. */
   .js main section:not([data-loc="hero"]) [data-reveal],
   .js main section:not([data-loc="hero"]) [data-reveal].in {
-    opacity: 1; transform: none; transition: none;
+    transform: none; transition: none;
     animation: depth-through linear both;
     animation-timeline: view();
     animation-range: cover calc(var(--i, 0) * 1.5%) cover 100%;
   }
+  .js main section:not([data-loc="hero"]) [data-reveal].in { transition: opacity 0.7s var(--ease-expo) calc(var(--i, 0) * 60ms); }
   .js main section:not([data-loc="hero"]) .spot[data-reveal],
   .js main section:not([data-loc="hero"]) .spot[data-reveal].in {
     transform: rotateX(calc(var(--py, 0) * -7deg)) rotateY(calc(var(--px, 0) * 9deg)); transition: transform 0.45s var(--ease-expo);
   }
+  .js main section:not([data-loc="hero"]) .spot[data-reveal].in { transition: transform 0.45s var(--ease-expo), opacity 0.7s var(--ease-expo) calc(var(--i, 0) * 60ms); }
   .js main section:not([data-loc="hero"]) :is(h2, .h2)[data-reveal] { transform-origin: 50% 100%; animation-name: flip-through; }
   .js main section:not([data-loc="hero"]) .glass[data-reveal] { animation-name: deal-through; }
   .js main section:not([data-loc="hero"]) .glass[data-reveal]:nth-child(even) { --side: 1; }
@@ -489,33 +494,28 @@ html[data-intro="live"] [data-loc="hero"] [data-reveal] { animation-name: none; 
   }
   .js .prose > h2 { transform-origin: 50% 100%; animation-name: flip-in; }
 }
-/* Opacity finishes early (by ~9% of the pass, when the first 80–100 px are in view) and the movement carries on to
-   ~25%: nothing that is resting at the bottom edge of the screen is left half-faded and hard to read. */
 @keyframes depth-through {
-  0% { opacity: 0; translate: 0 64px -140px; rotate: x 18deg; }
-  9% { opacity: 1; }
-  24%, 80% { opacity: 1; translate: 0 0 0; rotate: x 0deg; }
-  100% { opacity: 0.35; translate: 0 -24px -90px; rotate: x -9deg; }
+  0% { translate: 0 64px -140px; rotate: x 18deg; }
+  24%, 80% { translate: 0 0 0; rotate: x 0deg; }
+  100% { translate: 0 -24px -90px; rotate: x -9deg; }
 }
 @keyframes flip-through {
-  0% { opacity: 0; translate: 0 40px -60px; rotate: x 52deg; }
-  9% { opacity: 1; }
-  26%, 80% { opacity: 1; translate: 0 0 0; rotate: x 0deg; }
-  100% { opacity: 0.35; translate: 0 -20px -80px; rotate: x -12deg; }
+  0% { translate: 0 40px -60px; rotate: x 52deg; }
+  26%, 80% { translate: 0 0 0; rotate: x 0deg; }
+  100% { translate: 0 -20px -80px; rotate: x -12deg; }
 }
 @keyframes deal-through {
-  0% { opacity: 0; translate: 0 90px -240px; rotate: y calc((var(--side, -1)) * 22deg); scale: 0.92; }
-  9% { opacity: 1; }
-  26%, 80% { opacity: 1; translate: 0 0 0; rotate: y 0deg; scale: 1; }
-  100% { opacity: 0.4; translate: 0 -30px -120px; rotate: x -10deg; scale: 0.97; }
+  0% { translate: 0 90px -240px; rotate: y calc((var(--side, -1)) * 22deg); scale: 0.92; }
+  26%, 80% { translate: 0 0 0; rotate: y 0deg; scale: 1; }
+  100% { translate: 0 -30px -120px; rotate: x -10deg; scale: 0.97; }
 }
 @keyframes drift {
   from { translate: 0 56px; rotate: x 7deg; }
   to { translate: 0 -56px; rotate: x -7deg; }
 }
-@keyframes tall-in { from { opacity: 0; translate: 0 48px; } }
-@keyframes depth-in { from { opacity: 0; translate: 0 48px -100px; rotate: x 14deg; } }
-@keyframes flip-in { from { opacity: 0; translate: 0 32px -40px; rotate: x 48deg; } }
+@keyframes tall-in { from { translate: 0 48px; } }
+@keyframes depth-in { from { translate: 0 48px -100px; rotate: x 14deg; } }
+@keyframes flip-in { from { translate: 0 32px -40px; rotate: x 30deg; } }
 
 /* Reading progress: a hairline of brand gold across the top of every page, driven by the scroll position */
 .scroll-progress { position: fixed; inset: 0 0 auto 0; height: 2px; z-index: 110; background: var(--grad); transform-origin: 0 50%; transform: scaleX(0); pointer-events: none; }
@@ -523,8 +523,8 @@ html[data-intro="live"] [data-loc="hero"] [data-reveal] { animation-name: none; 
   .scroll-progress { animation: scroll-progress linear both; animation-timeline: scroll(root); }
 }
 @keyframes scroll-progress { to { transform: scaleX(1); } }
-/* blog posts measure the article itself (ReadingProgress in BlogClient), so the page-level line steps aside */
-body:has(.reading-progress) .scroll-progress { display: none; }
+/* blog posts measure the article itself (ReadingProgress in BlogClient sets data-article), so the page-level line steps aside */
+html[data-article] .scroll-progress { display: none; }
 
 /* Manifesto lines fill from dim to full strength as they scroll into view */
 .manifesto-line { color: var(--text-hi); }
@@ -535,11 +535,8 @@ body:has(.reading-progress) .scroll-progress { display: none; }
     -webkit-background-clip: text; background-clip: text; color: transparent;
     animation: line-fill linear both; animation-timeline: view(); animation-range: entry 30% cover 52%;
   }
-  /* the footer wordmark rises out of the page edge */
-  .js .footer-mark > span { animation: mark-rise linear both; animation-timeline: view(); animation-range: entry 0% entry 100%; }
 }
 @keyframes line-fill { to { background-position: 0 0; } }
-@keyframes mark-rise { from { translate: 0 45%; opacity: 0.2; } }
 
 /* Cards lean toward the pointer (the delegated pointer handler sets --px / --py on .spot and [data-tilt]) */
 :has(> .spot) { perspective: 1400px; }
@@ -552,6 +549,15 @@ body:has(.reading-progress) .scroll-progress { display: none; }
 .view-slot { position: relative; }
 .view-slot > .poster { position: absolute; inset: 0; transition: opacity 0.8s; }
 /* the poster hands over once its scene has compiled and is being drawn (GLRoot sets data-ready) */
+/* static globe poster: gold lines on dark, bronze lines on a tinted body on light (matches scenes/Globe.tsx) */
+.poster-grid { stroke: #c9a24b; stroke-opacity: 0.45; }
+.poster-arcs { stroke: #f2da8c; }
+.poster-home { fill: #e8a33d; }
+.poster-body { fill: none; }
+:root[data-theme="light"] .poster-grid { stroke: #6e5210; stroke-opacity: 0.6; }
+:root[data-theme="light"] .poster-arcs { stroke: #a8790f; stroke-width: 1.1; }
+:root[data-theme="light"] .poster-home { fill: #b8610c; }
+:root[data-theme="light"] .poster-body { fill: rgba(194, 150, 47, 0.13); }
 .gl-on .view-slot[data-ready="1"] > .poster { opacity: 0; }
 
 /* Custom cursor */
@@ -634,7 +640,6 @@ body:has(.reading-progress) .scroll-progress { display: none; }
   .spot { transform: none; }
   .scroll-progress { display: none; }
   .js .manifesto-line { animation: none; background: none; color: var(--text-hi); }
-  .js .footer-mark > span { animation: none; }
   ::view-transition-old(.page), ::view-transition-new(.page) { animation: none; }
   .btn::before { transition: none; }
 }
@@ -646,7 +651,6 @@ body:has(.reading-progress) .scroll-progress { display: none; }
 :root[data-motion="reduce"] .spot { transform: none; }
 :root[data-motion="reduce"] .scroll-progress { display: none; }
 :root[data-motion="reduce"] .js .manifesto-line { animation: none; background: none; color: var(--text-hi); }
-:root[data-motion="reduce"] .js .footer-mark > span { animation: none; }
 :root[data-motion="reduce"] .cursor-dot, :root[data-motion="reduce"] .cursor-ring { display: none; }
 :root[data-motion="reduce"]::view-transition-old(.page), :root[data-motion="reduce"]::view-transition-new(.page) { animation: none; }
 @keyframes spin { to { transform: rotate(360deg); } }

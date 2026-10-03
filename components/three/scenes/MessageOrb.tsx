@@ -3,12 +3,12 @@
 import { useMemo, useRef } from "react";
 import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
-import { Glow, Rig, damp, glowBlend, readNum, rng, useView, usePalette } from "../kit";
+import { Glow, Rig, damp, glowBlend, readNum, rng, useView, useLineAlpha, usePalette } from "../kit";
 import type { SceneProps } from "../GLRoot";
 
 const N = 260;
 export default function MessageOrb({ state }: SceneProps) {
-  const HEX = usePalette();
+  const HEX = usePalette(), A = useLineAlpha();
   const plane = useRef<THREE.Group>(null), pts = useRef<THREE.Points>(null), orb = useRef<THREE.Mesh>(null), k = useRef(0);
   const viewport = useView();
   const s = Math.min(viewport.height / 3.2, viewport.width / 5);
@@ -40,7 +40,7 @@ export default function MessageOrb({ state }: SceneProps) {
     <Rig strength={0.3} scale={s}>
       <ambientLight intensity={0.6} /><directionalLight position={[3, 4, 5]} intensity={2} />
       <Glow color={HEX.gold} scale={4.4} opacity={0.6} />
-      <mesh ref={orb}><icosahedronGeometry args={[0.9, 3]} /><meshBasicMaterial color={HEX.gold} wireframe transparent opacity={0.55} /></mesh>
+      <mesh ref={orb}><icosahedronGeometry args={[0.9, 3]} /><meshBasicMaterial color={HEX.gold} wireframe transparent opacity={A(0.55)} /></mesh>
       <mesh><sphereGeometry args={[0.5, 24, 24]} /><meshBasicMaterial color={HEX.champagne} transparent opacity={0.25} /></mesh>
       <group ref={plane} scale={0.55}><mesh geometry={paper}><meshStandardMaterial color={HEX.white} side={THREE.DoubleSide} flatShading emissive={HEX.champagne} emissiveIntensity={0.25} /></mesh></group>
       <points ref={pts} geometry={geo}><pointsMaterial color={HEX.champagne} size={0.07} transparent opacity={0} depthWrite={false} blending={glowBlend()} /></points>

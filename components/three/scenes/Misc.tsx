@@ -4,7 +4,7 @@ import { useMemo, useRef } from "react";
 import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
 import { Edges } from "@react-three/drei";
-import { Glow, Phone, Rig, Studio, damp, glowBlend, readNum, rng, smooth, useLight, useRoundedPlane, useView, usePalette } from "../kit";
+import { Glow, Phone, Rig, Studio, damp, glowBlend, readNum, rng, smooth, useLight, useRoundedPlane, useView, useLineAlpha, usePalette } from "../kit";
 import type { SceneProps } from "../GLRoot";
 
 const useFit = (w: number, h: number) => { const viewport = useView(); return Math.min(viewport.width / w, viewport.height / h); };
@@ -90,7 +90,7 @@ export function Blocks({ state, count = 9 }: SceneProps) {
 
 /** 404: a lost phone tumbling through particle space. */
 export function Astronaut({ tier }: SceneProps) {
-  const HEX = usePalette();
+  const HEX = usePalette(), A = useLineAlpha();
   const g = useRef<THREE.Group>(null);
   const s = useFit(6, 5);
   const dust = useMemo(() => { const r = rng(2), n = tier === "low" ? 300 : 900, a = new Float32Array(n * 3); for (let i = 0; i < n * 3; i++) a[i] = (r() - 0.5) * 14; return new THREE.BufferGeometry().setAttribute("position", new THREE.BufferAttribute(a, 3)); }, [tier]);
@@ -98,12 +98,12 @@ export function Astronaut({ tier }: SceneProps) {
   return (
     <Rig strength={0.2} scale={s}>
       <Studio /><Glow color={HEX.gold} scale={4.4} opacity={0.4} />
-      <points geometry={dust}><pointsMaterial color={HEX.champagne} size={0.035} transparent opacity={0.7} blending={glowBlend()} depthWrite={false} /></points>
+      <points geometry={dust}><pointsMaterial color={HEX.champagne} size={0.035} transparent opacity={A(0.7)} blending={glowBlend()} depthWrite={false} /></points>
       <group ref={g} scale={0.7}>
         <Phone screenColor="#14110b" />
         {/* helmet ring + tether */}
         <mesh position-y={1.2}><torusGeometry args={[0.95, 0.04, 8, 40]} /><meshBasicMaterial color={HEX.champagne} toneMapped={false} /></mesh>
-        <mesh position={[0.9, -1.2, -0.2]} rotation-z={0.7}><cylinderGeometry args={[0.012, 0.012, 1.6, 6]} /><meshBasicMaterial color={HEX.white} transparent opacity={0.5} /></mesh>
+        <mesh position={[0.9, -1.2, -0.2]} rotation-z={0.7}><cylinderGeometry args={[0.012, 0.012, 1.6, 6]} /><meshBasicMaterial color={HEX.white} transparent opacity={A(0.5)} /></mesh>
       </group>
     </Rig>
   );

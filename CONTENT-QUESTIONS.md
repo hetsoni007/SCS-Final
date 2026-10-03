@@ -70,4 +70,4 @@ Each item says where to change it once you have decided.
     - Blog posts: "Was this guide useful?" with "Yes" / "Not really", then "Thanks — glad it helped." / "Thanks — that helps us improve it." and "Ask Het a question →" (`/contact/`). The answer is sent as an analytics event only.
     - 404 page: a "Search the site" button.
 15. **Privacy page: analytics switch (new).** A card under the policy heading — "Your choice / Analytics cookies / Google Analytics, which sets cookies, loads only if you accept. You can change your choice here at any time." — with an on/off switch bound to the same choice as the cookie banner. The policy text itself is unchanged. Please have the card's wording reviewed with the banner copy (item 9).
-16. **Home page work list** is now a large numbered index (app name, tagline, first metric) under the 3D carousel, and the footer ends with an oversized "SONI" wordmark. Both are layout only; no copy was added.
+16. **Home page work list** is now a large numbered index (app name, tagline, first metric) under the 3D carousel. Layout only; no copy was added.

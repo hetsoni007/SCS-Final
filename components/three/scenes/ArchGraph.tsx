@@ -6,12 +6,12 @@
 import { useMemo, useRef } from "react";
 import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
-import { Glow, damp, glowBlend, readNum, useView, usePalette } from "../kit";
+import { Glow, damp, glowBlend, readNum, useView, useLineAlpha, usePalette } from "../kit";
 import { shared } from "@/lib/gl-store";
 import type { SceneProps } from "../GLRoot";
 
 export default function ArchGraph({ state, nodes, links }: SceneProps) {
-  const HEX = usePalette();
+  const HEX = usePalette(), A = useLineAlpha();
   const PALETTE = [HEX.gold, HEX.champagne, HEX.amber, HEX.green, HEX.cream];
   const ns = useMemo(() => (nodes as { id: string; group: number }[]) ?? [], [nodes]);
   const ls = useMemo(() => (links as [number, number][]) ?? [], [links]);
@@ -31,7 +31,7 @@ export default function ArchGraph({ state, nodes, links }: SceneProps) {
   return (
     <group ref={g} scale={s}>
       <Glow color={HEX.gold} scale={4.4} opacity={0.3} />
-      <lineSegments geometry={geo}><lineBasicMaterial color={HEX.gold} transparent opacity={0.22} blending={glowBlend()} /></lineSegments>
+      <lineSegments geometry={geo}><lineBasicMaterial color={HEX.gold} transparent opacity={A(0.22)} blending={glowBlend()} /></lineSegments>
       {pos.map((p, i) => (
         <group key={ns[i].id} position={p}>
           <mesh ref={(m) => { meshes.current[i] = m; }}><octahedronGeometry args={[0.16, 0]} /><meshBasicMaterial color={PALETTE[ns[i].group % PALETTE.length]} toneMapped={false} /></mesh>

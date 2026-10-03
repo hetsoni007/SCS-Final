@@ -4,7 +4,7 @@ import { useMemo, useRef } from "react";
 import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
 import { Edges } from "@react-three/drei";
-import { Glow, Rig, Studio, damp, glowBlend, rng, useView, usePalette } from "../kit";
+import { Glow, Rig, Studio, damp, glowBlend, rng, useView, useLineAlpha, usePalette } from "../kit";
 import type { SceneProps } from "../GLRoot";
 
 const useFit = (w: number, h: number) => { const viewport = useView(); return Math.min(viewport.width / w, viewport.height / h); };
@@ -70,7 +70,7 @@ export function Shelf() {
 
 /** A stylised city grid, cars on routes and an AI fare heat overlay. */
 export function City({ tier }: SceneProps) {
-  const HEX = usePalette();
+  const HEX = usePalette(), A = useLineAlpha();
   const cars = useRef<THREE.InstancedMesh>(null), heat = useRef<THREE.Mesh>(null), d = useMemo(() => new THREE.Object3D(), []);
   const s = useFit(10, 7.5);
   const G = 7, blocks = useMemo(() => { const r = rng(4), a: { x: number; z: number; h: number }[] = []; for (let x = 0; x < G; x++) for (let z = 0; z < G; z++) a.push({ x: x - (G - 1) / 2, z: z - (G - 1) / 2, h: 0.15 + r() * r() * 1.5 }); return a; }, []);
@@ -84,7 +84,7 @@ export function City({ tier }: SceneProps) {
     <Rig strength={0.25} scale={s}>
       <Studio /><Glow color={HEX.gold} scale={4.4} opacity={0.25} />
       <group rotation={[0.7, 0.7, 0]} position-y={-0.3}>
-        <mesh rotation-x={-Math.PI / 2}><planeGeometry args={[G, G, G, G]} /><meshBasicMaterial color={HEX.gold} wireframe transparent opacity={0.25} /></mesh>
+        <mesh rotation-x={-Math.PI / 2}><planeGeometry args={[G, G, G, G]} /><meshBasicMaterial color={HEX.gold} wireframe transparent opacity={A(0.25)} /></mesh>
         {blocks.map((b, i) => <mesh key={i} position={[b.x, b.h / 2, b.z]}><boxGeometry args={[0.62, b.h, 0.62]} /><meshPhysicalMaterial color={HEX.steel} metalness={0.7} roughness={0.3} clearcoat={1} transparent opacity={0.92} /><Edges color={HEX.gold} /></mesh>)}
         <instancedMesh ref={cars} args={[undefined, undefined, n]}><boxGeometry args={[0.22, 0.08, 0.1]} /><meshBasicMaterial color={HEX.champagne} toneMapped={false} /></instancedMesh>
         <mesh ref={heat} rotation-x={-Math.PI / 2}><circleGeometry args={[1, 32]} /><meshBasicMaterial color={HEX.amber} transparent opacity={0.28} blending={glowBlend()} depthWrite={false} /></mesh>

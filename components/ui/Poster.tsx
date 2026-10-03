@@ -38,15 +38,17 @@ export function Poster({ kind = "orb", screens }: { kind?: "orb" | "globe" | "ph
     return (
       <svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full" aria-hidden>
         <defs><radialGradient id="pg"><stop offset="0" stopColor="#C9A24B" stopOpacity=".35" /><stop offset="1" stopColor="#C9A24B" stopOpacity="0" /></radialGradient></defs>
-        <circle cx="100" cy="100" r="95" fill="url(#pg)" />
-        <g fill="none" stroke="#C9A24B" strokeOpacity=".45" strokeWidth=".5">
+        <circle cx="100" cy="100" r="95" fill="url(#pg)" className="poster-orb" />
+        {/* colours come from the theme tokens (globals.css: .poster-globe), so the light theme gets darker lines */}
+        <circle cx="100" cy="100" r="62" className="poster-body" />
+        <g fill="none" className="poster-grid" strokeWidth=".5">
           <circle cx="100" cy="100" r="62" />
           {[14, 30, 46].map((r) => <ellipse key={r} cx="100" cy="100" rx={r} ry="62" />)}
           {[20, 40].map((y) => <g key={y}><ellipse cx="100" cy={100 - y} rx={Math.sqrt(62 * 62 - y * y)} ry="5" /><ellipse cx="100" cy={100 + y} rx={Math.sqrt(62 * 62 - y * y)} ry="5" /></g>)}
           <ellipse cx="100" cy="100" rx="62" ry="6" />
         </g>
-        <g fill="none" stroke="#F2DA8C" strokeWidth=".8"><path d="M118 96 Q95 50 72 78" /><path d="M118 96 Q150 60 60 92" /><path d="M118 96 Q140 120 138 132" /><path d="M118 96 Q112 84 106 92" /></g>
-        <circle cx="118" cy="96" r="2.4" fill="#E8A33D" />
+        <g fill="none" className="poster-arcs" strokeWidth=".8"><path d="M118 96 Q95 50 72 78" /><path d="M118 96 Q150 60 60 92" /><path d="M118 96 Q140 120 138 132" /><path d="M118 96 Q112 84 106 92" /></g>
+        <circle cx="118" cy="96" r="2.4" className="poster-home" />
       </svg>
     );
   }

@@ -4,19 +4,19 @@ import { useMemo, useRef } from "react";
 import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
 import { site } from "@/content/site";
-import { Glow, damp, glowBlend, readNum, useView, usePalette } from "../kit";
+import { Glow, damp, glowBlend, readNum, useLight, useLineAlpha, useView, usePalette } from "../kit";
 import { shared } from "@/lib/gl-store";
 import type { SceneProps } from "../GLRoot";
 
-const R = 2;
+const R = 2, FRONT = new THREE.Vector3(0, 0, 1);
 const ll = (lat: number, lon: number, r = R) => {
   const phi = ((90 - lat) * Math.PI) / 180, th = ((lon + 180) * Math.PI) / 180;
   return new THREE.Vector3(-r * Math.sin(phi) * Math.cos(th), r * Math.cos(phi), r * Math.sin(phi) * Math.sin(th));
 };
 export default function Globe({ tier, orbit = false, state }: SceneProps) {
-  const HEX = usePalette();
+  const HEX = usePalette(), light = useLight(), A = useLineAlpha();
   const g = useRef<THREE.Group>(null), dots = useRef<THREE.InstancedMesh>(null), ring = useRef<THREE.Group>(null), halo = useRef<THREE.Mesh>(null);
-  const { grid, arcs, curves } = useMemo(() => {
+  const { grid, arcs, curves, tubes } = useMemo(() => {
     const pts: number[] = [], seg = tier === "low" ? 36 : 64;
     for (let lat = -75; lat <= 75; lat += 15) for (let i = 0; i < seg; i++) pts.push(...ll(lat, (i / seg) * 360).toArray(), ...ll(lat, ((i + 1) / seg) * 360).toArray());
     for (let lon = 0; lon < 360; lon += 15) for (let i = 0; i < seg; i++) pts.push(...ll(-90 + (i / seg) * 180, lon).toArray(), ...ll(-90 + ((i + 1) / seg) * 180, lon).toArray());
@@ -30,7 +30,9 @@ export default function Globe({ tier, orbit = false, state }: SceneProps) {
     const ap: number[] = [];
     curves.forEach((c) => { const p = c.getPoints(40); for (let i = 0; i < p.length - 1; i++) ap.push(...p[i].toArray(), ...p[i + 1].toArray()); });
     const arcs = new THREE.BufferGeometry().setAttribute("position", new THREE.Float32BufferAttribute(ap, 3));
-    return { grid, arcs, curves };
+    // the light theme draws the routes as thin tubes: a one-pixel line is too faint on a white page
+    const tubes = curves.map((c) => new THREE.TubeGeometry(c, 40, 0.011, 6, false));
+    return { grid, arcs, curves, tubes };
   }, [tier]);
   const dummy = useMemo(() => new THREE.Object3D(), []);
   const v = useMemo(() => new THREE.Vector3(), []);
@@ -50,7 +52,8 @@ export default function Globe({ tier, orbit = false, state }: SceneProps) {
     }
     if (halo.current) {
       halo.current.visible = !!m;
-      if (m) { halo.current.position.copy(ll(m.lat, m.lon, R + 0.02)); halo.current.lookAt(halo.current.position.clone().multiplyScalar(2)); halo.current.scale.setScalar(1 + 0.25 * Math.sin(clock.elapsedTime * 4)); }
+      // lie flat on the surface: oriented in the globe's own space (lookAt would need world coordinates)
+      if (m) { halo.current.position.copy(ll(m.lat, m.lon, R + 0.02)); halo.current.quaternion.setFromUnitVectors(FRONT, v.copy(halo.current.position).normalize()); halo.current.scale.setScalar(1 + 0.25 * Math.sin(clock.elapsedTime * 4)); }
     }
     if (ring.current) ring.current.rotation.z = clock.elapsedTime * 0.12;
     if (dots.current) {
@@ -65,8 +68,12 @@ export default function Globe({ tier, orbit = false, state }: SceneProps) {
     <group scale={fit}>
       <Glow color={HEX.gold} scale={4.4} opacity={0.35} />
       <group ref={g} rotation-y={-1.9}>
-        <lineSegments geometry={grid}><lineBasicMaterial color={HEX.gold} transparent opacity={0.28} /></lineSegments>
-        <lineSegments geometry={arcs}><lineBasicMaterial color={HEX.champagne} transparent opacity={0.9} blending={glowBlend()} /></lineSegments>
+        {/* light theme: a tinted body so the globe reads as a solid object, a darker grid and solid routes */}
+        {light ? <mesh><sphereGeometry args={[R * 0.985, 48, 32]} /><meshBasicMaterial color={HEX.champagne} transparent opacity={0.13} depthWrite={false} /></mesh> : null}
+        <lineSegments geometry={grid}><lineBasicMaterial color={light ? HEX.bronze : HEX.gold} transparent opacity={light ? 0.62 : 0.28} /></lineSegments>
+        {light
+          ? tubes.map((geo, i) => <mesh key={i} geometry={geo}><meshBasicMaterial color={HEX.gold} toneMapped={false} /></mesh>)
+          : <lineSegments geometry={arcs}><lineBasicMaterial color={HEX.champagne} transparent opacity={0.9} blending={glowBlend()} /></lineSegments>}
         {site.markets.map((m) => (
           <mesh key={m.code} position={ll(m.lat, m.lon, R + 0.01)}><sphereGeometry args={[m.code === "IN" ? 0.07 : 0.045, 12, 12]} /><meshBasicMaterial color={m.code === "IN" ? HEX.amber : HEX.champagne} toneMapped={false} /></mesh>
         ))}
@@ -75,7 +82,7 @@ export default function Globe({ tier, orbit = false, state }: SceneProps) {
       </group>
       {orbit ? (
         <group ref={ring} rotation-x={1.25}>
-          <mesh><torusGeometry args={[2.9, 0.006, 6, 160]} /><meshBasicMaterial color={HEX.white} transparent opacity={0.35} /></mesh>
+          <mesh><torusGeometry args={[2.9, light ? 0.012 : 0.006, 6, 160]} /><meshBasicMaterial color={light ? HEX.bronze : HEX.white} transparent opacity={A(0.35)} /></mesh>
           {Array.from({ length: 10 }, (_, i) => (
             <mesh key={i} position={[Math.cos((i / 10) * Math.PI * 2) * 2.9, Math.sin((i / 10) * Math.PI * 2) * 2.9, 0]}><octahedronGeometry args={[0.07]} /><meshBasicMaterial color={i % 2 ? HEX.gold : HEX.champagne} toneMapped={false} /></mesh>
           ))}

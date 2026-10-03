@@ -4,7 +4,7 @@ import { useMemo, useRef } from "react";
 import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
 import { snoise } from "../shaders/noise";
-import { Glow, Rig, damp, glowBlend, readNum, useShaderArgs, usePalette, type Palette } from "../kit";
+import { Glow, Rig, damp, glowBlend, readNum, useLineAlpha, useShaderArgs, usePalette, type Palette } from "../kit";
 import type { SceneProps } from "../GLRoot";
 
 const vert = /* glsl */ `
@@ -20,18 +20,19 @@ void main(){
   gl_PointSize = (14. + uPulse * 14.) / -mv.z;
 }`;
 const frag = /* glsl */ `
-uniform vec3 uA, uB; uniform float uPulse, uPoints; varying float vN;
+uniform vec3 uA, uB; uniform float uPulse, uPoints, uInk; varying float vN;
 void main(){
   if (uPoints > .5 && length(gl_PointCoord - .5) > .5) discard;
   vec3 c = mix(uA, uB, smoothstep(-.6, .6, vN));
-  gl_FragColor = vec4(c, (uPoints > .5 ? .9 : .28) + uPulse * .25);
+  gl_FragColor = vec4(c, min(1., (uPoints > .5 ? .9 : .28 * uInk) + uPulse * .25));
 }`;
-const uniformsFor = (points: number, p: Palette) => ({ uTime: { value: 0 }, uPulse: { value: 0 }, uPoints: { value: points }, uA: { value: new THREE.Color(p.gold) }, uB: { value: new THREE.Color(p.champagne) } });
+// uInk: how much stronger the wireframe is drawn (1 on dark; ~2.5 on a light page, see useLineAlpha)
+const uniformsFor = (points: number, p: Palette, ink: number) => ({ uTime: { value: 0 }, uPulse: { value: 0 }, uPoints: { value: points }, uInk: { value: ink }, uA: { value: new THREE.Color(p.gold) }, uB: { value: new THREE.Color(p.champagne) } });
 export default function NeuralSphere({ tier, state }: SceneProps) {
-  const HEX = usePalette();
+  const HEX = usePalette(), ink = useLineAlpha()(0.4) / 0.4;
   const detail = tier === "high" ? 10 : tier === "mid" ? 6 : 4;
   const geo = useMemo(() => new THREE.IcosahedronGeometry(1.45, detail), [detail]);
-  const u1 = useMemo(() => uniformsFor(0, HEX), [HEX]), u2 = useMemo(() => uniformsFor(1, HEX), [HEX]);
+  const u1 = useMemo(() => uniformsFor(0, HEX, ink), [HEX, ink]), u2 = useMemo(() => uniformsFor(1, HEX, ink), [HEX, ink]);
   const s1 = useShaderArgs(u1, vert, frag), s2 = useShaderArgs(u2, vert, frag);
   const pulse = useRef(0);
   useFrame(({ clock }, dt) => {
