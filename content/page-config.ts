@@ -20,6 +20,8 @@ export const pageScene: Record<string, { scene: SceneKey; props?: Record<string,
   contact: { scene: "orb" },
   "app-scoping-guide": { scene: "booklet" },
   blog: { scene: "pages" },
+  "devops-maturity-assessment": { scene: "cloud", poster: "grid" },
+  privacy: { scene: "shield" },
   work: { scene: "device", props: { screens: ["/assets/portfolio/hr-payroll-sim-punch.webp", "/assets/portfolio/creator-marketplace-1.webp", "/assets/portfolio/retail-ops-1.webp", "/assets/portfolio/ride-hailing-sim-map.webp"] }, poster: "device", screens: ["/assets/portfolio/hr-payroll-sim-punch.webp"] },
 };
 

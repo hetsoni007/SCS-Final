@@ -7,7 +7,7 @@ import { BadgeDollarSign, KeyRound, PhoneCall, ShieldCheck, Timer, UsersRound } 
 import { Counter } from "@/components/ui/Bits";
 import { SectionHead } from "./SectionHead";
 import { site } from "@/content/site";
-import { guarantees, stats, tools } from "@/content/home";
+import { guarantees, stats, tools, values } from "@/content/home";
 
 /* S3 — stats: extruded-looking numbers that tilt with the cursor (CSS 3D; the numbers stay real text) */
 export function Stats() {
@@ -17,17 +17,38 @@ export function Stats() {
         <SectionHead eyebrow="Proof, not promises" title="Real apps. Real results.<br>Live on the stores today." />
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((s, i) => (
-            <div key={s.label} className="glass spot p-7 [perspective:800px]" data-tilt data-reveal style={{ "--i": i } as React.CSSProperties}>
+            <Link key={s.label} href={s.href} className="glass spot group block p-7 [perspective:800px]" data-tilt data-reveal data-cursor="View" style={{ "--i": i } as React.CSSProperties}>
               <div className="tilt-3d stat-num font-display text-[clamp(64px,7vw,112px)] font-bold leading-none tracking-tighter">
                 <Counter value={s.value} suffix={s.suffix} />
               </div>
               <p className="muted mt-5 text-[15px]">{s.label}</p>
-            </div>
+              <p className="mt-4 text-[14px] text-accent-2 opacity-70 transition-[opacity,transform] duration-300 group-hover:translate-x-1 group-hover:opacity-100">{s.more} →</p>
+            </Link>
           ))}
         </div>
         <p className="dim mt-6" data-reveal>
           <a href="https://www.goodfirms.co/" target="_blank" rel="noopener" className="underline underline-offset-4 hover:text-hi">Reviewed on GoodFirms</a> · ★★★★★ 5.0 verified client review
         </p>
+      </div>
+    </section>
+  );
+}
+
+/* Manifesto — the three values from the About page, set large; each line fills in as it scrolls into view */
+export function Manifesto() {
+  return (
+    <section className="section" data-loc="manifesto" aria-labelledby="manifesto-h">
+      <div className="wrap">
+        <p className="eyebrow" data-reveal>What we value</p>
+        <h2 id="manifesto-h" className="sr-only">How we work.</h2>
+        <ol className="mt-10 grid gap-10 md:gap-14">
+          {values.map((v) => (
+            <li key={v.title} className="grid items-end gap-3 border-b border-line pb-10 md:grid-cols-[minmax(0,8fr)_minmax(0,4fr)] md:gap-10 md:pb-14">
+              <p className="manifesto-line font-display text-[clamp(40px,7.2vw,120px)] font-semibold leading-[0.98] tracking-[-0.03em]">{v.title}</p>
+              <p className="muted max-w-[34ch] text-[17px] md:pb-3" data-reveal>{v.body}</p>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

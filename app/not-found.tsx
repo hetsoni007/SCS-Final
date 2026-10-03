@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SceneBox from "@/components/sections/SceneBox";
+import PaletteButton from "@/components/ui/PaletteButton";
 
 export const metadata = { title: "404 — This screen didn't ship | Soni Consultancy Services", robots: { index: false, follow: true } };
 
@@ -15,6 +16,7 @@ export default function NotFound() {
           <Link href="/" className="btn btn-primary btn-lg" data-magnetic="0.25">Back to home</Link>
           <Link href="/work/" className="btn btn-glass btn-lg">See our work</Link>
           <Link href="/blog/" className="btn btn-glass btn-lg">Read the blog</Link>
+          <PaletteButton />
         </div>
       </div>
     </section>

@@ -15,6 +15,12 @@ export const ArchExplorer = dynamic(() => import("@/components/sections/extras/A
 export const MvpScoper = dynamic(() => import("@/components/sections/extras/MvpScoper"));
 export const PlatformToggle = dynamic(() => import("@/components/sections/extras/PlatformToggle"));
 export const AssistantDemo = dynamic(() => import("@/components/sections/AssistantDemo"));
+export const ScreenTour = dynamic(() => import("@/components/sections/extras/ScreenTour"));
+export const ServiceExplorer = dynamic(() => import("@/components/sections/extras/ServiceExplorer"));
+export const EngagementModels = dynamic(() => import("@/components/sections/extras/EngagementModels"));
+export const RegionsGlobe = dynamic(() => import("@/components/sections/extras/RegionsGlobe"));
+export const ConsentControls = dynamic(() => import("@/components/sections/extras/ConsentControls"));
+export const PostFeedback = dynamic(() => import("@/components/sections/extras/PostFeedback"));
 
 // Blog widgets and demos
 export const DecisionTool = dynamic(() => import("@/components/mdx/Widgets").then((m) => m.DecisionTool));

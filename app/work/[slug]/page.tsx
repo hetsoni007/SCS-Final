@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ScreenTour } from "@/components/lazy";
 import { ViewTransition } from "react";
 import type { Metadata } from "next";
 import SceneBox from "@/components/sections/SceneBox";
 import { Breadcrumb } from "@/components/sections/PageView";
 import { CtaBand } from "@/components/sections/SectionHead";
-import { PhoneFrame } from "@/components/ui/Poster";
 import Rich, { stripTags } from "@/components/ui/Rich";
 import { Counter } from "@/components/ui/Bits";
 import { caseBySlug, cases } from "@/content/work";
@@ -82,14 +82,7 @@ export default async function CasePage({ params }: PageProps<"/work/[slug]">) {
         </div></section>
       )}
 
-      {c.shots.length > 0 && (
-        <section className="section !pt-0"><div className="wrap">
-          <h2 className="h2">Inside the product.</h2>
-          <ul className="mt-10 grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4">
-            {c.shots.map((s, j) => <li key={s.src} data-reveal style={{ "--i": j % 4 } as React.CSSProperties}><figure><PhoneFrame src={s.src} alt={s.alt} /><figcaption className="dim mt-3 text-center">{s.cap ?? s.alt}</figcaption></figure></li>)}
-          </ul>
-        </div></section>
-      )}
+      {c.shots.length > 0 && <ScreenTour flush title="Inside the product." shots={c.shots.map((s) => ({ src: s.src, alt: s.alt, cap: s.cap }))} />}
 
       {c.flows && (
         <section className="section !pt-0"><div className="wrap">

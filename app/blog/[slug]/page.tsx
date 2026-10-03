@@ -7,6 +7,8 @@ import { mdxComponents } from "@/components/mdx";
 import BlogCard, { ThumbWarpFilter } from "@/components/sections/BlogCard";
 import { ReadingProgress, ShareRow, Toc } from "@/components/sections/BlogClient";
 import { Breadcrumb } from "@/components/sections/PageView";
+import SceneBox from "@/components/sections/SceneBox";
+import { PostFeedback } from "@/components/lazy";
 import { CtaBand } from "@/components/sections/SectionHead";
 import { getPost, getPosts, postDate, readPostJsonLd } from "@/lib/content";
 import { JsonLd } from "@/lib/schema";
@@ -36,7 +38,9 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
     <>
       <ReadingProgress />
       <ThumbWarpFilter />
-      <article id="article">
+      <article id="article" className="relative">
+        {/* a small 3D accent beside the title on wide screens */}
+        <SceneBox scene="pages" className="pointer-events-none absolute right-[max(24px,calc(50%-680px))] top-[calc(var(--nav-h)+56px)] hidden h-[230px] w-[300px] 2xl:block" />
         <header className="wrap-narrow pb-10 pt-[calc(var(--nav-h)+72px)]">
           <Breadcrumb trail={[{ name: "Home", path: "/" }, { name: "Blog", path: "/blog/" }, { name: post.categories[0] ?? "Post", path: `/blog/${post.slug}` }]} />
           <p className="eyebrow">{post.categories.join(" · ")}</p>
@@ -54,8 +58,9 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
             <MDXRemote source={post.body} components={mdxComponents} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
             <div className="not-prose mt-12 grid gap-6 border-t border-line pt-8">
               <ShareRow title={post.title} url={post.canonical} />
+              <PostFeedback slug={post.slug} />
               <div className="glass flex items-center gap-5 p-6">
-                <span className="font-display grid h-14 w-14 shrink-0 place-items-center rounded-full text-[18px] font-bold text-white" style={{ background: "var(--grad)" }} aria-hidden>{site.founder.initials}</span>
+                <span className="font-display grid h-14 w-14 shrink-0 place-items-center rounded-full text-[18px] font-bold text-on-accent" style={{ background: "var(--grad)" }} aria-hidden>{site.founder.initials}</span>
                 <p className="text-[15px] text-mid"><span className="block text-[16px] font-semibold text-hi">{site.founder.name}</span>{site.founder.role} at {site.name}. 5+ years building and shipping React Native, MERN and AI apps to the App Store and Google Play. <a href={site.founder.linkedin} target="_blank" rel="noopener" className="text-accent-2 underline underline-offset-4">LinkedIn</a> · <Link href="/about/" className="text-accent-2 underline underline-offset-4">About</Link></p>
               </div>
             </div>

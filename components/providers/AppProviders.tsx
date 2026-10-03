@@ -178,7 +178,12 @@ export default function AppProviders({ children }: { children: ReactNode }) {
 
   // ── scroll reveals: [data-reveal] → .in (re-scanned on route change)
   useEffect(() => {
-    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    const io = new IntersectionObserver((es) => es.forEach((e) => {
+      // Blocks taller than the screen (forms, tools) are marked so the CSS only fades them in: tilting them through
+      // the viewport would magnify their near edge past the screen and fade them while they are still in use.
+      if (e.rootBounds && e.boundingClientRect.height > e.rootBounds.height) (e.target as HTMLElement).dataset.tall = "1";
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+    }), { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
     const scan = () => document.querySelectorAll("[data-reveal]:not(.in)").forEach((el) => io.observe(el));
     scan();
     const mo = new MutationObserver(scan);

@@ -4,7 +4,7 @@
  * guide_download, calendly_open, calendly_booked.
  * GA4 only loads after consent; Vercel Analytics is cookieless and always on.
  */
-export type EventName = "cta_click" | "calc_complete" | "form_submit" | "guide_download" | "calendly_open" | "calendly_booked" | "calculator_estimate";
+export type EventName = "cta_click" | "calc_complete" | "form_submit" | "guide_download" | "calendly_open" | "calendly_booked" | "calculator_estimate" | "post_feedback";
 
 declare global {
   interface Window { gtag?: (...a: unknown[]) => void; dataLayer?: unknown[]; va?: (e: string, p?: unknown) => void }

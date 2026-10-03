@@ -37,6 +37,7 @@ const scenes: Record<SceneKey, Lazy> = {
   blocksPhysics: lazy(() => import("./scenes/BlocksPhysics")),
   astronaut: lazy(() => import("./scenes/Misc").then((m) => ({ default: m.Astronaut }))),
   pages: lazy(() => import("./scenes/Misc").then((m) => ({ default: m.Pages }))),
+  shield: lazy(() => import("./scenes/Misc").then((m) => ({ default: m.Shield }))),
   device: lazy(() => import("./scenes/DeviceScene")),
   graph: lazy(() => import("./scenes/ArchGraph")),
 };

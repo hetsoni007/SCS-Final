@@ -51,6 +51,10 @@ export default function Footer() {
         <Col title="Start" items={[...footer.start, ...footer.tools]} />
       </div>
       <div className="wrap mt-12 text-[13px] text-lo">{site.footerLine}</div>
+      {/* oversized brand mark: decorative, rises into place as the page ends */}
+      <div aria-hidden className="footer-mark wrap mt-10 select-none overflow-hidden">
+        <span className="font-display block text-center text-[clamp(96px,40vw,420px)] font-bold leading-[0.78] tracking-[-0.04em]"><span className="grad-text">SONI</span></span>
+      </div>
     </footer>
   );
 }

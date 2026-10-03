@@ -5,7 +5,7 @@ import type { Tier } from "./motion";
 export type SceneKey =
   | "hero" | "codeSplit" | "nodeGraph" | "neural" | "pipeline" | "carousel" | "portal" | "globe"
   | "exploded" | "cloud" | "constellation" | "calcPhone" | "booklet" | "orb" | "vault" | "shelf"
-  | "city" | "ledger" | "browser" | "pods" | "blocks" | "blocksPhysics" | "astronaut" | "pages" | "device" | "graph";
+  | "city" | "ledger" | "browser" | "pods" | "blocks" | "blocksPhysics" | "astronaut" | "pages" | "device" | "graph" | "shield";
 
 export type SlotEntry = { id: string; el: HTMLElement; scene: SceneKey; props: Record<string, unknown>; interactive: boolean };
 

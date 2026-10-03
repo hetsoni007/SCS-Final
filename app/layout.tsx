@@ -43,6 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {/* first-visit intro cover: shown by the boot script's data-intro flag, animated by ui/Preloader */}
         <div className="intro-cover" aria-hidden><span className="intro-mark">SCS</span></div>
         <a href="#main" className="skip-link">Skip to content</a>
+        <div className="scroll-progress" aria-hidden />
         <div className="bg-fluid" aria-hidden />
         <div className="grid-lines" aria-hidden />
         <div className="grain" aria-hidden />

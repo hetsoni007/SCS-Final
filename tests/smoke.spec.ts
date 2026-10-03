@@ -165,6 +165,104 @@ test("work: filters, case-study page and next-project link", async ({ page }) =>
   await expect(page).toHaveURL(/\/work\/web3-creator\/?$/);
 });
 
+test("home: proof tiles link to their evidence; the work index lists the live apps", async ({ page }) => {
+  await page.goto("/");
+  const stats = page.locator('[data-loc="stats"]');
+  await expect(stats.getByRole("link", { name: /More downloads/ })).toHaveAttribute("href", "/work/creator-marketplace/");
+  await expect(stats.getByRole("link", { name: /Less payroll admin/ })).toHaveAttribute("href", "/work/hr-payroll/");
+  await expect(page.locator('[data-loc="manifesto"]').getByText("Ship over slideware.")).toBeVisible();
+  const index = page.locator('[data-loc="work"] ol');
+  await expect(index.getByRole("link")).toHaveCount(4);
+  await expect(index.getByRole("link").first()).toHaveAttribute("href", /^\/work\/[a-z-]+\/$/);
+});
+
+test("services: the explorer switches service and keeps every description in the page @all", async ({ page }) => {
+  await page.goto("/services/");
+  const ex = page.locator('[data-loc="service-explorer"]');
+  const list = ex.locator('ul[aria-label="Services"]');
+  await expect(list.getByRole("button")).toHaveCount(7);
+  await expect(ex.getByRole("heading", { level: 2 })).toHaveText("React Native App Development"); // only the open one is exposed
+  const mvp = list.getByRole("button", { name: /MVP Development/ });
+  await mvp.click();
+  await expect(mvp).toHaveAttribute("aria-pressed", "true");
+  await expect(ex.getByRole("heading", { level: 2 })).toHaveText("MVP Development");
+  await expect(ex.getByRole("link", { name: "Full details: MVP Development" })).toHaveAttribute("href", "/mvp-development/");
+  await expect(ex.locator("h2")).toHaveCount(7); // the other six are hidden, not removed
+});
+
+test("hire: engagement models are selectable and keep their headings", async ({ page }) => {
+  await page.goto("/hire/");
+  const sec = page.locator('[data-loc="engagement-models"]');
+  await expect(sec.getByRole("heading", { level: 3 })).toHaveText(["Staff Augmentation", "Dedicated Team", "Project Contract"]);
+  await expect(sec.getByRole("button", { name: "Dedicated Team" })).toHaveAttribute("aria-pressed", "true");
+  await sec.getByRole("button", { name: "Project Contract" }).click();
+  await expect(sec.getByRole("button", { name: "Project Contract" })).toHaveAttribute("aria-pressed", "true");
+  await expect(sec.getByRole("button", { name: "Dedicated Team" })).toHaveAttribute("aria-pressed", "false");
+});
+
+test("about: choosing a country selects it", async ({ page }) => {
+  await page.goto("/about/");
+  const sec = page.locator('[data-loc="regions"]');
+  await expect(sec.getByRole("button")).toHaveCount(6);
+  const uae = sec.getByRole("button", { name: /UAE/ });
+  await uae.scrollIntoViewIfNeeded(); // scroll-linked motion moves the cards as they enter: let them settle first
+  await page.waitForTimeout(300);
+  await uae.click();
+  await expect(uae).toHaveAttribute("aria-pressed", "true");
+  await expect(sec.getByRole("button", { name: /India/ })).toHaveAttribute("aria-pressed", "false");
+});
+
+test("case study: the screen tour steps through the real app screens @all", async ({ page }) => {
+  await page.goto("/work/hr-payroll/");
+  const tour = page.locator('[data-loc="screen-tour"]');
+  await expect(tour.getByText("Screen 1 of 4")).toBeVisible();
+  await expect(tour.getByRole("status")).toHaveText("HR platform business registration screen");
+  await tour.getByRole("button", { name: "Next screen" }).click();
+  await expect(tour.getByText("Screen 2 of 4")).toBeVisible();
+  await expect(tour.getByRole("status")).toHaveText("HR platform punch in and out with live hour tracker");
+  await tour.getByRole("button", { name: /^Show screen 4/ }).click();
+  await expect(tour.getByText("Screen 4 of 4")).toBeVisible();
+  await tour.getByRole("button", { name: "Next screen" }).click();
+  await expect(tour.getByText("Screen 1 of 4")).toBeVisible(); // wraps round
+});
+
+test("service pages carry an interactive section from related content", async ({ page }) => {
+  await page.goto("/retail-app-development/");
+  await expect(page.locator('[data-loc="screen-tour"]').getByRole("heading", { level: 2 })).toHaveText("Tour the retail operations app.");
+  for (const [path, post] of [["/fintech-app-development/", "rbi-fintech-app-compliance-india"], ["/react-native-app-development-uk/", "native-vs-cross-platform-2026"], ["/wordpress-website-development-india/", "wordpress-website-cost-india"], ["/ai-app-development/", "can-ai-build-my-app"]] as const) {
+    await page.goto(path);
+    const tool = page.locator('[data-loc="tool"]');
+    await expect(tool.getByRole("link", { name: "Read the full guide →" })).toHaveAttribute("href", `/blog/${post}`);
+    await expect(tool.locator(".glass").first()).toBeVisible();
+  }
+});
+
+test("privacy: the analytics switch shows and changes the stored choice", async ({ page }) => {
+  await page.goto("/privacy/");
+  const box = page.locator('[data-loc="consent-controls"]');
+  const sw = box.getByRole("switch", { name: "Analytics cookies" });
+  await expect(sw).toHaveAttribute("aria-checked", "false"); // the shared setup stored "declined"
+  await expect(box.getByRole("status")).toContainText("declined");
+  await sw.click();
+  await expect(sw).toHaveAttribute("aria-checked", "true");
+  expect(await page.evaluate(() => localStorage.getItem("scs-consent"))).toBe("granted");
+  await sw.click();
+  await expect(sw).toHaveAttribute("aria-checked", "false");
+  expect(await page.evaluate(() => localStorage.getItem("scs-consent"))).toBe("denied");
+});
+
+test("blog post: one-tap feedback thanks the reader; 404 offers search", async ({ page }) => {
+  await page.goto("/blog/react-native-push-notifications");
+  const fb = page.locator('[data-loc="post-feedback"]');
+  await fb.getByRole("button", { name: "Yes" }).click();
+  await expect(fb.getByRole("status")).toContainText("glad it helped");
+  const res = await page.goto("/no-such-page/");
+  expect(res?.status()).toBe(404);
+  await page.waitForTimeout(400);
+  await page.getByRole("main").getByRole("button", { name: "Search the site", exact: true }).click();
+  await expect(page.getByRole("combobox", { name: "Search" })).toBeFocused();
+});
+
 test("reduced motion: no WebGL canvas, content fully visible", async ({ browser }) => {
   const ctx = await browser.newContext({ reducedMotion: "reduce" });
   const page = await ctx.newPage();
@@ -201,7 +299,7 @@ test("consent: GA4 loads only after accepting", async ({ page }) => {
 
 test.describe("mobile", () => {
   test.skip(({ isMobile }) => !isMobile, "phone-sized projects only");
-  for (const path of ["/", "/services/", "/work/", "/blog/", "/blog/react-native-push-notifications", "/contact/", "/app-cost-calculator/", "/cloud-cost-calculator/", "/mvp-development/", "/devops-cloud-engineering/"]) {
+  for (const path of ["/", "/services/", "/work/", "/work/hr-payroll/", "/blog/", "/blog/react-native-push-notifications", "/contact/", "/app-cost-calculator/", "/cloud-cost-calculator/", "/mvp-development/", "/devops-cloud-engineering/", "/hire/", "/about/", "/retail-app-development/", "/fintech-app-development/", "/privacy/"]) {
     test(`no horizontal overflow on ${path} @mobile`, async ({ page }) => {
       await page.goto(path, { waitUntil: "domcontentloaded" });
       await page.waitForTimeout(1500);
@@ -233,14 +331,14 @@ async function axeSerious(page: import("@playwright/test").Page, path: string) {
 }
 
 test.describe("accessibility (axe, WCAG 2.2 AA)", () => {
-  for (const path of ["/", "/services/", "/work/", "/work/hr-payroll/", "/blog/", "/blog/can-ai-build-my-app", "/contact/", "/app-cost-calculator/", "/app-scoping-guide/", "/ai-app-development/", "/privacy/"]) {
+  for (const path of ["/", "/services/", "/work/", "/work/hr-payroll/", "/blog/", "/blog/can-ai-build-my-app", "/contact/", "/app-cost-calculator/", "/app-scoping-guide/", "/ai-app-development/", "/privacy/", "/hire/", "/about/", "/retail-app-development/", "/fintech-app-development/"]) {
     test(`no serious violations on ${path}`, async ({ page }) => {
       const serious = await axeSerious(page, path);
       expect(serious, serious.join("\n")).toEqual([]);
     });
   }
   // the theme toggle in the header switches to a light palette; it has to meet the same contrast rules
-  for (const path of ["/", "/services/", "/work/", "/blog/can-ai-build-my-app", "/contact/", "/app-cost-calculator/", "/privacy/"]) {
+  for (const path of ["/", "/services/", "/work/", "/work/hr-payroll/", "/blog/can-ai-build-my-app", "/contact/", "/app-cost-calculator/", "/privacy/", "/hire/", "/about/"]) {
     test(`light theme: no serious violations on ${path}`, async ({ page }) => {
       await page.addInitScript(() => { try { localStorage.setItem("scs-theme", "light"); } catch {} });
       const serious = await axeSerious(page, path);

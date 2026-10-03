@@ -4,7 +4,7 @@ import { useMemo, useRef } from "react";
 import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
 import { site } from "@/content/site";
-import { Glow, glowBlend, useView, usePalette } from "../kit";
+import { Glow, damp, glowBlend, readNum, useView, usePalette } from "../kit";
 import { shared } from "@/lib/gl-store";
 import type { SceneProps } from "../GLRoot";
 
@@ -13,9 +13,9 @@ const ll = (lat: number, lon: number, r = R) => {
   const phi = ((90 - lat) * Math.PI) / 180, th = ((lon + 180) * Math.PI) / 180;
   return new THREE.Vector3(-r * Math.sin(phi) * Math.cos(th), r * Math.cos(phi), r * Math.sin(phi) * Math.sin(th));
 };
-export default function Globe({ tier, orbit = false }: SceneProps) {
+export default function Globe({ tier, orbit = false, state }: SceneProps) {
   const HEX = usePalette();
-  const g = useRef<THREE.Group>(null), dots = useRef<THREE.InstancedMesh>(null), ring = useRef<THREE.Group>(null);
+  const g = useRef<THREE.Group>(null), dots = useRef<THREE.InstancedMesh>(null), ring = useRef<THREE.Group>(null), halo = useRef<THREE.Mesh>(null);
   const { grid, arcs, curves } = useMemo(() => {
     const pts: number[] = [], seg = tier === "low" ? 36 : 64;
     for (let lat = -75; lat <= 75; lat += 15) for (let i = 0; i < seg; i++) pts.push(...ll(lat, (i / seg) * 360).toArray(), ...ll(lat, ((i + 1) / seg) * 360).toArray());
@@ -38,7 +38,20 @@ export default function Globe({ tier, orbit = false }: SceneProps) {
   // leave room for the orbit ring (r = 2.9) and the tallest arc inside the slot
   const fit = Math.min(1, view.width / (orbit ? 6.4 : 5.2), view.height / (orbit ? 6.4 : 5.2));
   useFrame(({ clock }, dt) => {
-    if (g.current) { g.current.rotation.y += dt * 0.08 + shared.scrollVel * 0.02; g.current.rotation.x = 0.35 + shared.my * 0.08; }
+    // a DOM control can ask the globe to turn to one market (state.current.focus = index in site.markets)
+    const f = readNum(state, "focus", -1), m = f >= 0 ? site.markets[f] : undefined;
+    if (g.current) {
+      if (m) {
+        const target = Math.PI / 2 - ((m.lon + 180) * Math.PI) / 180;
+        const d = Math.atan2(Math.sin(target - g.current.rotation.y), Math.cos(target - g.current.rotation.y));
+        g.current.rotation.y += d * Math.min(1, dt * 4);
+        g.current.rotation.x = damp(g.current.rotation.x, ((m.lat * Math.PI) / 180) * 0.7, 4, dt);
+      } else { g.current.rotation.y += dt * 0.08 + shared.scrollVel * 0.02; g.current.rotation.x = damp(g.current.rotation.x, 0.35 + shared.my * 0.08, 4, dt); }
+    }
+    if (halo.current) {
+      halo.current.visible = !!m;
+      if (m) { halo.current.position.copy(ll(m.lat, m.lon, R + 0.02)); halo.current.lookAt(halo.current.position.clone().multiplyScalar(2)); halo.current.scale.setScalar(1 + 0.25 * Math.sin(clock.elapsedTime * 4)); }
+    }
     if (ring.current) ring.current.rotation.z = clock.elapsedTime * 0.12;
     if (dots.current) {
       curves.forEach((c, i) => {
@@ -57,6 +70,7 @@ export default function Globe({ tier, orbit = false }: SceneProps) {
         {site.markets.map((m) => (
           <mesh key={m.code} position={ll(m.lat, m.lon, R + 0.01)}><sphereGeometry args={[m.code === "IN" ? 0.07 : 0.045, 12, 12]} /><meshBasicMaterial color={m.code === "IN" ? HEX.amber : HEX.champagne} toneMapped={false} /></mesh>
         ))}
+        <mesh ref={halo} visible={false}><ringGeometry args={[0.1, 0.14, 32]} /><meshBasicMaterial color={HEX.amber} toneMapped={false} side={THREE.DoubleSide} /></mesh>
         <instancedMesh ref={dots} args={[undefined, undefined, curves.length]}><sphereGeometry args={[0.035, 8, 8]} /><meshBasicMaterial color={HEX.white} toneMapped={false} /></instancedMesh>
       </group>
       {orbit ? (

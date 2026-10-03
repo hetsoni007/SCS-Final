@@ -129,3 +129,35 @@ export function Pages() {
     </Rig>
   );
 }
+
+/** Privacy: a gold shield with a keyhole inside a slow orbit ring. */
+export function Shield() {
+  const HEX = usePalette();
+  const g = useRef<THREE.Group>(null), ring = useRef<THREE.Mesh>(null);
+  const s = useFit(5.2, 5.4);
+  const geo = useMemo(() => {
+    const sh = new THREE.Shape();
+    sh.moveTo(0, 1.6); sh.bezierCurveTo(0.6, 1.4, 1.2, 1.3, 1.35, 1.25);
+    sh.lineTo(1.35, 0.1); sh.bezierCurveTo(1.35, -0.9, 0.7, -1.5, 0, -1.9);
+    sh.bezierCurveTo(-0.7, -1.5, -1.35, -0.9, -1.35, 0.1); sh.lineTo(-1.35, 1.25);
+    sh.bezierCurveTo(-1.2, 1.3, -0.6, 1.4, 0, 1.6);
+    const e = new THREE.ExtrudeGeometry(sh, { depth: 0.26, bevelEnabled: true, bevelThickness: 0.08, bevelSize: 0.08, bevelSegments: 4, curveSegments: 24 });
+    e.center();
+    return e;
+  }, []);
+  useFrame(({ clock }) => {
+    if (g.current) { g.current.rotation.y = Math.sin(clock.elapsedTime * 0.5) * 0.5; g.current.position.y = Math.sin(clock.elapsedTime * 0.9) * 0.06; }
+    if (ring.current) ring.current.rotation.z = clock.elapsedTime * 0.2;
+  });
+  return (
+    <Rig strength={0.3} scale={s}>
+      <Studio /><Glow color={HEX.gold} scale={4.6} opacity={0.35} position={[0, 0, -1]} />
+      <group ref={g}>
+        <mesh geometry={geo}><meshPhysicalMaterial color={HEX.gold} metalness={0.75} roughness={0.22} clearcoat={1} /></mesh>
+        <mesh position={[0, 0.28, 0.22]}><circleGeometry args={[0.27, 32]} /><meshBasicMaterial color={HEX.ink} /></mesh>
+        <mesh position={[0, -0.2, 0.22]}><planeGeometry args={[0.2, 0.66]} /><meshBasicMaterial color={HEX.ink} /></mesh>
+      </group>
+      <mesh ref={ring} rotation-x={1.2}><torusGeometry args={[2.15, 0.012, 8, 140, Math.PI * 1.6]} /><meshBasicMaterial color={HEX.champagne} toneMapped={false} /></mesh>
+    </Rig>
+  );
+}

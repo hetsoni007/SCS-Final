@@ -22,6 +22,7 @@ export function WorkShowcase({ cases: liveCases }: { cases: ShowcaseCase[] }) {
   const items = useMemo(() => liveCases.map((c) => ({ screens: c.shots.map((s) => s.src) })), [liveCases]);
   const go = (i: number) => { setIdx(i); state.current.angle = -i * step; state.current.hover = ((i % n) + n) % n; };
   const cur = ((idx % n) + n) % n, c = liveCases[cur];
+  const front = (i: number) => { if (expectGl && i !== cur) go(idx + (((i - cur + n + n / 2) % n) - n / 2)); }; // shortest way round
   return (
     <section className="section" data-loc="work" aria-labelledby="work-h">
       <div className="wrap">
@@ -53,18 +54,29 @@ export function WorkShowcase({ cases: liveCases }: { cases: ShowcaseCase[] }) {
             </div>
           </>
         ) : null}
-        {/* All four projects as links: the only UI without WebGL, and the crawlable/accessible list with it */}
-        <ul className={`grid gap-4 sm:grid-cols-2 lg:grid-cols-4 ${expectGl ? "mt-6" : "mt-12"}`}>
+        {/* Editorial index of the four live apps: the crawlable list, the only UI without WebGL, and (with it) a
+            remote for the carousel above — pointing at a row spins its phone to the front. */}
+        <ol className={`border-t border-line ${expectGl ? "mt-8" : "mt-12"}`}>
           {liveCases.map((w, i) => (
             <li key={w.slug} data-reveal style={{ "--i": i } as React.CSSProperties}>
-              <Link href={`/work/${w.slug}/`} className={`glass spot block h-full p-5 ${expectGl && cur === i ? "!border-accent" : ""}`} data-cursor="View" onPointerEnter={() => expectGl && go(idx + (((i - cur + n + n / 2) % n) - n / 2))}>
-                {!expectGl && <PhoneFrame src={w.shots[0]?.src} alt={w.shots[0]?.alt} className="mx-auto mb-5 w-[62%]" />}
-                <h3 className="h3">{w.short}</h3>
-                <p className="dim mt-1">{w.tagline}</p>
+              <Link href={`/work/${w.slug}/`} data-cursor="View" onPointerEnter={() => front(i)} onFocus={() => front(i)}
+                className={`group grid items-center gap-x-6 gap-y-2 border-b py-6 transition-[border-color] duration-300 md:grid-cols-[56px_minmax(0,1fr)_auto] ${expectGl && cur === i ? "border-accent" : "border-line"}`}>
+                <span className="mono text-[12px] text-accent-2">0{i + 1}</span>
+                <span className="flex min-w-0 items-center gap-5">
+                  {!expectGl && <PhoneFrame src={w.shots[0]?.src} alt={w.shots[0]?.alt} className="w-14 shrink-0" />}
+                  <span className="min-w-0">
+                    <span className="font-display block text-[clamp(26px,3.6vw,54px)] font-semibold leading-[1.02] tracking-tight transition-transform duration-500 group-hover:translate-x-3">{w.short}</span>
+                    <span className="dim mt-2 block">{w.tagline}</span>
+                  </span>
+                </span>
+                <span className="flex items-center gap-4 max-md:col-start-2">
+                  {w.metrics[0] && <span className="chip"><b className="text-hi">{w.metrics[0].num}</b>&nbsp;{w.metrics[0].lbl}</span>}
+                  <span aria-hidden className="text-[28px] leading-none text-accent-2 transition-transform duration-500 group-hover:translate-x-2">→</span>
+                </span>
               </Link>
             </li>
           ))}
-        </ul>
+        </ol>
       </div>
     </section>
   );

@@ -3,7 +3,7 @@ import Hero from "@/components/sections/Hero";
 import { ProcessPipeline, ServicesPinned, TrustMarquee } from "@/components/sections/HomeTop";
 import { FinalCTA, WorkShowcase } from "@/components/sections/HomeBottom";
 import Testimonials from "@/components/sections/Testimonials";
-import { Bento, Founder, Stats, ToolsTeaser } from "@/components/sections/HomeStatic";
+import { Bento, Founder, Manifesto, Stats, ToolsTeaser } from "@/components/sections/HomeStatic";
 import BlogCard, { ThumbWarpFilter } from "@/components/sections/BlogCard";
 import { SectionHead } from "@/components/sections/SectionHead";
 import { getPage, getPosts, pageMetadata } from "@/lib/content";
@@ -22,6 +22,7 @@ export default function Home() {
       <Hero />
       <TrustMarquee />
       <Stats />
+      <Manifesto />
       <ServicesPinned />
       <ProcessPipeline />
       <WorkShowcase cases={showcase} />
