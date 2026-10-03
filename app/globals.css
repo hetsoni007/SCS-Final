@@ -489,18 +489,23 @@ html[data-intro="live"] [data-loc="hero"] [data-reveal] { animation-name: none; 
   }
   .js .prose > h2 { transform-origin: 50% 100%; animation-name: flip-in; }
 }
+/* Opacity finishes early (by ~9% of the pass, when the first 80–100 px are in view) and the movement carries on to
+   ~25%: nothing that is resting at the bottom edge of the screen is left half-faded and hard to read. */
 @keyframes depth-through {
   0% { opacity: 0; translate: 0 64px -140px; rotate: x 18deg; }
+  9% { opacity: 1; }
   24%, 80% { opacity: 1; translate: 0 0 0; rotate: x 0deg; }
   100% { opacity: 0.35; translate: 0 -24px -90px; rotate: x -9deg; }
 }
 @keyframes flip-through {
   0% { opacity: 0; translate: 0 40px -60px; rotate: x 52deg; }
+  9% { opacity: 1; }
   26%, 80% { opacity: 1; translate: 0 0 0; rotate: x 0deg; }
   100% { opacity: 0.35; translate: 0 -20px -80px; rotate: x -12deg; }
 }
 @keyframes deal-through {
   0% { opacity: 0; translate: 0 90px -240px; rotate: y calc((var(--side, -1)) * 22deg); scale: 0.92; }
+  9% { opacity: 1; }
   26%, 80% { opacity: 1; translate: 0 0 0; rotate: y 0deg; scale: 1; }
   100% { opacity: 0.4; translate: 0 -30px -120px; rotate: x -10deg; scale: 0.97; }
 }
@@ -518,6 +523,8 @@ html[data-intro="live"] [data-loc="hero"] [data-reveal] { animation-name: none; 
   .scroll-progress { animation: scroll-progress linear both; animation-timeline: scroll(root); }
 }
 @keyframes scroll-progress { to { transform: scaleX(1); } }
+/* blog posts measure the article itself (ReadingProgress in BlogClient), so the page-level line steps aside */
+body:has(.reading-progress) .scroll-progress { display: none; }
 
 /* Manifesto lines fill from dim to full strength as they scroll into view */
 .manifesto-line { color: var(--text-hi); }

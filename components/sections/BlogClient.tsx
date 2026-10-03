@@ -30,7 +30,7 @@ export function ReadingProgress() {
     on(); window.addEventListener("scroll", on, { passive: true });
     return () => window.removeEventListener("scroll", on);
   }, []);
-  return <div className="fixed inset-x-0 top-0 z-[110] h-[3px]" role="progressbar" aria-label="Reading progress" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(p * 100)}><div className="h-full origin-left" style={{ transform: `scaleX(${p})`, background: "var(--grad)" }} /></div>;
+  return <div className="reading-progress fixed inset-x-0 top-0 z-[110] h-[3px]" role="progressbar" aria-label="Reading progress" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(p * 100)}><div className="h-full origin-left" style={{ transform: `scaleX(${p})`, background: "var(--grad)" }} /></div>;
 }
 export function Toc({ headings }: { headings: { id: string; text: string }[] }) {
   const [active, setActive] = useState(headings[0]?.id);

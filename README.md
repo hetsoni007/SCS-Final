@@ -83,6 +83,46 @@ so it is the first thing painted; the particle animation takes it over when Java
 ends by 2.2 s. If JavaScript is slower, the cover fades out on its own after 1.2 s, so the intro can never hold the
 page back. The hero entrance (CSS) starts when the intro hands over.
 
+### Motion on scroll
+
+Every `data-reveal` element inside a page section is tied to its own position in the viewport with CSS scroll-driven
+animations (`animation-timeline: view()` in `app/globals.css`): it rises out of depth as it enters, sits flat while
+it is read and tilts back as it leaves. Headings flip up, cards fan in from alternate sides, media drifts. It runs
+on the compositor, needs no JavaScript and reverses with the scroll. Browsers without scroll-driven animations
+(Firefox today) get a one-time fade-and-rise from an IntersectionObserver; reduced motion switches both off.
+Three details worth knowing before changing it:
+
+- The animations use the individual `translate` / `rotate` / `scale` properties, so a card's pointer tilt (which
+  uses `transform`; classes `spot` and `tilt-3d`) composes with them.
+- A block taller than the screen (a form, a long tool) is marked `data-tall` by the reveal observer in
+  `AppProviders.tsx` and only fades in. Tilting it would push its near edge past the screen edge and fade it while
+  it is still in use.
+- A gold hairline at the top of every page shows scroll progress (`.scroll-progress`; blog posts use the article's
+  own `ReadingProgress` instead), the home page's values fill in as they scroll into view (`.manifesto-line`) and
+  the footer wordmark rises into place (`.footer-mark`).
+
+### Interactive sections
+
+Each page type has a section the visitor can operate, built from that page's own content:
+
+| Page | What the visitor can do | Component | Content comes from |
+|---|---|---|---|
+| Home | Follow each proof tile to its evidence; point at a row of the app index to turn the 3D carousel | `Stats`, `WorkShowcase` | `stats` in `content/home.ts`, `content/work.ts` |
+| `/services/` | Pick a service: its 3D scene and details come forward | `extras/ServiceExplorer` | the services grid in `content/pages/services.json` |
+| `/hire/` | Compare the three engagement models; the matching 3D figure steps forward | `extras/EngagementModels` | the models grid in `content/pages/hire.json` |
+| `/about/` | Pick a country and the globe turns to it | `extras/RegionsGlobe` | the regions grid in `content/pages/about.json`, `markets` in `content/site.ts` |
+| Case studies; retail, ride-hailing and HR pages | Tour the real app screens | `extras/ScreenTour` | `shots` in `content/work.ts` |
+| FinTech, USA / UK / Dubai, WordPress and AI pages | Use the tool from the related blog post, in place | `ToolSection` | `content/widgets/<post>.json` |
+| MVP, React Native, DevOps and AI pages | Scope sorter, platform toggle, live-ops dashboard and architecture explorer, idea constellation | `extras/MvpScoper`, `PlatformToggle`, `OpsDashboard`, `ArchExplorer`, `IdeaConstellation` | the page's own JSON, `content/tools.ts` |
+| Blog posts | The post's tool, one-tap feedback | `mdx/Widgets`, `extras/PostFeedback` | the post and its widget file |
+| `/privacy/` | Turn analytics cookies on or off | `extras/ConsentControls` | the consent store in `lib/prefs.ts` |
+| 404 | Search the site | `ui/PaletteButton` | the search index |
+
+Which section goes on which page is decided in `extras()` in `app/[slug]/page.tsx`. Sections that select on hover use
+`lib/use-hover-pick.ts`: only real pointer movement counts, so content sliding under a resting pointer while the page
+scrolls does not change the selection. Everything selectable by hover is also a button, so it works by keyboard and
+touch, and inactive panels stay in the HTML (hidden), so all copy remains crawlable.
+
 ## Editing content
 
 All copy is in `content/`. Components never hard-code it.
@@ -101,6 +141,8 @@ All copy is in `content/`. Components never hard-code it.
 | Colours, type scale, radii | the tokens at the top of `app/globals.css` (brand gold on near-black; light theme values right below) |
 | 3D scene colours (dark and light palettes) | `DARK` / `LIGHT` in `components/three/kit.tsx`, brand values in `lib/brand.ts` |
 | LinkedIn profile and newsletter links | `founder.linkedin` and `newsletter` in `content/site.ts` |
+| Which interactive section a page gets, and the tour / tool headings | `extras()` in `app/[slug]/page.tsx` |
+| Where each home proof tile links, and its link label | `stats` in `content/home.ts` (`href`, `more`) |
 | Easing, durations, springs, particle budgets | `lib/motion.ts` |
 
 `content/pages/*.json` is a typed block tree (`Block` in `lib/content.ts`): sections contain blocks such as
@@ -219,7 +261,8 @@ A DOM component can drive a scene by passing a `useRef` object in `props` and mu
 - **Analytics**: Vercel Analytics (cookieless) on Vercel deployments — its script only exists there, so other hosts
   skip it unless `ANALYTICS=vercel` is set at build time; GA4 only after the visitor accepts the banner.
   Events: `cta_click {location,label}`, `calc_complete {config}`, `form_submit {form}`, `guide_download`,
-  `calendly_open`, `calendly_booked`, `calculator_estimate`. UTM and blog attribution are attached to every lead.
+  `calendly_open`, `calendly_booked`, `calculator_estimate`, `post_feedback {slug,useful}` (the "Was this guide
+  useful?" buttons under a post; nothing else is stored). UTM and blog attribution are attached to every lead.
 - **AI assistant demo** (`/ai-app-development/`): off by default. Set `ASSISTANT_ENABLED=true`,
   `NEXT_PUBLIC_ASSISTANT_ENABLED=true` and `ANTHROPIC_API_KEY`. It calls Claude Opus 5.5 (`claude-opus-5-5`) through the
   official SDK with streaming, low effort, a 10-requests-per-10-minutes courtesy limit per IP and a 6-question cap
@@ -234,7 +277,7 @@ A DOM component can drive a scene by passing a `useRef` object in `props` and mu
 | Suite | Checks |
 |---|---|
 | `tests/urls.spec.ts` | All 58 live sitemap URLs return 200 with the live title, description, canonical, robots and H1; both slash forms; redirects; sitemap and robots; a crawl of every internal link |
-| `tests/smoke.spec.ts` | Navigation, Calendly modal and focus return, ⌘K search, the calculator formula, every form (validation and success), the PDF download, blog widgets scoring, work filters, reduced motion, consent gating, phone-width overflow and the mobile menu, and axe (WCAG 2.2 AA) on 11 page types in the dark theme and 7 in the light theme |
+| `tests/smoke.spec.ts` | Navigation, Calendly modal and focus return, ⌘K search, the calculator formula, every form (validation and success), the PDF download, blog widgets scoring, work filters, every interactive section (service explorer, engagement models, region picker, screen tour, embedded tools, consent switch, post feedback, 404 search), reduced motion, consent gating, phone-width overflow on 16 pages and the mobile menu, and axe (WCAG 2.2 AA) on 15 pages in the dark theme and 10 in the light theme |
 | `tests/webgl.spec.ts` | One shared canvas, scenes attach, no console errors, and at phone width the 3D layout never widens the page (before and after the canvas mounts). Needs a hardware GPU and skips itself without one |
 
 Functional tests launch Chrome with `--disable-gpu`, so the site takes its no-WebGL path: fast, deterministic and
@@ -245,7 +288,7 @@ WebKit, iPhone and a small Android profile; run `npx playwright install` first �
 Lighthouse budgets are in `lighthouserc.json` (desktop: performance ≥ 90, accessibility ≥ 95, best practices ≥ 95,
 SEO 100, CLS < 0.05) and `lighthouserc.mobile.json` (performance ≥ 80). Run `npm run lhci` / `npm run lhci:mobile`;
 reports are written to `lhci-reports/` and are not uploaded anywhere. The summary from the build session (desktop and
-mobile, 11 page types) is in `docs/lighthouse/SUMMARY.md`; `node scripts/lh-summary.mjs <folder> --write` builds
+mobile, 13 page types) is in `docs/lighthouse/SUMMARY.md`; `node scripts/lh-summary.mjs <folder> --write` builds
 that table from a folder of Lighthouse JSON reports.
 `.github/workflows/ci.yml` runs lint, type-check, build, Playwright, both Lighthouse configs and the JS budget.
 
@@ -272,6 +315,9 @@ Rules that keep it there:
 
 `node scripts/profile.mjs <url>` records a CPU profile under 4× throttling and prints the hottest functions, for
 when Total Blocking Time moves.
+
+`node scripts/overflow.mjs <url> [width]` lists the elements that stick out of a phone-width viewport, for when the
+overflow test fails.
 
 `scripts/shots.mjs` takes full-resolution screenshots through headless Chrome with the GPU on, for reviewing 3D work:
 
