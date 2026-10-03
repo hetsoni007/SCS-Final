@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "App Store & Google Play Launch: A 2026 Submission Checklist",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-06-17",
+  "dateModified": "2026-06-17",
+  "articleSection": "Mobile",
+  "description": "A practical 2026 checklist for launching on the App Store and Google Play — developer accounts, store listing and ASO, privacy labels, screenshots, common rejection reasons, staged rollout and launch day."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "App Store & Google Play Launch: A 2026 Submission Checklist",
+    "item": "https://soniconsultancyservices.com/blog/app-store-launch-checklist"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "How long does app store review take in 2026?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Apple's App Store review typically returns within a day or two, though it can be longer for a first submission or a flagged build. Google Play review can range from hours to a few days, and new developer accounts may face extra verification. Always build a buffer into your launch date rather than assuming same-day approval."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Why do apps get rejected from the App Store?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "The most common reasons are crashes and bugs in review, inaccurate or incomplete privacy disclosures, broken or placeholder links, missing demo credentials for a login-gated app, misleading metadata or screenshots, and using private APIs. Most rejections are avoidable with a clean build and an honest, complete listing."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What are privacy nutrition labels and the Play Data safety form?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Both stores require you to declare what data your app collects, why, and whether it is linked to the user or used for tracking. Apple calls these privacy nutrition labels; Google calls it the Data safety section. They must accurately match what your app and its SDKs actually do — inaccurate declarations are a frequent cause of rejection and removal."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Should I release to 100% of users at launch?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Usually no. A staged (phased) rollout releases to a small percentage of users first so you can watch crash and review metrics before going wide. If something breaks, you halt the rollout instead of shipping the problem to your entire user base on day one."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can you handle our app store submission and launch?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. We take React Native apps through the full release process — store accounts, signing, listings, privacy declarations, screenshots, review and a staged rollout — and set up the pipeline so future releases are routine. Book a call and we'll map your launch."
+    }
+   }
+  ]
+ }
+]

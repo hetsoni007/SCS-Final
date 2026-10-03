@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "From MVP to Product-Market Fit: What Changes After Launch",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-03-18",
+  "dateModified": "2026-06-14",
+  "articleSection": "Strategy",
+  "description": "How to measure product-market fit, the metrics that matter, the mistakes that stall founders after launch, and how to run the first 90 days to find traction faster."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "From MVP to Product-Market Fit: What Changes After Launch",
+    "item": "https://soniconsultancyservices.com/blog/mvp-to-product-market-fit"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "How long does it take to reach product-market fit?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "There's no fixed timeline, but most teams that find product-market fit do so within 6-18 months of launch by iterating tightly. If you've been live for two years with flat retention and no organic pull, you likely haven't found it yet, and more features won't change that."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What is the 40% product-market fit test?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Survey activated users with 'How would you feel if you could no longer use this product?' If at least 40% answer 'very disappointed', you likely have product-market fit. It's a directional gut-check best paired with retention data."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Should I add features or improve retention first?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Retention, almost always. New features rarely rescue a product users don't return to; they add surface area to maintain. Fix the drop-off in your core loop before broadening scope."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What metrics prove product-market fit?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Flattening cohort-retention curves, a 40%-plus 'very disappointed' score, and growth increasingly driven by word of mouth. Downloads and signups are vanity metrics that don't count."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can an agency help us find product-market fit?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "A good product partner won't hand you fit but will get you there faster by instrumenting analytics, running a disciplined iteration loop, and shipping the right small tests instead of a bloated roadmap."
+    }
+   }
+  ]
+ }
+]

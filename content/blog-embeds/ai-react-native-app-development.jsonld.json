@@ -1,0 +1,80 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Build an AI-Powered React Native App in 2026",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-06-13",
+  "dateModified": "2026-06-13",
+  "articleSection": "Mobile"
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "How to Build an AI-Powered React Native App in 2026",
+    "item": "https://soniconsultancyservices.com/blog/ai-react-native-app-development"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Can a React Native app run AI models on-device?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. In 2026 libraries like react-native-executorch and Callstack's react-native-ai run small-to-mid sized models directly on the phone — chat, speech-to-text and image classification — with no network call. It is ideal for privacy-sensitive features, offline use and high call volume, at the cost of a larger app binary and a model ceiling lower than the frontier cloud models."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Should I call the OpenAI or Claude API directly from a React Native app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "No. An API key shipped inside a mobile binary can be extracted and abused, running up your bill. Route every model call through your own backend, which holds the key, enforces auth and rate limits, and can swap providers without an app-store release."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How much does it cost to add AI to a React Native app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "It depends on the feature set: a single chat or summarise feature on top of an existing app is a small add-on, while retrieval (RAG), voice, vision or multi-step automation each add backend, data and evaluation work. The build is usually predictable; the surprise is per-token running cost, which scales with context size and usage. Our app cost calculator gives an instant indicative range."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How long does it take to build an AI feature into a mobile app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "A focused AI feature on an existing React Native app typically lands in 2–5 weeks including evaluation; a new AI-first app with RAG, auth and a polished UI is more like 8–14 weeks to the stores. Most of the time goes into data plumbing, prompt and retrieval quality, and testing — not the UI."
+    }
+   }
+  ]
+ }
+]

@@ -1,0 +1,810 @@
+{
+ "slug": "ai-app-development",
+ "path": "/ai-app-development/",
+ "meta": {
+  "title": "AI App Development | Soni Consultancy Services",
+  "description": "Build AI-powered mobile apps — Claude & GPT integration, assistants, RAG and prediction in React Native. 12 AI app ideas and how we ship them.",
+  "keywords": "AI app development, AI app development company, React Native AI integration, ChatGPT app development, Claude API integration, build an AI app, AI chatbot app, LLM app development, AI agent development, AI SaaS development, on-device AI mobile",
+  "robots": "index,follow,max-image-preview:large",
+  "canonical": "https://soniconsultancyservices.com/ai-app-development/",
+  "ogTitle": "AI App Development — Build AI-Powered Mobile Apps",
+  "ogDescription": "Claude & GPT-powered React Native apps. 12 AI app ideas + how we build them.",
+  "ogType": "website"
+ },
+ "h1": "Build an app that thinks.",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Service",
+   "serviceType": "AI App Development",
+   "provider": {
+    "@type": "Organization",
+    "name": "Soni Consultancy Services"
+   },
+   "description": "AI-powered mobile app development with React Native, MERN, Claude and GPT.",
+   "areaServed": "Worldwide"
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://soniconsultancyservices.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "AI App Development",
+     "item": "https://soniconsultancyservices.com/ai-app-development/"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What kind of AI features do you build into apps?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Practical, revenue-relevant features — AI support assistants (RAG), predictive pricing, smart matching engines, document/receipt scanning, voice assistants, content generation, analytics copilots, sales copilots, AI tutors, shopping concierges, and moderation/safety. See the 12 ideas above."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you use Claude or GPT?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Both — we choose the model and pattern (RAG vs fine-tune, on-device vs cloud, single call vs agent) based on accuracy, latency and cost for your use case, not hype."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How long does it take to ship an AI feature?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Typically around 6 weeks from idea to a working AI feature in users' hands."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is the AI feature built into my React Native app, or is it a separate product?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It ships inside your real product — React Native front end, MERN backend, vector store, caching and guardrails for when the model gets it wrong."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do you make sure the AI actually works before launch?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We define the outcome and write eval/test cases before building, then launch behind a human-in-the-loop and expand automation as the data earns trust."
+     }
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "AI App Development"
+    },
+    {
+     "t": "h",
+     "level": 1,
+     "html": "Build an app that<br>thinks.",
+     "cls": "display"
+    },
+    {
+     "t": "p",
+     "html": "AI is no longer a feature you bolt on — it's the reason users pick one app over another. We build <strong>React Native apps with Claude &amp; GPT inside</strong>, from smart assistants to prediction engines. Here are the ideas, and how we ship them.",
+     "cls": "lead"
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Discuss Your AI App",
+       "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+       "variant": "primary"
+      },
+      {
+       "label": "See 12 AI app ideas ↓",
+       "href": "#ideas",
+       "variant": "glass"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "grid",
+     "cls": "g3",
+     "items": [
+      {
+       "cls": "glass",
+       "blocks": [
+        {
+         "t": "metric",
+         "num": "3×",
+         "lbl": "Higher engagement when AI removes a manual step users hate"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "blocks": [
+        {
+         "t": "metric",
+         "num": "6wk",
+         "lbl": "From idea to a working AI feature in users' hands"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "blocks": [
+        {
+         "t": "metric",
+         "num": "∞",
+         "lbl": "Models improve over time — your app gets smarter without a rebuild"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ideas",
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Ideas worth building"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "12 AI app ideas<br>that actually convert.",
+     "cls": "h2"
+    },
+    {
+     "t": "p",
+     "html": "Not \"AI for AI's sake\" — each of these solves a real, billable problem. Pick one, or bring your own and we'll scope it.",
+     "cls": "lead"
+    },
+    {
+     "t": "grid",
+     "cls": "idea-grid",
+     "items": [
+      {
+       "cls": "glass idea",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "AI Support Assistant"
+        },
+        {
+         "t": "p",
+         "html": "A 24/7 in-app assistant that answers from your own docs (RAG), deflects tickets and hands off to a human when it matters."
+        },
+        {
+         "t": "text",
+         "html": "Claude · RAG · Chat",
+         "cls": "tag"
+        }
+       ]
+      },
+      {
+       "cls": "glass idea",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Predictive Pricing"
+        },
+        {
+         "t": "p",
+         "html": "AI fare / price prediction based on demand, time and traffic — like we've built for ride-hailing clients. Transparent pricing users trust."
+        },
+        {
+         "t": "text",
+         "html": "ML · Forecasting",
+         "cls": "tag"
+        }
+       ]
+      },
+      {
+       "cls": "glass idea",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Smart Matching Engine"
+        },
+        {
+         "t": "p",
+         "html": "Pair people, jobs, venues or products by intent — not keywords. Embeddings + ranking that gets better as data grows."
+        },
+        {
+         "t": "text",
+         "html": "Embeddings · Vector DB",
+         "cls": "tag"
+        }
+       ]
+      },
+      {
+       "cls": "glass idea",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Document &amp; Receipt Scanner"
+        },
+        {
+         "t": "p",
+         "html": "Snap a photo → AI extracts, classifies and files it. Invoices, IDs, receipts, forms — OCR plus an LLM that understands context."
+        },
+        {
+         "t": "text",
+         "html": "Vision · OCR · LLM",
+         "cls": "tag"
+        }
+       ]
+      },
+      {
+       "cls": "glass idea",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "AI Voice Assistant"
+        },
+        {
+         "t": "p",
+         "html": "Hands-free, natural-language control of your app. Speech-to-text, intent, and an LLM that actually does the task."
+        },
+        {
+         "t": "text",
+         "html": "Voice · STT · Agents",
+         "cls": "tag"
+        }
+       ]
+      },
+      {
+       "cls": "glass idea",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "AI Health &amp; Fitness Coach"
+        },
+        {
+         "t": "p",
+         "html": "Personalised plans, form feedback and check-ins that adapt to the user — coaching that feels one-to-one at scale."
+        },
+        {
+         "t": "text",
+         "html": "Personalisation",
+         "cls": "tag"
+        }
+       ]
+      },
+      {
+       "cls": "glass idea",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "AI Content Generator"
+        },
+        {
+         "t": "p",
+         "html": "Captions, listings, replies, summaries — on-brand content generated in-app so users ship faster and stay longer."
+        },
+        {
+         "t": "text",
+         "html": "GPT · Claude",
+         "cls": "tag"
+        }
+       ]
+      },
+      {
+       "cls": "glass idea",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "AI Analytics &amp; Insights"
+        },
+        {
+         "t": "p",
+         "html": "Turn raw data into plain-English insights and next actions — a \"talk to your data\" layer on dashboards."
+        },
+        {
+         "t": "text",
+         "html": "RAG · Analytics",
+         "cls": "tag"
+        }
+       ]
+      },
+      {
+       "cls": "glass idea",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "AI Sales Co-pilot"
+        },
+        {
+         "t": "p",
+         "html": "Lead scoring, follow-up drafting and call summaries inside your CRM app — reps sell, AI handles the admin."
+        },
+        {
+         "t": "text",
+         "html": "Agents · Automation",
+         "cls": "tag"
+        }
+       ]
+      },
+      {
+       "cls": "glass idea",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "AI Tutor / LMS"
+        },
+        {
+         "t": "p",
+         "html": "Adaptive lessons, instant Q&amp;A and auto-graded practice — like the gamified LMS we built for a retail platform, with an AI that meets each learner."
+        },
+        {
+         "t": "text",
+         "html": "Education · RAG",
+         "cls": "tag"
+        }
+       ]
+      },
+      {
+       "cls": "glass idea",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "AI Shopping Concierge"
+        },
+        {
+         "t": "p",
+         "html": "Natural-language product discovery and recommendations that lift basket size and cut returns."
+        },
+        {
+         "t": "text",
+         "html": "Recommendations",
+         "cls": "tag"
+        }
+       ]
+      },
+      {
+       "cls": "glass idea",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "AI Moderation &amp; Safety"
+        },
+        {
+         "t": "p",
+         "html": "Real-time content moderation, fraud signals and SOS triage — keep your community and platform safe at scale."
+        },
+        {
+         "t": "text",
+         "html": "Classification · Trust",
+         "cls": "tag"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "How we ship AI"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "From idea to a smart<br>app in four moves.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "items": [
+      {
+       "cls": "step",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "01",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Define the win &amp; the eval"
+        },
+        {
+         "t": "p",
+         "html": "We start from the outcome — the manual step to kill or the metric to move — and write the test cases that prove the AI works before we build it."
+        }
+       ]
+      },
+      {
+       "cls": "step",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "02",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Pick the right model &amp; pattern"
+        },
+        {
+         "t": "p",
+         "html": "Claude or GPT, RAG vs fine-tune, on-device vs cloud, single call vs agent. We choose for accuracy, latency and cost — not hype."
+        }
+       ]
+      },
+      {
+       "cls": "step",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "03",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Build into React Native + MERN"
+        },
+        {
+         "t": "p",
+         "html": "The AI ships inside a real product — clean UX, a MERN backend, vector store, caching and guardrails for when the model is wrong."
+        }
+       ]
+      },
+      {
+       "cls": "step",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "04",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Measure, ship, improve"
+        },
+        {
+         "t": "p",
+         "html": "Instrumented from day one — cost, latency and quality visible. We launch behind a human-in-the-loop, then expand as the data earns trust."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Where the market is moving"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "What everyone's<br>searching for in 2026.",
+     "cls": "h2"
+    },
+    {
+     "t": "p",
+     "html": "High-intent demand around React Native &amp; AI — the conversations we're having with founders every week.",
+     "cls": "lead"
+    },
+    {
+     "t": "chips",
+     "items": [
+      {
+       "label": "AI app development"
+      },
+      {
+       "label": "React Native AI integration"
+      },
+      {
+       "label": "ChatGPT app development"
+      },
+      {
+       "label": "Claude API integration"
+      },
+      {
+       "label": "build an AI app"
+      },
+      {
+       "label": "AI chatbot for business"
+      },
+      {
+       "label": "LLM app development"
+      },
+      {
+       "label": "AI agent development"
+      },
+      {
+       "label": "on-device AI mobile"
+      },
+      {
+       "label": "cross-platform app development"
+      },
+      {
+       "label": "hire React Native developers"
+      },
+      {
+       "label": "AI SaaS development"
+      },
+      {
+       "label": "RAG application development"
+      },
+      {
+       "label": "AI MVP development"
+      },
+      {
+       "label": "React Native vs Flutter"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Got an AI idea?<br>Let's see if it's worth building.",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "30 minutes with a senior engineer who ships AI for a living. We'll tell you honestly whether AI is the right call — and what it takes.",
+       "cls": "lead"
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Book Your Free AI Call →",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "primary"
+        },
+        {
+         "label": "See AI we've shipped",
+         "href": "/work/",
+         "variant": "glass"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Free guides & tools"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Scope it before you build it.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "g3",
+     "items": [
+      {
+       "cls": "glass",
+       "href": "/blog/can-ai-build-my-app",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Scope tool"
+        },
+        {
+         "t": "text",
+         "html": "Can AI build your app?"
+        },
+        {
+         "t": "text",
+         "html": "Find out →"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/blog/mvp-tech-stack-2026",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Stack picker"
+        },
+        {
+         "t": "text",
+         "html": "Which stack fits your MVP"
+        },
+        {
+         "t": "text",
+         "html": "Get a recommendation →"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/blog/dpdp-act-app-compliance-india",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Self-audit"
+        },
+        {
+         "t": "text",
+         "html": "Is your app DPDP-ready?"
+        },
+        {
+         "t": "text",
+         "html": "Score your readiness →"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "form",
+     "id": "leadForm",
+     "fields": [
+      {
+       "name": "lbName",
+       "id": "lbName",
+       "type": "text",
+       "label": "Your name",
+       "placeholder": "Jane Doe",
+       "required": false
+      },
+      {
+       "name": "lbEmail",
+       "id": "lbEmail",
+       "type": "email",
+       "label": "Work email",
+       "placeholder": "jane@company.com",
+       "required": false
+      },
+      {
+       "name": "lbWant",
+       "id": "lbWant",
+       "type": "text",
+       "label": "What are you building?",
+       "placeholder": "One line is plenty — e.g. a patient booking app for 3 clinics",
+       "required": false
+      },
+      {
+       "name": "lbBudget",
+       "id": "lbBudget",
+       "type": "select",
+       "label": "Budget",
+       "required": false,
+       "options": [
+        "Select a range",
+        "Not sure yet",
+        "<$10k",
+        "$10-25k",
+        "$25-60k",
+        "$60k+"
+       ]
+      },
+      {
+       "name": "lbTime",
+       "id": "lbTime",
+       "type": "select",
+       "label": "Timeline",
+       "required": false,
+       "options": [
+        "Select a timeline",
+        "ASAP",
+        "1-3 months",
+        "3-6 months",
+        "Just exploring"
+       ]
+      },
+      {
+       "type": "checkbox",
+       "label": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+       "required": false
+      }
+     ],
+     "submit": "Send →",
+     "kick": "Start here",
+     "title": "Scope your AI feature.",
+     "sub": "Describe the feature in one line. We’ll tell you honestly whether AI is the right tool for it — including when it isn’t.",
+     "note": "Replies within one business day · no upfront fee to talk",
+     "consent": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+     "success": "✓ Thanks — that’s with Het. You’ll get a reply within one business day, usually with either a straight answer or the two or three questions needed to scope it properly."
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Common questions"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "About building AI in.",
+     "cls": "h2"
+    },
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What kind of AI features do you build into apps?",
+       "a": "Practical, revenue-relevant features — AI support assistants (RAG), predictive pricing, smart matching engines, document/receipt scanning, voice assistants, content generation, analytics copilots, sales copilots, AI tutors, shopping concierges, and moderation/safety. See the 12 ideas above."
+      },
+      {
+       "q": "Do you use Claude or GPT?",
+       "a": "Both — we choose the model and pattern (RAG vs fine-tune, on-device vs cloud, single call vs agent) based on accuracy, latency and cost for your use case, not hype."
+      },
+      {
+       "q": "How long does it take to ship an AI feature?",
+       "a": "Typically around 6 weeks from idea to a working AI feature in users' hands."
+      },
+      {
+       "q": "Is the AI feature built into my React Native app, or is it a separate product?",
+       "a": "It ships inside your real product — React Native front end, MERN backend, vector store, caching and guardrails for when the model gets it wrong."
+      },
+      {
+       "q": "How do you make sure the AI actually works before launch?",
+       "a": "We define the outcome and write eval/test cases before building, then launch behind a human-in-the-loop and expand automation as the data earns trust."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

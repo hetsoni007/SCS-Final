@@ -1,0 +1,191 @@
+{
+ "type": "quiz",
+ "kick": "Interactive · migration urgency check",
+ "keys": [
+  "urgent",
+  "soon",
+  "fine"
+ ],
+ "results": {
+  "urgent": {
+   "label": "Migrate now",
+   "name": "This needs to move to the top of the roadmap",
+   "why": "Between the version you are on and the shape of your dependencies, you are carrying real risk today — either you cannot get security or bug fixes without upgrading, or an upgrade is going to force this migration on you with far less control over timing than you have right now.",
+   "note": "Start with the native module audit this week, even before you touch a release plan. It is the one step that tells you the real size of the job."
+  },
+  "soon": {
+   "label": "Plan it for this quarter",
+   "name": "Not an emergency, but don’t let it drift",
+   "why": "You have some runway, but the gap between where you are and where React Native is heading is widening every release. Doing this on your own schedule, with time to audit dependencies properly, is a materially easier project than doing it under pressure later.",
+   "note": "Put a native module audit on the roadmap now, even if the migration itself waits a sprint or two."
+  },
+  "fine": {
+   "label": "You’re in reasonable shape",
+   "name": "No immediate action needed",
+   "why": "Either you are already on the New Architecture or close to a version where the jump is small. Keep an eye on your dependency versions as you update React Native, since New Architecture support is uneven across the ecosystem.",
+   "note": "Re-run this check whenever you plan your next React Native upgrade."
+  }
+ },
+ "questions": [
+  {
+   "q": "What React Native version is your app on?",
+   "a": [
+    {
+     "t": "0.82 or later",
+     "s": "New Architecture only — already migrated",
+     "w": {
+      "fine": 3
+     }
+    },
+    {
+     "t": "0.76 – 0.81",
+     "s": "New Architecture available, opt-in or default",
+     "w": {
+      "soon": 2,
+      "fine": 1
+     }
+    },
+    {
+     "t": "0.70 – 0.75",
+     "w": {
+      "urgent": 2,
+      "soon": 1
+     }
+    },
+    {
+     "t": "Older than 0.70, or not sure",
+     "w": {
+      "urgent": 3
+     }
+    }
+   ]
+  },
+  {
+   "q": "How many custom or third-party native modules does your app use?",
+   "a": [
+    {
+     "t": "Almost none — mostly JavaScript",
+     "w": {
+      "fine": 2,
+      "soon": 1
+     }
+    },
+    {
+     "t": "A handful of well-maintained libraries",
+     "w": {
+      "soon": 2
+     }
+    },
+    {
+     "t": "Several, including some rarely updated",
+     "w": {
+      "urgent": 2,
+      "soon": 1
+     }
+    },
+    {
+     "t": "Many, including custom in-house native code",
+     "w": {
+      "urgent": 3
+     }
+    }
+   ]
+  },
+  {
+   "q": "Do you rely on an Expo managed workflow?",
+   "a": [
+    {
+     "t": "Yes, on a recent SDK",
+     "w": {
+      "fine": 2
+     }
+    },
+    {
+     "t": "Yes, but an older SDK",
+     "w": {
+      "soon": 2
+     }
+    },
+    {
+     "t": "No — bare React Native",
+     "w": {
+      "soon": 1,
+      "urgent": 1
+     }
+    },
+    {
+     "t": "Not sure",
+     "w": {
+      "urgent": 1,
+      "soon": 1
+     }
+    }
+   ]
+  },
+  {
+   "q": "When did you last upgrade React Native?",
+   "a": [
+    {
+     "t": "Within the last 3 months",
+     "w": {
+      "fine": 2
+     }
+    },
+    {
+     "t": "3–12 months ago",
+     "w": {
+      "soon": 2
+     }
+    },
+    {
+     "t": "1–2 years ago",
+     "w": {
+      "urgent": 2,
+      "soon": 1
+     }
+    },
+    {
+     "t": "More than 2 years, or never",
+     "w": {
+      "urgent": 3
+     }
+    }
+   ]
+  },
+  {
+   "q": "What happens if you need a security or bug fix from React Native itself?",
+   "a": [
+    {
+     "t": "We can upgrade freely, no blockers",
+     "w": {
+      "fine": 2
+     }
+    },
+    {
+     "t": "We could, but it would take real effort",
+     "w": {
+      "soon": 2
+     }
+    },
+    {
+     "t": "We are stuck — a dependency blocks upgrading",
+     "w": {
+      "urgent": 3
+     }
+    },
+    {
+     "t": "Honestly, we don’t know",
+     "w": {
+      "urgent": 1,
+      "soon": 1
+     }
+    }
+   ]
+  }
+ ],
+ "cta": {
+  "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+  "label": "Get a migration scoping call →"
+ },
+ "badge": "Your result"
+}

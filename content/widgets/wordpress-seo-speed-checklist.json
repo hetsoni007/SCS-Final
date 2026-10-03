@@ -1,0 +1,89 @@
+{
+ "type": "audit",
+ "kick": "✦ Interactive self-audit · answer all 10",
+ "items": [
+  {
+   "t": "Quality hosting, not bargain shared",
+   "d": "Managed WordPress or VPS hosting with server-level caching and PHP 8+ — not a ₹99/month shared plan."
+  },
+  {
+   "t": "Page caching is active",
+   "d": "A caching plugin or host-level page cache serves prebuilt pages instead of rebuilding every request."
+  },
+  {
+   "t": "Images are optimised",
+   "d": "WebP format, sized to display dimensions, lazy-loaded below the fold — not full-size camera uploads."
+  },
+  {
+   "t": "Plugins are audited",
+   "d": "Every active plugin earns its place; unused ones deleted (not just deactivated); no overlapping duplicates."
+  },
+  {
+   "t": "A CDN serves your assets",
+   "d": "Static files delivered from edge locations near your visitors — critical for India’s mobile networks."
+  },
+  {
+   "t": "Core Web Vitals pass on mobile",
+   "d": "Green LCP/CLS/INP in PageSpeed Insights on mobile, not just desktop."
+  },
+  {
+   "t": "SEO basics are wired up",
+   "d": "Unique titles and meta descriptions, an XML sitemap submitted to Google Search Console, clean permalinks."
+  },
+  {
+   "t": "Schema markup exists",
+   "d": "Structured data for your business/products so Google (and AI search) understands the site."
+  },
+  {
+   "t": "HTTPS everywhere, no mixed content",
+   "d": "Valid SSL, all assets over HTTPS, HTTP redirecting to HTTPS."
+  },
+  {
+   "t": "Old URLs redirect after changes",
+   "d": "Any rebuild/migration preserved URLs or 301-redirected old ones — no ranking thrown away."
+  }
+ ],
+ "options": [
+  [
+   "Yes",
+   2
+  ],
+  [
+   "Partly",
+   1
+  ],
+  [
+   "No",
+   0
+  ]
+ ],
+ "verdicts": [
+  {
+   "min": 80,
+   "title": "Solid: ",
+   "text": "Your site\\u2019s foundations look good. Keep plugins updated, re-run this quarterly, and consider a professional Core Web Vitals pass to squeeze out the rest."
+  },
+  {
+   "min": 50,
+   "title": "Gaps to close: ",
+   "text": "Real gaps, but fixable ones. Start with hosting and caching \\u2014 they\\u2019re the biggest wins \\u2014 then images, then the plugin audit. Most of this is days of work, not a rebuild."
+  },
+  {
+   "min": 0,
+   "title": "Losing customers: ",
+   "text": "At this score your site is actively costing you speed, rankings and conversions. The fixes are well-understood \\u2014 hosting, caching, images, redirects \\u2014 and a focused rescue usually beats starting over."
+  }
+ ],
+ "ctas": [
+  {
+   "label": "Get your site fixed →",
+   "href": "/wordpress-website-development-india/#quote",
+   "primary": true
+  },
+  {
+   "label": "Book a free call",
+   "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+   "primary": false
+  }
+ ]
+}

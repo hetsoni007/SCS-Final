@@ -1,0 +1,72 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How Much Does It Cost to Build an AI App in 2026?",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-05-20",
+  "dateModified": "2026-06-11",
+  "articleSection": "AI"
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "How Much Does It Cost to Build an AI App in 2026?",
+    "item": "https://soniconsultancyservices.com/blog/ai-app-development-cost-2026"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "How much does it cost to build an AI app in 2026?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "A focused AI MVP typically runs £15k–£35k, a growth product £35k–£80k, and a scale platform £80k–£150k+. The spread comes from integration surface, data work and the accuracy bar — not the AI itself."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What are the ongoing costs of an AI app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Model usage (which scales with traffic), hosting and monitoring, plus maintenance — budget 15–20% of the build cost annually. Caching and retrieval keep model costs predictable."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How can I reduce AI app development cost?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Scope to the single most valuable feature, ship behind a human review step, use API-based models instead of training your own, and build cross-platform so one codebase serves iOS and Android."
+    }
+   }
+  ]
+ }
+]

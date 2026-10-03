@@ -1,0 +1,123 @@
+---
+slug: "build-vs-buy-ai-cto-framework"
+title: "Build vs Buy AI: A CTO's Decision Framework"
+metaTitle: "Build vs Buy AI: A CTO's Decision Framework"
+description: "The most expensive AI mistake is building what you should have bought. A four-axis decision framework to help CTOs get build-vs-buy right the first time."
+canonical: "https://soniconsultancyservices.com/blog/build-vs-buy-ai-cto-framework"
+ogTitle: "Build vs Buy AI: A CTO's Decision Framework"
+ogDescription: "The decision framework that helps you get build-vs-buy right the first time."
+categories: ["AI","CTO Strategy"]
+lead: "The most expensive AI mistake isn't a failed build — it's building something you should have bought, or buying something that should have been your moat. Here's how to tell the difference."
+author: "Het Soni"
+readTime: "10 min read"
+dateLabel: "Updated June 2026"
+datePublished: "2026-05-08"
+dateModified: "2026-06-14"
+excerpt: "The most expensive AI mistake is building what you should have bought."
+indexOrder: 27
+indexFilter: "ai strategy"
+cta: {"heading":"Facing a build-vs-buy call?","body":"Walk us through the capability. We'll help you find the line between your moat and your plumbing.","buttons":[{"label":"Book a Free Call →","href":"https://calendly.com/het-soni-soniconsultancyservices/introductory"},{"label":"More articles","href":"/blog/"}]}
+related: ["bsa-aml-software-build-vs-buy","ai-agent-development-services","ai-app-development-cost-2026"]
+hasWidget: false
+---
+
+## The real question
+
+"Build vs buy" is the wrong framing because it implies a binary. Almost every AI feature in 2026 is **assembled** — you buy the model, you buy some infrastructure, and you build the thin layer of logic and data that makes it yours. The real question is: *which layer is your competitive advantage, and which is a commodity you should never have written?*
+
+## The four axes
+
+### 1\. Is it core to your differentiation?
+
+If a customer would choose you *because* of how this works, build it. If it's table stakes everyone has, buy it. You don't earn points for building your own auth, transcription or vector database.
+
+### 2\. Does it depend on your proprietary data?
+
+If the value comes from data only you have, the logic around it is yours to build. If it runs on public knowledge a vendor already has, buy it — they'll out-invest you.
+
+### 3\. What's the cost of switching later?
+
+Buying is fast but creates lock-in. Build the parts where being trapped would be fatal; buy the parts you could swap in a weekend. Keep a clean interface either way.
+
+### 4\. Do you have the team to maintain it?
+
+A build isn't done at launch — it's done when you stop needing it. If you can't staff ongoing maintenance, buying is the honest choice.
+
+<Callout>
+
+**The trap:** teams build commodity infrastructure because it feels like "real engineering," then buy the differentiating layer because it feels too hard. That's exactly backwards.
+
+</Callout>
+
+## When to buy
+
+-   The capability is a solved commodity (speech-to-text, OCR, generic chat, embeddings).
+-   A vendor's scale gives quality you can't match.
+-   You need it live this month and a build would take a quarter.
+
+## When to build
+
+-   It runs on your proprietary data or workflow.
+-   It *is* the product, or the reason customers pick you.
+-   Vendor economics break at your scale, or lock-in is existential.
+
+## The hybrid path (almost always the answer)
+
+Buy the foundation model and infrastructure. Build the orchestration, the data layer, the evaluation and the product experience. Wrap every bought component behind an interface you control so you can swap vendors without a rewrite.
+
+> Build your moat. Buy your plumbing. Never confuse the two.
+
+If you're staring at a build-vs-buy decision and want a second opinion from people who've shipped both — across [AI products](/ai-app-development/) and [the infrastructure underneath them](/devops-cloud-engineering/) — that's a good first call to have.
+
+## A worked example: a customer-support AI
+
+Say you want an AI assistant that answers customer questions. Run it through the four axes. The **foundation model**? Buy — you will never out-train a frontier lab on general language. The **vector database and retrieval infrastructure**? Buy or use open source; it's a solved commodity. But the **retrieval layer over your own docs, tickets and product data**, the **evaluation harness** that proves answers are correct, and the **escalation logic** that knows when to hand off to a human — that's your build, because it runs on your data and defines the experience. Same feature, four different answers, and the value lives almost entirely in the build half.
+
+## The total cost of ownership nobody budgets for
+
+"Build" looks cheaper because the invoice is internal. It rarely is. A real build TCO includes engineering time, an evaluation pipeline, inference and infrastructure cost, monitoring, and — the big one — *perpetual maintenance* as models, prompts and data drift. "Buy" trades that for a per-seat or usage fee, faster time-to-live and someone else's on-call, at the cost of margin and some lock-in. Price both over **three years**, not three months; the curves usually cross somewhere you didn't expect.
+
+## Build vs buy across the AI stack
+
+Make the decision layer by layer, not for the whole feature at once:
+
+-   **Foundation model** — buy. Frontier models are a commodity you reach via API.
+-   **Infrastructure & vector store** — buy or open source. Don't write your own.
+-   **Orchestration & agent logic** — build. This is your product's behaviour.
+-   **Data & RAG layer** — build. It runs on data only you have.
+-   **Evaluation & guardrails** — build the evals; buy and configure the safety filters.
+-   **Product experience** — build. Nobody ships your UX for you.
+
+## Five build-vs-buy mistakes
+
+1.  **Building commodity infrastructure** because it feels like "real engineering."
+2.  **Buying your moat** — outsourcing the one capability customers choose you for.
+3.  **No abstraction layer** — calling a vendor SDK directly everywhere, so switching means a rewrite.
+4.  **Skipping evaluation** — shipping an AI feature with no systematic way to know whether it's right.
+5.  **Underestimating maintenance** — treating a build as finished at launch.
+
+## When "buy" quietly becomes "build"
+
+Plenty of teams buy a tidy vendor solution, then hit its ceiling: it can't use their data the way they need, fine-tuning isn't exposed, or the per-token economics break at scale. By then, data gravity and workflow lock-in make leaving expensive. The defence is the abstraction layer from axis three — buy behind an interface you own, so "buy now, build later" stays a real option instead of a trap.
+
+## Frequently asked questions
+
+### Should a startup build its own LLM?
+
+Almost never. Training a foundation model costs millions and gives you nothing customers can see. Build the data, orchestration and product layers on top of a bought model — that's where your differentiation lives.
+
+### Is RAG a build or a buy?
+
+Hybrid. Buy the embedding model and vector store; build the retrieval logic, chunking and ranking over your proprietary content, plus the evaluation that proves it's accurate.
+
+### How do we avoid AI vendor lock-in?
+
+Wrap every bought component behind your own interface, keep prompts and data under your control, and maintain an evaluation suite so you can benchmark a replacement quickly. Lock-in is a design choice, not an inevitability.
+
+### When does buying make more sense than building an AI capability?
+
+When the capability is a solved commodity, a vendor's scale beats anything you'd build, or you need it live this month. Buy the plumbing; reserve your build budget for the moat.
+
+### Can you help us decide?
+
+Yes — we've shipped both sides of this line. [See how we approach AI builds](/ai-app-development/), or [book a call](https://calendly.com/het-soni-soniconsultancyservices/introductory) and walk us through the capability.

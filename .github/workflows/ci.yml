@@ -1,0 +1,38 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run build
+      - name: Playwright (URL parity, smoke, mobile, axe; plus Firefox, WebKit/Safari, iPhone and a small Android profile)
+        run: |
+          npx playwright install --with-deps chromium firefox webkit
+          npm run test:e2e:all
+      - name: Lighthouse CI (desktop + mobile budgets)
+        run: |
+          npm i -g @lhci/cli@0.15.x
+          lhci autorun --config=lighthouserc.json
+          lhci autorun --config=lighthouserc.mobile.json
+      - name: JavaScript budget (initial route JS < 180 KB gzip)
+        run: |
+          npm run start -- -p 3100 &
+          for i in $(seq 1 30); do curl -sf http://localhost:3100/ > /dev/null && break; sleep 1; done
+          npm run budget
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with: { name: playwright-report, path: playwright-report }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: lighthouse-reports, path: lhci-reports }

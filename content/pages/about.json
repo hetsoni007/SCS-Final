@@ -1,0 +1,605 @@
+{
+ "slug": "about",
+ "path": "/about/",
+ "meta": {
+  "title": "About | Soni Consultancy Services",
+  "description": "A senior-only React Native, MERN & AI app studio founded by Het Soni, shipping apps live on the App Store & Google Play across six countries.",
+  "robots": "index,follow,max-image-preview:large",
+  "canonical": "https://soniconsultancyservices.com/about/",
+  "ogTitle": "About — Soni Consultancy Services",
+  "ogDescription": "A senior-only React Native, MERN & AI app studio.",
+  "ogType": "website"
+ },
+ "h1": "A senior-only studio that actually ships.",
+ "breadcrumb": "Home › About",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "logo": "https://soniconsultancyservices.com/favicon.svg",
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://www.instagram.com/soni.consultancyservices/",
+    "https://www.facebook.com/soniconsultancyservices",
+    "https://medium.com/@hetsoni9398"
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "Person",
+   "name": "Het Soni",
+   "jobTitle": "Founder & Lead Engineer",
+   "url": "https://soniconsultancyservices.com/about/",
+   "worksFor": {
+    "@type": "Organization",
+    "name": "Soni Consultancy Services",
+    "url": "https://soniconsultancyservices.com"
+   },
+   "knowsAbout": [
+    "React Native",
+    "MERN Stack",
+    "AI App Development",
+    "Cross-platform mobile apps",
+    "DevOps"
+   ],
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://medium.com/@hetsoni9398"
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://soniconsultancyservices.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "About",
+     "item": "https://soniconsultancyservices.com/about/"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Who founded Soni Consultancy Services?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Het Soni, Founder & Lead Engineer, with 5+ years of senior commercial experience in React Native, MERN and AI."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What makes Soni Consultancy Services different from a typical agency?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We're a boutique studio, not an agency body-shop — the senior engineers on your first call are the ones who write your code and submit your app. No juniors, no account-manager layer."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which countries do you work with clients in?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The UK, US, UAE, India, Canada and Australia — six countries, one standard of senior-only engineering."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How many apps has Soni Consultancy Services shipped?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "4+ apps live across 8 store listings, serving users in 30+ countries."
+     }
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "cls": "page-hero",
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Who we are"
+    },
+    {
+     "t": "h",
+     "level": 1,
+     "html": "A senior-only studio<br>that actually ships.",
+     "cls": "h1"
+    },
+    {
+     "t": "p",
+     "html": "Soni Consultancy Services builds React Native &amp; MERN apps with AI inside — for founders and teams who care more about shipping than slideware.",
+     "cls": "lead"
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "grid",
+     "cls": "gauto glass",
+     "items": [
+      {
+       "blocks": [
+        {
+         "t": "text",
+         "html": "HS"
+        },
+        {
+         "t": "text",
+         "html": "Het Soni"
+        },
+        {
+         "t": "text",
+         "html": "Founder &amp; Lead Engineer"
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "LinkedIn ↗",
+           "href": "https://www.linkedin.com/in/hetsoni/"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "blocks": [
+        {
+         "t": "h",
+         "level": 2,
+         "html": "Built by engineers, run like a product team.",
+         "cls": "h3"
+        },
+        {
+         "t": "p",
+         "html": "We're a boutique studio, not an agency body-shop. The senior engineers on your first call are the ones who write your code and submit your app. We've shipped attendance &amp; payroll, retail ops, creator marketplaces and ride-hailing — real products, live on the App Store and Google Play, across six countries.",
+         "cls": "muted"
+        },
+        {
+         "t": "p",
+         "html": "Our edge is range: deep React Native and MERN, plus AI integration that earns its place. We move fast because we keep the team small and the standards high.",
+         "cls": "muted"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "grid",
+     "cls": "g4 glass",
+     "items": [
+      {
+       "cls": "metric",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "4+",
+         "cls": "num"
+        },
+        {
+         "t": "text",
+         "html": "Apps shipped",
+         "cls": "lbl"
+        }
+       ]
+      },
+      {
+       "cls": "metric",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "30+",
+         "cls": "num"
+        },
+        {
+         "t": "text",
+         "html": "Countries served",
+         "cls": "lbl"
+        }
+       ]
+      },
+      {
+       "cls": "metric",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "8",
+         "cls": "num"
+        },
+        {
+         "t": "text",
+         "html": "Store listings",
+         "cls": "lbl"
+        }
+       ]
+      },
+      {
+       "cls": "metric",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "5+",
+         "cls": "num"
+        },
+        {
+         "t": "text",
+         "html": "Yrs senior experience",
+         "cls": "lbl"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "What we value"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "How we work.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "g3",
+     "items": [
+      {
+       "cls": "glass",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Ship over slideware",
+         "cls": "h3"
+        },
+        {
+         "t": "p",
+         "html": "Working software every week beats a perfect plan. You see progress, not promises.",
+         "cls": "muted"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Senior, not staffed-up",
+         "cls": "h3"
+        },
+        {
+         "t": "p",
+         "html": "No juniors learning on your budget. Every line is written by someone who's shipped before.",
+         "cls": "muted"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Honest, even when it costs us",
+         "cls": "h3"
+        },
+        {
+         "t": "p",
+         "html": "If you shouldn't build it, we'll tell you. Trust beats one more invoice.",
+         "cls": "muted"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Where we work"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Six countries. One standard.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "region-grid",
+     "items": [
+      {
+       "cls": "glass region",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "🇬🇧",
+         "cls": "fl"
+        },
+        {
+         "t": "text",
+         "html": "United Kingdom",
+         "cls": "c"
+        },
+        {
+         "t": "text",
+         "html": "SaaS · FinTech · Healthcare",
+         "cls": "i"
+        }
+       ]
+      },
+      {
+       "cls": "glass region",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "🇺🇸",
+         "cls": "fl"
+        },
+        {
+         "t": "text",
+         "html": "United States",
+         "cls": "c"
+        },
+        {
+         "t": "text",
+         "html": "SaaS · AI · E-commerce",
+         "cls": "i"
+        }
+       ]
+      },
+      {
+       "cls": "glass region",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "🇦🇪",
+         "cls": "fl"
+        },
+        {
+         "t": "text",
+         "html": "UAE",
+         "cls": "c"
+        },
+        {
+         "t": "text",
+         "html": "Real Estate · Retail",
+         "cls": "i"
+        }
+       ]
+      },
+      {
+       "cls": "glass region",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "🇮🇳",
+         "cls": "fl"
+        },
+        {
+         "t": "text",
+         "html": "India",
+         "cls": "c"
+        },
+        {
+         "t": "text",
+         "html": "EdTech · FinTech · SaaS",
+         "cls": "i"
+        }
+       ]
+      },
+      {
+       "cls": "glass region",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "🇨🇦",
+         "cls": "fl"
+        },
+        {
+         "t": "text",
+         "html": "Canada",
+         "cls": "c"
+        },
+        {
+         "t": "text",
+         "html": "Healthcare · B2B",
+         "cls": "i"
+        }
+       ]
+      },
+      {
+       "cls": "glass region",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "🇦🇺",
+         "cls": "fl"
+        },
+        {
+         "t": "text",
+         "html": "Australia",
+         "cls": "c"
+        },
+        {
+         "t": "text",
+         "html": "PropTech · Marketplace",
+         "cls": "i"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Let's build something<br>worth shipping.",
+       "cls": "h2"
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Book a Free Call →",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "primary"
+        },
+        {
+         "label": "See our work",
+         "href": "/work/",
+         "variant": "glass"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "form",
+     "id": "leadForm",
+     "fields": [
+      {
+       "name": "lbName",
+       "id": "lbName",
+       "type": "text",
+       "label": "Your name",
+       "placeholder": "Jane Doe",
+       "required": false
+      },
+      {
+       "name": "lbEmail",
+       "id": "lbEmail",
+       "type": "email",
+       "label": "Work email",
+       "placeholder": "jane@company.com",
+       "required": false
+      },
+      {
+       "name": "lbWant",
+       "id": "lbWant",
+       "type": "text",
+       "label": "What are you building?",
+       "placeholder": "One line is plenty — e.g. a patient booking app for 3 clinics",
+       "required": false
+      },
+      {
+       "name": "lbBudget",
+       "id": "lbBudget",
+       "type": "select",
+       "label": "Budget",
+       "required": false,
+       "options": [
+        "Select a range",
+        "Not sure yet",
+        "<$10k",
+        "$10-25k",
+        "$25-60k",
+        "$60k+"
+       ]
+      },
+      {
+       "name": "lbTime",
+       "id": "lbTime",
+       "type": "select",
+       "label": "Timeline",
+       "required": false,
+       "options": [
+        "Select a timeline",
+        "ASAP",
+        "1-3 months",
+        "3-6 months",
+        "Just exploring"
+       ]
+      },
+      {
+       "type": "checkbox",
+       "label": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+       "required": false
+      }
+     ],
+     "submit": "Send →",
+     "kick": "Start here",
+     "title": "Start a conversation.",
+     "sub": "No pitch deck, no discovery-call funnel. It goes straight to Het, who reads every brief personally.",
+     "note": "Replies within one business day · no upfront fee to talk",
+     "consent": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+     "success": "✓ Thanks — that’s with Het. You’ll get a reply within one business day, usually with either a straight answer or the two or three questions needed to scope it properly."
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Common questions"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "About the studio.",
+     "cls": "h2"
+    },
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "Who founded Soni Consultancy Services?",
+       "a": "Het Soni, Founder &amp; Lead Engineer, with 5+ years of senior commercial experience in React Native, MERN and AI."
+      },
+      {
+       "q": "What makes Soni Consultancy Services different from a typical agency?",
+       "a": "We're a boutique studio, not an agency body-shop — the senior engineers on your first call are the ones who write your code and submit your app. No juniors, no account-manager layer."
+      },
+      {
+       "q": "Which countries do you work with clients in?",
+       "a": "The UK, US, UAE, India, Canada and Australia — six countries, one standard of senior-only engineering."
+      },
+      {
+       "q": "How many apps has Soni Consultancy Services shipped?",
+       "a": "4+ apps live across 8 store listings, serving users in 30+ countries."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

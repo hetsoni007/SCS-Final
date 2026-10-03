@@ -1,0 +1,22 @@
+{
+ "type": "custom",
+ "kick": "✦ Interactive · your assumptions, live math",
+ "note": "",
+ "ctas": [
+  {
+   "label": "Pressure-test your model on a free call →",
+   "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+   "primary": true
+  },
+  {
+   "label": "Estimate the build cost",
+   "href": "/app-cost-calculator/",
+   "primary": false
+  }
+ ],
+ "cards": [],
+ "out": [
+  "Est. monthly revenue",
+  "Est. annual run-rate"
+ ]
+}

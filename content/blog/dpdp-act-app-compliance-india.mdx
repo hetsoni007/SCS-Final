@@ -1,0 +1,119 @@
+---
+slug: "dpdp-act-app-compliance-india"
+title: "India's DPDP Act for Apps (2026): Deadlines, Consent, and a Readiness Check"
+metaTitle: "DPDP Act for Apps: 2026 Deadlines & Readiness Check"
+description: "India's DPDP Act reaches full enforcement in May 2027, with Consent Manager registration closing in November 2026."
+keywords: "DPDP Act mobile app compliance, DPDP Act 2026 deadline, India data protection app, DPDP consent manager, India app privacy compliance"
+canonical: "https://soniconsultancyservices.com/blog/dpdp-act-app-compliance-india"
+ogTitle: "DPDP Act for Apps: 2026 Deadlines & Readiness Check"
+ogDescription: "DPDP Act compliance for mobile apps: real deadlines, what consent actually requires, and a 10-point readiness self-check."
+categories: ["Strategy","Compliance","Interactive"]
+lead: "India's Digital Personal Data Protection Act has real deadlines now, real penalties, and no revenue threshold to hide behind. If your app touches the personal data of anyone in India, it applies to you. Score your readiness against ten controls below, then work through what each one actually means."
+author: "Het Soni"
+readTime: "9 min read"
+dateLabel: "September 2026"
+datePublished: "2026-09-03"
+dateModified: "2026-09-03"
+excerpt: "Full enforcement lands May 2027. Score your app against 10 controls and see what to fix first."
+indexOrder: 5
+indexFilter: "strategy mobile"
+cta: {"heading":"Want your app assessed against these controls?","body":"A 30-minute scoping call, then a fixed-price proposal within 48 hours. If it is not a fit, we will say so on the call.","buttons":[{"label":"Book a free scoping call →","href":"https://calendly.com/het-soni-soniconsultancyservices/introductory"},{"label":"Get the free scoping guide","href":"/app-scoping-guide/"}]}
+related: ["rbi-fintech-app-compliance-india","bsa-aml-software-build-vs-buy","woocommerce-payment-gateway-india"]
+hasWidget: true
+---
+
+<Callout>
+
+**Not legal advice.** This is an engineering-side readiness guide written by an app development studio, not a law firm. The DPDP Act has genuine legal complexity and the rules are still settling. Use this to understand what your product and codebase need to support, then take the specifics to a qualified privacy lawyer.
+
+</Callout>
+
+Most founders we speak to know the DPDP Act exists and assume it is a 2027 problem. Two things are worth correcting. First, the Consent Manager registration window is expected to close in November 2026, well before enforcement. Second, and more importantly: almost none of the required work is paperwork. Consent capture, withdrawal, and deletion on request are product features. They need designing, building and testing, and retrofitting them into a live app is considerably more expensive than designing them in.
+
+## The deadlines that matter
+
+Broadly, enforcement arrives in phases. The Data Protection Board of India has been established since November 2025. Consent Manager provisions activate around November 2026. Full enforcement — the hard date most coverage points to — lands in May 2027.
+
+Two details catch people out. There is no revenue threshold and no minimum user count: a side project with 200 users is in scope on the same terms as a funded startup. And it applies based on whose data you process, not where you are registered — if you handle personal data of people in India, a company incorporated anywhere is covered.
+
+Penalties are structured to be taken seriously, running to figures in the hundreds of crores for the most serious failures. For an early-stage company the practical risk is less the maximum fine than the position you end up in: a product that cannot honour a deletion request, discovered during due diligence.
+
+## Score your app
+
+Tick the controls you genuinely have in place today — not the ones you intend to build. The score updates live.
+
+<Widget post="dpdp-act-app-compliance-india" />
+
+## What each control actually means in the product
+
+### Consent has to be specific, and it cannot be bundled
+
+The single most common failure we see is one checkbox at signup covering everything the app will ever do. That is not consent under this regime. Each distinct purpose — analytics, marketing, location, sharing with a third party — needs its own clear, affirmative opt-in, described in plain language.
+
+Practically: a consent screen with separate toggles, defaulted off, each with a one-line explanation a normal person understands. Pre-ticked boxes and "by continuing you agree to everything" flows do not survive contact with this law.
+
+### Withdrawal must be as easy as giving consent
+
+If a user consented with one tap, they must be able to withdraw with roughly one tap. A settings screen where each consent can be switched off individually is the standard answer. Requiring an email to support, or burying it several screens deep, defeats the requirement.
+
+This has a technical consequence people miss: withdrawal has to actually propagate. If marketing consent is withdrawn, downstream systems need to stop processing. That is a data-pipeline problem, not a UI problem.
+
+### Deletion has to genuinely delete, on a clock
+
+Users can request erasure, and the expectation is prompt action — commonly discussed as a seven-day window. "Soft delete" that flips a flag while retaining the row is not erasure. Neither is deleting from your primary database while the data persists in analytics, backups, logs, a CRM and three SaaS tools.
+
+This is the requirement most likely to force real architectural work, because it means knowing every place a user's data has been copied to. If you cannot draw that map today, that is the first thing to fix — before the deadline, not after a request arrives.
+
+### Children's data has stricter rules
+
+Processing a child's data requires verifiable parental consent, and behavioural advertising to children is off the table. If your app might attract under-18 users, you need age assurance and a different consent path. "We didn't think kids used it" is not a defence.
+
+### Breach notification is a build task too
+
+You are expected to notify the Board and affected users of a personal data breach. Meeting that in practice requires detection — logging and alerting good enough to know a breach happened and which users were affected. A team without that instrumentation cannot notify on time, regardless of intent.
+
+## The order we would fix these in
+
+If you are starting from a low score, sequence matters more than heroics:
+
+-   **Draw the data map first.** Every field you collect, why, where it flows, how long you keep it. Everything else depends on this, and it usually takes less time than teams fear.
+-   **Fix consent capture next**, because it stops the problem growing. Every new user under a broken consent flow is another record you may have to unwind.
+-   **Then build withdrawal and deletion**, since they need the data map to be correct to work at all.
+-   **Then instrumentation** — logging, alerting, retention jobs — which is also the part that pays you back in ordinary operations.
+-   **Then the paperwork**: notices, records, vendor terms. Real, but cheap to produce once the product behaves correctly.
+
+## The uncomfortable but useful framing
+
+Almost every control here is something a well-built app should do anyway. Knowing where your data lives, deleting it when asked, asking permission in language people understand, noticing when you have been breached — these are marks of a product built by people paying attention. The Act sets a deadline for work that was always worth doing.
+
+The teams that will struggle are the ones treating this as a document to produce in early 2027. The ones that will be fine are treating it as a handful of features on the roadmap now.
+
+## Frequently asked questions
+
+<FaqList>
+<Faq q="When does the DPDP Act actually take effect for apps?">
+
+Enforcement is phased. The Data Protection Board has been in place since November 2025, Consent Manager provisions activate around November 2026, and full enforcement lands in May 2027. The practical deadline is earlier than the headline date, because consent, withdrawal and deletion are product features that need building and testing.
+
+</Faq>
+<Faq q="Does the DPDP Act apply to my app if my company is not registered in India?">
+
+Yes, if you process the personal data of people located in India. The Act follows whose data you handle rather than where you are incorporated, and there is no revenue threshold or minimum user count exemption.
+
+</Faq>
+<Faq q="What does valid consent look like in an app?">
+
+Specific, unbundled and affirmative. Each distinct purpose — analytics, marketing, location, third-party sharing — needs its own clear opt-in in plain language, defaulted off. A single checkbox at signup covering everything the app will ever do does not meet the standard.
+
+</Faq>
+<Faq q="Is soft-deleting a user record enough for a deletion request?">
+
+No. Flipping a deleted flag while retaining the data is not erasure, and neither is clearing your primary database while copies persist in analytics, backups, logs and third-party SaaS tools. Meeting deletion requests properly requires knowing every place a user's data has been copied to.
+
+</Faq>
+<Faq q="What should we do first if we are starting from nothing?">
+
+Draw the data map: every field you collect, why you collect it, where it flows and how long you keep it. Every other control depends on that being accurate, and it usually takes less time than teams expect. Fix consent capture next, so the problem stops growing while you work.
+
+</Faq>
+</FaqList>

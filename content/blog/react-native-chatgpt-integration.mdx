@@ -1,0 +1,92 @@
+---
+slug: "react-native-chatgpt-integration"
+title: "Integrating ChatGPT & LLMs into a React Native App"
+metaTitle: "Integrate ChatGPT & LLMs into a React Native App"
+description: "How to add ChatGPT or any LLM to a React Native app the right way — backend proxy vs direct calls, streaming responses, API-key security and cost control."
+canonical: "https://soniconsultancyservices.com/blog/react-native-chatgpt-integration"
+ogTitle: "Integrating ChatGPT & LLMs into a React Native App"
+ogDescription: "The right way to wire an LLM into React Native: proxy, streaming, key security and cost control."
+categories: ["Mobile","AI"]
+lead: "Wiring an LLM into a mobile app is easy to do badly and not much harder to do right. Here's the right way — the architecture, the one security rule that matters most, and how to make responses feel instant."
+author: "Het Soni"
+dateLabel: ""
+datePublished: "2026-06-13"
+dateModified: "2026-06-13"
+excerpt: "The right way: secure proxy, streaming responses and cost control."
+indexOrder: 32
+indexFilter: "mobile ai"
+cta: {"heading":"Adding AI to your app?","body":"We'll set up the secure proxy, streaming UI and cost controls so your LLM feature ships right the first time.","buttons":[{"label":"Book a Free Call →","href":"https://calendly.com/het-soni-soniconsultancyservices/introductory"},{"label":"Read the full guide","href":"/blog/ai-react-native-app-development"}]}
+related: ["ai-chatbot-app-react-native","ai-react-native-app-development","on-device-ai-react-native"]
+hasWidget: false
+---
+
+<Callout>
+
+**TL;DR:** Don't call the model from the app. Put your API key on a small **backend proxy**, call that from React Native, and **stream** the response token-by-token. That single pattern gives you secure keys, rate limiting, caching, provider portability, and a UI that feels alive. This is the integration layer of our wider [guide to building AI-powered React Native apps](/blog/ai-react-native-app-development).
+
+</Callout>
+
+## The 30-second version
+
+Every tutorial that has you paste an OpenAI key into a React Native file and `fetch` the model directly is showing you a demo, not a product. It works on your simulator and falls apart the moment real users install it. The production shape is barely more work and looks like this: the app sends a message to *your* server; your server adds the key, calls the model, and streams the answer back. That's it. Get this right and everything else — cost control, provider swaps, abuse protection — becomes a setting rather than a rewrite.
+
+## Rule #1: the key never lives in the app
+
+This is the part people get wrong, so it's worth seeing both paths side by side. Toggle between them:
+
+<Embed id="react-native-chatgpt-integration-1" />
+
+A mobile app ships to the user's device, and anything in it — including a "hidden" key — can be pulled out with standard tools. The proxy isn't bureaucracy; it's the thing standing between a leaked key and a five-figure surprise invoice. We unpack this and the other expensive mistakes in the [pillar guide](/blog/ai-react-native-app-development).
+
+## Stream the response, or it feels broken
+
+A model can take several seconds to produce a full answer. Show nothing for those seconds and users assume the app froze; stream the tokens as they generate and the same wait feels instant. Streaming is the single biggest UX lever in an AI feature — here's the difference, live:
+
+<Embed id="react-native-chatgpt-integration-2" />
+
+On the backend you forward the model's stream over Server-Sent Events or a streaming `fetch`; in the app you append each chunk to state so the text grows in place. Add a typing indicator, handle partial responses, and time out gracefully. The model is half the experience — the other half is how honestly the UI represents waiting.
+
+## Provider and SDK choices
+
+For cloud models the realistic shortlist is Anthropic's Claude and OpenAI's GPT family, with open-weight models as a self-hosted option. For the wiring itself you have three sensible routes:
+
+-   **A plain `fetch` to your own endpoint** — the least magic, the most control, perfect for a first feature.
+-   **The Vercel AI SDK** — provider-agnostic streaming and a clean message model; a common choice when you want to swap providers without rewriting client code.
+-   **A chat infrastructure SDK** (e.g. Stream) — when you also need conversation history, presence and rich message rendering out of the box.
+
+If your feature should work offline or must never send data off the device, that's a different architecture entirely — running the model on the phone with react-native-executorch or react-native-ai. We cover that in [on-device AI in React Native](/blog/on-device-ai-react-native).
+
+## Keeping the bill under control
+
+Per-token spend is the cost that surprises teams, because it scales with context size and call volume rather than user count. The proxy you built for security is also where you control cost: right-size the model per request, cache repeat prompts and responses, trim the context you send, and set per-user rate limits. Because the app only ever talks to your endpoint, every one of those is a server change — no app-store release required. This is the same backend discipline behind our [DevOps & cloud engineering](/devops-cloud-engineering/) work.
+
+## A minimal, correct flow
+
+```
+// React Native (client) — talks ONLY to your backend
+const res = await fetch("https://api.yourapp.com/chat", {
+  method: "POST",
+  headers: { "Authorization": `Bearer ${userToken}` },
+  body: JSON.stringify({ message })
+});
+// read res.body as a stream and append chunks to state
+
+// Your backend — holds the key, calls the model, streams back
+// (auth check) -> (rate limit) -> (call LLM, stream=true) -> (pipe tokens to client)
+```
+
+That's the whole shape. The client never sees a provider key; the server owns capability, cost and safety. Everything fancier — retrieval, tools, voice — bolts onto this same backbone.
+
+> If your AI feature would break by open-sourcing the app, the key is in the wrong place.
+
+## Quick answers
+
+**How do I add ChatGPT to a React Native app?** Build a backend endpoint that holds the key and calls the model, then call that endpoint from the app and render the streamed reply. Start with a direct fetch or the Vercel AI SDK.
+
+**Is it safe to put my OpenAI API key in a React Native app?** No — it can be extracted from the binary. Keep it server-side, always.
+
+**How do I stream AI responses in React Native?** Forward the model's token stream over SSE or a streaming fetch and append chunks to state as they arrive.
+
+**Which library should I use to add an LLM to React Native?** Vercel AI SDK or a plain fetch for cloud; react-native-executorch or react-native-ai for on-device.
+
+Want this built properly the first time? We integrate LLMs into [React Native apps](/react-native-app-development/) end to end — secure proxy, streaming UI and cost controls included. [Tell us what you're building.](/contact/)

@@ -1,0 +1,35 @@
+{
+ "type": "custom",
+ "kick": "✦ Interactive · your volume, live fee math",
+ "note": "Estimated monthly gateway cost at each provider's standard published domestic rate. Actual rates vary by payment mix (UPI vs cards vs international), negotiated pricing and GST on fees — treat this as a framing tool, then confirm current rates with each provider.",
+ "ctas": [
+  {
+   "label": "Get your store built →",
+   "href": "/wordpress-website-development-india/#quote",
+   "primary": true
+  },
+  {
+   "label": "Book a free call",
+   "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+   "primary": false
+  }
+ ],
+ "cards": [
+  {
+   "id": "gc_rz",
+   "name": "Razorpay",
+   "sub": "@ 2% published TDR<br>No annual fee"
+  },
+  {
+   "id": "gc_cf",
+   "name": "Cashfree",
+   "sub": "@ 1.95% standard rate<br>No annual fee"
+  },
+  {
+   "id": "gc_pu",
+   "name": "PayU",
+   "sub": "@ 2% + ₹4,999/yr AMC<br>(≈₹417/mo added)"
+  }
+ ],
+ "out": []
+}

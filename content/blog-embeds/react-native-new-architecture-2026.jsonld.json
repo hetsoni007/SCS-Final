@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "React Native's New Architecture in 2026: What Changed and How to Migrate",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-09-06",
+  "dateModified": "2026-09-06",
+  "articleSection": "Mobile",
+  "description": "React Native 0.82 permanently disabled the old bridge and 0.85 removed it from the codebase entirely. What the New Architecture actually changed, what migration costs, and an urgency check for your app."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "React Native's New Architecture in 2026: What Changed and How to Migrate",
+    "item": "https://soniconsultancyservices.com/blog/react-native-new-architecture-2026"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Do I have to migrate to the New Architecture?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "If you are on React Native 0.82 or later, you already have — the old architecture cannot be re-enabled from that version onward. If you are on an older version, migrating is no longer optional in any practical sense: 0.85 removed the legacy bridge code and its interop layer entirely, so every version after it requires the New Architecture to run at all."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How long does migrating to the New Architecture take?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "For a small app with few custom native modules, real-world migrations have taken about a week. For a larger app with several custom native modules or ageing dependencies that need auditing or replacing, four to eight weeks is a more realistic range. The native module audit is almost always the long pole, not the JavaScript side."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What actually changed with Fabric, JSI and TurboModules?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "JSI replaced the old asynchronous Bridge with direct JavaScript-to-native calls, removing a serialization step that caused most cross-platform performance issues. Fabric replaced the legacy UI manager as the rendering layer. TurboModules replaced legacy native modules, loading lazily instead of all at once on app start."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Will migrating actually improve performance?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Direction, yes; the exact number is case-specific. Case studies from real production migrations report meaningfully faster cold starts and lower memory use, largely because TurboModules load on demand instead of upfront and JSI removes the old bridge's serialization overhead. Apps with heavy custom native module usage tend to see the largest gains."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What should I check before starting a migration?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Audit every third-party native module for New Architecture support first — that list, not your own code, usually determines the timeline. Confirm your React Native and Expo SDK versions, budget real QA time for native-adjacent features like maps, camera and biometrics, and treat any library with no New Architecture support as a replace-or-fork decision made early, not discovered late."
+    }
+   }
+  ]
+ }
+]

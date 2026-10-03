@@ -1,0 +1,89 @@
+{
+ "type": "audit",
+ "kick": "✦ Interactive self-audit · answer all 10",
+ "items": [
+  {
+   "t": "All traffic uses HTTPS with modern TLS",
+   "d": "No plain HTTP anywhere; no disabled certificate validation, even in dev builds."
+  },
+  {
+   "t": "Tokens live in Keychain / Keystore",
+   "d": "Session and refresh tokens in secure storage — not AsyncStorage, localStorage or files."
+  },
+  {
+   "t": "Every API endpoint authorizes server-side",
+   "d": "The server checks the user may touch the resource — not just that they're logged in."
+  },
+  {
+   "t": "No secrets ship in the app bundle",
+   "d": "Payment, AI/LLM and service keys stay on your server behind an API you control."
+  },
+  {
+   "t": "All input is validated on the server",
+   "d": "Client-side checks are UX; the server validates and sanitizes everything regardless."
+  },
+  {
+   "t": "Dependencies are scanned automatically",
+   "d": "npm audit / Dependabot (or similar) run in CI; security patches applied promptly."
+  },
+  {
+   "t": "Auth endpoints are rate-limited",
+   "d": "Login, OTP and password flows are throttled to block credential-stuffing."
+  },
+  {
+   "t": "Sessions expire and can be revoked",
+   "d": "Short-lived access tokens with refresh rotation; server-side kill switch for a compromised session."
+  },
+  {
+   "t": "Sensitive data is encrypted at rest",
+   "d": "PII and business data encrypted in the database; backups included; access logged."
+  },
+  {
+   "t": "You monitor and can respond",
+   "d": "Crash + security alerting exists, and someone owns the response when it fires."
+  }
+ ],
+ "options": [
+  [
+   "Yes",
+   2
+  ],
+  [
+   "Partly",
+   1
+  ],
+  [
+   "No",
+   0
+  ]
+ ],
+ "verdicts": [
+  {
+   "min": 80,
+   "title": "Solid: ",
+   "text": "Your foundations look strong. Keep dependencies moving, re-run this quarterly, and consider a periodic external review to keep yourselves honest."
+  },
+  {
+   "min": 50,
+   "title": "Gaps to close: ",
+   "text": "Real gaps, but fixable ones. Prioritise anything you answered \"No\" on that touches tokens, secrets or server-side authorization — those are the breach-makers. Most fixes take days, not months."
+  },
+  {
+   "min": 0,
+   "title": "At risk: ",
+   "text": "Treat hardening as this sprint's work, not backlog. Start with transport security, token storage and server-side auth — then work down the list. This is well-understood engineering; you don't need a security team to fix it."
+  }
+ ],
+ "ctas": [
+  {
+   "label": "Get a proper security review →",
+   "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+   "primary": true
+  },
+  {
+   "label": "DevOps & Cloud services",
+   "href": "/devops-cloud-engineering/",
+   "primary": false
+  }
+ ]
+}

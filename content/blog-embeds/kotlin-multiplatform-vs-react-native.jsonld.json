@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Kotlin Multiplatform vs React Native (2026): Which Should You Pick?",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-09-03",
+  "dateModified": "2026-09-03",
+  "articleSection": "Mobile",
+  "description": "Kotlin Multiplatform adoption has climbed fast, but React Native still owns the talent pool. Answer 5 questions for a recommendation, plus the honest trade-offs behind each."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Kotlin Multiplatform vs React Native (2026): Which Should You Pick?",
+    "item": "https://soniconsultancyservices.com/blog/kotlin-multiplatform-vs-react-native"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Is Kotlin Multiplatform replacing React Native?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "No. Adoption is growing quickly — JetBrains' Developer Ecosystem survey showed KMP usage rising from 7% in 2024 to 18% in 2025 — but the two solve different problems. KMP shares business logic while you build native UI on each platform; React Native shares the entire app including the UI. Growth in one is not displacement of the other."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Which is better for a startup building its first app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Usually React Native, for staffing reasons rather than technical ones. One codebase and one talent pool gets a first product shipped faster, and JavaScript/React engineers are the easiest mobile-capable hires to make. KMP becomes more attractive once you have native engineers or existing native apps."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can Kotlin Multiplatform share the UI as well as the logic?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes, through Compose Multiplatform. But the common and lowest-risk KMP pattern is shared logic with native UI per platform, which is what gives KMP its native-fidelity advantage in the first place."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Is Kotlin Multiplatform faster than React Native?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Published benchmarks show KMP ahead on specific measures such as time to first frame. For mainstream apps this rarely reaches users — the performance issues that do are architectural, like unoptimised list rendering, oversized images and chatty APIs, and those hurt equally in either stack."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can I adopt KMP without rewriting my existing apps?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes, and it is one of KMP's genuine strengths. You can extract a single shared module — a sync layer or pricing rules, say — into shared Kotlin and leave the rest of both native apps untouched, which makes it a low-risk incremental step rather than a rewrite."
+    }
+   }
+  ]
+ }
+]

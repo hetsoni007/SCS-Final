@@ -1,0 +1,80 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "On-Device AI in React Native: Private, Offline, $0 per Call",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-06-13",
+  "dateModified": "2026-06-13",
+  "articleSection": "Mobile"
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "On-Device AI in React Native",
+    "item": "https://soniconsultancyservices.com/blog/on-device-ai-react-native"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Can you run an LLM on-device in React Native?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. In 2026, react-native-executorch (Software Mansion) and react-native-ai (Callstack), along with runtimes like MLC LLM, run small-to-mid sized language, speech and vision models directly on the phone's hardware — no network call and no API key. The trade-off is a larger app and a capability ceiling below the frontier cloud models."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What are the best on-device AI libraries for React Native?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "The leading options are react-native-executorch, which wraps PyTorch's ExecuTorch runtime for LLMs, speech-to-text and image classification, and Callstack's react-native-ai for on-device inference. MLC LLM is another mature runtime for running quantised LLMs locally."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Is on-device AI cheaper than cloud AI?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "There is no per-call cost because inference runs on the user's device rather than a paid API, which is a major saving at high volume. You trade that against a one-time engineering cost to integrate and optimise the model, a larger app binary, and a lower capability ceiling than cloud frontier models."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "When should I use on-device AI instead of a cloud API?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Choose on-device when privacy is non-negotiable, the feature must work offline, call volume would make cloud costs painful, or instant latency matters. Choose cloud when you need the most capable models or the largest context. Most production apps end up hybrid: cheap, private work on-device, heavy reasoning in the cloud."
+    }
+   }
+  ]
+ }
+]

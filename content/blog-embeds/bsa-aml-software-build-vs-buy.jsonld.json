@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "BSA/AML Software: Build vs Buy in 2026",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-06-14",
+  "dateModified": "2026-06-14",
+  "articleSection": "FinTech",
+  "description": "BSA/AML software build vs buy in 2026 — what AML systems must do, when to buy, when to build, a decision framework, the architecture underneath, and regulatory expectations."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "BSA/AML Software: Build vs Buy in 2026",
+    "item": "https://soniconsultancyservices.com/blog/bsa-aml-software-build-vs-buy"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Should a bank build or buy AML software?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Most banks should buy a proven, regulator-recognised platform and customise it, because the core detection and reporting logic is commodity and a vendor keeps it current. Build, or build around a bought core, only when your risk profile or data make off-the-shelf scenarios too noisy or limiting."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What does BSA/AML software include?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Transaction monitoring, sanctions and watchlist screening (OFAC, EU/UN/UK, FinCEN), case management with an audit trail, SAR/CTR regulatory filing, and KYC/customer due diligence."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Is building AML software cheaper than buying?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Rarely, once the full cost is counted. A build means you own model validation, regulatory evidence, ongoing tuning and keeping pace with rule changes, a permanent commitment most build estimates leave out. Buying or a hybrid usually wins on total cost."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can you customise an existing AML platform?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. The common, pragmatic path is buying a regulated core and building the custom rules, data pipelines, integrations and investigator experience around it, behind interfaces you control."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can you help us build or integrate AML/compliance software?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. Fintech compliance platforms are core to our work, including BSA/AML case management and sanctions or watchlist screening."
+    }
+   }
+  ]
+ }
+]

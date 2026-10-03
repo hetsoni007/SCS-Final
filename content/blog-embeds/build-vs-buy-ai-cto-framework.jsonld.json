@@ -1,0 +1,81 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Build vs Buy AI: A CTO's Decision Framework",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-05-08",
+  "dateModified": "2026-06-14",
+  "articleSection": "AI",
+  "description": "A CTO build-vs-buy framework for AI: the four axes, a worked example, total cost of ownership, a layer-by-layer breakdown of the AI stack, and the mistakes to avoid."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Build vs Buy AI: A CTO's Decision Framework",
+    "item": "https://soniconsultancyservices.com/blog/build-vs-buy-ai-cto-framework"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Should a startup build its own LLM?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Almost never. Training a foundation model costs millions and gives you nothing customers can see. Build the data, orchestration and product layers on top of a bought model instead, because that's where your differentiation lives."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Is RAG a build or a buy?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Hybrid. Buy the embedding model and vector store; build the retrieval logic, chunking and ranking over your proprietary content, plus the evaluation that proves it's accurate."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How do we avoid AI vendor lock-in?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Wrap every bought component behind your own interface, keep prompts and data under your control, and maintain an evaluation suite so you can benchmark a replacement quickly. Lock-in is a design choice, not an inevitability."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "When does buying make more sense than building an AI capability?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "When the capability is a solved commodity, a vendor's scale beats anything you'd build, or you need it live this month. Buy the plumbing and reserve your build budget for the moat."
+    }
+   }
+  ]
+ }
+]

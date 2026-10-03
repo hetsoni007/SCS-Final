@@ -1,0 +1,36 @@
+<div class="arch" id="arch" aria-label="Where the AI model runs">
+      <div class="arch-tabs" role="tablist">
+        <button class="arch-tab active" data-k="device" role="tab">On-device</button>
+        <button class="arch-tab" data-k="cloud" role="tab">Cloud API</button>
+        <button class="arch-tab" data-k="hybrid" role="tab">Hybrid</button>
+      </div>
+      <div class="arch-stage">
+        <svg class="arch-svg" viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram of device and cloud AI">
+          <defs><linearGradient id="ag" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F2DA8C"></stop><stop offset="1" stop-color="#9A7B2E"></stop></linearGradient></defs>
+          <!-- phone -->
+          <g>
+            <rect x="40" y="50" width="120" height="100" rx="14" fill="var(--glass2)" stroke="var(--line2)"></rect>
+            <rect x="54" y="64" width="92" height="58" rx="7" fill="none" stroke="var(--line2)"></rect>
+            <text x="100" y="142" text-anchor="middle" font-size="12" fill="var(--t3)" font-family="Inter,sans-serif">React Native app</text>
+            <g class="g-devicechip"><rect x="66" y="76" width="68" height="34" rx="7" fill="rgba(201,162,75,.12)" stroke="url(#ag)"></rect><text x="100" y="97" text-anchor="middle" font-size="11" fill="var(--t1)" font-family="Inter,sans-serif">on-device model</text></g>
+          </g>
+          <!-- connector -->
+          <line class="seg g-cloudpath" x1="166" y1="100" x2="430" y2="100" stroke="url(#ag)" stroke-width="2.4" fill="none"></line>
+          <!-- backend -->
+          <g class="g-cloudpath">
+            <rect x="300" y="64" width="92" height="72" rx="12" fill="var(--glass2)" stroke="var(--line2)"></rect>
+            <text x="346" y="96" text-anchor="middle" font-size="11" fill="var(--t1)" font-family="Inter,sans-serif">your</text>
+            <text x="346" y="112" text-anchor="middle" font-size="11" fill="var(--t1)" font-family="Inter,sans-serif">backend</text>
+          </g>
+          <line class="seg g-cloudpath" x1="392" y1="100" x2="470" y2="100" stroke="url(#ag)" stroke-width="2.4" fill="none"></line>
+          <!-- cloud model -->
+          <g class="g-cloudpath">
+            <rect x="470" y="58" width="130" height="84" rx="14" fill="rgba(201,162,75,.1)" stroke="url(#ag)"></rect>
+            <text x="535" y="96" text-anchor="middle" font-size="12" fill="var(--t1)" font-family="Inter,sans-serif">cloud LLM</text>
+            <text x="535" y="114" text-anchor="middle" font-size="10.5" fill="var(--t3)" font-family="Inter,sans-serif">GPT · Claude</text>
+          </g>
+        </svg>
+      </div>
+      <div class="arch-panel" id="archPanel"></div>
+      <div class="arch-chips" id="archChips"></div>
+    </div>

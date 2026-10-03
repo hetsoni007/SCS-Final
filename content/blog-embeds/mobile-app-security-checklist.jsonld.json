@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Mobile App Security Checklist 2026 — Score Your App in 2 Minutes",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-07-06",
+  "dateModified": "2026-07-06",
+  "articleSection": "Mobile",
+  "description": "A practical mobile app security checklist for 2026. Score your app across 10 controls — transport security, token storage, API auth, secrets, dependencies and more — and see exactly where to harden first."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Mobile App Security Checklist 2026 — Score Your App in 2 Minutes",
+    "item": "https://soniconsultancyservices.com/blog/mobile-app-security-checklist"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "What are the most important mobile app security measures?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "The controls with the highest payoff: HTTPS everywhere with modern TLS, tokens stored in the platform's secure storage (iOS Keychain / Android Keystore), server-side authorization on every API endpoint, no secrets shipped in the app bundle, dependency scanning in CI, and server-side validation of all input. Most real-world mobile breaches trace back to one of these basics, not exotic attacks."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Where should a mobile app store auth tokens?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "In the platform's secure enclave: the iOS Keychain or Android Keystore/EncryptedSharedPreferences — never in plain AsyncStorage, localStorage or files. Secure storage encrypts at rest and gates access to your app, so a lost or compromised device does not silently leak sessions."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Is it safe to put API keys inside a mobile app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "No. Anything shipped in the app binary can be extracted — attackers routinely decompile apps to harvest keys. Third-party secrets (payment, AI/LLM, maps beyond restricted client keys) belong on your server behind an API you control, with per-user auth and rate limits."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How often should mobile app dependencies be updated?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Continuously: automated dependency and vulnerability scanning (npm audit, Dependabot or similar) should run in CI on every build, with security patches applied promptly. Known CVEs in stale libraries are one of the most common and most preventable ways apps get compromised."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can you run a security review of our app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes — we review React Native apps and their backends against this checklist and OWASP mobile guidance: transport, storage, auth, secrets, dependencies and monitoring. Take the self-audit above, then book a free call and bring your score."
+    }
+   }
+  ]
+ }
+]

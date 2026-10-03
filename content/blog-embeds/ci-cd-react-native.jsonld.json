@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "CI/CD for React Native Apps: A 2026 Setup Guide",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-06-17",
+  "dateModified": "2026-06-17",
+  "articleSection": "DevOps",
+  "description": "How to set up CI/CD for a React Native app in 2026 — the pipeline stages, Fastlane, EAS and GitHub Actions, code signing, automated store releases and over-the-air updates."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "CI/CD for React Native Apps: A 2026 Setup Guide",
+    "item": "https://soniconsultancyservices.com/blog/ci-cd-react-native"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "What is CI/CD for a mobile app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Continuous Integration automatically lints, tests and builds your app every time code is pushed, so problems are caught in minutes instead of at release time. Continuous Delivery automatically packages, signs and ships those builds to testers and the app stores. Together they turn release from a stressful manual ritual into a routine, repeatable step."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What tools do you use for React Native CI/CD?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Commonly GitHub Actions (or GitLab CI) to orchestrate the pipeline, Fastlane to automate signing, building and store uploads, and for Expo projects EAS Build and EAS Submit for managed cloud builds and submissions. Over-the-air updates are handled by EAS Update or a CodePush-style service."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can you push React Native updates without an app store review?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes, for changes to the JavaScript bundle — UI tweaks, copy, logic and bug fixes — using over-the-air updates such as EAS Update. Anything that changes native code or app permissions still requires a new binary and a store review. OTA is for fast iteration, not for bypassing store policy."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Why is code signing the hardest part of mobile CI/CD?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Both stores require cryptographic signing with certificates and provisioning profiles that expire, differ per environment and must be kept secret. Managing them by hand across a team is error-prone. Tools like Fastlane Match or EAS-managed credentials store and rotate them centrally so the pipeline can sign builds reliably."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can you set up a CI/CD pipeline for our app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes — CI/CD, cloud and DevOps is one of our core services. We set up automated build, test, signing and release pipelines for React Native apps so your team ships faster and breaks less. Book a call and we'll review your current setup."
+    }
+   }
+  ]
+ }
+]

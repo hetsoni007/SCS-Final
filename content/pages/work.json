@@ -1,0 +1,2791 @@
+{
+ "slug": "work",
+ "path": "/work/",
+ "meta": {
+  "title": "Case Studies: React Native Apps & Enterprise Platforms",
+  "description": "Real React Native and MERN products we shipped — HR, retail, ride-hailing, B2B and healthcare platforms, with the problem, approach and measured result.",
+  "keywords": "React Native portfolio, mobile app case studies, MERN app development, enterprise software development, solutions architecture, BSA AML software, sanctions screening software, cloud migration AWS, enterprise application integration, HL7 healthcare software, microservices architecture",
+  "robots": "index,follow,max-image-preview:large",
+  "canonical": "https://soniconsultancyservices.com/work/",
+  "ogTitle": "Our Work — Apps Live on the App Store & Google Play",
+  "ogDescription": "React Native & MERN apps plus enterprise platforms — fintech compliance, loyalty, cloud migration and healthcare systems.",
+  "ogType": "website"
+ },
+ "h1": "Apps we've shipped, live on the stores.",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "CollectionPage",
+   "name": "Our Work",
+   "url": "https://soniconsultancyservices.com/work/",
+   "about": [
+    "React Native app development",
+    "Cross-platform mobile apps"
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "logo": "https://soniconsultancyservices.com/favicon.svg",
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://www.instagram.com/soni.consultancyservices/",
+    "https://www.facebook.com/soniconsultancyservices",
+    "https://medium.com/@hetsoni9398"
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://soniconsultancyservices.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Work",
+     "item": "https://soniconsultancyservices.com/work/"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What real results have you delivered for clients?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Measured outcomes, not vanity metrics: 40% less payroll processing time for our HR & Payroll platform, a 35% lift in downloads and 20% rise in venue bookings for our Creator–Venue Marketplace, standardised multi-store operations for our Retail Operations platform, and average booking time down to ~3 minutes for our Ride-Hailing platform. Product names are withheld under client NDAs — metrics are real."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Are the Web3 Creator and Fan Investment platforms real, shipped products?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No — they're clearly labelled as product & UI/UX design concepts on this page. We don't claim results or live status for work that hasn't shipped."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What industries have you shipped apps in?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "HR & payroll, influencer marketing, retail operations, and ride-hailing, among others — see the case studies above for the problem, approach and result on each."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I see case studies for a specific industry, like FinTech or retail?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — check our industry pages for FinTech, Retail, Ride-Hailing and HR & Payroll app development."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is the Healthcare Staffing Platform live on the App Store or Google Play?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Not yet publicly — it's presented as a delivered platform (mobile app + web dashboard), the same way we present our enterprise engagements, without store links or live-status claims."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why don't you name these products?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Client confidentiality agreements. The problems, solutions, metrics, tech stacks and screens shown are all real and unaltered — only the product names are withheld."
+     }
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Selected work"
+    },
+    {
+     "t": "h",
+     "level": 1,
+     "html": "Apps we've shipped,<br>live on the stores.",
+     "cls": "display"
+    },
+    {
+     "t": "p",
+     "html": "Four cross-platform products in React Native &amp; MERN — from HR and retail to ride-hailing and creator platforms. Each one is live, in users' hands, with results to show for it. Product names are withheld under client NDAs; every metric below is real.",
+     "cls": "lead"
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "grid",
+     "cls": "g4 glass",
+     "items": [
+      {
+       "cls": "metric",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "4",
+         "cls": "num"
+        },
+        {
+         "t": "text",
+         "html": "Apps shipped",
+         "cls": "lbl"
+        }
+       ]
+      },
+      {
+       "cls": "metric",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "8",
+         "cls": "num"
+        },
+        {
+         "t": "text",
+         "html": "Store listings (iOS+Android)",
+         "cls": "lbl"
+        }
+       ]
+      },
+      {
+       "cls": "metric",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "97wk",
+         "cls": "num"
+        },
+        {
+         "t": "text",
+         "html": "Combined build time",
+         "cls": "lbl"
+        }
+       ]
+      },
+      {
+       "cls": "metric",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "100%",
+         "cls": "num"
+        },
+        {
+         "t": "text",
+         "html": "React Native + MERN",
+         "cls": "lbl"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "case",
+     "id": "hr-payroll",
+     "blocks": [
+      {
+       "t": "group",
+       "cls": "sim-frame",
+       "blocks": [
+        {
+         "t": "img",
+         "src": "/assets/portfolio/hr-payroll-sim-register.webp",
+         "alt": "HR platform business registration screen",
+         "cls": "sim-screen active"
+        },
+        {
+         "t": "img",
+         "src": "/assets/portfolio/hr-payroll-sim-punch.webp",
+         "alt": "HR platform punch in and out with live hour tracker",
+         "cls": "sim-screen"
+        },
+        {
+         "t": "img",
+         "src": "/assets/portfolio/hr-payroll-sim-ledger.webp",
+         "alt": "HR platform salary ledger with income breakdown",
+         "cls": "sim-screen"
+        },
+        {
+         "t": "img",
+         "src": "/assets/portfolio/hr-payroll-sim-profile.webp",
+         "alt": "HR platform staff profile update screen",
+         "cls": "sim-screen"
+        }
+       ]
+      },
+      {
+       "t": "eyebrow",
+       "text": "HR & Payroll · 16 weeks · Name withheld (NDA)"
+      },
+      {
+       "t": "h",
+       "level": 2,
+       "html": "HR &amp; Payroll Platform",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "Attendance &amp; salary ledger system — real-time attendance, automated payroll and centralised records across Company, Branch and Staff roles.",
+       "cls": "muted"
+      },
+      {
+       "t": "grid",
+       "cls": "psr",
+       "items": [
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Problem",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "Manual spreadsheets caused <b>15–20% payroll errors</b>, delayed slips and zero branch-level visibility.",
+           "cls": "v"
+          }
+         ]
+        },
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Solution",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "Biometric &amp; GPS attendance, customizable payroll rules per branch, real-time irregularity alerts, detailed salary breakdowns.",
+           "cls": "v"
+          }
+         ]
+        },
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Result",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "<b>40% less</b> payroll processing time and accurate, transparent pay every cycle.",
+           "cls": "v"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "grid",
+       "cls": "metrics",
+       "items": [
+        {
+         "cls": "metric-pill",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "40%",
+           "cls": "num"
+          },
+          {
+           "t": "text",
+           "html": "Faster payroll",
+           "cls": "lbl"
+          }
+         ]
+        },
+        {
+         "cls": "metric-pill",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "3",
+           "cls": "num"
+          },
+          {
+           "t": "text",
+           "html": "User roles",
+           "cls": "lbl"
+          }
+         ]
+        },
+        {
+         "cls": "metric-pill",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "2",
+           "cls": "num"
+          },
+          {
+           "t": "text",
+           "html": "Stores live",
+           "cls": "lbl"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "chips",
+       "items": [
+        {
+         "label": "React Native"
+        },
+        {
+         "label": "React"
+        },
+        {
+         "label": "Node.js"
+        },
+        {
+         "label": "MongoDB"
+        },
+        {
+         "label": "Live on the App Store & Google Play"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "panel",
+     "cls": "case flip",
+     "id": "creator-marketplace",
+     "blocks": [
+      {
+       "t": "grid",
+       "cls": "case-visual",
+       "items": [
+        {
+         "cls": "device behind right",
+         "blocks": [
+          {
+           "t": "img",
+           "src": "/assets/portfolio/creator-marketplace-3.webp",
+           "alt": "Creator marketplace venue discovery"
+          }
+         ]
+        },
+        {
+         "cls": "device",
+         "blocks": [
+          {
+           "t": "img",
+           "src": "/assets/portfolio/creator-marketplace-1.webp",
+           "alt": "Creator marketplace app home"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "eyebrow",
+       "text": "Creator Marketplace · 24 weeks · Name withheld (NDA)"
+      },
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Creator–Venue Marketplace",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "An influencer-to-venue collaboration platform — slot booking, in-app content sharing, chat and a points &amp; rewards engine that keeps both sides engaged.",
+       "cls": "muted"
+      },
+      {
+       "t": "grid",
+       "cls": "psr",
+       "items": [
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Problem",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "Influencer–venue deals were fragmented: no clean way to book slots, communicate, or reward engagement.",
+           "cls": "v"
+          }
+         ]
+        },
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Solution",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "Dynamic real-time slot booking, content upload with status sharing, automated chat templates and a loyalty points system.",
+           "cls": "v"
+          }
+         ]
+        },
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Result",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "A <b>35% lift in downloads</b> and a <b>20% rise in venue bookings</b> driven by authentic creator content.",
+           "cls": "v"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "grid",
+       "cls": "metrics",
+       "items": [
+        {
+         "cls": "metric-pill",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "+35%",
+           "cls": "num"
+          },
+          {
+           "t": "text",
+           "html": "Downloads",
+           "cls": "lbl"
+          }
+         ]
+        },
+        {
+         "cls": "metric-pill",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "+20%",
+           "cls": "num"
+          },
+          {
+           "t": "text",
+           "html": "Bookings",
+           "cls": "lbl"
+          }
+         ]
+        },
+        {
+         "cls": "metric-pill",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "4.x",
+           "cls": "num"
+          },
+          {
+           "t": "text",
+           "html": "App Store",
+           "cls": "lbl"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "chips",
+       "items": [
+        {
+         "label": "React Native"
+        },
+        {
+         "label": "Chat"
+        },
+        {
+         "label": "Rewards"
+        },
+        {
+         "label": "Maps"
+        },
+        {
+         "label": "Live on the App Store"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "group",
+     "cls": "shots-band",
+     "blocks": [
+      {
+       "t": "text",
+       "html": "Creator–Venue Marketplace · more screens",
+       "cls": "lead-sm"
+      },
+      {
+       "t": "grid",
+       "cls": "shots reveal-group",
+       "items": [
+        {
+         "cls": "shot",
+         "blocks": [
+          {
+           "t": "img",
+           "src": "/assets/portfolio/creator-marketplace-g1.webp",
+           "alt": "Creator marketplace venue detail and service selection"
+          },
+          {
+           "t": "text",
+           "html": "Service &amp; combos",
+           "cls": "cap"
+          }
+         ]
+        },
+        {
+         "cls": "shot",
+         "blocks": [
+          {
+           "t": "img",
+           "src": "/assets/portfolio/creator-marketplace-g2.webp",
+           "alt": "Creator marketplace deals and content brief"
+          },
+          {
+           "t": "text",
+           "html": "Deals &amp; content briefs",
+           "cls": "cap"
+          }
+         ]
+        },
+        {
+         "cls": "shot",
+         "blocks": [
+          {
+           "t": "img",
+           "src": "/assets/portfolio/creator-marketplace-g3.webp",
+           "alt": "Creator marketplace date and slot picker"
+          },
+          {
+           "t": "text",
+           "html": "Slot booking",
+           "cls": "cap"
+          }
+         ]
+        },
+        {
+         "cls": "shot",
+         "blocks": [
+          {
+           "t": "img",
+           "src": "/assets/portfolio/creator-marketplace-g4.webp",
+           "alt": "Creator marketplace bookings and content schedule"
+          },
+          {
+           "t": "text",
+           "html": "Bookings &amp; content",
+           "cls": "cap"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "panel",
+     "cls": "case",
+     "id": "retail-ops",
+     "blocks": [
+      {
+       "t": "group",
+       "cls": "sim-frame",
+       "blocks": [
+        {
+         "t": "img",
+         "src": "/assets/portfolio/retail-ops-sim-menu.webp",
+         "alt": "Retail platform store menu with checklists, trainings, logs and reports",
+         "cls": "sim-screen active"
+        },
+        {
+         "t": "img",
+         "src": "/assets/portfolio/retail-ops-sim-checklist.webp",
+         "alt": "Retail platform checklist module",
+         "cls": "sim-screen"
+        },
+        {
+         "t": "img",
+         "src": "/assets/portfolio/retail-ops-sim-training.webp",
+         "alt": "Retail platform LMS training module",
+         "cls": "sim-screen"
+        },
+        {
+         "t": "img",
+         "src": "/assets/portfolio/retail-ops-sim-submission.webp",
+         "alt": "Retail platform checklist submission report",
+         "cls": "sim-screen"
+        }
+       ]
+      },
+      {
+       "t": "eyebrow",
+       "text": "Retail SaaS · 32 weeks · Name withheld (NDA)"
+      },
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Retail Operations Platform",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "A retail chain management platform unifying operational checklists, a gamified LMS, issue logs and customer logs — standardising operations across every store.",
+       "cls": "muted"
+      },
+      {
+       "t": "grid",
+       "cls": "psr",
+       "items": [
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Problem",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "Inconsistent store operations, unrecorded issues and outdated, inaccessible staff training.",
+           "cls": "v"
+          }
+         ]
+        },
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Solution",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "Customizable checklists, gamified bite-sized LMS, structured issue logging and an analytics dashboard for head office.",
+           "cls": "v"
+          }
+         ]
+        },
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Result",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "<b>Standardised multi-store operations</b> with real-time visibility and measurably faster staff onboarding.",
+           "cls": "v"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "grid",
+       "cls": "metrics",
+       "items": [
+        {
+         "cls": "metric-pill",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "4",
+           "cls": "num"
+          },
+          {
+           "t": "text",
+           "html": "Modules unified",
+           "cls": "lbl"
+          }
+         ]
+        },
+        {
+         "cls": "metric-pill",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "2",
+           "cls": "num"
+          },
+          {
+           "t": "text",
+           "html": "Stores live",
+           "cls": "lbl"
+          }
+         ]
+        },
+        {
+         "cls": "metric-pill",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "LMS",
+           "cls": "num"
+          },
+          {
+           "t": "text",
+           "html": "Gamified",
+           "cls": "lbl"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "chips",
+       "items": [
+        {
+         "label": "React Native"
+        },
+        {
+         "label": "React"
+        },
+        {
+         "label": "Node.js"
+        },
+        {
+         "label": "MongoDB"
+        },
+        {
+         "label": "Live on the App Store & Google Play"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "panel",
+     "cls": "case flip",
+     "id": "ride-hailing",
+     "blocks": [
+      {
+       "t": "group",
+       "cls": "sim-frame",
+       "blocks": [
+        {
+         "t": "img",
+         "src": "/assets/portfolio/ride-hailing-sim-bookings.webp",
+         "alt": "Ride-hailing driver app bookings list",
+         "cls": "sim-screen active"
+        },
+        {
+         "t": "img",
+         "src": "/assets/portfolio/ride-hailing-sim-driver.webp",
+         "alt": "Ride-hailing driver profile details form",
+         "cls": "sim-screen"
+        },
+        {
+         "t": "img",
+         "src": "/assets/portfolio/ride-hailing-sim-map.webp",
+         "alt": "Ride-hailing live ride tracking with fare",
+         "cls": "sim-screen"
+        },
+        {
+         "t": "img",
+         "src": "/assets/portfolio/ride-hailing-sim-nav.webp",
+         "alt": "Ride-hailing turn by turn navigation screen",
+         "cls": "sim-screen"
+        }
+       ]
+      },
+      {
+       "t": "eyebrow",
+       "text": "Ride-Hailing · AI · 25 weeks · Name withheld (NDA)"
+      },
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Ride-Hailing Platform",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "A cab-booking platform built around rider trust — transparent pricing, real-time tracking, safety features and AI-based fare prediction.",
+       "cls": "muted"
+      },
+      {
+       "t": "grid",
+       "cls": "psr",
+       "items": [
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Problem",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "Driver cancellations, opaque surge pricing and clunky interfaces eroded rider trust.",
+           "cls": "v"
+          }
+         ]
+        },
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Solution",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "<b>AI fare prediction</b> for transparent pricing, driver-rating assurance, ride scheduling, an SOS feature and an eco-friendly vehicle option.",
+           "cls": "v"
+          }
+         ]
+        },
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Result",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "Average booking time down to <b>~3 minutes</b> with safety-first UX riders actually trust.",
+           "cls": "v"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "grid",
+       "cls": "metrics",
+       "items": [
+        {
+         "cls": "metric-pill",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "3min",
+           "cls": "num"
+          },
+          {
+           "t": "text",
+           "html": "Avg. booking",
+           "cls": "lbl"
+          }
+         ]
+        },
+        {
+         "cls": "metric-pill",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "AI",
+           "cls": "num"
+          },
+          {
+           "t": "text",
+           "html": "Fare prediction",
+           "cls": "lbl"
+          }
+         ]
+        },
+        {
+         "cls": "metric-pill",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "SOS",
+           "cls": "num"
+          },
+          {
+           "t": "text",
+           "html": "Safety built-in",
+           "cls": "lbl"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "chips",
+       "items": [
+        {
+         "label": "React Native"
+        },
+        {
+         "label": "Next.js"
+        },
+        {
+         "label": "PostgreSQL"
+        },
+        {
+         "label": "AWS"
+        },
+        {
+         "label": "Live on the App Store & Google Play"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "panel",
+     "cls": "case",
+     "id": "b2b-wholesale",
+     "blocks": [
+      {
+       "t": "group",
+       "cls": "brand-tile b2b-wholesale",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "B2B Wholesale",
+         "cls": "bt-name"
+        },
+        {
+         "t": "text",
+         "html": "Wholesale ordering &amp; loyalty rewards for retailers",
+         "cls": "bt-tag"
+        }
+       ]
+      },
+      {
+       "t": "eyebrow",
+       "text": "B2B Retail · Loyalty Platform · Name withheld (NDA)"
+      },
+      {
+       "t": "h",
+       "level": 2,
+       "html": "B2B Wholesale Platform",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "A B2B wholesale ordering platform for retailers, with a points-based loyalty engine, tiered pricing catalogue and real-time inventory tracking.",
+       "cls": "muted"
+      },
+      {
+       "t": "grid",
+       "cls": "psr",
+       "items": [
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Problem",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "Retailers had no streamlined way to bulk-order, track inventory or earn loyalty rewards — existing systems were outdated and manual.",
+           "cls": "v"
+          }
+         ]
+        },
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Solution",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "Dynamic points tied to purchasing volume, tiered wholesale pricing, predictive inventory analytics and ERP-synced ordering.",
+           "cls": "v"
+          }
+         ]
+        },
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Result",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "Order placement time cut by <b>30%</b> and customer retention up <b>20%</b> post-launch.",
+           "cls": "v"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "grid",
+       "cls": "metrics",
+       "items": [
+        {
+         "cls": "metric-pill",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "-30%",
+           "cls": "num"
+          },
+          {
+           "t": "text",
+           "html": "Order time",
+           "cls": "lbl"
+          }
+         ]
+        },
+        {
+         "cls": "metric-pill",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "+20%",
+           "cls": "num"
+          },
+          {
+           "t": "text",
+           "html": "Retention",
+           "cls": "lbl"
+          }
+         ]
+        },
+        {
+         "cls": "metric-pill",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "60%",
+           "cls": "num"
+          },
+          {
+           "t": "text",
+           "html": "Redeemed in mo. 1",
+           "cls": "lbl"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "chips",
+       "items": [
+        {
+         "label": "React.js"
+        },
+        {
+         "label": "Node.js"
+        },
+        {
+         "label": "ERP Integration"
+        },
+        {
+         "label": "Live on the App Store & Google Play"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "panel",
+     "cls": "case flip",
+     "id": "healthcare-staffing",
+     "blocks": [
+      {
+       "t": "group",
+       "cls": "brand-tile healthcare-staffing",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Healthcare Staffing",
+         "cls": "bt-name"
+        },
+        {
+         "t": "text",
+         "html": "Shift-based hiring platform connecting hospitals with nurses",
+         "cls": "bt-tag"
+        }
+       ]
+      },
+      {
+       "t": "eyebrow",
+       "text": "HealthTech · Platform · 26 weeks · Name withheld (NDA)"
+      },
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Healthcare Staffing Platform",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "A digital hiring platform connecting hospitals with nurses for shift-based work — a mobile app for nurses and a web dashboard for hospital staffing teams.",
+       "cls": "muted"
+      },
+      {
+       "t": "grid",
+       "cls": "psr",
+       "items": [
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Problem",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "Hospitals fill shifts by phone calls and spreadsheets; nurses struggle to find flexible, transparent-pay shifts that fit their schedule.",
+           "cls": "v"
+          }
+         ]
+        },
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Solution",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "Real-time shift posting, AI-based nurse matching, a credential vault with auto-verification, and geo-filtered shift search.",
+           "cls": "v"
+          }
+         ]
+        },
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Result",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "Designed to cut average shift-fill time from <b>4–8 hours to under 30 minutes</b>, based on research across 18 hospitals.",
+           "cls": "v"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "grid",
+       "cls": "metrics",
+       "items": [
+        {
+         "cls": "metric-pill",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "78%",
+           "cls": "num"
+          },
+          {
+           "t": "text",
+           "html": "Want short-term shifts",
+           "cls": "lbl"
+          }
+         ]
+        },
+        {
+         "cls": "metric-pill",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "65%",
+           "cls": "num"
+          },
+          {
+           "t": "text",
+           "html": "Still use manual calls",
+           "cls": "lbl"
+          }
+         ]
+        },
+        {
+         "cls": "metric-pill",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "&lt;30min",
+           "cls": "num"
+          },
+          {
+           "t": "text",
+           "html": "Target fill time",
+           "cls": "lbl"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "chips",
+       "items": [
+        {
+         "label": "React Native"
+        },
+        {
+         "label": "Next.js"
+        },
+        {
+         "label": "Express.js"
+        },
+        {
+         "label": "PostgreSQL"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "group",
+     "cls": "shots-band",
+     "blocks": [
+      {
+       "t": "text",
+       "html": "Healthcare Staffing Platform · how it works",
+       "cls": "lead-sm"
+      },
+      {
+       "t": "grid",
+       "cls": "flow-tabs",
+       "items": [
+        {
+         "cls": "flow-tab active",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Nurse mobile app"
+          }
+         ]
+        },
+        {
+         "cls": "flow-tab",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Hospital web dashboard"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "grid",
+       "cls": "flow-track show-mobile",
+       "items": [
+        {
+         "cls": "flow-step",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "1Login &amp; verification",
+           "cls": "flow-node"
+          }
+         ]
+        },
+        {
+         "cls": "flow-step",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "2View recommended shifts",
+           "cls": "flow-node"
+          }
+         ]
+        },
+        {
+         "cls": "flow-step",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "3Search &amp; filter by distance, pay, facility",
+           "cls": "flow-node"
+          }
+         ]
+        },
+        {
+         "cls": "flow-step",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "4Review shift details",
+           "cls": "flow-node"
+          }
+         ]
+        },
+        {
+         "cls": "flow-step",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "5Apply → in-progress → confirmation",
+           "cls": "flow-node"
+          }
+         ]
+        },
+        {
+         "cls": "flow-step",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "6Credential vault",
+           "cls": "flow-node"
+          }
+         ]
+        },
+        {
+         "cls": "flow-step",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "7Payments &amp; earnings",
+           "cls": "flow-node"
+          }
+         ]
+        },
+        {
+         "cls": "flow-step",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "8Profile &amp; reliability score",
+           "cls": "flow-node"
+          }
+         ]
+        },
+        {
+         "cls": "flow-step",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "1Login",
+           "cls": "flow-node"
+          }
+         ]
+        },
+        {
+         "cls": "flow-step",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "2Post a shift",
+           "cls": "flow-node"
+          }
+         ]
+        },
+        {
+         "cls": "flow-step",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "3View applicants",
+           "cls": "flow-node"
+          }
+         ]
+        },
+        {
+         "cls": "flow-step",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "4Review credentials",
+           "cls": "flow-node"
+          }
+         ]
+        },
+        {
+         "cls": "flow-step",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "5Confirm nurse",
+           "cls": "flow-node"
+          }
+         ]
+        },
+        {
+         "cls": "flow-step",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "6Track live shift status",
+           "cls": "flow-node"
+          }
+         ]
+        },
+        {
+         "cls": "flow-step",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "7Rate nurse",
+           "cls": "flow-node"
+          }
+         ]
+        },
+        {
+         "cls": "flow-step",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "8Analytics dashboard",
+           "cls": "flow-node"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "panel",
+     "cls": "case",
+     "id": "web3-creator",
+     "blocks": [
+      {
+       "t": "group",
+       "cls": "brand-tile web3-creator",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Web3 Creator",
+         "cls": "bt-name"
+        },
+        {
+         "t": "text",
+         "html": "Social network + multi-chain wallet + NFT marketplace",
+         "cls": "bt-tag"
+        }
+       ]
+      },
+      {
+       "t": "eyebrow",
+       "text": "Web3 · Social + Wallet + NFT · Name withheld (NDA)"
+      },
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Web3 Creator Platform",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "A Web3 creator-economy concept — a social network, a multi-chain crypto wallet and an NFT marketplace in one premium dark experience, so creators can publish, mint and get paid inside a single app.",
+       "cls": "muted"
+      },
+      {
+       "t": "grid",
+       "cls": "psr",
+       "items": [
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Wallet",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "A built-in <b>multi-chain wallet</b> with a native token, deposit/withdraw and balances across BTC, ETH, XRP and more.",
+           "cls": "v"
+          }
+         ]
+        },
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Market",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "An <b>NFT &amp; SNFT marketplace</b> with floor price, volume and offers — collect, buy and sell digital art.",
+           "cls": "v"
+          }
+         ]
+        },
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Social",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "Creator profiles, a fan-following model and a <b>\"Social Art\" feed</b> where posts can be minted and earned from.",
+           "cls": "v"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "chips",
+       "items": [
+        {
+         "label": "UI/UX Design"
+        },
+        {
+         "label": "Web3"
+        },
+        {
+         "label": "Crypto Wallet"
+        },
+        {
+         "label": "NFT Marketplace"
+        },
+        {
+         "label": "Mobile-first"
+        },
+        {
+         "label": "✦ Product & UI/UX design concept"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "panel",
+     "cls": "case flip",
+     "id": "fan-investing",
+     "blocks": [
+      {
+       "t": "grid",
+       "cls": "case-visual",
+       "items": [
+        {
+         "cls": "device behind right",
+         "blocks": [
+          {
+           "t": "img",
+           "src": "/assets/portfolio/fan-investing-3.webp",
+           "alt": "Fan investment platform wallet and portfolio performance screen"
+          }
+         ]
+        },
+        {
+         "cls": "device",
+         "blocks": [
+          {
+           "t": "img",
+           "src": "/assets/portfolio/fan-investing-1.webp",
+           "alt": "Fan investment platform home feed of new artists"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "eyebrow",
+       "text": "Music FinTech · Social investing · Name withheld (NDA)"
+      },
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Fan Investment Platform",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "A concept for a fan-investing app — discover emerging music artists, back them with fractional \"shares\" tied to their career milestones, and watch a personal portfolio grow inside a social feed of the artists you follow.",
+       "cls": "muted"
+      },
+      {
+       "t": "grid",
+       "cls": "psr",
+       "items": [
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Discover",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "A home feed of <b>hot new artists</b> and people to follow, each with a live offering open to back.",
+           "cls": "v"
+          }
+         ]
+        },
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Growth Score",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "A dynamic metric blending social reach, engagement and revenue — so backers can evaluate an artist before investing.",
+           "cls": "v"
+          }
+         ]
+        },
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Portfolio",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "A wallet that tracks <b>performance over time</b> — total invested, milestone-based returns and each artist's share of the portfolio.",
+           "cls": "v"
+          }
+         ]
+        },
+        {
+         "cls": "row",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Artist",
+           "cls": "k"
+          },
+          {
+           "t": "text",
+           "html": "Rich artist profiles with bio, genre, monthly streams and the <b>percentage offering</b> available.",
+           "cls": "v"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "html": "Concept research (82 respondents): 74% wanted a low-barrier way to invest in creative talent; 71% said they'd trust the platform more with verifiable growth metrics — which shaped the Growth Score above.",
+       "cls": "muted"
+      },
+      {
+       "t": "chips",
+       "items": [
+        {
+         "label": "UI/UX Design"
+        },
+        {
+         "label": "FinTech"
+        },
+        {
+         "label": "Social Investing"
+        },
+        {
+         "label": "Mobile-first"
+        },
+        {
+         "label": "Dark UI"
+        },
+        {
+         "label": "✦ Product & UI/UX design concept"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "group",
+     "cls": "shots-band",
+     "blocks": [
+      {
+       "t": "text",
+       "html": "Fan Investment Platform · more screens",
+       "cls": "lead-sm"
+      },
+      {
+       "t": "grid",
+       "cls": "shots reveal-group",
+       "items": [
+        {
+         "cls": "shot",
+         "blocks": [
+          {
+           "t": "img",
+           "src": "/assets/portfolio/fan-investing-2.webp",
+           "alt": "Fan investment platform artist profile with offering"
+          },
+          {
+           "t": "text",
+           "html": "Artist profile &amp; offering",
+           "cls": "cap"
+          }
+         ]
+        },
+        {
+         "cls": "shot",
+         "blocks": [
+          {
+           "t": "img",
+           "src": "/assets/portfolio/fan-investing-4.webp",
+           "alt": "Fan investment platform list of artists held in portfolio"
+          },
+          {
+           "t": "text",
+           "html": "Your artist holdings",
+           "cls": "cap"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "cls": "ent-sec",
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Enterprise & platform engineering"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Beyond apps — platforms built to scale.",
+     "cls": "h2"
+    },
+    {
+     "t": "p",
+     "html": "Soni Consultancy Services doesn't only ship mobile apps. We architect and deliver <b>enterprise-grade platforms</b> — BSA/AML and fraud-detection systems, sanctions-screening engines, loyalty and rewards platforms, large-scale AWS cloud migrations and HL7 healthcare integrations — built with microservices, event-driven architecture and DevOps for high availability, resilience and scale.",
+     "cls": "lead"
+    },
+    {
+     "t": "panel",
+     "cls": "cat-block",
+     "blocks": [
+      {
+       "t": "group",
+       "cls": "ct",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "FinTech, Risk &amp; Compliance"
+        },
+        {
+         "t": "p",
+         "html": "Regulatory-grade software for financial institutions — engineered for accuracy, auditability and scale."
+        }
+       ]
+      },
+      {
+       "t": "grid",
+       "cls": "ent-grid",
+       "items": [
+        {
+         "cls": "glass ent",
+         "blocks": [
+          {
+           "t": "group",
+           "cls": "ent-top",
+           "blocks": [
+            {
+             "t": "h",
+             "level": 4,
+             "html": "BAM+ — AML &amp; Fraud Case Management"
+            },
+            {
+             "t": "text",
+             "html": "Solution Architect &amp; Delivery Lead",
+             "cls": "role"
+            }
+           ]
+          },
+          {
+           "t": "p",
+           "html": "A web-based <b>BSA/AML and enterprise-fraud case management platform</b> that lets financial institutions run every risk workflow from one console, driven by a configurable scenario library for a blended-analytics approach to risk. Coverage spans ACH origination &amp; incoming fraud, check fraud, debit-card fraud, new-account fraud and wire fraud — on a C#/.NET <b>microservices architecture</b> with Apache Kafka event streaming.",
+           "cls": "desc"
+          },
+          {
+           "t": "chips",
+           "items": [
+            {
+             "label": "C#"
+            },
+            {
+             "label": "ASP.NET Core"
+            },
+            {
+             "label": "Microservices"
+            },
+            {
+             "label": "Apache Kafka"
+            },
+            {
+             "label": "MongoDB"
+            },
+            {
+             "label": "Kubernetes"
+            },
+            {
+             "label": "Azure"
+            },
+            {
+             "label": "AWS"
+            },
+            {
+             "label": "GraphQL"
+            },
+            {
+             "label": "Terraform"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "cls": "glass ent",
+         "blocks": [
+          {
+           "t": "group",
+           "cls": "ent-top",
+           "blocks": [
+            {
+             "t": "h",
+             "level": 4,
+             "html": "IQ AutoScan — Sanctions &amp; Watchlist Screening"
+            },
+            {
+             "t": "text",
+             "html": "Solution Architect &amp; Delivery Lead",
+             "cls": "role"
+            }
+           ]
+          },
+          {
+           "t": "p",
+           "html": "A real-time <b>sanctions and watchlist screening solution</b> that screens customers, vendors and counterparties against OFAC, EU/UN/UK and FinCEN lists and other watchlists — helping institutions meet complex <b>AML and KYC compliance</b> obligations. Delivered as event-driven microservices on a containerised, cloud-native stack.",
+           "cls": "desc"
+          },
+          {
+           "t": "chips",
+           "items": [
+            {
+             "label": "C#"
+            },
+            {
+             "label": "ASP.NET Core"
+            },
+            {
+             "label": "Microservices"
+            },
+            {
+             "label": "Apache Kafka"
+            },
+            {
+             "label": "MongoDB"
+            },
+            {
+             "label": "Angular"
+            },
+            {
+             "label": "TypeScript"
+            },
+            {
+             "label": "Kubernetes"
+            },
+            {
+             "label": "Azure"
+            },
+            {
+             "label": "AWS"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "panel",
+     "cls": "cat-block",
+     "blocks": [
+      {
+       "t": "group",
+       "cls": "ct",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Loyalty &amp; Rewards Platforms"
+        },
+        {
+         "t": "p",
+         "html": "Configurable loyalty engines and financial analytics that power rewards programmes end to end."
+        }
+       ]
+      },
+      {
+       "t": "grid",
+       "cls": "ent-grid",
+       "items": [
+        {
+         "cls": "glass ent",
+         "blocks": [
+          {
+           "t": "group",
+           "cls": "ent-top",
+           "blocks": [
+            {
+             "t": "h",
+             "level": 4,
+             "html": "Loyalty Rule Engine"
+            },
+            {
+             "t": "text",
+             "html": "Architecture &amp; Implementation",
+             "cls": "role"
+            }
+           ]
+          },
+          {
+           "t": "p",
+           "html": "A high-throughput <b>loyalty rule engine</b> letting administrators configure an effectively unlimited set of rules across tiers, actions, rewards, events, benefits and channels — the configurable core of a modern rewards platform. Built with ASP.NET Core microservices, MongoDB and Apache Kafka on Azure.",
+           "cls": "desc"
+          },
+          {
+           "t": "chips",
+           "items": [
+            {
+             "label": "ASP.NET Core"
+            },
+            {
+             "label": "Microservices"
+            },
+            {
+             "label": "MongoDB"
+            },
+            {
+             "label": "Apache Kafka"
+            },
+            {
+             "label": "Azure"
+            },
+            {
+             "label": "Kubernetes"
+            },
+            {
+             "label": "Docker"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "cls": "glass ent",
+         "blocks": [
+          {
+           "t": "group",
+           "cls": "ent-top",
+           "blocks": [
+            {
+             "t": "h",
+             "level": 4,
+             "html": "Loyalty P&amp;L Reporting &amp; Analytics"
+            },
+            {
+             "t": "text",
+             "html": "Architecture &amp; Implementation",
+             "cls": "role"
+            }
+           ]
+          },
+          {
+           "t": "p",
+           "html": "A <b>financial analytics and P&amp;L reporting platform</b> giving stakeholders self-serve access to margins, mark-ups, subscription fees, accruals and redemptions. A <b>serverless data pipeline</b> on AWS — Lambda, SQS, DynamoDB, Redshift and QuickSight — turns raw loyalty events into board-ready reporting.",
+           "cls": "desc"
+          },
+          {
+           "t": "chips",
+           "items": [
+            {
+             "label": "Python"
+            },
+            {
+             "label": ".NET Core"
+            },
+            {
+             "label": "AWS Lambda"
+            },
+            {
+             "label": "DynamoDB"
+            },
+            {
+             "label": "Redshift"
+            },
+            {
+             "label": "QuickSight"
+            },
+            {
+             "label": "ETL"
+            },
+            {
+             "label": "Microservices"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "panel",
+     "cls": "cat-block",
+     "blocks": [
+      {
+       "t": "group",
+       "cls": "ct",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Cloud Migration &amp; DevOps"
+        },
+        {
+         "t": "p",
+         "html": "On-premises to cloud — lifted, shifted and re-architected on AWS for resilience and elastic scale."
+        }
+       ]
+      },
+      {
+       "t": "grid",
+       "cls": "ent-grid",
+       "items": [
+        {
+         "cls": "glass ent",
+         "blocks": [
+          {
+           "t": "group",
+           "cls": "ent-top",
+           "blocks": [
+            {
+             "t": "h",
+             "level": 4,
+             "html": "Loyalty Platform — Cloud Migration &amp; Re-Architecture"
+            },
+            {
+             "t": "text",
+             "html": "Solutions Architecture &amp; Migration",
+             "cls": "role"
+            }
+           ]
+          },
+          {
+           "t": "p",
+           "html": "End-to-end <b>AWS cloud migration</b> of a loyalty platform's on-premises integration services and APIs, followed by <b>re-architecture</b> of critical components using cloud-native AWS PaaS and proven patterns — delivering a highly available, resilient and horizontally scalable system.",
+           "cls": "desc"
+          },
+          {
+           "t": "chips",
+           "items": [
+            {
+             "label": "AWS"
+            },
+            {
+             "label": "ASP.NET Core"
+            },
+            {
+             "label": "Apache Kafka"
+            },
+            {
+             "label": "React Native"
+            },
+            {
+             "label": "Kubernetes"
+            },
+            {
+             "label": "Docker"
+            },
+            {
+             "label": "Microservices"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "cls": "glass ent",
+         "blocks": [
+          {
+           "t": "group",
+           "cls": "ent-top",
+           "blocks": [
+            {
+             "t": "h",
+             "level": 4,
+             "html": "AWS Lift &amp; Shift and Re-Architecture"
+            },
+            {
+             "t": "text",
+             "html": "Solutions Architecture &amp; Migration",
+             "cls": "role"
+            }
+           ]
+          },
+          {
+           "t": "p",
+           "html": "Migration of on-premises integration services and APIs to AWS using IaaS, then re-architecture of critical components with AWS PaaS and <b>Well-Architected</b> patterns for high availability and elastic scale — <b>infrastructure as code</b> with HashiCorp Terraform across Route 53, CloudFront, WAF/Shield, VPC, EC2, RDS and S3.",
+           "cls": "desc"
+          },
+          {
+           "t": "chips",
+           "items": [
+            {
+             "label": "AWS"
+            },
+            {
+             "label": "HashiCorp Terraform"
+            },
+            {
+             "label": "IaC"
+            },
+            {
+             "label": "CloudFront"
+            },
+            {
+             "label": "WAF"
+            },
+            {
+             "label": "VPC"
+            },
+            {
+             "label": "EC2"
+            },
+            {
+             "label": "RDS"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "panel",
+     "cls": "cat-block",
+     "blocks": [
+      {
+       "t": "group",
+       "cls": "ct",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Enterprise Integration &amp; Identity"
+        },
+        {
+         "t": "p",
+         "html": "EAI, API platforms and single sign-on that connect systems, partners and identities securely."
+        }
+       ]
+      },
+      {
+       "t": "grid",
+       "cls": "ent-grid",
+       "items": [
+        {
+         "cls": "glass ent",
+         "blocks": [
+          {
+           "t": "group",
+           "cls": "ent-top",
+           "blocks": [
+            {
+             "t": "h",
+             "level": 4,
+             "html": "Marketplace Integration Platform"
+            },
+            {
+             "t": "text",
+             "html": "Solution Architect &amp; Delivery Lead",
+             "cls": "role"
+            }
+           ]
+          },
+          {
+           "t": "p",
+           "html": "An <b>enterprise integration platform</b> that synchronises supplier catalogues into a marketplace and integrates order placement back to suppliers in real time. Event-driven microservices spanning AWS (ECS, Lambda, SQS, EventBridge, API Gateway) and Azure (AKS, API Management, Azure SQL), with GraphQL APIs.",
+           "cls": "desc"
+          },
+          {
+           "t": "chips",
+           "items": [
+            {
+             "label": "C#"
+            },
+            {
+             "label": "ASP.NET Core"
+            },
+            {
+             "label": "React"
+            },
+            {
+             "label": "Microservices"
+            },
+            {
+             "label": "AWS"
+            },
+            {
+             "label": "Azure"
+            },
+            {
+             "label": "GraphQL"
+            },
+            {
+             "label": "Kubernetes"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "cls": "glass ent",
+         "blocks": [
+          {
+           "t": "group",
+           "cls": "ent-top",
+           "blocks": [
+            {
+             "t": "h",
+             "level": 4,
+             "html": "Custom Integration Platform &amp; Integrations"
+            },
+            {
+             "t": "text",
+             "html": "Architecture Lead",
+             "cls": "role"
+            }
+           ]
+          },
+          {
+           "t": "p",
+           "html": "A custom <b>enterprise application integration (EAI)</b> platform and a broad suite of integrations connecting on-premises and SaaS systems through APIs, messaging and event-driven flows — fronted by a <b>Kong API gateway</b> and built on reusable enterprise-integration patterns across a multi-year .NET estate.",
+           "cls": "desc"
+          },
+          {
+           "t": "chips",
+           "items": [
+            {
+             "label": "ASP.NET Core"
+            },
+            {
+             "label": ".NET"
+            },
+            {
+             "label": "Microservices"
+            },
+            {
+             "label": "RabbitMQ"
+            },
+            {
+             "label": "Kong API Gateway"
+            },
+            {
+             "label": "Azure"
+            },
+            {
+             "label": "AWS"
+            },
+            {
+             "label": "Kubernetes"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "cls": "glass ent",
+         "blocks": [
+          {
+           "t": "group",
+           "cls": "ent-top",
+           "blocks": [
+            {
+             "t": "h",
+             "level": 4,
+             "html": "Azure AD OneClick SSO"
+            },
+            {
+             "t": "text",
+             "html": "Architecture &amp; Implementation",
+             "cls": "role"
+            }
+           ]
+          },
+          {
+           "t": "p",
+           "html": "A one-click <b>single sign-on (SSO)</b> integration delivering uni-directional federation from <b>Microsoft Azure Active Directory</b> to Cornerstone — configurable in minutes and eliminating separate portal credentials.",
+           "cls": "desc"
+          },
+          {
+           "t": "chips",
+           "items": [
+            {
+             "label": "Azure Active Directory"
+            },
+            {
+             "label": "SSO"
+            },
+            {
+             "label": ".NET Core"
+            },
+            {
+             "label": "ASP.NET Core"
+            },
+            {
+             "label": "MS SQL"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "panel",
+     "cls": "cat-block",
+     "blocks": [
+      {
+       "t": "group",
+       "cls": "ct",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Healthcare &amp; HealthTech"
+        },
+        {
+         "t": "p",
+         "html": "Clinical systems with HL7 integration across labs, providers and patient portals."
+        }
+       ]
+      },
+      {
+       "t": "grid",
+       "cls": "ent-grid",
+       "items": [
+        {
+         "cls": "glass ent",
+         "blocks": [
+          {
+           "t": "group",
+           "cls": "ent-top",
+           "blocks": [
+            {
+             "t": "h",
+             "level": 4,
+             "html": "NHSP Hearing Screening System"
+            },
+            {
+             "t": "text",
+             "html": "Architecture &amp; Technical Guidance",
+             "cls": "role"
+            }
+           ]
+          },
+          {
+           "t": "p",
+           "html": "A healthcare platform to manage patients, record newborn <b>hearing-screening</b> tests, generate clinical reports and run analytics — with <b>HL7 integration</b> to connected health systems.",
+           "cls": "desc"
+          },
+          {
+           "t": "chips",
+           "items": [
+            {
+             "label": "ASP.NET MVC"
+            },
+            {
+             "label": "ASP.NET Web API"
+            },
+            {
+             "label": "WCF"
+            },
+            {
+             "label": "MS SQL Server"
+            },
+            {
+             "label": "HL7"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "cls": "glass ent",
+         "blocks": [
+          {
+           "t": "group",
+           "cls": "ent-top",
+           "blocks": [
+            {
+             "t": "h",
+             "level": 4,
+             "html": "CareEvolve — Lab Management &amp; Health Data Integration"
+            },
+            {
+             "t": "text",
+             "html": "Architecture &amp; Technical Guidance",
+             "cls": "role"
+            }
+           ]
+          },
+          {
+           "t": "p",
+           "html": "A <b>laboratory management and health-data integration</b> system enabling physicians to order lab tests, trigger alerts, generate reports and run analytics — with <b>HL7 integration</b> to multiple laboratories and a patient portal for results.",
+           "cls": "desc"
+          },
+          {
+           "t": "chips",
+           "items": [
+            {
+             "label": "ASP.NET MVC"
+            },
+            {
+             "label": "Web Services"
+            },
+            {
+             "label": "MS SQL Server"
+            },
+            {
+             "label": "HL7"
+            },
+            {
+             "label": ".NET Framework"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "group",
+     "cls": "ent-cta",
+     "blocks": [
+      {
+       "t": "eyebrow",
+       "text": "Enterprise engagements"
+      },
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Have a platform to architect or migrate?",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "From compliance systems to cloud migrations — let's scope the architecture together.",
+       "cls": "lead"
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Book a Free Call →",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "primary"
+        },
+        {
+         "label": "Our services",
+         "href": "/services/",
+         "variant": "glass"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "What people say"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Trusted by clients and collaborators.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "g3",
+     "items": [
+      {
+       "cls": "glass tcard",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "★★★★★ <b>5.0</b>",
+         "cls": "tstars"
+        },
+        {
+         "t": "p",
+         "html": "A 5.0-rated engagement for the <b>Sales Automation</b> project — Mobile App Development, on a fixed-price build.",
+         "cls": "tproj"
+        },
+        {
+         "t": "text",
+         "html": "SR <span>Satyam Rathaur</span><span>Verified client review</span><span>GoodFirms</span>",
+         "cls": "twho"
+        }
+       ]
+      },
+      {
+       "cls": "glass tcard",
+       "blocks": [
+        {
+         "t": "quote",
+         "html": "“I've had the pleasure of collaborating with Het. Having strong technical knowledge, particularly in DevOps and Power BI, and always approaching challenges with a solution-oriented mindset.”",
+         "cls": "tquote"
+        },
+        {
+         "t": "text",
+         "html": "SB <span>Shalin Bhatt</span><span>Business Consultant for Startups &amp; SMBs</span><span>LinkedIn</span>",
+         "cls": "twho"
+        }
+       ]
+      },
+      {
+       "cls": "glass tcard",
+       "blocks": [
+        {
+         "t": "quote",
+         "html": "“Het is a friendly, positive, responsible person and it was amazing meeting him on my networking sessions about digital marketing.”",
+         "cls": "tquote"
+        },
+        {
+         "t": "text",
+         "html": "JB <span>Jiri Borc</span><span>Networking &amp; community building</span><span>LinkedIn</span>",
+         "cls": "twho"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Your project could be next<br>on this list.",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "Apps, AI or enterprise platforms — tell us what you're building and we'll show you how we'd ship it.",
+       "cls": "lead"
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Book a Free Call →",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "primary"
+        },
+        {
+         "label": "Explore AI app ideas",
+         "href": "/ai-app-development/",
+         "variant": "glass"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "form",
+     "id": "leadForm",
+     "fields": [
+      {
+       "name": "lbName",
+       "id": "lbName",
+       "type": "text",
+       "label": "Your name",
+       "placeholder": "Jane Doe",
+       "required": false
+      },
+      {
+       "name": "lbEmail",
+       "id": "lbEmail",
+       "type": "email",
+       "label": "Work email",
+       "placeholder": "jane@company.com",
+       "required": false
+      },
+      {
+       "name": "lbWant",
+       "id": "lbWant",
+       "type": "text",
+       "label": "What are you building?",
+       "placeholder": "One line is plenty — e.g. a patient booking app for 3 clinics",
+       "required": false
+      },
+      {
+       "name": "lbBudget",
+       "id": "lbBudget",
+       "type": "select",
+       "label": "Budget",
+       "required": false,
+       "options": [
+        "Select a range",
+        "Not sure yet",
+        "<$10k",
+        "$10-25k",
+        "$25-60k",
+        "$60k+"
+       ]
+      },
+      {
+       "name": "lbTime",
+       "id": "lbTime",
+       "type": "select",
+       "label": "Timeline",
+       "required": false,
+       "options": [
+        "Select a timeline",
+        "ASAP",
+        "1-3 months",
+        "3-6 months",
+        "Just exploring"
+       ]
+      },
+      {
+       "type": "checkbox",
+       "label": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+       "required": false
+      }
+     ],
+     "submit": "Send →",
+     "kick": "Start here",
+     "title": "Want something like this built?",
+     "sub": "Tell us what you have in mind. We’ll tell you what it takes, and what it doesn’t need.",
+     "note": "Replies within one business day · no upfront fee to talk",
+     "consent": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+     "success": "✓ Thanks — that’s with Het. You’ll get a reply within one business day, usually with either a straight answer or the two or three questions needed to scope it properly."
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Common questions"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "About the work above.",
+     "cls": "h2"
+    },
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What real results have you delivered for clients?",
+       "a": "Measured outcomes, not vanity metrics: 40% less payroll processing time for our HR &amp; Payroll platform, a 35% lift in downloads and 20% rise in venue bookings for our Creator–Venue Marketplace, standardised multi-store operations for our Retail Operations platform, and average booking time down to ~3 minutes for our Ride-Hailing platform. Product names are withheld under client NDAs — every metric is real."
+      },
+      {
+       "q": "Are the Web3 Creator and Fan Investment platforms real, shipped products?",
+       "a": "No — they're clearly labelled as product &amp; UI/UX design concepts on this page. We don't claim results or live status for work that hasn't shipped."
+      },
+      {
+       "q": "What industries have you shipped apps in?",
+       "a": "HR &amp; payroll, influencer marketing, retail operations, and ride-hailing, among others — see the case studies above for the problem, approach and result on each."
+      },
+      {
+       "q": "Can I see case studies for a specific industry, like FinTech or retail?",
+       "a": "Yes — check our industry pages for <a href=\"/fintech-app-development/\">FinTech</a>, <a href=\"/retail-app-development/\">Retail</a>, <a href=\"/ride-hailing-app-development/\">Ride-Hailing</a> and <a href=\"/hr-payroll-app-development/\">HR &amp; Payroll</a> app development."
+      },
+      {
+       "q": "Is the Healthcare Staffing Platform live on the App Store or Google Play?",
+       "a": "Not yet publicly — it's presented as a delivered platform (mobile app + web dashboard), the same way we present our enterprise engagements, without store links or live-status claims."
+      },
+      {
+       "q": "Why don't you name these products?",
+       "a": "Client confidentiality agreements. The problems, solutions, metrics, tech stacks and screens shown are all real and unaltered — only the product names are withheld."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

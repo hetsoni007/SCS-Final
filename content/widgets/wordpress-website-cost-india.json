@@ -1,0 +1,21 @@
+{
+ "type": "custom",
+ "kick": "✦ Interactive · live estimate",
+ "note": "",
+ "ctas": [
+  {
+   "label": "Get your actual fixed price →",
+   "href": "/wordpress-website-development-india/#quote",
+   "primary": true
+  },
+  {
+   "label": "Book a free call",
+   "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+   "primary": false
+  }
+ ],
+ "cards": [],
+ "out": [
+  "Typical India market range"
+ ]
+}

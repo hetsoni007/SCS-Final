@@ -1,0 +1,559 @@
+{
+ "slug": "retail-app-development",
+ "path": "/retail-app-development/",
+ "meta": {
+  "title": "Retail App Development | Soni Consultancy Services",
+  "description": "Retail app development — store operations checklists, gamified staff training and head-office analytics. Our retail operations platform is live on both stores.",
+  "robots": "index,follow,max-image-preview:large",
+  "canonical": "https://soniconsultancyservices.com/retail-app-development/",
+  "ogTitle": "Retail App Development | Soni Consultancy Services",
+  "ogDescription": "Retail app development — store operations checklists, gamified staff training and head-office analytics. Our retail operations platform is live on both stores.",
+  "ogType": "website"
+ },
+ "h1": "Every store, run to one standard.",
+ "breadcrumb": "Home › Retail",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Service",
+   "name": "Retail App Development",
+   "serviceType": "Retail operations app development",
+   "provider": {
+    "@type": "Organization",
+    "name": "Soni Consultancy Services",
+    "url": "https://soniconsultancyservices.com"
+   },
+   "areaServed": "Worldwide",
+   "description": "Retail chain operations apps — checklists, gamified LMS training, issue logs and head-office analytics in React Native and MERN.",
+   "url": "https://soniconsultancyservices.com/retail-app-development/"
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://soniconsultancyservices.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Retail",
+     "item": "https://soniconsultancyservices.com/retail-app-development/"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Can it handle many locations?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — our platform was built for multi-store chains: role-based access for head office, area managers and store staff, with analytics rolled up across every location."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does it work with unreliable store internet?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We design for the shop floor — offline-tolerant flows and sync so a weak connection doesn't stop a checklist or a training module."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How long does a retail operations app take?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "This platform took 32 weeks to full market release across both stores. A focused first version of your operations app can ship much sooner — estimate your scope here."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "logo": "https://soniconsultancyservices.com/favicon.svg",
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://www.instagram.com/soni.consultancyservices/",
+    "https://www.facebook.com/soniconsultancyservices",
+    "https://medium.com/@hetsoni9398"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "cls": "page-hero",
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Retail · Operations · LMS"
+    },
+    {
+     "t": "h",
+     "level": 1,
+     "html": "Every store, run<br>to one standard.",
+     "cls": "h1"
+    },
+    {
+     "t": "p",
+     "html": "We build retail operations apps — checklists, training, issue tracking and analytics — that make every branch run like your best branch. Our retail chain platform is live on the App Store and Google Play.",
+     "cls": "lead"
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Book a Free Call →",
+       "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+       "variant": "primary"
+      },
+      {
+       "label": "Estimate your app cost",
+       "href": "/app-cost-calculator/",
+       "variant": "glass"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "What we build"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Built for how it's<br>actually used.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "feat-grid",
+     "items": [
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Operational checklists"
+        },
+        {
+         "t": "p",
+         "html": "Customisable open, close and audit checklists with photo proof and timestamps per store."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Gamified staff training"
+        },
+        {
+         "t": "p",
+         "html": "Bite-sized LMS modules staff actually finish, with scores head office can see."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Issue &amp; customer logs"
+        },
+        {
+         "t": "p",
+         "html": "Structured logging that turns floor problems into trackable, assignable items."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Head-office analytics"
+        },
+        {
+         "t": "p",
+         "html": "One dashboard for compliance, training and issues across every location."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Multi-store rollouts"
+        },
+        {
+         "t": "p",
+         "html": "Role-based access for HQ, area managers and store staff."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Works on the shop floor"
+        },
+        {
+         "t": "p",
+         "html": "Fast on mid-range Android devices and tolerant of patchy store Wi-Fi."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Proof"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Case study: Retail Operations Platform",
+     "cls": "h2"
+    },
+    {
+     "t": "p",
+     "html": "A retail chain management platform unifying four modules — operational checklists, a gamified LMS, issue logs and customer logs — live on the App Store and Google Play.",
+     "cls": "lead"
+    },
+    {
+     "t": "grid",
+     "cls": "case-strip",
+     "items": [
+      {
+       "cls": "glass case-card",
+       "href": "/work/#retail-ops",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "4 modules",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Checklists, LMS, issue logs and customer logs in one platform",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      },
+      {
+       "cls": "glass case-card",
+       "href": "/work/#retail-ops",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Multi-store",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Standardised operations with real-time head-office visibility",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      },
+      {
+       "cls": "glass case-card",
+       "href": "/work/#retail-ops",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Faster onboarding",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Gamified bite-sized training measurably sped up staff onboarding",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Process"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Idea to app store,<br>without the drama.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "proc-grid",
+     "items": [
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "01",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Scope call"
+        },
+        {
+         "t": "p",
+         "html": "30 minutes on your goals, users and constraints — with an honest read on feasibility."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "02",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Fixed-price proposal"
+        },
+        {
+         "t": "p",
+         "html": "Scope, timeline and a fixed price within 48 hours. No vague day-rates."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "03",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Build"
+        },
+        {
+         "t": "p",
+         "html": "Weekly demo builds you can hold in your hand from the first sprint."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "04",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Launch &amp; support"
+        },
+        {
+         "t": "p",
+         "html": "Store submission handled, then monitoring and iteration after launch."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "FAQ"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Common questions.",
+     "cls": "h2"
+    },
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "Can it handle many locations?",
+       "a": "Yes — our platform was built for multi-store chains: role-based access for head office, area managers and store staff, with analytics rolled up across every location."
+      },
+      {
+       "q": "Does it work with unreliable store internet?",
+       "a": "We design for the shop floor — offline-tolerant flows and sync so a weak connection doesn't stop a checklist or a training module."
+      },
+      {
+       "q": "How long does a retail operations app take?",
+       "a": "This platform took 32 weeks to full market release across both stores. A focused first version of your operations app can ship much sooner — <a href=\"/app-cost-calculator/\">estimate your scope here</a>."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "form",
+     "id": "leadForm",
+     "fields": [
+      {
+       "name": "lbName",
+       "id": "lbName",
+       "type": "text",
+       "label": "Your name",
+       "placeholder": "Jane Doe",
+       "required": false
+      },
+      {
+       "name": "lbEmail",
+       "id": "lbEmail",
+       "type": "email",
+       "label": "Work email",
+       "placeholder": "jane@company.com",
+       "required": false
+      },
+      {
+       "name": "lbWant",
+       "id": "lbWant",
+       "type": "text",
+       "label": "What are you building?",
+       "placeholder": "One line is plenty — e.g. a patient booking app for 3 clinics",
+       "required": false
+      },
+      {
+       "name": "lbBudget",
+       "id": "lbBudget",
+       "type": "select",
+       "label": "Budget",
+       "required": false,
+       "options": [
+        "Select a range",
+        "Not sure yet",
+        "<$10k",
+        "$10-25k",
+        "$25-60k",
+        "$60k+"
+       ]
+      },
+      {
+       "name": "lbTime",
+       "id": "lbTime",
+       "type": "select",
+       "label": "Timeline",
+       "required": false,
+       "options": [
+        "Select a timeline",
+        "ASAP",
+        "1-3 months",
+        "3-6 months",
+        "Just exploring"
+       ]
+      },
+      {
+       "type": "checkbox",
+       "label": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+       "required": false
+      }
+     ],
+     "submit": "Send →",
+     "kick": "Start here",
+     "title": "Building for retail?",
+     "sub": "Store ops, stock, loyalty or a customer app — tell us what it has to do and we’ll come back with a fixed price.",
+     "note": "Replies within one business day · no upfront fee to talk",
+     "consent": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+     "success": "✓ Thanks — that’s with Het. You’ll get a reply within one business day, usually with either a straight answer or the two or three questions needed to scope it properly."
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Get a fixed price<br>for your app.",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "A 30-minute call, then a fixed-price proposal within 48 hours. NDA on request.",
+       "cls": "lead"
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Book a Free Call →",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "primary"
+        },
+        {
+         "label": "See our work",
+         "href": "/work/",
+         "variant": "glass"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

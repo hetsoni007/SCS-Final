@@ -1,0 +1,756 @@
+{
+ "slug": "wordpress-website-development-india",
+ "path": "/wordpress-website-development-india/",
+ "meta": {
+  "title": "WordPress Development India | Soni Consultancy Services",
+  "description": "Custom WordPress & WooCommerce websites for Indian businesses, built by senior engineers. Fixed price, fast turnaround. Get a free quote.",
+  "keywords": "WordPress website development India, WordPress developer India, WordPress development company India, WooCommerce development India, custom WordPress website design",
+  "robots": "index,follow,max-image-preview:large",
+  "canonical": "https://soniconsultancyservices.com/wordpress-website-development-india/",
+  "ogTitle": "WordPress Website Development for Indian Businesses",
+  "ogDescription": "Custom WordPress & WooCommerce websites for Indian businesses, built by senior engineers. Fixed price, fast turnaround.",
+  "ogType": "website"
+ },
+ "h1": "A WordPress website that actually grows your business.",
+ "breadcrumb": "Home › WordPress Website Development India",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Service",
+   "name": "WordPress Website Development",
+   "serviceType": "WordPress website development",
+   "provider": {
+    "@type": "Organization",
+    "name": "Soni Consultancy Services",
+    "url": "https://soniconsultancyservices.com"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "India"
+   },
+   "description": "Custom WordPress and WooCommerce website development for Indian businesses — design, build, migration, SEO setup and ongoing support.",
+   "url": "https://soniconsultancyservices.com/wordpress-website-development-india/"
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://soniconsultancyservices.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "WordPress Website Development India",
+     "item": "https://soniconsultancyservices.com/wordpress-website-development-india/"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Do you build custom WordPress sites, or just install a template?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We design and build around your brand — custom theming where it matters, and efficient use of tools like Elementor or WooCommerce where that's genuinely the right call. Not a one-size-fits-all template."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can you migrate my existing website to WordPress?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — migrating from another platform, or fixing a slow or poorly-built WordPress site (content, SEO redirects, speed), is one of our core services."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you build online stores with WooCommerce?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, including Indian payment gateway integration such as Razorpay, PayU or Cashfree."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How much does a WordPress website cost?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It depends on scope. You get a fixed-price proposal after a free call, so you know the number before committing — no vague hourly guesswork."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you offer ongoing maintenance after launch?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — updates, backups, security and support plans are available. We'll go through options on the call."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is this different from your React Native / app development work?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — this is a dedicated website service from the same senior team, for businesses that need a website rather than a mobile app. We can build both if you need them."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "logo": "https://soniconsultancyservices.com/favicon.svg",
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://www.instagram.com/soni.consultancyservices/",
+    "https://www.facebook.com/soniconsultancyservices",
+    "https://medium.com/@hetsoni9398"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "cls": "page-hero",
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "WordPress Website Development · India"
+    },
+    {
+     "t": "h",
+     "level": 1,
+     "html": "A WordPress website<br>that actually grows your business.",
+     "cls": "h1"
+    },
+    {
+     "t": "p",
+     "html": "Custom-built, fast-loading WordPress &amp; WooCommerce websites for Indian businesses — designed and engineered by the same senior team behind our React Native and AI products. No template shortcuts, built for SEO from day one.",
+     "cls": "lead"
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Get a Free Quote →",
+       "href": "#quote",
+       "variant": "primary"
+      },
+      {
+       "label": "Book a Free Call",
+       "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+       "variant": "glass"
+      }
+     ]
+    },
+    {
+     "t": "group",
+     "cls": "trust-row",
+     "blocks": [
+      {
+       "t": "text",
+       "html": "Custom-built, not just a theme install"
+      },
+      {
+       "t": "text",
+       "html": "Fixed price, agreed upfront"
+      },
+      {
+       "t": "text",
+       "html": "India-based, IST business hours"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "What we build"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Everything your business<br>website needs to do.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "feat-grid",
+     "items": [
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Business &amp; brand websites"
+        },
+        {
+         "t": "p",
+         "html": "Custom WordPress sites that load fast and actually reflect the brand — not a generic template with your logo swapped in."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "WooCommerce online stores"
+        },
+        {
+         "t": "p",
+         "html": "Full e-commerce builds — products, inventory, shipping and Indian payment gateways like Razorpay, PayU or Cashfree."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Migration &amp; speed fixes"
+        },
+        {
+         "t": "p",
+         "html": "Moving from an old host, builder or a slow WordPress site — with content, SEO redirects and performance handled properly."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Custom themes &amp; plugins"
+        },
+        {
+         "t": "p",
+         "html": "When a page builder can't do what you need, we write the PHP and JavaScript ourselves — no hacky workarounds."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "On-page SEO, done right"
+        },
+        {
+         "t": "p",
+         "html": "Technical SEO set up from launch — schema markup, sitemaps, Core Web Vitals and mobile performance, not an afterthought."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "AI-enhanced features"
+        },
+        {
+         "t": "p",
+         "html": "Chat assistants, smart search or content tools — built with the same Claude/GPT integration work we do for our app clients."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Why founders in India pick us"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Engineering discipline,<br>not a template shop.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "why-grid",
+     "items": [
+      {
+       "cls": "glass why",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Engineering-grade discipline"
+        },
+        {
+         "t": "p",
+         "html": "Built by the same senior engineers who ship production React Native, MERN and AI apps — not a template shop churning out lookalike sites."
+        }
+       ]
+      },
+      {
+       "cls": "glass why",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "India-based, IST hours"
+        },
+        {
+         "t": "p",
+         "html": "Based in India, working India business hours — no timezone friction, no midnight calls to get an update."
+        }
+       ]
+      },
+      {
+       "cls": "glass why",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Fixed price, agreed upfront"
+        },
+        {
+         "t": "p",
+         "html": "A clear proposal before a line of code is written. You know the number before you commit a rupee."
+        }
+       ]
+      },
+      {
+       "cls": "glass why",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Direct access, no middlemen"
+        },
+        {
+         "t": "p",
+         "html": "You work directly with the engineer building your site — not an account manager relaying messages back and forth."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Process"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Brief to live site,<br>without the back-and-forth.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "proc-grid",
+     "items": [
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "01",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Discover"
+        },
+        {
+         "t": "p",
+         "html": "Goals, content and the metric that matters — leads, sales or bookings. Fixed-price proposal within 48 hours."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "02",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Design"
+        },
+        {
+         "t": "p",
+         "html": "A clean layout built around your brand, mobile-first from the first mockup."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "03",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Build"
+        },
+        {
+         "t": "p",
+         "html": "WordPress (and WooCommerce, where needed) built cleanly, with weekly progress you can see."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "04",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Launch &amp; support"
+        },
+        {
+         "t": "p",
+         "html": "Go live with SEO basics in place, then ongoing maintenance and support available."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "quote",
+   "blocks": [
+    {
+     "t": "group",
+     "cls": "lead-grid",
+     "blocks": [
+      {
+       "t": "eyebrow",
+       "text": "Get started"
+      },
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Tell us about your website.<br>We'll reply within one business day.",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "Fill in the form and it goes straight to our team — no forms disappearing into a queue. Prefer to talk first? Book a free call instead, or message us on WhatsApp.",
+       "cls": "lead"
+      },
+      {
+       "t": "panel",
+       "cls": "glass",
+       "href": "https://wa.me/918160682185?text=Hi%20Het%2C%20I%27d%20like%20a%20WordPress%20website%20built.",
+       "blocks": [
+        {
+         "t": "grid",
+         "items": [
+          {
+           "blocks": [
+            {
+             "t": "text",
+             "html": "Chat on WhatsApp"
+            }
+           ]
+          },
+          {
+           "blocks": [
+            {
+             "t": "text",
+             "html": "Usually replies same business day"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "panel",
+       "cls": "glass form-card",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 2,
+         "html": "Get a free quote",
+         "cls": "h3"
+        },
+        {
+         "t": "p",
+         "html": "No obligation. We'll come back with a fixed-price proposal.",
+         "cls": "muted"
+        },
+        {
+         "t": "form",
+         "id": "wpForm",
+         "fields": [
+          {
+           "name": "wpName",
+           "id": "wpName",
+           "type": "input",
+           "label": "Name",
+           "placeholder": "Rohan Mehta",
+           "required": false
+          },
+          {
+           "name": "wpPhone",
+           "id": "wpPhone",
+           "type": "tel",
+           "label": "Phone / WhatsApp",
+           "placeholder": "+91 98765 43210",
+           "required": false
+          },
+          {
+           "name": "wpEmail",
+           "id": "wpEmail",
+           "type": "email",
+           "label": "Email",
+           "placeholder": "you@business.com",
+           "required": false
+          },
+          {
+           "name": "wpBiz",
+           "id": "wpBiz",
+           "type": "input",
+           "label": "Business name",
+           "placeholder": "Your business (optional)",
+           "required": false
+          },
+          {
+           "name": "wpType",
+           "id": "wpType",
+           "type": "select",
+           "label": "What do you need?",
+           "required": false,
+           "options": [
+            "Select an option",
+            "New WordPress Website",
+            "WooCommerce Online Store",
+            "Website Redesign / Migration",
+            "Maintenance & Support",
+            "Something else"
+           ]
+          },
+          {
+           "name": "wpMsg",
+           "id": "wpMsg",
+           "type": "textarea",
+           "label": "Tell us about your project",
+           "placeholder": "What's the site for? Any pages/features in mind?",
+           "required": false
+          }
+         ],
+         "submit": "Get My Free Quote →",
+         "success": "✓ Thanks — we've received your details and will reply within one business day. Want to talk sooner? <a href=\"https://calendly.com/het-soni-soniconsultancyservices/introductory\" target=\"_blank\" rel=\"noopener\">Book a free call</a>."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Free guides & tools"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Do your homework first.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "g4",
+     "items": [
+      {
+       "cls": "glass",
+       "href": "/blog/wordpress-website-cost-india",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Calculator"
+        },
+        {
+         "t": "text",
+         "html": "What a WordPress site costs in India"
+        },
+        {
+         "t": "text",
+         "html": "Estimate yours →"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/blog/wordpress-vs-custom-website",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Decision tool"
+        },
+        {
+         "t": "text",
+         "html": "WordPress vs custom — which fits you?"
+        },
+        {
+         "t": "text",
+         "html": "Take the quiz →"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/blog/woocommerce-payment-gateway-india",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Comparison"
+        },
+        {
+         "t": "text",
+         "html": "Razorpay vs PayU vs Cashfree"
+        },
+        {
+         "t": "text",
+         "html": "Compare fees →"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/blog/wordpress-seo-speed-checklist",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Self-audit"
+        },
+        {
+         "t": "text",
+         "html": "Score your site's speed &amp; SEO"
+        },
+        {
+         "t": "text",
+         "html": "Run the audit →"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "FAQ"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Common questions.",
+     "cls": "h2"
+    },
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "Do you build custom WordPress sites, or just install a template?",
+       "a": "We design and build around your brand — custom theming where it matters, and efficient use of tools like Elementor or WooCommerce where that's genuinely the right call. Not a one-size-fits-all template."
+      },
+      {
+       "q": "Can you migrate my existing website to WordPress?",
+       "a": "Yes — migrating from another platform, or fixing a slow or poorly-built WordPress site (content, SEO redirects, speed), is one of our core services."
+      },
+      {
+       "q": "Do you build online stores with WooCommerce?",
+       "a": "Yes, including Indian payment gateway integration such as Razorpay, PayU or Cashfree."
+      },
+      {
+       "q": "How much does a WordPress website cost?",
+       "a": "It depends on scope. You get a fixed-price proposal after a free call, so you know the number before committing — no vague hourly guesswork."
+      },
+      {
+       "q": "Do you offer ongoing maintenance after launch?",
+       "a": "Yes — updates, backups, security and support plans are available. We'll go through options on the call."
+      },
+      {
+       "q": "Is this different from your React Native / app development work?",
+       "a": "Yes — this is a dedicated website service from the same senior team, for businesses that need a website rather than a mobile app. We can build both if you need them."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Ready for a website<br>that works as hard as you do?",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "Free quote, no obligation. Fixed price agreed before we start.",
+       "cls": "lead"
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Get a Free Quote →",
+         "href": "#quote",
+         "variant": "primary"
+        },
+        {
+         "label": "Book a Free Call",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "glass"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

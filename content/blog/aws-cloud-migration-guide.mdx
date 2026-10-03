@@ -1,0 +1,94 @@
+---
+slug: "aws-cloud-migration-guide"
+title: "AWS Cloud Migration: A Practical Guide for 2026"
+metaTitle: "AWS Cloud Migration: A Practical Guide for 2026"
+description: "A practical AWS cloud migration guide for 2026 — the 6 R's, lift-and-shift vs re-architecture, a migration roadmap, the Well-Architected pillars, FinOps."
+canonical: "https://soniconsultancyservices.com/blog/aws-cloud-migration-guide"
+ogTitle: "AWS Cloud Migration: A Practical Guide for 2026"
+ogDescription: "AWS cloud migration in 2026: the 6 R's, lift-and-shift vs re-architecture, a roadmap, and how to control cost."
+categories: ["Cloud","Migration"]
+lead: "A practical AWS cloud migration guide for 2026 — the 6 R's, lift-and-shift vs re-architecture, a migration roadmap, the Well-Architected pillars, FinOps and the pitfalls to avoid."
+author: "Het Soni"
+readTime: "11 min read"
+dateLabel: "June 2026"
+datePublished: "2026-06-14"
+dateModified: "2026-06-14"
+excerpt: "The 6 R's, lift-and-shift vs re-architecture, a roadmap and how to control cloud cost."
+indexOrder: 21
+indexFilter: "web strategy"
+cta: {"heading":"Planning a move to AWS?","body":"From lift-and-shift to full re-architecture — let's scope a migration that de-risks the cutover and controls cost.","buttons":[{"label":"Book a Free Call →","href":"https://calendly.com/het-soni-soniconsultancyservices/introductory"},{"label":"See our platform work","href":"/work/"}]}
+related: ["ci-cd-react-native","react-native-new-architecture-2026","ai-agent-development-services"]
+hasWidget: false
+---
+
+## Why teams migrate to AWS in 2026
+
+Most migrations aren't about chasing a trend — they're triggered by a real constraint: an on-premises data centre that can't scale for a launch, hardware-refresh costs that no longer make sense, compliance or reliability requirements the current setup can't meet, or simply the drag of maintaining infrastructure instead of shipping product. The goal isn't "be on the cloud." It's **elastic scale, higher reliability, and engineering time spent on the product instead of the plumbing.**
+
+## The 6 R's: choosing a strategy per workload
+
+There's no single "migrate to AWS" — you make a decision per application. The industry shorthand is the 6 R's:
+
+-   **Rehost ("lift and shift")** — move as-is to EC2. Fastest and lowest risk, fewest cloud-native benefits. A good first step under time pressure.
+-   **Replatform** — lift and tweak: swap a self-managed database for RDS, containers onto ECS/EKS. Modest effort, real operational wins.
+-   **Refactor / re-architect** — redesign for the cloud with microservices, managed services and event-driven patterns. Most effort, biggest payoff in scale and resilience.
+-   **Repurchase** — drop a self-hosted app for a SaaS equivalent.
+-   **Retire** — switch off what nobody uses (you'll find more than you expect).
+-   **Retain** — leave it where it is for now, by choice.
+
+<Callout>
+
+**The pragmatic path** we use most: **rehost to land quickly, then re-architect the critical components** that actually need cloud-native scale — the lift-and-shift-then-rearchitect approach behind the loyalty-platform migration on our [work page](/work/).
+
+</Callout>
+
+## Lift-and-shift vs re-architect: which, when
+
+Lift-and-shift gets you off the data centre fast and stops the bleeding, but it carries your old bottlenecks with it. Re-architecting turns a monolith into services that scale independently, fail in isolation and deploy continuously — but it's real engineering you shouldn't do to everything at once. The honest answer is usually *both, in sequence*: migrate to stabilise, then re-architect the few components where scale, reliability or cost actually demand it.
+
+## A migration roadmap that de-risks the cutover
+
+1.  **Assess & inventory.** Map every application, its dependencies, data and traffic. You can't migrate what you haven't documented.
+2.  **Pick a strategy per workload.** Assign each app one of the 6 R's and sequence by risk and value.
+3.  **Landing zone first.** Stand up accounts, networking (VPC), identity (IAM), guardrails and observability before you move a single workload.
+4.  **Migrate in waves.** Start with low-risk, low-dependency apps to build confidence and tooling.
+5.  **Run in parallel, then cut over.** Sync data, validate against production, and switch with a tested rollback path.
+6.  **Optimise after.** Right-size, add autoscaling and tune cost once it's live and measured.
+
+## Build on the Well-Architected pillars
+
+AWS's Well-Architected Framework is the checklist worth following: **operational excellence, security, reliability, performance efficiency, cost optimisation and sustainability.** In practice that means infrastructure as code (Terraform or CloudFormation) so environments are reproducible, least-privilege IAM, multi-AZ for the services that can't go down, autoscaling for elastic load, and monitoring (CloudWatch, X-Ray) wired from day one — the same discipline behind our [DevOps & cloud engineering](/devops-cloud-engineering/) work.
+
+## Don't forget FinOps — cloud cost is a discipline
+
+The bill surprises teams who treat it as someone else's job. Tag every resource by team and environment, right-size instances instead of over-provisioning, use savings plans for steady baseline load and spot for fault-tolerant work, and set budget alerts. A lift-and-shift with no optimisation often costs *more* than the data centre — the savings come from using cloud-native, managed and elastic services deliberately.
+
+## Common migration pitfalls
+
+-   **Big-bang cutovers** instead of waves — maximum risk, minimum learning.
+-   **Lift-and-shift and stop** — paying cloud prices for data-centre architecture.
+-   **No landing zone** — bolting security and networking on after workloads are live.
+-   **Ignoring data gravity** — underestimating how long large datasets take to move and sync.
+-   **No rollback plan** — every cutover needs a tested way back.
+
+## Frequently asked questions
+
+### What are the 6 R's of cloud migration?
+
+Rehost (lift and shift), replatform (lift and tweak), refactor/re-architect, repurchase (move to SaaS), retire (switch off) and retain (leave as-is). You choose one per workload based on its value, risk and how much cloud-native benefit you need.
+
+### Should I lift and shift or re-architect for AWS?
+
+Usually both, in sequence: lift-and-shift to get off the data centre quickly and reduce risk, then re-architect the specific components that genuinely need cloud-native scale, reliability or cost efficiency. Re-architecting everything at once is rarely worth the risk.
+
+### How long does an AWS migration take?
+
+It depends on the size and complexity of the estate and the strategy per workload. A rehost of a handful of apps can be weeks; a full re-architecture of a large platform runs longer and is best done in waves. A proper assessment phase gives you a realistic timeline.
+
+### Will moving to AWS reduce our costs?
+
+Only if you optimise. A naive lift-and-shift can cost more than on-premises. Real savings come from right-sizing, autoscaling, managed services, savings plans and disciplined FinOps tagging and monitoring.
+
+### Can you help us migrate to AWS?
+
+Yes — cloud migration and re-architecture is core to our DevOps & cloud practice, and often pairs with rebuilding the client app itself in [React Native](/react-native-app-development/). See the platform engagements on our [work page](/work/) or [book a call](https://calendly.com/het-soni-soniconsultancyservices/introductory) to scope yours.

@@ -1,0 +1,96 @@
+---
+slug: "ci-cd-react-native"
+title: "CI/CD for React Native Apps: A 2026 Setup Guide"
+metaTitle: "CI/CD for React Native Apps: A 2026 Setup Guide"
+description: "How to set up CI/CD for a React Native app in 2026 — the pipeline stages, Fastlane, EAS and GitHub Actions, code signing, automated store releases."
+canonical: "https://soniconsultancyservices.com/blog/ci-cd-react-native"
+ogTitle: "CI/CD for React Native Apps: A 2026 Setup Guide"
+ogDescription: "The pipeline stages, the tools, code signing and OTA updates — how to automate builds and releases for a React Native app."
+categories: ["DevOps","Mobile"]
+lead: "Manual app releases don't scale: someone's laptop, an expired certificate, a forgotten build step. Here's the pipeline that replaces all of that — automated build, test, signing and release for a React Native app, plus over-the-air updates for the fast lane."
+author: "Het Soni"
+readTime: "10 min read"
+dateLabel: "June 2026"
+datePublished: "2026-06-17"
+dateModified: "2026-06-17"
+excerpt: "Automated build, test, signing and store releases — plus OTA updates for the fast lane."
+indexOrder: 17
+indexFilter: "mobile"
+cta: {"heading":"Releasing by hand? Let's automate it.","body":"We build CI/CD pipelines for React Native apps — automated build, test, signing and store releases. Book a free call and we'll review your current setup.","buttons":[{"label":"Book a Free Call →","href":"https://calendly.com/het-soni-soniconsultancyservices/introductory"},{"label":"DevOps & Cloud services","href":"/devops-cloud-engineering/"}]}
+related: ["aws-cloud-migration-guide","ai-react-native-app-development","app-store-launch-checklist"]
+hasWidget: false
+---
+
+## Why mobile needs CI/CD more than web does
+
+Web ships when you push. Mobile doesn't — there are signed binaries, two app stores, review queues, device fragmentation and credentials that expire at the worst possible moment. Without automation, every release becomes a manual ritual that only one person on the team really knows how to perform. That's a bottleneck and a single point of failure rolled into one.
+
+**CI/CD fixes that.** Continuous Integration catches problems within minutes of a push; Continuous Delivery turns "cut a release" into a button, not a day. The payoff is faster releases, fewer broken builds, and a team that isn't afraid to ship — table stakes for every [React Native app](/react-native-app-development/) we build.
+
+## The pipeline, stage by stage
+
+A solid React Native pipeline runs on every push and pull request and looks like this:
+
+1.  **Install & cache.** Restore dependencies (npm/yarn, CocoaPods, Gradle) from cache so each run starts in seconds, not minutes.
+2.  **Lint & type-check.** ESLint and TypeScript fail fast on the cheap-to-catch issues before anything is built.
+3.  **Test.** Unit and component tests (Jest, React Native Testing Library), and end-to-end flows (Detox/Maestro) on the critical paths.
+4.  **Build.** Compile a signed iOS `.ipa` and Android `.aab` for the target environment.
+5.  **Distribute to testers.** Push to TestFlight and Google Play internal testing automatically so QA and stakeholders always have the latest build.
+6.  **Release.** On a tagged release, submit to the App Store and Play production tracks — often as a staged rollout.
+
+Stages 1–3 are CI and gate every change. Stages 4–6 are CD and run on the branches and tags you choose, so a merge to `main` can mean "ready to test" while a version tag means "go to the stores."
+
+## The tools that do the work
+
+-   **GitHub Actions** (or GitLab CI / Bitrise / CircleCI) — the orchestrator that runs the pipeline on macOS and Linux runners.
+-   **Fastlane** — the workhorse for mobile: it builds, signs, captures screenshots and uploads to both stores from a few readable lanes.
+-   **EAS Build & EAS Submit** — for Expo projects, managed cloud builds and store submissions that spare you from maintaining native build infrastructure.
+-   **EAS Update / CodePush-style OTA** — for shipping JavaScript-only fixes straight to users without a new binary.
+
+## Code signing: the part everyone underestimates
+
+This is where mobile pipelines go to die. Both stores require cryptographic signing with certificates and provisioning profiles that expire, differ per environment, and must stay secret. Done by hand across a team, it's a recurring source of failed releases. The fix is to centralise credentials — **Fastlane Match** stores and syncs them from an encrypted repo, and EAS manages them for you in the cloud — and inject them into CI as encrypted secrets, never committed to git. Set this up once, correctly, and "the build won't sign" stops being a release-day phrase.
+
+<Callout>
+
+**Our default:** GitHub Actions for orchestration, Fastlane (or EAS for Expo apps) for builds and submissions, centrally managed signing, and OTA updates for JavaScript fixes. We build these pipelines as part of our [DevOps & Cloud engineering](/devops-cloud-engineering/) work — so a release is a routine event, not an ordeal.
+
+</Callout>
+
+## Over-the-air updates: the fast lane
+
+One of React Native's quiet superpowers: most of your app is a JavaScript bundle, and you can update that bundle *without* shipping a new binary. A copy fix, a logic tweak or a small bug fix can reach every user in minutes via EAS Update or a CodePush-style service — no review queue. The boundary to respect: anything touching native code, native dependencies or app permissions still needs a full binary and a store review. OTA is for speed and hotfixes, not for routing around store policy.
+
+## Environments and secrets
+
+Wire up at least three build profiles — **development, staging and production** — each with its own API endpoints, bundle identifiers and signing. Keep every secret (API keys, signing credentials, service tokens) in your CI provider's encrypted secret store, not in the repo. This is also where security review belongs: dependency scanning and secret scanning as pipeline steps, so a leaked key fails the build instead of reaching production.
+
+## Common pitfalls
+
+-   **No caching** — uncached pods and Gradle turn a 4-minute build into a 20-minute one and burn CI minutes.
+-   **Signing by hand** — the number-one cause of "works on my machine, fails in CI."
+-   **Skipping the test gate** — a pipeline that only builds and ships automates your bugs straight to users.
+-   **Treating OTA as a store bypass** — pushing native changes over the air breaks apps and violates policy.
+-   **No staged rollout** — release to 100% of users at once and a regression hits everyone before you can react.
+
+## Frequently asked questions
+
+### What is CI/CD for a mobile app?
+
+Continuous Integration automatically lints, tests and builds your app on every push, so problems surface in minutes instead of at release time. Continuous Delivery automatically packages, signs and ships those builds to testers and the app stores. Together they turn release from a stressful manual ritual into a routine, repeatable step.
+
+### What tools do you use for React Native CI/CD?
+
+Commonly GitHub Actions (or GitLab CI) to orchestrate the pipeline, Fastlane to automate signing, building and store uploads, and for Expo projects EAS Build and EAS Submit for managed cloud builds. Over-the-air updates are handled by EAS Update or a CodePush-style service.
+
+### Can you push React Native updates without an app store review?
+
+Yes, for changes to the JavaScript bundle — UI tweaks, copy, logic and bug fixes — using over-the-air updates such as EAS Update. Anything that changes native code or app permissions still requires a new binary and a store review. OTA is for fast iteration, not for bypassing store policy.
+
+### Why is code signing the hardest part of mobile CI/CD?
+
+Both stores require signing with certificates and provisioning profiles that expire, differ per environment and must stay secret. Managing them by hand across a team is error-prone. Fastlane Match or EAS-managed credentials store and rotate them centrally so the pipeline can sign builds reliably.
+
+### Can you set up a CI/CD pipeline for our app?
+
+Yes — CI/CD, cloud and DevOps is one of our core services. We set up automated build, test, signing and release pipelines for React Native apps so your team ships faster and breaks less. See our [DevOps & Cloud](/devops-cloud-engineering/) work or [book a call](https://calendly.com/het-soni-soniconsultancyservices/introductory) to review your current setup.

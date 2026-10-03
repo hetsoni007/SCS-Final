@@ -1,0 +1,1147 @@
+{
+ "slug": "blog",
+ "path": "/blog/",
+ "meta": {
+  "title": "Blog — App Development Insights | Soni Consultancy Services",
+  "description": "Practical guides on React Native, MERN and AI app development for founders and CTOs — costs, frameworks, architecture and AI strategy.",
+  "robots": "index,follow,max-image-preview:large",
+  "canonical": "https://soniconsultancyservices.com/blog/",
+  "ogTitle": "Blog — React Native, MERN & AI App Insights",
+  "ogDescription": "Practical guides for founders and CTOs.",
+  "ogType": "website"
+ },
+ "h1": "From the studio.",
+ "breadcrumb": "Home › Blog",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "logo": "https://soniconsultancyservices.com/favicon.svg",
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://www.instagram.com/soni.consultancyservices/",
+    "https://www.facebook.com/soniconsultancyservices",
+    "https://medium.com/@hetsoni9398"
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://soniconsultancyservices.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Blog",
+     "item": "https://soniconsultancyservices.com/blog/"
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "cls": "page-hero",
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Insights"
+    },
+    {
+     "t": "h",
+     "level": 1,
+     "html": "From the studio.",
+     "cls": "h1"
+    },
+    {
+     "t": "p",
+     "html": "Practical, honest guides on React Native, MERN and AI app development — written for founders and product leaders who want to ship better software.",
+     "cls": "lead"
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass featured",
+     "href": "/blog/ai-react-native-app-development",
+     "blocks": [
+      {
+       "t": "chips",
+       "items": [
+        {
+         "label": "✦ Featured"
+        }
+       ]
+      },
+      {
+       "t": "h",
+       "level": 2,
+       "html": "How to Build an AI-Powered React Native App in 2026"
+      },
+      {
+       "t": "p",
+       "html": "Where the model runs, how the pieces fit, what it costs and how long it takes — the complete founder's guide, with an interactive architecture explorer.",
+       "cls": "muted"
+      },
+      {
+       "t": "text",
+       "html": "Mobile · AI14 min read",
+       "cls": "article-meta"
+      }
+     ]
+    },
+    {
+     "t": "grid",
+     "cls": "filter-row",
+     "items": [
+      {
+       "cls": "fbtn active",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "All"
+        }
+       ]
+      },
+      {
+       "cls": "fbtn",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "AI"
+        }
+       ]
+      },
+      {
+       "cls": "fbtn",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Mobile"
+        }
+       ]
+      },
+      {
+       "cls": "fbtn",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Web"
+        }
+       ]
+      },
+      {
+       "cls": "fbtn",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Strategy"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "grid",
+     "cls": "blog-grid",
+     "items": [
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/react-native-new-architecture-2026",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Mobile · Engineering · Interactive",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "React Native’s New Architecture in 2026: What Changed and How to Migrate"
+        },
+        {
+         "t": "p",
+         "html": "0.82 disabled the old bridge, 0.85 removed it. Check how urgent migration is for you."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/rbi-fintech-app-compliance-india",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Strategy · FinTech · Interactive",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "RBI Compliance for Fintech Apps in India (2026)"
+        },
+        {
+         "t": "p",
+         "html": "AFA and digital lending rules are live in 2026. Score your app against 10 requirements."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/react-native-push-notifications",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Mobile · Engineering · Interactive",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "React Native Push Notifications: Firebase, OneSignal or Notifee in 2026"
+        },
+        {
+         "t": "p",
+         "html": "OneSignal’s free tier just shrank. See the real cost at your user count."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/kotlin-multiplatform-vs-react-native",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Mobile · Interactive",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Kotlin Multiplatform vs React Native (2026): Which Should You Pick?"
+        },
+        {
+         "t": "p",
+         "html": "KMP adoption is climbing fast. Answer 5 questions for a recommendation on your project."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/dpdp-act-app-compliance-india",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Strategy · Compliance · Interactive",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "India’s DPDP Act for Apps (2026): Deadlines and a Readiness Check"
+        },
+        {
+         "t": "p",
+         "html": "Full enforcement lands May 2027. Score your app against 10 controls and see what to fix first."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/can-ai-build-my-app",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "AI · Strategy · Interactive",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Can AI Build My App? An Honest 2026 Answer for Founders"
+        },
+        {
+         "t": "p",
+         "html": "What AI genuinely accelerates, what it still cannot own — and which side your project falls on."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/super-app-development",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Mobile · Strategy · Interactive",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Super Apps and Mini Apps in 2026: Should Your Product Become a Platform?"
+        },
+        {
+         "t": "p",
+         "html": "The model works only under specific conditions. Answer 5 questions to see if yours qualify."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/wordpress-website-cost-india",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Web · Interactive · Cost",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "WordPress Website Cost in India (2026): Real Numbers + Calculator"
+        },
+        {
+         "t": "p",
+         "html": "Real market pricing by project type — and a calculator to estimate your own build."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/wordpress-vs-custom-website",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Web · Interactive",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "WordPress vs Custom Website in 2026: Which Should You Build?"
+        },
+        {
+         "t": "p",
+         "html": "Answer 5 questions, get an honest recommendation — from a team that builds both."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/woocommerce-payment-gateway-india",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Web · E-commerce",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Razorpay vs PayU vs Cashfree: Best Gateway for WooCommerce India"
+        },
+        {
+         "t": "p",
+         "html": "2026 fees, plugin status and settlements compared — with live fee math for your volume."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/wordpress-seo-speed-checklist",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Web · SEO · Interactive",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "WordPress Speed &amp; SEO Checklist 2026: Score Your Site in 2 Minutes"
+        },
+        {
+         "t": "p",
+         "html": "10 controls, a live score, and what to fix first — run the free self-audit."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/native-vs-cross-platform-2026",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Mobile · Interactive",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Native vs Cross-Platform in 2026: An Interactive Decision Tool"
+        },
+        {
+         "t": "p",
+         "html": "Answer 5 questions, get a recommendation — native, React Native or Flutter — for your app."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/mvp-tech-stack-2026",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Strategy · Interactive",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "How to Choose Your MVP Tech Stack in 2026"
+        },
+        {
+         "t": "p",
+         "html": "Answer 5 questions — get frontend, backend, database and hosting for your product."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/mobile-app-security-checklist",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Mobile · Security",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Mobile App Security Checklist 2026: Score Your App in 2 Minutes"
+        },
+        {
+         "t": "p",
+         "html": "10 controls, a live score, and the fixes that matter first — run the free self-audit."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/app-monetization-models",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Strategy · Revenue",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "App Monetization Models 2026: Interactive Revenue Explorer"
+        },
+        {
+         "t": "p",
+         "html": "Subscription, IAP, ads or commission — drag the sliders and see the math for your app."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/how-long-to-build-an-app",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Mobile · Timeline",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "How Long Does It Take to Build a Mobile App in 2026?"
+        },
+        {
+         "t": "p",
+         "html": "A realistic timeline by phase — MVP vs full build, what drives the schedule, and why estimates slip."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/ci-cd-react-native",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "DevOps · Mobile",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "CI/CD for React Native Apps: A 2026 Setup Guide"
+        },
+        {
+         "t": "p",
+         "html": "Automated build, test, signing and store releases — plus OTA updates for the fast lane."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/validate-app-idea-before-building",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Strategy · Product",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "How to Validate Your App Idea Before You Build It"
+        },
+        {
+         "t": "p",
+         "html": "The cheap way to find out people want your app — before you spend a development budget."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/app-store-launch-checklist",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Mobile · Launch",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "App Store &amp; Google Play Launch: A 2026 Submission Checklist"
+        },
+        {
+         "t": "p",
+         "html": "Everything between a finished build and a live app — accounts, listings, privacy labels and review."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/app-maintenance-cost",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Strategy · Cost",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "What App Maintenance Really Costs After Launch"
+        },
+        {
+         "t": "p",
+         "html": "Apps aren't \"done\" at launch — the real ongoing cost of keeping one alive, and how to keep it down."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/aws-cloud-migration-guide",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Cloud · Migration",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "AWS Cloud Migration: A Practical Guide for 2026"
+        },
+        {
+         "t": "p",
+         "html": "The 6 R's, lift-and-shift vs re-architecture, a roadmap and how to control cloud cost."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/bsa-aml-software-build-vs-buy",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "FinTech · Compliance",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "BSA/AML Software: Build vs Buy in 2026"
+        },
+        {
+         "t": "p",
+         "html": "When to buy, when to build, and the architecture and compliance that decide it."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/react-native-app-development-cost",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Mobile · Cost",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "React Native App Development Cost in 2026"
+        },
+        {
+         "t": "p",
+         "html": "A transparent breakdown by complexity, the hidden costs, and how to budget from MVP to scale."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/hire-react-native-developers",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Mobile · Hiring",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "How to Hire React Native Developers in 2026"
+        },
+        {
+         "t": "p",
+         "html": "In-house vs freelance vs agency, the skills to screen for, and what it really costs."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/ai-agent-development-services",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "AI · Agents",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "AI Agent Development Services in 2026"
+        },
+        {
+         "t": "p",
+         "html": "What agents are, what they cost, and how to build one that delivers outcomes — not demos."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/ai-app-development-cost-2026",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "AI · Cost",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "How Much Does It Cost to Build an AI App in 2026?"
+        },
+        {
+         "t": "p",
+         "html": "A real pricing breakdown for founders and CTOs — no vague \"it depends.\""
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/build-vs-buy-ai-cto-framework",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "AI · CTO Strategy",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Build vs Buy AI: A CTO's Decision Framework"
+        },
+        {
+         "t": "p",
+         "html": "The most expensive AI mistake is building what you should have bought."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-cta",
+       "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "✦ Work with us",
+         "cls": "k"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Have a project in mind?"
+        },
+        {
+         "t": "p",
+         "html": "Book a free 30-minute call — we’ll map the fastest path from idea to a shipped product."
+        },
+        {
+         "t": "text",
+         "html": "Book a Free Call →",
+         "cls": "go"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/react-native-vs-flutter-2026",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Mobile · Framework",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "React Native vs Flutter in 2026: Which Should You Choose?"
+        },
+        {
+         "t": "p",
+         "html": "An honest comparison from a studio that ships both."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/nextjs-saas-architecture",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Web · Architecture",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Next.js SaaS Architecture: The Patterns We Use"
+        },
+        {
+         "t": "p",
+         "html": "Multi-tenancy, RBAC, API layers, Stripe — the patterns behind every SaaS we ship."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/mvp-to-product-market-fit",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Strategy · Product",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "From MVP to Product-Market Fit: What Changes After Launch"
+        },
+        {
+         "t": "p",
+         "html": "The mistakes founders make in the first 90 days — and how to find traction faster."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/ai-react-native-app-development",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Mobile · AI",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "How to Build an AI-Powered React Native App in 2026"
+        },
+        {
+         "t": "p",
+         "html": "Where the model runs, how it's wired, what it costs — the complete guide."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/react-native-chatgpt-integration",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Mobile · AI",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Integrating ChatGPT &amp; LLMs into a React Native App"
+        },
+        {
+         "t": "p",
+         "html": "The right way: secure proxy, streaming responses and cost control."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/on-device-ai-react-native",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Mobile · AI",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "On-Device AI in React Native: Private, Offline, $0 per Call"
+        },
+        {
+         "t": "p",
+         "html": "Run models on the phone — privacy, offline and no per-call cost."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      },
+      {
+       "cls": "glass blog-card",
+       "href": "/blog/ai-chatbot-app-react-native",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Mobile · AI",
+         "cls": "cat"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Building an AI Chatbot App with React Native"
+        },
+        {
+         "t": "p",
+         "html": "The four complexity tiers, realistic timelines and what drives cost."
+        },
+        {
+         "t": "text",
+         "html": "Read more →",
+         "cls": "more"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "form",
+     "id": "leadForm",
+     "fields": [
+      {
+       "name": "lbName",
+       "id": "lbName",
+       "type": "text",
+       "label": "Your name",
+       "placeholder": "Jane Doe",
+       "required": false
+      },
+      {
+       "name": "lbEmail",
+       "id": "lbEmail",
+       "type": "email",
+       "label": "Work email",
+       "placeholder": "jane@company.com",
+       "required": false
+      },
+      {
+       "name": "lbWant",
+       "id": "lbWant",
+       "type": "text",
+       "label": "What are you building?",
+       "placeholder": "One line is plenty — e.g. a patient booking app for 3 clinics",
+       "required": false
+      },
+      {
+       "name": "lbBudget",
+       "id": "lbBudget",
+       "type": "select",
+       "label": "Budget",
+       "required": false,
+       "options": [
+        "Select a range",
+        "Not sure yet",
+        "<$10k",
+        "$10-25k",
+        "$25-60k",
+        "$60k+"
+       ]
+      },
+      {
+       "name": "lbTime",
+       "id": "lbTime",
+       "type": "select",
+       "label": "Timeline",
+       "required": false,
+       "options": [
+        "Select a timeline",
+        "ASAP",
+        "1-3 months",
+        "3-6 months",
+        "Just exploring"
+       ]
+      },
+      {
+       "type": "checkbox",
+       "label": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+       "required": false
+      }
+     ],
+     "submit": "Send →",
+     "kick": "Start here",
+     "title": "Have a project in mind?",
+     "sub": "You’ve read the thinking. If you want it applied to your product, tell us in one line.",
+     "note": "Replies within one business day · no upfront fee to talk",
+     "consent": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+     "success": "✓ Thanks — that’s with Het. You’ll get a reply within one business day, usually with either a straight answer or the two or three questions needed to scope it properly."
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Got a product idea?<br>Let's talk this week.",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "30 minutes. No pitch deck. An honest conversation about what you're building.",
+       "cls": "lead"
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Book a Free Call →",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "primary"
+        },
+        {
+         "label": "See our work",
+         "href": "/work/",
+         "variant": "glass"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

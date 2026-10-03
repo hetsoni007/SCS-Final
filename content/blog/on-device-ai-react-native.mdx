@@ -1,0 +1,86 @@
+---
+slug: "on-device-ai-react-native"
+title: "On-Device AI in React Native: Private, Offline, $0 per Call"
+metaTitle: "On-Device AI in React Native (Offline & Private)"
+description: "Run AI models on-device in React Native with ExecuTorch and react-native-ai — full privacy, offline support and no per-call API cost. When it's worth it."
+canonical: "https://soniconsultancyservices.com/blog/on-device-ai-react-native"
+ogTitle: "On-Device AI in React Native: Private, Offline, $0 per Call"
+ogDescription: "When to run AI on the phone instead of the cloud — the libraries, the trade-offs, and why hybrid usually wins."
+categories: ["Mobile","AI"]
+lead: "Some AI features shouldn't touch the cloud at all. In 2026 you can run real models on the phone itself from a React Native app — here's what's possible, the honest trade-offs, and when it's the right call."
+author: "Het Soni"
+dateLabel: ""
+datePublished: "2026-06-13"
+dateModified: "2026-06-13"
+excerpt: "Run models on the phone — privacy, offline and no per-call cost."
+indexOrder: 33
+indexFilter: "mobile ai"
+cta: {"heading":"Need AI that respects privacy?","body":"If your data can't leave the device, we'll architect an on-device or hybrid React Native app that delivers anyway.","buttons":[{"label":"Book a Free Call →","href":"https://calendly.com/het-soni-soniconsultancyservices/introductory"},{"label":"Read the full guide","href":"/blog/ai-react-native-app-development"}]}
+related: ["ai-react-native-app-development","app-store-launch-checklist","ci-cd-react-native"]
+hasWidget: false
+---
+
+<Callout>
+
+**TL;DR:** On-device AI means the model runs on the user's phone — **no network call, no API key, no per-call cost, full privacy, works offline.** Libraries like **react-native-executorch** and **react-native-ai** make it real in 2026. The catch: a bigger app and a lower capability ceiling than cloud frontier models, which is why most products end up **hybrid**. This is one path in our wider [guide to building AI-powered React Native apps](/blog/ai-react-native-app-development).
+
+</Callout>
+
+<Embed id="on-device-ai-react-native-1" />
+
+## What "on-device AI" actually means now
+
+For years, "AI in a mobile app" implicitly meant "a request to someone else's server." That assumption broke in 2026. The phones in people's pockets ship with neural accelerators, and the tooling finally caught up. From a React Native app you can now load a quantised model and run inference locally:
+
+-   **react-native-executorch** (Software Mansion) — wraps PyTorch's ExecuTorch runtime to run LLMs, speech-to-text and image classification on-device, with a React-friendly API.
+-   **react-native-ai** (Callstack) — on-device inference aimed squarely at React Native, so you can ship an offline chatbot or classifier inside the app.
+-   **MLC LLM** — a mature runtime for running quantised LLMs locally, usable from React Native with native glue.
+
+The headline is simple: no API key, no network round-trip, and no per-call bill — the model is just part of your app.
+
+## Why founders ask for it
+
+On-device isn't a novelty; it solves real product problems that the cloud can't:
+
+-   **Privacy by architecture** — for health, finance or legal data, "it never leaves the device" is a stronger promise than any policy. This is why it draws [fintech](/fintech-app-development/) and healthcare teams.
+-   **Offline** — field tools, travel, transit and low-connectivity markets keep working with no signal.
+-   **Zero marginal cost** — inference runs on the user's hardware, so a feature used a million times a day costs the same in API fees as one used once: nothing.
+-   **Instant latency** — no round-trip means responses start immediately.
+
+## Where should your model run?
+
+The honest answer depends on what you're optimising for. Pick your top priority and see where it points:
+
+<Embed id="on-device-ai-react-native-2" />
+
+## The honest trade-offs
+
+On-device is powerful, not magic. The costs are real and you should weigh them openly:
+
+-   **Capability ceiling** — a model small enough to run on a phone won't match a frontier cloud model on hard reasoning or broad knowledge.
+-   **App size** — bundling a model adds tens to hundreds of megabytes to the download.
+-   **Device variance** — a flagship runs it smoothly; a three-year-old budget phone may struggle. You design for the floor, not the ceiling.
+-   **Battery & heat** — sustained inference draws power; you batch and throttle accordingly.
+-   **Update friction** — improving an on-device model means shipping an app update, not just changing a server.
+
+## What runs well on-device today
+
+Match the task to the tier. These are comfortable on-device in 2026: speech-to-text and text-to-speech, image classification and on-device vision, text embeddings for local search, and small-to-mid chat and summarisation. What still belongs in the cloud: frontier reasoning, very large context windows, and anything needing the absolute strongest model. For wiring up that cloud half correctly, see [integrating ChatGPT & LLMs into React Native](/blog/react-native-chatgpt-integration).
+
+## Hybrid is usually the answer
+
+The best architecture rarely picks a side. It runs the cheap, private, latency-sensitive work on-device — speech, classification, a quick first-pass — and escalates only the genuinely hard requests to a cloud model behind your backend. Users get instant, private interactions most of the time, you get frontier capability when it matters, and your API bill reflects only the calls that truly needed it.
+
+> On-device AI is the right tool when "your data never leaves your phone" is a feature you can sell — and a quiet superpower for keeping costs flat at scale.
+
+## Quick answers
+
+**Can you run an LLM on-device in React Native?** Yes — react-native-executorch, react-native-ai and MLC LLM run language, speech and vision models locally with no network call.
+
+**What are the best on-device AI libraries for React Native?** react-native-executorch and Callstack's react-native-ai, with MLC LLM as a runtime option.
+
+**Is on-device AI cheaper than cloud AI?** There's no per-call fee since inference runs on the user's device; you trade that for integration effort, a bigger app and a lower model ceiling.
+
+**When should I use on-device AI instead of a cloud API?** Privacy, offline, high volume or instant latency favour on-device; maximum capability and huge context favour cloud. Most apps do both.
+
+Weighing on-device, cloud or hybrid for a privacy-sensitive feature? We build all three in [React Native](/react-native-app-development/) — [tell us the constraint](/contact/) and we'll recommend the architecture honestly.

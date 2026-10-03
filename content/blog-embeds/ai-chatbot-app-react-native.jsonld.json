@@ -1,0 +1,80 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Building an AI Chatbot App with React Native: Scope, Cost & Timeline",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-06-13",
+  "dateModified": "2026-06-13",
+  "articleSection": "Mobile"
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Building an AI Chatbot App with React Native",
+    "item": "https://soniconsultancyservices.com/blog/ai-chatbot-app-react-native"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "How much does it cost to build an AI chatbot app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "It depends on the tier. A simple FAQ-style bot on top of an existing app is a small build; a grounded assistant with retrieval, voice or the ability to take actions adds backend, data and evaluation work that raises both the build and the running cost. The build is predictable; the per-token running cost scales with usage. Our app cost calculator gives an instant indicative range for your feature set."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How long does it take to build an AI chatbot in React Native?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "A simple FAQ bot can ship in 2–3 weeks. A grounded assistant with retrieval is more like 4–8 weeks, and an advanced assistant that takes actions or handles voice and multiple languages runs 8 weeks and up. Most of the time goes into retrieval quality and evaluation, not the chat UI."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What's the difference between an AI chatbot and an AI agent?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "A chatbot answers; an agent acts. A chatbot responds in natural language, optionally grounded in your data. An agent goes further by calling your functions and APIs to complete multi-step tasks autonomously. Many products start as a chatbot and grow agentic features over time."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Do I need RAG for my chatbot?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "If the bot must answer from your specific documents, policies or data accurately, yes — retrieval-augmented generation grounds answers in your facts and prevents confident hallucination. If it only needs general conversation or simple scripted flows, you can start without it."
+    }
+   }
+  ]
+ }
+]

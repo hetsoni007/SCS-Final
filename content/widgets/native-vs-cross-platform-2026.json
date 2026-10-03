@@ -1,0 +1,183 @@
+{
+ "type": "wizard",
+ "kick": "✦ Interactive · 30 seconds",
+ "badge": "Your recommendation",
+ "questions": [
+  {
+   "q": "What matters most for this app right now?",
+   "a": [
+    {
+     "t": "Ship fast, control budget",
+     "s": {
+      "rn": 2,
+      "fl": 1,
+      "na": 0
+     }
+    },
+    {
+     "t": "Absolute performance & native feel",
+     "s": {
+      "rn": 0,
+      "fl": 1,
+      "na": 2
+     }
+    },
+    {
+     "t": "A balance of both",
+     "s": {
+      "rn": 1,
+      "fl": 2,
+      "na": 0
+     }
+    }
+   ]
+  },
+  {
+   "q": "Which platforms do you need?",
+   "a": [
+    {
+     "t": "iOS + Android (maybe web later)",
+     "s": {
+      "rn": 2,
+      "fl": 1,
+      "na": 0
+     }
+    },
+    {
+     "t": "Mainly one platform, best-in-class",
+     "s": {
+      "rn": 0,
+      "fl": 0,
+      "na": 2
+     }
+    },
+    {
+     "t": "iOS + Android + web from one codebase",
+     "s": {
+      "rn": 2,
+      "fl": 2,
+      "na": 0
+     }
+    }
+   ]
+  },
+  {
+   "q": "Your team's existing skills?",
+   "a": [
+    {
+     "t": "JavaScript / React",
+     "s": {
+      "rn": 3,
+      "fl": 0,
+      "na": 0
+     }
+    },
+    {
+     "t": "Swift / Kotlin (native)",
+     "s": {
+      "rn": 0,
+      "fl": 0,
+      "na": 3
+     }
+    },
+    {
+     "t": "Starting fresh / no team yet",
+     "s": {
+      "rn": 1,
+      "fl": 1,
+      "na": 0
+     }
+    }
+   ]
+  },
+  {
+   "q": "Does the app lean on heavy device hardware?",
+   "a": [
+    {
+     "t": "Yes — AR, advanced camera, BLE, 3D/graphics",
+     "s": {
+      "rn": 0,
+      "fl": 1,
+      "na": 2
+     }
+    },
+    {
+     "t": "Some device features",
+     "s": {
+      "rn": 1,
+      "fl": 1,
+      "na": 1
+     }
+    },
+    {
+     "t": "Mostly standard app features",
+     "s": {
+      "rn": 2,
+      "fl": 1,
+      "na": 0
+     }
+    }
+   ]
+  },
+  {
+   "q": "What stage are you at?",
+   "a": [
+    {
+     "t": "MVP / early validation",
+     "s": {
+      "rn": 2,
+      "fl": 1,
+      "na": 0
+     }
+    },
+    {
+     "t": "Scaling an existing product",
+     "s": {
+      "rn": 1,
+      "fl": 1,
+      "na": 1
+     }
+    },
+    {
+     "t": "Enterprise-grade / mission-critical",
+     "s": {
+      "rn": 1,
+      "fl": 1,
+      "na": 1
+     }
+    }
+   ]
+  }
+ ],
+ "verdicts": {
+  "rn": {
+   "name": "React Native",
+   "why": "Your answers point to speed, cost-efficiency and reach — exactly where React Native wins. One JavaScript codebase covers iOS and Android (and can share logic with web), so you ship faster and maintain less. It's our core stack, and for most products it's the smart default."
+  },
+  "fl": {
+   "name": "Flutter",
+   "why": "You're weighting custom, polished UI and cross-platform reach. Flutter's single Dart codebase renders pixel-perfect interfaces beautifully across iOS and Android — a great fit for design-led, animation-rich apps. We ship Flutter too."
+  },
+  "na": {
+   "name": "Native (Swift & Kotlin)",
+   "why": "Your needs lean on hardware, raw performance or a single best-in-class platform — the case where native earns its higher cost. Expect to build and maintain per platform. We can help you scope whether that trade-off is truly required, or whether cross-platform gets you 95% of the way for far less."
+  }
+ },
+ "barLabels": {
+  "rn": "React Native",
+  "fl": "Flutter",
+  "na": "Native"
+ },
+ "ctas": [
+  {
+   "label": "Pressure-test this on a free call →",
+   "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+   "primary": true
+  },
+  {
+   "label": "Estimate the build",
+   "href": "/app-cost-calculator/",
+   "primary": false
+  }
+ ]
+}

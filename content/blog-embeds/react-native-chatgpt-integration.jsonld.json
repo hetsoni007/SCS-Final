@@ -1,0 +1,80 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Integrating ChatGPT & LLMs into a React Native App",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-06-13",
+  "dateModified": "2026-06-13",
+  "articleSection": "Mobile"
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Integrating ChatGPT & LLMs into a React Native App",
+    "item": "https://soniconsultancyservices.com/blog/react-native-chatgpt-integration"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "How do I add ChatGPT to a React Native app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Build a small backend endpoint that holds your provider API key and calls the model, then have the React Native app call that endpoint and render the streamed response. You can start with a direct fetch or use a toolkit like the Vercel AI SDK; the key rule is that the model call goes through your server, never straight from the app."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Is it safe to put my OpenAI API key in a React Native app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "No. A mobile binary can be decompiled and the key extracted, letting anyone run up your bill. Keep the key on your backend, which calls the model on the app's behalf and can enforce auth, rate limits and caching."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How do I stream AI responses in React Native?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Have your backend forward the model's token stream over Server-Sent Events or a streaming fetch, and append tokens to state in the app as they arrive so text appears word-by-word. Streaming is what makes an AI feature feel instant instead of frozen."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Which library should I use to add an LLM to React Native?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "For cloud models, the Vercel AI SDK gives you provider-agnostic streaming and is a common choice; a plain fetch to your own endpoint also works. For on-device models, use react-native-executorch or Callstack's react-native-ai. Pick based on whether you need cloud capability or offline privacy."
+    }
+   }
+  ]
+ }
+]

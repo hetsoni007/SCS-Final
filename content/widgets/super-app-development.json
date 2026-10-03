@@ -1,0 +1,186 @@
+{
+ "type": "quiz",
+ "kick": "Interactive · 5 questions",
+ "keys": [
+  "no",
+  "native",
+  "super"
+ ],
+ "results": {
+  "no": {
+   "label": "Stay focused",
+   "name": "Stay a single-purpose app for now",
+   "why": "Your answers point to a product that has not yet earned the habitual use a platform strategy depends on. Adding services will not create that engagement — it will spread a fixed amount of attention across more surface area, and give you more to maintain.",
+   "note": "The most valuable next move is almost certainly retention on your core use case, not expansion. Revisit the platform question once people open your app without being prompted."
+  },
+  "native": {
+   "label": "Add services natively",
+   "name": "Add adjacent services yourself first",
+   "why": "You have real engagement, and there is a plausible case for offering more. But the jump straight to a third-party platform carries SDK, sandboxing and governance costs you do not need yet. Build the next one or two services natively inside your app and keep the distribution benefit without the platform burden.",
+   "note": "If those additions do well, the platform argument becomes evidence-based rather than aspirational — and you will know which services users actually want before you invite anyone to build on you."
+  },
+  "super": {
+   "label": "Platform play",
+   "name": "A mini-app platform is a defensible move",
+   "why": "Habitual use, a shared account model and genuine demand for services beyond your own — this is the profile where hosting third parties creates real leverage rather than just complexity.",
+   "note": "Before writing an SDK: fix the sandbox boundary, set performance budgets as a publishing condition, write the review policy ahead of your first partner, and design consent for a multi-service world from the start."
+  }
+ },
+ "questions": [
+  {
+   "q": "How often do your users open the app?",
+   "a": [
+    {
+     "t": "Daily, without being prompted",
+     "w": {
+      "super": 3
+     }
+    },
+    {
+     "t": "A few times a week",
+     "w": {
+      "native": 3
+     }
+    },
+    {
+     "t": "When they need the specific thing it does",
+     "w": {
+      "no": 2,
+      "native": 1
+     }
+    },
+    {
+     "t": "Rarely — retention is a known problem",
+     "w": {
+      "no": 3
+     }
+    }
+   ]
+  },
+  {
+   "q": "Have users asked for services beyond your core?",
+   "a": [
+    {
+     "t": "Yes — we can name three specific requests",
+     "w": {
+      "super": 3
+     }
+    },
+    {
+     "t": "One or two keep coming up",
+     "w": {
+      "native": 3
+     }
+    },
+    {
+     "t": "Not really, it is our idea",
+     "w": {
+      "no": 2
+     }
+    },
+    {
+     "t": "We have not asked them",
+     "w": {
+      "no": 2
+     }
+    }
+   ]
+  },
+  {
+   "q": "Who would build the additional services?",
+   "a": [
+    {
+     "t": "Third parties, on our platform",
+     "w": {
+      "super": 3
+     }
+    },
+    {
+     "t": "Us, at least at first",
+     "w": {
+      "native": 3
+     }
+    },
+    {
+     "t": "A mix, eventually",
+     "w": {
+      "native": 1,
+      "super": 2
+     }
+    },
+    {
+     "t": "Unclear",
+     "w": {
+      "no": 2
+     }
+    }
+   ]
+  },
+  {
+   "q": "Do you already own identity and payment?",
+   "a": [
+    {
+     "t": "Yes — accounts and payment details on file",
+     "w": {
+      "super": 3
+     }
+    },
+    {
+     "t": "Accounts yes, payment no",
+     "w": {
+      "native": 2
+     }
+    },
+    {
+     "t": "Neither, really",
+     "w": {
+      "no": 2
+     }
+    },
+    {
+     "t": "We use a third party for both",
+     "w": {
+      "native": 1,
+      "no": 1
+     }
+    }
+   ]
+  },
+  {
+   "q": "Could you staff platform work ongoing?",
+   "s": "SDK, docs, review, developer support",
+   "a": [
+    {
+     "t": "Yes — we can dedicate people to it",
+     "w": {
+      "super": 3
+     }
+    },
+    {
+     "t": "Maybe, if it proved itself first",
+     "w": {
+      "native": 2
+     }
+    },
+    {
+     "t": "Not without stopping other work",
+     "w": {
+      "no": 2,
+      "native": 1
+     }
+    },
+    {
+     "t": "No",
+     "w": {
+      "no": 3
+     }
+    }
+   ]
+  }
+ ],
+ "cta": {
+  "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+  "label": "Pressure-test this on a free call →"
+ },
+ "badge": "Your result"
+}

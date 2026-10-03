@@ -1,0 +1,633 @@
+{
+ "slug": "fintech-app-development",
+ "path": "/fintech-app-development/",
+ "meta": {
+  "title": "FinTech App Development | Soni Consultancy Services",
+  "description": "FinTech app development — payments, wallets, KYC-ready onboarding and investing UX in React Native, engineered with security-first practices.",
+  "robots": "index,follow,max-image-preview:large",
+  "canonical": "https://soniconsultancyservices.com/fintech-app-development/",
+  "ogTitle": "FinTech App Development | Soni Consultancy Services",
+  "ogDescription": "FinTech app development — payments, wallets, KYC-ready onboarding and investing UX in React Native, engineered with security-first practices.",
+  "ogType": "website"
+ },
+ "h1": "FinTech apps users trust with money.",
+ "breadcrumb": "Home › FinTech",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Service",
+   "name": "FinTech App Development",
+   "serviceType": "FinTech app development",
+   "provider": {
+    "@type": "Organization",
+    "name": "Soni Consultancy Services",
+    "url": "https://soniconsultancyservices.com"
+   },
+   "areaServed": "Worldwide",
+   "description": "Payments, wallets, KYC onboarding and investing experiences built in React Native and MERN with security-first engineering.",
+   "url": "https://soniconsultancyservices.com/fintech-app-development/"
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://soniconsultancyservices.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "FinTech",
+     "item": "https://soniconsultancyservices.com/fintech-app-development/"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Can you integrate payment gateways?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — Stripe-class gateways, subscriptions and store billing, including the Apple and Google policy rules around digital goods that trip up many FinTech launches."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do you secure financial data?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Encryption at rest and in transit, secure key storage, role-based access and audit logging by default — with a security review before anything ships."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you build investing or trading apps?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We've designed investing product concepts and ship production transactional systems. For regulated trading we build against your licensed backend or broker APIs."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "logo": "https://soniconsultancyservices.com/favicon.svg",
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://www.instagram.com/soni.consultancyservices/",
+    "https://www.facebook.com/soniconsultancyservices",
+    "https://medium.com/@hetsoni9398"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "cls": "page-hero",
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "FinTech · Payments · Investing"
+    },
+    {
+     "t": "h",
+     "level": 1,
+     "html": "FinTech apps users<br>trust with money.",
+     "cls": "h1"
+    },
+    {
+     "t": "p",
+     "html": "Payments, subscriptions, wallets and investing flows — built in React Native with security-first engineering and the polish financial users expect.",
+     "cls": "lead"
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Book a Free Call →",
+       "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+       "variant": "primary"
+      },
+      {
+       "label": "Estimate your app cost",
+       "href": "/app-cost-calculator/",
+       "variant": "glass"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "What we build"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Built for how it's<br>actually used.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "feat-grid",
+     "items": [
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Payments &amp; subscriptions"
+        },
+        {
+         "t": "p",
+         "html": "Card payments, recurring billing and in-app purchase flows, integrated with Stripe-class gateways and store billing rules."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Wallets &amp; portfolio UX"
+        },
+        {
+         "t": "p",
+         "html": "Balance views, transaction histories and performance charts that make complex money data feel obvious."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "KYC-ready onboarding"
+        },
+        {
+         "t": "p",
+         "html": "Identity capture and verification flows designed for completion rates, not drop-off."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Security first"
+        },
+        {
+         "t": "p",
+         "html": "Encrypted storage and transport, secure auth, role-based access and audit trails as defaults, not add-ons."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Real-time data"
+        },
+        {
+         "t": "p",
+         "html": "Live prices, instant updates and offline-tolerant sync built on MERN and websockets."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Compliance-aware builds"
+        },
+        {
+         "t": "p",
+         "html": "Architecture that respects data residency and access-control requirements from day one."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Proof"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Our product work in FinTech",
+     "cls": "h2"
+    },
+    {
+     "t": "p",
+     "html": "Investing and wallet product design, plus production transactional systems.",
+     "cls": "lead"
+    },
+    {
+     "t": "grid",
+     "cls": "case-strip",
+     "items": [
+      {
+       "cls": "glass case-card",
+       "href": "/work/#fan-investing",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Fan Investing",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Social-investing concept — discover artists, back offerings, track a portfolio",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      },
+      {
+       "cls": "glass case-card",
+       "href": "/work/#web3-creator",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Web3 Creator",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Multi-chain wallet &amp; NFT marketplace concept",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      },
+      {
+       "cls": "glass case-card",
+       "href": "/work/#creator-marketplace",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Creator Marketplace",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Production points &amp; rewards engine, live on the App Store",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Process"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Idea to app store,<br>without the drama.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "proc-grid",
+     "items": [
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "01",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Scope call"
+        },
+        {
+         "t": "p",
+         "html": "30 minutes on your goals, users and constraints — with an honest read on feasibility."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "02",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Fixed-price proposal"
+        },
+        {
+         "t": "p",
+         "html": "Scope, timeline and a fixed price within 48 hours. No vague day-rates."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "03",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Build"
+        },
+        {
+         "t": "p",
+         "html": "Weekly demo builds you can hold in your hand from the first sprint."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "04",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Launch &amp; support"
+        },
+        {
+         "t": "p",
+         "html": "Store submission handled, then monitoring and iteration after launch."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Free guides & tools"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Compliance, checked before it's a problem.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "g3",
+     "items": [
+      {
+       "cls": "glass",
+       "href": "/blog/rbi-fintech-app-compliance-india",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Self-audit"
+        },
+        {
+         "t": "text",
+         "html": "Is your app RBI-compliant?"
+        },
+        {
+         "t": "text",
+         "html": "Score your readiness →"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/blog/dpdp-act-app-compliance-india",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Self-audit"
+        },
+        {
+         "t": "text",
+         "html": "Is your app DPDP-ready?"
+        },
+        {
+         "t": "text",
+         "html": "Score your readiness →"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/blog/mobile-app-security-checklist",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Self-audit"
+        },
+        {
+         "t": "text",
+         "html": "Score your app’s security"
+        },
+        {
+         "t": "text",
+         "html": "Run the audit →"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "FAQ"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Common questions.",
+     "cls": "h2"
+    },
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "Can you integrate payment gateways?",
+       "a": "Yes — Stripe-class gateways, subscriptions and store billing, including the Apple and Google policy rules around digital goods that trip up many FinTech launches."
+      },
+      {
+       "q": "How do you secure financial data?",
+       "a": "Encryption at rest and in transit, secure key storage, role-based access and audit logging by default — with a security review before anything ships. For apps in India, that also means building to RBI's requirements — see our <a href=\"/blog/rbi-fintech-app-compliance-india\">RBI compliance readiness check</a>."
+      },
+      {
+       "q": "Do you build investing or trading apps?",
+       "a": "We've designed investing product concepts and ship production transactional systems. For regulated trading we build against your licensed backend or broker APIs."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "form",
+     "id": "leadForm",
+     "fields": [
+      {
+       "name": "lbName",
+       "id": "lbName",
+       "type": "text",
+       "label": "Your name",
+       "placeholder": "Jane Doe",
+       "required": false
+      },
+      {
+       "name": "lbEmail",
+       "id": "lbEmail",
+       "type": "email",
+       "label": "Work email",
+       "placeholder": "jane@company.com",
+       "required": false
+      },
+      {
+       "name": "lbWant",
+       "id": "lbWant",
+       "type": "text",
+       "label": "What are you building?",
+       "placeholder": "One line is plenty — e.g. a patient booking app for 3 clinics",
+       "required": false
+      },
+      {
+       "name": "lbBudget",
+       "id": "lbBudget",
+       "type": "select",
+       "label": "Budget",
+       "required": false,
+       "options": [
+        "Select a range",
+        "Not sure yet",
+        "<$10k",
+        "$10-25k",
+        "$25-60k",
+        "$60k+"
+       ]
+      },
+      {
+       "name": "lbTime",
+       "id": "lbTime",
+       "type": "select",
+       "label": "Timeline",
+       "required": false,
+       "options": [
+        "Select a timeline",
+        "ASAP",
+        "1-3 months",
+        "3-6 months",
+        "Just exploring"
+       ]
+      },
+      {
+       "type": "checkbox",
+       "label": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+       "required": false
+      }
+     ],
+     "submit": "Send →",
+     "kick": "Start here",
+     "title": "Building a fintech product?",
+     "sub": "Payments, KYC, compliance and audit trails are the hard part. Tell us the shape of it and we’ll scope it properly.",
+     "note": "Replies within one business day · no upfront fee to talk",
+     "consent": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+     "success": "✓ Thanks — that’s with Het. You’ll get a reply within one business day, usually with either a straight answer or the two or three questions needed to scope it properly."
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Get a fixed price<br>for your app.",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "A 30-minute call, then a fixed-price proposal within 48 hours. NDA on request.",
+       "cls": "lead"
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Book a Free Call →",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "primary"
+        },
+        {
+         "label": "See our work",
+         "href": "/work/",
+         "variant": "glass"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

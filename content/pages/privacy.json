@@ -1,0 +1,181 @@
+{
+ "slug": "privacy",
+ "path": "/privacy/",
+ "meta": {
+  "title": "Privacy Policy | Soni Consultancy Services",
+  "description": "How Soni Consultancy Services collects, uses and protects your personal data, in line with UK GDPR and the Data Protection Act 2018.",
+  "robots": "index,follow",
+  "canonical": "https://soniconsultancyservices.com/privacy/"
+ },
+ "h1": "Privacy Policy",
+ "breadcrumb": "Home › Privacy",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "logo": "https://soniconsultancyservices.com/favicon.svg",
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://www.instagram.com/soni.consultancyservices/",
+    "https://www.facebook.com/soniconsultancyservices",
+    "https://medium.com/@hetsoni9398"
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://soniconsultancyservices.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Privacy Policy",
+     "item": "https://soniconsultancyservices.com/privacy/"
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "cls": "page-hero",
+   "blocks": [
+    {
+     "t": "group",
+     "cls": "article-wrap",
+     "blocks": [
+      {
+       "t": "text",
+       "html": "Legal",
+       "cls": "article-cat"
+      },
+      {
+       "t": "h",
+       "level": 1,
+       "html": "Privacy Policy",
+       "cls": "article-title"
+      },
+      {
+       "t": "p",
+       "html": "What personal data we collect, why we collect it, and the rights you have over it. We keep it short and plain because that's how a privacy policy should be.",
+       "cls": "article-lead"
+      },
+      {
+       "t": "text",
+       "html": "Last updated: June 2026",
+       "cls": "article-meta"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "group",
+     "cls": "article-wrap article-body",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Who we are"
+      },
+      {
+       "t": "p",
+       "html": "Soni Consultancy Services (\"we\", \"us\") is a software development studio. For the purposes of UK GDPR and the Data Protection Act 2018, we are the data controller for the personal data described below. Reach us any time at <a href=\"mailto:het.soni@soniconsultancyservices.com\">het.soni@soniconsultancyservices.com</a>."
+      },
+      {
+       "t": "h",
+       "level": 2,
+       "html": "What we collect"
+      },
+      {
+       "t": "list",
+       "ordered": false,
+       "items": [
+        "<strong>Information you give us</strong> — name, email, company and enquiry details when you submit a brief, email us, or book a call.",
+        "<strong>Booking data</strong> — when you schedule a call, our scheduling provider (Calendly) processes your name, email and chosen time.",
+        "<strong>Basic technical data</strong> — standard server/analytics information such as approximate location, browser type and pages visited."
+       ]
+      },
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Why we use it"
+      },
+      {
+       "t": "list",
+       "ordered": false,
+       "items": [
+        "To respond to your enquiry and provide the services you ask about.",
+        "To schedule and conduct discovery calls.",
+        "To improve our website and understand how it is used.",
+        "To meet our legal and accounting obligations."
+       ]
+      },
+      {
+       "t": "p",
+       "html": "Our lawful bases are your <strong>consent</strong> (when you contact us), <strong>legitimate interests</strong> (running and improving our business), and <strong>legal obligation</strong> (record-keeping)."
+      },
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Who we share it with"
+      },
+      {
+       "t": "p",
+       "html": "We do not sell your data. We share it only with the service providers that help us operate — scheduling, email and hosting — and only as far as they need it. Some providers may process data outside the UK; where they do, appropriate safeguards are in place."
+      },
+      {
+       "t": "h",
+       "level": 2,
+       "html": "How long we keep it"
+      },
+      {
+       "t": "p",
+       "html": "We keep enquiry data as long as needed to respond and for a reasonable period afterwards, then delete it. Data we are legally required to retain is kept for the period the law requires."
+      },
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Your rights"
+      },
+      {
+       "t": "p",
+       "html": "Under UK GDPR you can access, correct, delete or restrict the use of your data, object to processing, or withdraw consent at any time. Email <a href=\"mailto:het.soni@soniconsultancyservices.com\">het.soni@soniconsultancyservices.com</a> and we'll action it promptly. You can also complain to the UK Information Commissioner's Office (ICO)."
+      },
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Cookies"
+      },
+      {
+       "t": "p",
+       "html": "We use only essential and basic analytics cookies — no advertising or cross-site tracking. You can block cookies in your browser; the site still works."
+      },
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Changes"
+      },
+      {
+       "t": "p",
+       "html": "If we change this policy we'll update the date above. Material changes will be made clear on this page."
+      },
+      {
+       "t": "text",
+       "html": "Questions about your data? Email <strong><a href=\"mailto:het.soni@soniconsultancyservices.com\">het.soni@soniconsultancyservices.com</a></strong> and we'll reply within one business day.",
+       "cls": "article-callout"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

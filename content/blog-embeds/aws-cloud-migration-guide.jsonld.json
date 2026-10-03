@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AWS Cloud Migration: A Practical Guide for 2026",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-06-14",
+  "dateModified": "2026-06-14",
+  "articleSection": "Cloud",
+  "description": "A practical AWS cloud migration guide for 2026 — the 6 R's, lift-and-shift vs re-architecture, a migration roadmap, the Well-Architected pillars, FinOps and the pitfalls to avoid."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "AWS Cloud Migration: A Practical Guide for 2026",
+    "item": "https://soniconsultancyservices.com/blog/aws-cloud-migration-guide"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "What are the 6 R's of cloud migration?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Rehost (lift and shift), replatform (lift and tweak), refactor or re-architect, repurchase (move to SaaS), retire (switch off) and retain (leave as-is). You choose one per workload based on its value, risk and how much cloud-native benefit you need."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Should I lift and shift or re-architect for AWS?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Usually both, in sequence: lift-and-shift to get off the data centre quickly and reduce risk, then re-architect the specific components that genuinely need cloud-native scale, reliability or cost efficiency."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How long does an AWS migration take?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "It depends on the size and complexity of the estate and the strategy per workload. A rehost of a handful of apps can be weeks; a full re-architecture of a large platform runs longer and is best done in waves."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Will moving to AWS reduce our costs?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Only if you optimise. A naive lift-and-shift can cost more than on-premises. Real savings come from right-sizing, autoscaling, managed services, savings plans and disciplined FinOps tagging and monitoring."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can you help us migrate to AWS?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. Cloud migration and re-architecture is core to our enterprise work, including lift-and-shift and re-architecture of on-premises platforms onto AWS."
+    }
+   }
+  ]
+ }
+]

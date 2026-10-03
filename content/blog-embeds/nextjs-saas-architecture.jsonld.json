@@ -1,0 +1,81 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Next.js SaaS Architecture: The Patterns We Use on Every Project",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-04-05",
+  "dateModified": "2026-06-14",
+  "articleSection": "Web",
+  "description": "The Next.js SaaS architecture we use: rendering strategy, multi-tenancy, RBAC, the API layer, Stripe webhooks, data access, caching, security and scaling from MVP to Series A."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Next.js SaaS Architecture: The Patterns We Use on Every Project",
+    "item": "https://soniconsultancyservices.com/blog/nextjs-saas-architecture"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Is Next.js a good choice for a SaaS in 2026?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "For most B2B SaaS it's an excellent default: fast, SEO-friendly marketing pages and a server-rendered authenticated app in one codebase and language, with a large hiring pool. The caveats are real-time-heavy or non-web-first products, where a dedicated backend may be better."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What's the best multi-tenancy model for a Next.js SaaS?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "For most products, a shared database with a tenant ID on every row, enforced in the data-access layer and optionally backed by Postgres row-level security. Database-per-tenant only pays off under strict isolation or compliance needs, at higher operational cost."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Should I build my own authentication for a SaaS?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "No. Use a managed auth provider for identity and password storage, and own your authorization (roles and permissions) in your database, enforced server-side."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How do you handle Stripe subscriptions reliably?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Treat Stripe as the source of truth and mirror subscription state into your database only via signed, idempotent webhooks, never by trusting the post-checkout client redirect. Derive entitlements from the mirrored state."
+    }
+   }
+  ]
+ }
+]

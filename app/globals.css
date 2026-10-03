@@ -1,26 +1,686 @@
 @import "tailwindcss";
 
+/* ───────────────────────── Design tokens ─────────────────────────
+   Brand: the gold of the Soni Consultancy Services logo on near-black, matched to the live site
+   (liquid.css: --gold #C9A24B, --gold-light #E8CD7E, --gold-dim #9A7B2E, --gold-grad).
+   Swap brand colours here; components only reference the variables (3D colours: lib/brand.ts). */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-0: #060607;
+  --bg-1: #0c0c0e;
+  --bg-2: #141416;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --text-hi: #f5f5f7;
+  --text-mid: #a9a9b1;
+  --text-lo: #8c8c95; /* AA on --bg-0 */
+  --accent: #c9a24b; /* brand gold: fills, borders, glows */
+  --accent-ink: #e8cd7e; /* gold for text on dark (AA) */
+  --accent-2: #f2da8c; /* champagne highlight: eyebrows, links, focus */
+  --accent-3: #e8a33d; /* amber: ratings, alerts */
+  --on-accent: #0a0a0c; /* text on gold */
+  --success: #34d399;
+  --danger: #ff6b81;
+  --glass: rgba(21, 20, 18, 0.55);
+  --grad: linear-gradient(110deg, #f2da8c, #c9a24b 55%, #9a7b2e);
+  --glow-warm: rgba(201, 162, 75, 0.16);
+  --glow-cool: rgba(46, 52, 74, 0.55); /* the live site's slate background glow */
+  --radius: 20px;
+  --nav-h: 68px;
+  color-scheme: dark;
+}
+:root[data-theme="light"] {
+  --bg-0: #f8f8f6;
+  --bg-1: #ffffff;
+  --bg-2: #ffffff;
+  --line: rgba(22, 22, 28, 0.1);
+  --line-strong: rgba(22, 22, 28, 0.18);
+  --text-hi: #16161a;
+  --text-mid: #46464f;
+  --text-lo: #5c5c66;
+  --accent: #a8832e;
+  --accent-ink: #7a5c12; /* the live site's light-theme gold (AA on white) */
+  --accent-2: #7a5c12;
+  --accent-3: #9a4f0e;
+  --on-accent: #0a0a0c;
+  --success: #047857;
+  --danger: #be123c;
+  --glass: rgba(255, 255, 255, 0.7);
+  --grad: linear-gradient(110deg, #e8cd7e, #c9a24b 50%, #9a7b2e);
+  --glow-warm: rgba(201, 162, 75, 0.12);
+  --glow-cool: rgba(120, 140, 200, 0.08);
+  color-scheme: light;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg-0: var(--bg-0);
+  --color-bg-1: var(--bg-1);
+  --color-bg-2: var(--bg-2);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-hi: var(--text-hi);
+  --color-mid: var(--text-mid);
+  --color-lo: var(--text-lo);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-2: var(--accent-2);
+  --color-accent-3: var(--accent-3);
+  --color-on-accent: var(--on-accent);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --font-sans: var(--f-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--f-display), var(--f-body), system-ui, sans-serif;
+  --font-mono: var(--f-mono), ui-monospace, SFMono-Regular, monospace;
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-power3: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Element defaults sit in the `base` layer, so component classes (e.g. `.btn-primary` on an <a>) override them. */
+@layer base {
+  html {
+    background: var(--bg-0);
+    scroll-padding-top: calc(var(--nav-h) + 24px);
+  }
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  body {
+    background: transparent;
+    color: var(--text-hi);
+    font-family: var(--font-sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+  ::selection {
+    background: color-mix(in srgb, var(--accent) 55%, transparent);
+    color: var(--text-hi);
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent-2);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  a {
+    color: inherit;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Everything below lives in the `components` layer so Tailwind utilities can override it. */
+@layer components {
+/* ───────────────────────── Layout ───────────────────────── */
+.wrap {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 56px);
 }
+.wrap-narrow {
+  width: 100%;
+  max-width: 820px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 32px);
+}
+.section {
+  position: relative;
+  padding-block: clamp(72px, 10vw, 150px);
+}
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(14px, 1.6vw, 24px);
+}
+
+/* Fixed page layers: gradient → canvas → grid lines → grain → content */
+.bg-fluid {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  background:
+    radial-gradient(60vw 50vh at calc(20% + var(--mx, 0) * 6%) calc(10% + var(--sy, 0) * 20%), var(--glow-warm), transparent 70%),
+    radial-gradient(50vw 50vh at calc(85% - var(--mx, 0) * 6%) calc(70% - var(--sy, 0) * 30%), var(--glow-cool), transparent 70%),
+    var(--bg-0);
+}
+.gl-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+.grid-lines {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  max-width: 1440px;
+  margin-inline: auto;
+  background-image: linear-gradient(to right, var(--line) 1px, transparent 1px);
+  background-size: calc(100% / 6) 100%;
+  mask-image: linear-gradient(to bottom, transparent, #000 30%, #000 70%, transparent);
+  opacity: 0.5;
+}
+.grain {
+  position: fixed;
+  inset: -50%;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.055;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 1.2s steps(6) infinite;
+}
+@keyframes grain {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-3%, 2%); }
+  40% { transform: translate(2%, -4%); }
+  60% { transform: translate(-2%, 3%); }
+  80% { transform: translate(4%, 1%); }
+  100% { transform: translate(0, 0); }
+}
+
+/* ───────────────────────── Type ───────────────────────── */
+.display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+  font-size: clamp(46px, 7.6vw, 132px);
+  text-wrap: balance;
+}
+.h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  font-size: clamp(42px, 6.6vw, 104px);
+  text-wrap: balance;
+}
+/* page heroes share the row with a 3D scene, so their headings run smaller than a full-width .h1 */
+.h1-hero { font-size: clamp(38px, 5.4vw, 88px); }
+.h1-long { font-size: clamp(34px, 4.3vw, 68px); line-height: 1.04; }
+.h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  font-size: clamp(32px, 4.6vw, 68px);
+  text-wrap: balance;
+}
+.h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  font-size: clamp(20px, 1.7vw, 26px);
+}
+.lead {
+  color: var(--text-mid);
+  font-size: clamp(17px, 1.35vw, 21px);
+  line-height: 1.55;
+  max-width: 62ch;
+  text-wrap: pretty;
+}
+.muted { color: var(--text-mid); }
+.dim { color: var(--text-lo); font-size: 14px; }
+.mono { font-family: var(--font-mono); }
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+}
+.eyebrow::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 99px;
+  background: var(--accent-2);
+  box-shadow: 0 0 12px var(--accent-2);
+}
+/* metallic gold sweep, like the logo's lettering */
+.grad-text {
+  background: linear-gradient(110deg, #9a7b2e 0%, #c9a24b 28%, #f2da8c 44%, #fff6dc 50%, #f2da8c 56%, #c9a24b 72%, #9a7b2e 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+:root[data-theme="light"] .grad-text {
+  background-image: linear-gradient(110deg, #7a5c12 0%, #a8832e 50%, #7a5c12 100%);
+}
+@keyframes shimmer {
+  to { background-position: -250% 0; }
+}
+.rich a {
+  color: var(--accent-2);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent-2) 40%, transparent);
+  text-underline-offset: 3px;
+}
+.rich a:hover { text-decoration-color: currentColor; }
+.rich strong, .rich b { color: var(--text-hi); font-weight: 600; }
+
+/* ───────────────────────── Components ───────────────────────── */
+.glass {
+  position: relative;
+  background: var(--glass);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  isolation: isolate;
+}
+/* mouse-tracked spotlight + conic hover rim (set --sx/--sy from JS) */
+.spot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(420px circle at var(--sx, 50%) var(--sy, 0%), color-mix(in srgb, var(--accent) 22%, transparent), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.25s;
+  z-index: -1;
+  pointer-events: none;
+}
+.spot::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(from calc(var(--sa, 0) * 1deg) at var(--sx, 50%) var(--sy, 50%), var(--accent), var(--accent-2), transparent 40%, transparent 60%, var(--accent));
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  opacity: 0;
+  transition: opacity 0.25s;
+  pointer-events: none;
+}
+.spot:hover::before, .spot:hover::after, .spot:focus-within::after { opacity: 1; }
+
+.btn {
+  --fill: var(--accent);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid var(--line-strong);
+  color: var(--text-hi);
+  transition: color 0.25s, border-color 0.25s, transform 0.25s var(--ease-expo);
+  will-change: transform;
+}
+.btn::before { /* liquid fill */
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 160%;
+  aspect-ratio: 1;
+  border-radius: 45%;
+  background: var(--fill);
+  transform: translate(-50%, 0) rotate(0deg);
+  transition: transform 0.6s var(--ease-expo);
+  z-index: -1;
+}
+.btn:hover::before, .btn:focus-visible::before { transform: translate(-50%, -62%) rotate(40deg); }
+.btn-primary {
+  background: var(--grad);
+  border-color: transparent;
+  color: var(--on-accent);
+  --fill: #fff1c9; /* liquid champagne on hover */
+  box-shadow: 0 8px 40px -12px var(--accent);
+}
+.btn-primary:hover { color: var(--on-accent); }
+.btn-glass { background: var(--glass); backdrop-filter: blur(12px); }
+.btn-glass:hover { color: var(--on-accent); border-color: transparent; }
+.btn-lg { min-height: 58px; padding: 0 32px; font-size: 16px; }
+.btn-xl { min-height: 84px; padding: 0 52px; font-size: clamp(18px, 2vw, 24px); }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg-2) 70%, transparent);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-mid);
+  white-space: nowrap;
+}
+a.chip:hover, button.chip:hover { color: var(--text-hi); border-color: var(--line-strong); }
+.chip[aria-pressed="true"], .chip.on {
+  background: color-mix(in srgb, var(--accent) 24%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 70%, transparent);
+  color: var(--text-hi);
+}
+.field {
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--line-strong);
+  background: color-mix(in srgb, var(--bg-0) 60%, transparent);
+  color: var(--text-hi);
+  font: inherit;
+  font-size: 16px;
+}
+.field::placeholder { color: var(--text-lo); }
+.field:focus { outline: 2px solid var(--accent-2); outline-offset: 1px; }
+.field[aria-invalid="true"] { border-color: var(--danger); }
+.label { display: block; font-size: 13px; color: var(--text-mid); margin-bottom: 6px; }
+.step-n {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent-2);
+  letter-spacing: 0.1em;
+}
+.skip-link {
+  position: fixed;
+  left: 12px;
+  top: -80px;
+  z-index: 200;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+}
+.skip-link:focus { top: 12px; }
+
+/* ───────────────────────── First-visit intro ─────────────────────────
+   The cover is server-rendered and switched on by the boot script (html[data-intro]), so it is the first thing
+   painted and the page never flashes before it. ui/Preloader takes it over ("live") with the particle animation.
+   If JavaScript is not ready in time the cover fades out by itself after 1.2 s: it can never hold the page back. */
+.intro-cover { display: none; }
+html[data-intro] .intro-cover {
+  display: grid; place-items: center; position: fixed; inset: 0; z-index: 170; background: var(--bg-0);
+  animation: intro-auto-out 0.45s ease 1.2s forwards;
+}
+html[data-intro="live"] .intro-cover { animation: none; }
+html[data-intro="out"] .intro-cover { animation: none; opacity: 0; visibility: hidden; transition: opacity 0.45s ease, visibility 0s 0.45s; }
+@keyframes intro-auto-out { to { opacity: 0; visibility: hidden; } }
+.intro-mark {
+  font-family: var(--font-display); font-weight: 700; font-size: clamp(64px, 10vw, 140px); letter-spacing: 0.04em;
+  color: transparent; -webkit-text-stroke: 1px var(--line-strong); animation: intro-pulse 0.9s ease-in-out infinite alternate;
+}
+html[data-intro="live"] .intro-mark, html[data-intro="out"] .intro-mark { opacity: 0; animation: none; }
+@keyframes intro-pulse { from { opacity: 0.35; } to { opacity: 0.9; } }
+
+/* ───────────────────────── Above the fold ─────────────────────────
+   Hero content never waits for JavaScript. The home headline rotates in character by character and template
+   heroes rise into place, both as CSS animations that start on the first frame (text stays opaque on template
+   pages, so it is the largest paint immediately). While the intro cover is up they wait for it. */
+.js [data-loc="hero"] .split-char { animation: char-in 1.1s var(--ease-expo) both; animation-delay: calc(var(--ci, 0) * 18ms); }
+@keyframes char-in { from { opacity: 0; transform: translateY(55%) rotateX(-75deg); } }
+.js [data-loc="hero"] [data-reveal], .js [data-loc="hero"] [data-reveal].in {
+  opacity: 1; transform: none; transition: none;
+  animation: hero-rise 0.9s var(--ease-expo) both; animation-delay: calc(var(--i, 0) * 60ms);
+}
+@keyframes hero-rise { from { transform: translateY(24px); } }
+/* intro running without JavaScript yet: start after the cover's own fade */
+html[data-intro="1"] [data-loc="hero"] .split-char { animation-delay: calc(1.3s + var(--ci, 0) * 18ms); }
+html[data-intro="1"] [data-loc="hero"] [data-reveal] { animation-delay: calc(1.3s + var(--i, 0) * 60ms); }
+/* intro driven by JavaScript: hold, then play from the start when it hands over */
+html[data-intro="live"] [data-loc="hero"] .split-char { animation-name: none; opacity: 0; }
+html[data-intro="live"] [data-loc="hero"] [data-reveal] { animation-name: none; }
+
+/* Scroll reveal (JS adds .in). Content is visible by default without JS. */
+.js [data-reveal] { opacity: 0; transform: translateY(28px); }
+.js [data-reveal].in {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.9s var(--ease-expo), transform 0.9s var(--ease-expo);
+  transition-delay: calc(var(--i, 0) * 60ms);
+}
+/* ───────────────────────── Scroll-linked 3D (every page) ─────────────────────────
+   Where the browser supports scroll-driven animations (Chrome/Edge 115+, Safari 26+), every revealed element in a
+   page section is tied to its own position in the viewport: it rises out of depth as it enters, sits flat while
+   it is read, and tilts back into the page as it leaves at the top. Headings flip up, cards fan in from alternate
+   sides, media drifts in parallax. It is scroll-linked and reversible, runs on the compositor (no JavaScript), and
+   animates the individual translate/rotate/scale properties so hover tilts (which use `transform`) still compose.
+   Other browsers keep the IntersectionObserver reveal above; reduced motion switches all of it off. */
+@supports (animation-timeline: view()) {
+  /* depth: every container of revealed content gets a perspective */
+  .js main section:not([data-loc="hero"]) :has(> [data-reveal]) { perspective: 1600px; }
+  .js main section:not([data-loc="hero"]) [data-reveal],
+  .js main section:not([data-loc="hero"]) [data-reveal].in {
+    opacity: 1; transform: none; transition: none;
+    animation: depth-through linear both;
+    animation-timeline: view();
+    animation-range: cover calc(var(--i, 0) * 1.5%) cover 100%;
+  }
+  .js main section:not([data-loc="hero"]) :is(h2, .h2)[data-reveal] { transform-origin: 50% 100%; animation-name: flip-through; }
+  .js main section:not([data-loc="hero"]) .glass[data-reveal] { animation-name: deal-through; }
+  .js main section:not([data-loc="hero"]) .glass[data-reveal]:nth-child(even) { --side: 1; }
+  /* media and 3D boxes drift through the viewport */
+  .js main :is(.scene-box, .phone-frame):not([data-loc="hero"] *) { animation: drift linear both; animation-timeline: view(); animation-range: cover 0% cover 100%; }
+  /* long-form reading (blog posts): entrances only, nothing fades while it is being read */
+  .js .prose > :is(h2, h3, pre, table, figure, .legacy-art, blockquote, aside) {
+    animation: depth-in linear both; animation-timeline: view(); animation-range: entry 0% cover 25%;
+  }
+  .js .prose > h2 { transform-origin: 50% 100%; animation-name: flip-in; }
+}
+@keyframes depth-through {
+  0% { opacity: 0; translate: 0 64px -140px; rotate: x 18deg; }
+  24%, 80% { opacity: 1; translate: 0 0 0; rotate: x 0deg; }
+  100% { opacity: 0.35; translate: 0 -24px -90px; rotate: x -9deg; }
+}
+@keyframes flip-through {
+  0% { opacity: 0; translate: 0 40px -60px; rotate: x 52deg; }
+  26%, 80% { opacity: 1; translate: 0 0 0; rotate: x 0deg; }
+  100% { opacity: 0.35; translate: 0 -20px -80px; rotate: x -12deg; }
+}
+@keyframes deal-through {
+  0% { opacity: 0; translate: 0 90px -240px; rotate: y calc((var(--side, -1)) * 22deg); scale: 0.92; }
+  26%, 80% { opacity: 1; translate: 0 0 0; rotate: y 0deg; scale: 1; }
+  100% { opacity: 0.4; translate: 0 -30px -120px; rotate: x -10deg; scale: 0.97; }
+}
+@keyframes drift {
+  from { translate: 0 56px; rotate: x 7deg; }
+  to { translate: 0 -56px; rotate: x -7deg; }
+}
+@keyframes depth-in { from { opacity: 0; translate: 0 48px -100px; rotate: x 14deg; } }
+@keyframes flip-in { from { opacity: 0; translate: 0 32px -40px; rotate: x 48deg; } }
+
+/* Cards lean toward the pointer (the delegated pointer handler sets --px / --py on .spot and [data-tilt]) */
+:has(> .spot) { perspective: 1400px; }
+.spot { transform: rotateX(calc(var(--py, 0) * -7deg)) rotateY(calc(var(--px, 0) * 9deg)); transition: transform 0.45s var(--ease-expo); }
+
+.split-char { display: inline-block; transform-origin: 50% 100%; will-change: transform, opacity; }
+.split-word { display: inline-block; white-space: nowrap; }
+
+/* 3D view slots reserve space; poster shows until/unless WebGL mounts */
+.view-slot { position: relative; }
+.view-slot > .poster { position: absolute; inset: 0; transition: opacity 0.8s; }
+/* the poster hands over once its scene has compiled and is being drawn (GLRoot sets data-ready) */
+.gl-on .view-slot[data-ready="1"] > .poster { opacity: 0; }
+
+/* Custom cursor */
+.cursor-dot, .cursor-ring { position: fixed; left: 0; top: 0; z-index: 150; pointer-events: none; border-radius: 999px; }
+.cursor-dot { width: 6px; height: 6px; margin: -3px 0 0 -3px; background: #fff; mix-blend-mode: difference; }
+.cursor-ring {
+  width: 38px; height: 38px; margin: -19px 0 0 -19px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  display: grid; place-items: center;
+  font: 600 11px var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--on-accent);
+  transition: width 0.3s var(--ease-expo), height 0.3s var(--ease-expo), margin 0.3s var(--ease-expo), background 0.3s, border-color 0.3s;
+}
+.cursor-ring.is-link { width: 56px; height: 56px; margin: -28px 0 0 -28px; border-color: var(--accent); }
+.cursor-ring.has-label { width: 76px; height: 76px; margin: -38px 0 0 -38px; background: #e8cd7e; border-color: transparent; }
+@media (hover: none), (pointer: coarse) { .cursor-dot, .cursor-ring { display: none; } }
+
+/* Accordion + menus (CSS only: no animation library in the global shell) */
+.faq-panel { transition: grid-template-rows 0.45s var(--ease-expo), opacity 0.3s; }
+@keyframes menu-in { from { opacity: 0; transform: translateY(10px) rotateX(-8deg); } to { opacity: 1; transform: none; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes rise-in { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+.menu-in { animation: menu-in 0.35s var(--ease-expo) both; transform-origin: top; }
+.fade-in { animation: fade-in 0.25s linear both; }
+.rise-in { animation: rise-in 0.6s var(--ease-expo) both; animation-delay: calc(var(--i, 0) * 40ms); }
+:root[data-motion="reduce"] .faq-panel { transition: none; }
+:root[data-motion="reduce"] .menu-in, :root[data-motion="reduce"] .fade-in, :root[data-motion="reduce"] .rise-in { animation: none; }
+.deck-card { transition: transform 0.6s var(--ease-expo), opacity 0.4s; }
+:root[data-motion="reduce"] .deck-card { transition: none; }
+/* Stat numbers: a layered gold extrusion on dark; on the light theme a clean numeral with a soft shadow */
+.stat-num {
+  color: var(--text-hi);
+  text-shadow: 1px 1px 0 #b8913f, 2px 2px 0 #a9843a, 3px 3px 0 #9a7b2e, 4px 4px 0 #8a6d28, 5px 5px 0 #7a5f22, 6px 6px 0 #6b521d, 10px 14px 30px rgba(201, 162, 75, 0.45);
+}
+:root[data-theme="light"] .stat-num { text-shadow: 0 1px 0 #fff, 0 14px 28px rgba(122, 92, 18, 0.18); }
+
+/* cursor-tilted tiles: --px / --py come from the delegated pointer handler ([data-tilt]) */
+.tilt-3d { transform: rotateX(calc(var(--py, 0) * -14deg)) rotateY(calc(var(--px, 0) * 18deg)); transition: transform 0.3s ease-out; }
+
+/* Marquee */
+.marquee { overflow: hidden; mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent); }
+.marquee-track { display: flex; gap: 14px; width: max-content; will-change: transform; }
+
+/* Article typography */
+.prose { color: var(--text-mid); font-size: 18px; line-height: 1.75; }
+.prose > * + * { margin-top: 1.15em; }
+.prose h2 { font-family: var(--font-display); color: var(--text-hi); font-size: clamp(26px, 3vw, 36px); line-height: 1.15; letter-spacing: -0.02em; margin-top: 2.2em; font-weight: 600; }
+.prose h3 { font-family: var(--font-display); color: var(--text-hi); font-size: 22px; line-height: 1.25; margin-top: 1.8em; font-weight: 600; }
+.prose ul { list-style: none; padding: 0; }
+.prose ul > li { position: relative; padding-left: 26px; margin-top: 0.55em; }
+.prose ul > li::before { content: ""; position: absolute; left: 4px; top: 0.72em; width: 8px; height: 1.5px; background: var(--accent-2); }
+.prose ol { list-style: decimal; padding-left: 24px; }
+.prose ol > li { margin-top: 0.55em; padding-left: 6px; }
+.prose ol > li::marker { color: var(--accent-2); font-family: var(--font-mono); font-size: 0.85em; }
+.prose a { color: var(--accent-2); text-decoration: underline; text-underline-offset: 3px; }
+.prose strong, .prose b { color: var(--text-hi); font-weight: 600; }
+.prose blockquote { border-left: 2px solid var(--accent); padding: 4px 0 4px 22px; color: var(--text-hi); font-size: 1.1em; font-family: var(--font-display); }
+.prose code { font-family: var(--font-mono); font-size: 0.86em; background: var(--bg-2); border: 1px solid var(--line); padding: 2px 6px; border-radius: 6px; color: var(--text-hi); }
+.prose pre { background: #0b0c10; border: 1px solid var(--line); border-radius: 16px; padding: 20px; overflow-x: auto; font-size: 14px; line-height: 1.6; }
+.prose pre code { background: none; border: 0; padding: 0; }
+.prose table { width: 100%; border-collapse: collapse; font-size: 15px; display: block; overflow-x: auto; }
+.prose th { text-align: left; color: var(--text-hi); font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+.prose th, .prose td { padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+
+/* View Transitions: accent noise-dissolve wipe between routes */
+::view-transition-old(.page) { animation: vt-out 0.4s var(--ease-power3) both; }
+::view-transition-new(.page) { animation: vt-in 0.6s var(--ease-power3) both; }
+::view-transition-group(.page) { animation-duration: 0.6s; }
+
+@keyframes vt-out { to { opacity: 0; filter: blur(8px); transform: scale(0.985); } }
+@keyframes vt-in { from { opacity: 0; transform: translateY(24px); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+
+/* ───────────────────────── Reduced motion ─────────────────────────
+   Applies to the OS setting and to the footer "Reduce motion" toggle. */
+@media (prefers-reduced-motion: reduce) {
+  .grain, .grad-text { animation: none; }
+  .js [data-reveal] { transform: none; }
+  .js [data-reveal].in { transition: opacity 0.4s linear; }
+  .js [data-loc="hero"] .split-char, .js [data-loc="hero"] [data-reveal] { animation: none; }
+  .js main [data-reveal], .js main :is(.scene-box, .phone-frame), .js .prose > * { animation: none !important; }
+  .spot { transform: none; }
+  ::view-transition-old(.page), ::view-transition-new(.page) { animation: none; }
+  .btn::before { transition: none; }
+}
+:root[data-motion="reduce"] .grain, :root[data-motion="reduce"] .grad-text { animation: none; }
+:root[data-motion="reduce"] .js [data-reveal], :root[data-motion="reduce"] [data-reveal] { transform: none; }
+:root[data-motion="reduce"] [data-reveal].in { transition: opacity 0.4s linear; }
+:root[data-motion="reduce"] [data-loc="hero"] .split-char, :root[data-motion="reduce"] [data-loc="hero"] [data-reveal] { animation: none; }
+:root[data-motion="reduce"] main [data-reveal], :root[data-motion="reduce"] main :is(.scene-box, .phone-frame), :root[data-motion="reduce"] .prose > * { animation: none !important; }
+:root[data-motion="reduce"] .spot { transform: none; }
+:root[data-motion="reduce"] .cursor-dot, :root[data-motion="reduce"] .cursor-ring { display: none; }
+:root[data-motion="reduce"]::view-transition-old(.page), :root[data-motion="reduce"]::view-transition-new(.page) { animation: none; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Artwork ported from the live site (blog thumbnails, article figures) references its old variable names. */
+.legacy-art {
+  --gold: var(--accent); --t1: var(--text-hi); --t2: var(--text-mid); --t3: var(--text-lo);
+  --line2: var(--line-strong); --glass2: color-mix(in srgb, var(--text-hi) 8%, transparent); --glass3: color-mix(in srgb, var(--text-hi) 12%, transparent);
+  --bg2: var(--bg-1); --bg: var(--bg-0);
+}
+.legacy-art svg { width: 100%; height: 100%; display: block; }
+.thumb { position: relative; overflow: hidden; }
+.thumb > .legacy-art { transition: transform 0.7s var(--ease-expo), filter 0.4s; }
+a:hover .thumb > .legacy-art, a:focus-visible .thumb > .legacy-art { transform: scale(1.08) rotate(-1deg); filter: url(#thumb-warp) saturate(1.3); }
+:root[data-motion="reduce"] a:hover .thumb > .legacy-art { transform: none; filter: none; }
+} /* end @layer components */
+@layer components {
+  .arch-svg .g-devicechip, .arch-svg .g-cloudpath { transition: opacity 0.4s; }
+  .arch-svg.dim-device .g-devicechip, .arch-svg.dim-cloud .g-cloudpath { opacity: 0.16; }
+  .legacy-art.figure svg { height: auto; border: 1px solid var(--line); border-radius: 18px; background: var(--glass); padding: 10px; }
+  .legacy-art.figure figcaption { font-size: 13px; color: var(--text-lo); text-align: center; margin-top: 12px; }
+  .legacy-art .pulse, .legacy-art .sp { animation: legacy-pulse 2.4s ease-in-out infinite; }
+  .legacy-art .ring { transform-origin: center; transform-box: fill-box; animation: spin 9s linear infinite; }
+  @keyframes legacy-pulse { 0%, 100% { opacity: 0.25; } 50% { opacity: 1; } }
+  :root[data-motion="reduce"] .legacy-art * { animation: none !important; }
+  @media (prefers-reduced-motion: reduce) { .legacy-art * { animation: none !important; } }
+}
+
+@layer components {
+  /* ───────────────────────── Light theme: clean surfaces ─────────────────────────
+     White cards with a hairline border and a soft layered shadow instead of translucent glass; quieter grid lines;
+     no film grain; the hover spotlight becomes a faint gold wash. */
+  :root[data-theme="light"] .glass {
+    background: rgba(255, 255, 255, 0.86);
+    border-color: rgba(22, 22, 28, 0.08);
+    box-shadow: 0 1px 2px rgba(22, 22, 28, 0.04), 0 12px 32px -18px rgba(22, 22, 28, 0.16);
+  }
+  /* Cards that host a 3D scene. The canvas sits behind the page, so a translucent white fill (and the backdrop
+     blur) would veil the scene and wash its colours out: these cards keep the border and shadow but no fill. */
+  .glass:has(.view-slot) { backdrop-filter: none; -webkit-backdrop-filter: none; }
+  :root[data-theme="light"] .glass:has(.view-slot) { background: transparent; }
+  :root[data-theme="light"] .spot::before { background: radial-gradient(420px circle at var(--sx, 50%) var(--sy, 0%), rgba(201, 162, 75, 0.1), transparent 60%); }
+  :root[data-theme="light"] .grain { display: none; }
+  :root[data-theme="light"] .grid-lines { opacity: 0.5; }
+  :root[data-theme="light"] .btn-glass { background: #fff; border-color: rgba(22, 22, 28, 0.12); }
+  :root[data-theme="light"] .chip:not(.on):not([aria-pressed="true"]) { background: #fff; }
+  :root[data-theme="light"] .eyebrow::before { box-shadow: none; }
+  /* the soft glow that stands in for a 3D scene is only a hint on a light page */
+  :root[data-theme="light"] .poster-orb { opacity: 0.28; }
+}
+
+/* ───────────────────────── Adaptive quality (CSS side) ─────────────────────────
+   data-gpu is set after the GPU tier probe. On low / no-GPU devices the effects that need
+   per-frame compositing or repainting are switched off: backdrop blur, animated grain, gradient shimmer. */
+:root[data-gpu="low"] .glass, :root[data-gpu="none"] .glass,
+:root[data-gpu="low"] .btn-glass, :root[data-gpu="none"] .btn-glass {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  background: color-mix(in srgb, var(--bg-2) 94%, transparent);
+}
+:root[data-gpu="low"] .grain, :root[data-gpu="none"] .grain,
+:root[data-gpu="low"] .grad-text, :root[data-gpu="none"] .grad-text { animation: none; }
+:root[data-gpu="low"] header nav.glass, :root[data-gpu="none"] header nav.glass { background: color-mix(in srgb, var(--bg-1) 96%, transparent); }
+
+
+/* Looping micro-animations on the home page (bento icons, tool previews). Paused for reduced motion and low-end GPUs. */
+@keyframes bento-tick { to { transform: rotate(360deg); } }
+@keyframes bento-float { 50% { transform: translateY(-4px); } }
+@keyframes bento-lock { 0%, 100% { transform: scale(1); } 45% { transform: scale(1.18) rotate(-8deg); } 60% { transform: scale(0.95); } }
+@keyframes bento-turn { 0%, 100% { transform: rotate(0); } 50% { transform: rotate(90deg); } }
+@keyframes bento-pulse { 50% { transform: scale(1.15); filter: drop-shadow(0 0 8px #f2da8c); } }
+@keyframes bento-ring { 0%, 100% { transform: rotate(0); } 10%, 30% { transform: rotate(-14deg); } 20%, 40% { transform: rotate(14deg); } 50% { transform: rotate(0); } }
+@keyframes viz-grow { from { transform: scaleY(0.55); } to { transform: scaleY(1); } }
+@keyframes viz-fan { from { margin-bottom: 0; } to { margin-bottom: 8px; } }
+@keyframes viz-draw { from { stroke-dashoffset: 90; } to { stroke-dashoffset: 0; } }
+:root[data-motion="reduce"] :is([data-loc="why"], [data-loc="tools"]) *,
+:root[data-gpu="low"] :is([data-loc="why"], [data-loc="tools"]) *,
+:root[data-gpu="none"] :is([data-loc="why"], [data-loc="tools"]) * { animation: none !important; }
+@media (prefers-reduced-motion: reduce) { :is([data-loc="why"], [data-loc="tools"]) * { animation: none !important; } }
+
+/* Before hydration, reduced-motion visitors already get the one-screen hero (the tall scroll track is for the 3D sequence). */
+:root[data-motion="reduce"] [data-loc="hero"] { height: auto !important; }

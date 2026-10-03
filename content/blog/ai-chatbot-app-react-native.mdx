@@ -1,0 +1,79 @@
+---
+slug: "ai-chatbot-app-react-native"
+title: "Building an AI Chatbot App with React Native: Scope, Cost & Timeline"
+metaTitle: "AI Chatbot App with React Native: Cost & Timeline"
+description: "What it takes to build an AI chatbot app in React Native — architecture, the four complexity tiers, realistic timelines and what really drives the cost."
+canonical: "https://soniconsultancyservices.com/blog/ai-chatbot-app-react-native"
+ogTitle: "Building an AI Chatbot App with React Native: Scope, Cost & Timeline"
+ogDescription: "The four complexity tiers of an AI chatbot app, realistic timelines, and what drives the cost."
+categories: ["Mobile","AI"]
+lead: "\"We want an AI chatbot\" can mean a weekend feature or a three-month product. Here's how to tell which one you're describing — the four complexity tiers, what each really costs, and how long it takes."
+author: "Het Soni"
+dateLabel: ""
+datePublished: "2026-06-13"
+dateModified: "2026-06-13"
+excerpt: "The four complexity tiers, realistic timelines and what drives cost."
+indexOrder: 34
+indexFilter: "mobile ai"
+cta: {"heading":"Ready to build your chatbot?","body":"Tell us what it needs to do. We'll confirm the tier, give you a realistic timeline, and ship it to both stores.","buttons":[{"label":"Book a Free Call →","href":"https://calendly.com/het-soni-soniconsultancyservices/introductory"},{"label":"Estimate the cost","href":"/app-cost-calculator/"}]}
+related: ["react-native-chatgpt-integration","ai-react-native-app-development","on-device-ai-react-native"]
+hasWidget: false
+---
+
+<Embed id="ai-chatbot-app-react-native-1" />
+
+<Callout>
+
+**TL;DR:** Scope your chatbot by what it must *do*, not how it looks. A simple **FAQ bot** is quick; adding **grounded answers (RAG)**, **voice**, **actions** or **multiple languages** each moves it up a tier in cost and timeline. Use the selector below to place your idea, then get an exact range from our [cost calculator](/app-cost-calculator/). This is the product-level companion to our [AI React Native build guide](/blog/ai-react-native-app-development) and our [AI app development](/ai-app-development/) page.
+
+</Callout>
+
+## What an "AI chatbot app" actually is in 2026
+
+The phrase covers a huge range. At the simple end it's a conversational interface answering common questions from a fixed knowledge base. At the complex end it's a grounded, multilingual assistant that pulls live data, speaks and listens, and takes real actions on the user's behalf. Both are "AI chatbots." They are not the same project, and conflating them is the single biggest reason chatbot estimates come back wildly different from different studios.
+
+So before talking cost, the useful move is to decide which tier you're actually building.
+
+## Place your chatbot: the four complexity tiers
+
+Select the capabilities your chatbot needs. The tier, a realistic timeline, and the engineering it implies update as you go:
+
+<Embed id="ai-chatbot-app-react-native-2" />
+
+Timelines are typical ranges for an experienced team; your exact number depends on data and integrations. For a tailored estimate, run the [cost calculator](/app-cost-calculator/).
+
+## How it's built under the hood
+
+Whatever the tier, the backbone is the same one we use for every AI feature: the React Native app talks to **your backend**, which holds the model keys, runs retrieval against your data, and streams answers back. The app never calls the model directly — that's both a security rule and a cost-control lever, covered in [integrating ChatGPT & LLMs into React Native](/blog/react-native-chatgpt-integration). Higher tiers add a retrieval layer (a vector database over your documents) and, for the top tier, tool-calling so the model can act — the point where a chatbot becomes closer to an [AI agent](/blog/ai-agent-development-services).
+
+## What actually drives the timeline and cost
+
+-   **Retrieval quality** — getting a RAG bot to answer your real questions accurately is most of the work in tiers 2 and up. Chunking, embeddings and evaluation, not the chat bubbles.
+-   **Integrations** — every system the bot reads from or acts on (CRM, orders, bookings) is its own slice of work.
+-   **Voice** — speech-to-text and text-to-speech, plus the UX of a hands-free flow.
+-   **Running cost** — per-token spend scales with context size and usage; caching, right-sized models and retrieval keep it sane.
+-   **Evaluation & safety** — the test set that proves the bot is right, and the guardrails that keep it on-topic.
+
+The build cost is the predictable part; the per-token running cost is the one teams forget to budget. Our [calculator](/app-cost-calculator/) exposes both kinds of driver so the number isn't a surprise.
+
+## Mistakes that sink chatbot projects
+
+-   **No retrieval where it's needed** — a confident bot inventing your refund policy is worse than no bot.
+-   **Skipping evaluation** — shipping prompt changes with no way to know if quality went up or down.
+-   **Keys in the app** — the security and cost mistake from the integration guide.
+-   **Over-scoping the MVP** — building tier 4 when tier 2 would have validated the idea.
+-   **No fallback to a human** — every good support bot knows when to hand off.
+
+> The chat UI is a weekend. The reason a chatbot is trusted — grounded answers, evaluation and guardrails — is the project.
+
+## Quick answers
+
+**How much does it cost to build an AI chatbot app?** It scales with tier — a simple FAQ bot is a small build; RAG, voice and actions add backend and data work. The build is predictable; per-token running cost scales with use. The [calculator](/app-cost-calculator/) gives an indicative range.
+
+**How long does it take to build an AI chatbot in React Native?** Roughly 2–3 weeks for a simple bot, 4–8 weeks with retrieval, 8+ weeks for an advanced assistant.
+
+**What's the difference between an AI chatbot and an AI agent?** A chatbot answers; an agent acts by calling your functions to complete tasks.
+
+**Do I need RAG for my chatbot?** Yes if it must answer accurately from your data; optional for general conversation or scripted flows.
+
+Know your tier and want it built right? We ship AI chatbot apps in [React Native](/react-native-app-development/) with grounded answers and proper evaluation. [Tell us what yours should do.](/contact/)

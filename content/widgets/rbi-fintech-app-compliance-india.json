@@ -1,0 +1,69 @@
+{
+ "type": "checklist",
+ "kick": "Interactive · 10-point RBI readiness check",
+ "bands": [
+  {
+   "min": 90,
+   "t": "Strong position.",
+   "d": "You are ahead of most fintech apps we see. Keep the annual VAPT and record-retention discipline current, and re-run this whenever you add a new payment flow or lending feature."
+  },
+  {
+   "min": 70,
+   "t": "Solid, with real gaps.",
+   "d": "The foundations are there. Close the remaining controls in order — confirm your RBI category, then verify data localisation and audit logging — and get the licensing questions in front of a fintech compliance lawyer soon."
+  },
+  {
+   "min": 40,
+   "t": "Meaningful work ahead.",
+   "d": "Several unchecked items here are infrastructure decisions, not paperwork — data localisation and audit logging in particular are expensive to retrofit. Get a compliance lawyer and a technical audit involved before you scale further."
+  },
+  {
+   "min": 0,
+   "t": "Start with your RBI category.",
+   "d": "A low score here is fixable, but not on a short timeline if you are already processing real transactions. First establish exactly which RBI category applies to you, then get a qualified fintech lawyer involved before building further."
+  }
+ ],
+ "items": [
+  {
+   "t": "We know exactly which RBI category we fall under",
+   "s": "Payment aggregator, lending service provider, NBFC partner, or none of the above"
+  },
+  {
+   "t": "Payments run through an already-licensed aggregator",
+   "s": "Razorpay, Cashfree or similar — not a payment flow we built and hold ourselves"
+  },
+  {
+   "t": "Every transaction has a genuine second authentication factor",
+   "s": "AFA-compliant — not a single password or OTP alone where two factors are required"
+  },
+  {
+   "t": "Payment and transaction data is stored on servers located in India",
+   "s": "Data localisation — not a foreign-only cloud region for anything payment-related"
+  },
+  {
+   "t": "If we lend money, we have NBFC registration or an LSP partnership",
+   "s": "Not applicable if you don't originate or facilitate loans"
+  },
+  {
+   "t": "KYC and AML checks run on every user per RBI's Master Direction",
+   "s": "Automated, not a manual process someone can skip under pressure"
+  },
+  {
+   "t": "We've had an annual VAPT covering the app, infrastructure and APIs",
+   "s": "Addressing the OWASP Top 10 plus business logic flaws, with remediation verified"
+  },
+  {
+   "t": "Transaction records, KYC documents and audit logs are retained for 5 years",
+   "s": "With a system that actually enforces the retention, not a policy on paper"
+  },
+  {
+   "t": "We could detect a fraud incident and report it to RBI within the required window",
+   "s": "Logging and alerting good enough to know it happened and notify on time"
+  },
+  {
+   "t": "Our DPDP Act consent and data-handling obligations are handled separately",
+   "s": "RBI compliance does not replace India's data protection law — both apply"
+  }
+ ],
+ "footnote": "Nothing you tick is sent anywhere — this runs entirely in your browser."
+}

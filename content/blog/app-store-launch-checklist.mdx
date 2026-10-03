@@ -1,0 +1,96 @@
+---
+slug: "app-store-launch-checklist"
+title: "App Store & Google Play Launch: A 2026 Submission Checklist"
+metaTitle: "App Store & Google Play Launch: A 2026 Submission Checklist"
+description: "A practical 2026 checklist for launching on the App Store and Google Play — developer accounts, store listing and ASO, privacy labels, screenshots, common"
+canonical: "https://soniconsultancyservices.com/blog/app-store-launch-checklist"
+ogTitle: "App Store & Google Play Launch: A 2026 Submission Checklist"
+ogDescription: "Everything between a finished build and a live app — accounts, listings, privacy labels, review pitfalls and a safe rollout."
+categories: ["Mobile","Launch"]
+lead: "A finished build is only half the job. Between \"it works on my phone\" and \"it's live for everyone\" sits a gauntlet of accounts, listings, privacy declarations and review queues. Here's the checklist we run so launch day is a non-event — in the best possible way."
+author: "Het Soni"
+readTime: "10 min read"
+dateLabel: "June 2026"
+datePublished: "2026-06-17"
+dateModified: "2026-06-17"
+excerpt: "Everything between a finished build and a live app — accounts, listings, privacy labels and review."
+indexOrder: 19
+indexFilter: "mobile strategy"
+cta: {"heading":"Ready to ship to the stores?","body":"We've taken apps through review and onto the App Store and Google Play. Book a free call and we'll map your launch — and set up releases so the next one is a non-event.","buttons":[{"label":"Book a Free Call →","href":"https://calendly.com/het-soni-soniconsultancyservices/introductory"},{"label":"React Native development","href":"/react-native-app-development/"}]}
+related: ["ai-react-native-app-development","ci-cd-react-native","mobile-app-security-checklist"]
+hasWidget: false
+---
+
+## Launch is a process, not a button
+
+Founders new to mobile often assume that "the app is done" means it's a click away from being downloadable. It isn't. Both stores are gatekept: there are legal agreements to accept, a developer identity to verify, an honest privacy declaration to make, a listing to optimise, and a human (and increasingly automated) review to pass. Skip a step and you don't get a bug report — you get a rejection, and your launch date slips a week. The fix is to treat launch as its own phase with its own checklist, started well before the code is finished.
+
+## Before you submit: accounts & agreements
+
+-   **Apple Developer Program** and **Google Play Console** accounts — both are paid (Apple is an annual fee; Google a one-time fee) and both can take days to approve, especially for an organisation that needs identity verification. Start this *early*; it's the most common cause of a delayed launch.
+-   **Legal & tax agreements** accepted in both consoles — paid apps and in-app purchases won't go live until banking and tax forms are complete.
+-   **Bundle ID / package name** registered, and **signing** sorted — Apple's certificates and provisioning profiles, Google's app signing key. If signing makes you nervous, that's normal; automating it is exactly what a [CI/CD pipeline](/devops-cloud-engineering/) is for.
+-   **Required URLs live** — a reachable [privacy policy](/privacy/) and support contact. Broken or placeholder links are an instant rejection.
+
+## The store listing & ASO essentials
+
+Your listing is a conversion page — App Store Optimisation (ASO) is SEO for the stores. Treat it like one:
+
+-   **App name & subtitle** — clear, branded, and carrying the keyword people actually search. Don't waste the name on something clever nobody types.
+-   **Keywords** (Apple's keyword field) and a **keyword-rich description** (which Google indexes). Lead the description with the value in the first two lines — that's all most people read.
+-   **Category & age rating** chosen accurately.
+-   **Localisation** for your priority markets — even just the listing — measurably lifts conversion.
+
+## Privacy: get the labels exactly right
+
+This is where modern submissions most often go wrong. Apple's **privacy nutrition labels** and Google's **Data safety** form require you to declare what data your app collects, why, and whether it's linked to the user or used for tracking — and the declaration must match what your app *and every SDK in it* actually do. Analytics, ads, crash reporting and attribution SDKs all collect data on your behalf. An inaccurate label isn't a paperwork slip; it's grounds for rejection and, post-launch, removal. Audit your SDKs against your declaration before you submit.
+
+## Screenshots, preview & metadata
+
+Most installs are decided on the screenshots, not the description. Ship sharp, current screenshots at the required device sizes, ideally with short captions that sell the benefit of each screen. Add an app preview video if you can. And make sure everything is **truthful** — screenshots that show features the app doesn't have are both a rejection risk and a one-star-review machine.
+
+<Callout>
+
+**Building in React Native?** One codebase ships to both stores, which halves the listing and release work versus two native apps. See how we approach it on our [React Native development](/react-native-app-development/) page.
+
+</Callout>
+
+## The review gauntlet — and how to clear it first time
+
+Most rejections are avoidable. The usual suspects:
+
+-   **Crashes & bugs in review** — test on a clean device and a real network. Reviewers will find what your happy-path testing didn't.
+-   **No demo account** — if your app is login-gated, provide working demo credentials and clear notes in the review form. Reviewers can't approve what they can't get into.
+-   **Privacy mismatches** — see above; the number-one modern rejection.
+-   **Misleading metadata** — screenshots or descriptions that don't match the app.
+-   **Incomplete account deletion** — both stores require an in-app way to delete an account if you offer account creation.
+
+## Launch day: roll out in stages
+
+Resist the urge to flip to 100% immediately. Use a **staged (phased) rollout** — release to a small slice of users first and watch your crash-free rate and early reviews. If a regression slipped through, you halt the rollout instead of shipping it to everyone. Have your monitoring (crash reporting, analytics, alerting) live *before* the first user installs, not after. Plan releases for early in the week and the day, never Friday afternoon — if something breaks, you want to be awake and at a keyboard.
+
+## After launch: the part that's actually the start
+
+Approval is a milestone, not the finish line. Respond to early reviews, watch which keywords convert and refine your ASO, and start iterating on the core loop. Day one is when you begin the journey from [MVP to product-market fit](/blog/mvp-to-product-market-fit) — and a healthy release cadence from here is what keeps an app alive. Budget for it; we cover the numbers in [what app maintenance really costs](/blog/app-maintenance-cost).
+
+## Frequently asked questions
+
+### How long does app store review take in 2026?
+
+Apple's App Store review typically returns within a day or two, though a first submission or a flagged build can take longer. Google Play ranges from hours to a few days, and new developer accounts may face extra verification. Build a buffer into your launch date rather than assuming same-day approval.
+
+### Why do apps get rejected from the App Store?
+
+The most common reasons are crashes in review, inaccurate or incomplete privacy disclosures, broken or placeholder links, missing demo credentials for a login-gated app, misleading metadata or screenshots, and using private APIs. Almost all are avoidable with a clean build and an honest, complete listing.
+
+### What are privacy nutrition labels and the Play Data safety form?
+
+Both stores require you to declare what data your app collects, why, and whether it's linked to the user or used for tracking. Apple calls these privacy nutrition labels; Google calls it the Data safety section. They must accurately match what your app and its SDKs actually do — inaccurate declarations are a frequent cause of rejection and removal.
+
+### Should I release to 100% of users at launch?
+
+Usually no. A staged (phased) rollout releases to a small percentage of users first so you can watch crash and review metrics before going wide. If something breaks, you halt the rollout instead of shipping the problem to your entire user base on day one.
+
+### Can you handle our app store submission and launch?
+
+Yes. We take React Native apps through the full release process — store accounts, signing, listings, privacy declarations, screenshots, review and a staged rollout — and set up the pipeline so future releases are routine. [Book a call](https://calendly.com/het-soni-soniconsultancyservices/introductory) and we'll map your launch.

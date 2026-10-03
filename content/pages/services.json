@@ -1,0 +1,793 @@
+{
+ "slug": "services",
+ "path": "/services/",
+ "meta": {
+  "title": "App Development Services | Soni Consultancy Services",
+  "description": "React Native, MERN, AI integration, DevOps and developer hiring — mobile-first app development services from idea to App Store.",
+  "keywords": "React Native app development services, mobile app development company, MERN stack development, AI integration services, hire React Native developers",
+  "robots": "index,follow,max-image-preview:large",
+  "canonical": "https://soniconsultancyservices.com/services/",
+  "ogTitle": "Services — React Native, MERN & AI App Development",
+  "ogDescription": "From idea to App Store. React Native, MERN & AI.",
+  "ogType": "website"
+ },
+ "h1": "From idea to App Store — one senior team.",
+ "breadcrumb": "Home › Services",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "logo": "https://soniconsultancyservices.com/favicon.svg",
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://www.instagram.com/soni.consultancyservices/",
+    "https://www.facebook.com/soniconsultancyservices",
+    "https://medium.com/@hetsoni9398"
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "Service",
+   "name": "React Native App Development",
+   "serviceType": "Mobile app development",
+   "provider": {
+    "@type": "Organization",
+    "name": "Soni Consultancy Services"
+   },
+   "areaServed": "Worldwide",
+   "description": "Cross-platform iOS and Android apps from a single React Native codebase — native performance, submitted, approved and live on both stores."
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://soniconsultancyservices.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Services",
+     "item": "https://soniconsultancyservices.com/services/"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What services does Soni Consultancy Services offer?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Five core services: React Native app development, MERN-stack & web development, AI integration (Claude & GPT), DevOps & cloud engineering, and hiring a developer through staff augmentation or a dedicated pod."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What's your development process?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Five steps: Discover (goals, scope, a fixed proposal within 48 hours), Design (clickable UX before code), Build (weekly working software), Launch (App Store & Play Store submission handled for you), and Scale (iterate on real usage while we own the ops)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you build the backend as well as the app?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — one team covers the React Native front end and the MERN backend (APIs, auth, dashboards, real-time), so you're not coordinating separate vendors."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I hire a single developer instead of a full project team?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — staff augmentation, dedicated pods or contract placements are available. See our hiring page for engagement models."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you handle App Store and Google Play submission?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — submission and approval on both stores is part of our Launch step, done for you."
+     }
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "cls": "page-hero",
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "What we do"
+    },
+    {
+     "t": "h",
+     "level": 1,
+     "html": "From idea to App Store —<br>one senior team.",
+     "cls": "h1"
+    },
+    {
+     "t": "p",
+     "html": "Mobile-first, AI-ready, full-stack. We design, build and launch React Native &amp; MERN products — and stay to scale them.",
+     "cls": "lead"
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "grid",
+     "cls": "wrap",
+     "items": [
+      {
+       "cls": "glass svc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "01",
+         "cls": "num"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "React Native App Development"
+        },
+        {
+         "t": "p",
+         "html": "Cross-platform iOS &amp; Android apps from a single codebase — native performance, submitted, approved and live on both stores."
+        },
+        {
+         "t": "list",
+         "ordered": false,
+         "items": [
+          "iOS + Android from one codebase",
+          "Push, maps, payments, biometrics, offline",
+          "App Store &amp; Play Store submission"
+         ]
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "React Native"
+          },
+          {
+           "label": "Expo"
+          },
+          {
+           "label": "TypeScript"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "cls": "glass svc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "02",
+         "cls": "num"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "MVP Development"
+        },
+        {
+         "t": "p",
+         "html": "A focused first product that proves the idea with real users — scoped hard, shipped in roughly 10–16 weeks on a fixed price. <a href=\"/mvp-development/\">See MVP development →</a>"
+        },
+        {
+         "t": "list",
+         "ordered": false,
+         "items": [
+          "Scope cut to Core / Supporting / Later",
+          "Fixed-price proposal within 48 hours",
+          "Analytics instrumented from day one"
+         ]
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "React Native"
+          },
+          {
+           "label": "MERN"
+          },
+          {
+           "label": "10–16 weeks"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "cls": "glass svc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "03",
+         "cls": "num"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "MERN-Stack &amp; Web Development"
+        },
+        {
+         "t": "p",
+         "html": "The backend, API, dashboards and SSR web app your product runs on — MongoDB, Express, React, Node and Next.js, built to scale."
+        },
+        {
+         "t": "list",
+         "ordered": false,
+         "items": [
+          "REST/GraphQL APIs, auth, real-time",
+          "Admin dashboards &amp; SSR web apps",
+          "Stripe, webhooks, multi-tenancy"
+         ]
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "Node.js"
+          },
+          {
+           "label": "MongoDB"
+          },
+          {
+           "label": "Next.js"
+          },
+          {
+           "label": "PostgreSQL"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "cls": "glass svc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "04",
+         "cls": "num"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "AI Integration"
+        },
+        {
+         "t": "p",
+         "html": "Claude &amp; GPT features that earn their place — assistants, matching, prediction, RAG. <a href=\"/ai-app-development/\">See AI app ideas →</a>"
+        },
+        {
+         "t": "list",
+         "ordered": false,
+         "items": [
+          "Claude / GPT pipelines &amp; agents",
+          "RAG, embeddings, vector search",
+          "Evaluation, guardrails, cost control"
+         ]
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "Claude API"
+          },
+          {
+           "label": "GPT"
+          },
+          {
+           "label": "RAG"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "cls": "glass svc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "05",
+         "cls": "num"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "DevOps &amp; Cloud"
+        },
+        {
+         "t": "p",
+         "html": "CI/CD pipelines, containerised deploys and auto-scaling AWS infrastructure — we own the ops layer so launches are boring. <a href=\"/devops-cloud-engineering/\">Explore DevOps &amp; Cloud →</a>"
+        },
+        {
+         "t": "list",
+         "ordered": false,
+         "items": [
+          "AWS architecture &amp; auto-scaling",
+          "CI/CD, Docker, monitoring",
+          "99.9% uptime infrastructure"
+         ]
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "AWS"
+          },
+          {
+           "label": "Docker"
+          },
+          {
+           "label": "CI/CD"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "cls": "glass svc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "06",
+         "cls": "num"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Hire a Developer"
+        },
+        {
+         "t": "p",
+         "html": "Embed our senior React Native, MERN or AI engineers into your team — staff augmentation, dedicated pods or contract. <a href=\"/hire/\">See engagement models →</a>"
+        },
+        {
+         "t": "list",
+         "ordered": false,
+         "items": [
+          "Senior-only, 5+ years commercial",
+          "Kick-off within 48 hours",
+          "IR35-aware for UK clients"
+         ]
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "Staff aug"
+          },
+          {
+           "label": "Dedicated team"
+          },
+          {
+           "label": "Contract"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "cls": "glass svc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "07",
+         "cls": "num"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "WordPress Website Development"
+        },
+        {
+         "t": "p",
+         "html": "Custom WordPress &amp; WooCommerce websites for Indian businesses, built by the same senior engineers. <a href=\"/wordpress-website-development-india/\">See WordPress services →</a>"
+        },
+        {
+         "t": "list",
+         "ordered": false,
+         "items": [
+          "Custom theming, not just templates",
+          "WooCommerce &amp; Indian payment gateways",
+          "Migration, speed &amp; SEO setup"
+         ]
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "WordPress"
+          },
+          {
+           "label": "WooCommerce"
+          },
+          {
+           "label": "India"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "How we work"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Five steps. No surprises.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "g5 proc-grid",
+     "items": [
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "01",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Discover"
+        },
+        {
+         "t": "p",
+         "html": "Goals, scope, the metric to move. Fixed proposal in 48h."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "02",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Design"
+        },
+        {
+         "t": "p",
+         "html": "Clickable UX before a line of code."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "03",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Build"
+        },
+        {
+         "t": "p",
+         "html": "Weekly working software, in your tools."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "04",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Launch"
+        },
+        {
+         "t": "p",
+         "html": "App Store &amp; Play Store submission, done for you."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "05",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Scale"
+        },
+        {
+         "t": "p",
+         "html": "Iterate on real usage; own the ops."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Know what you want to build?",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "Get a fixed-price proposal within 48 hours of a free call.",
+       "cls": "lead"
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Book a Free Call →",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "primary"
+        },
+        {
+         "label": "See our work",
+         "href": "/work/",
+         "variant": "glass"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Free guides & tools"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Not ready to talk? Try these first.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "g4",
+     "items": [
+      {
+       "cls": "glass",
+       "href": "/blog/mvp-tech-stack-2026",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Stack picker"
+        },
+        {
+         "t": "text",
+         "html": "Which stack fits your MVP"
+        },
+        {
+         "t": "text",
+         "html": "Get a recommendation →"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/blog/native-vs-cross-platform-2026",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Decision tool"
+        },
+        {
+         "t": "text",
+         "html": "Native, React Native or Flutter?"
+        },
+        {
+         "t": "text",
+         "html": "Get a recommendation →"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/blog/mobile-app-security-checklist",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Self-audit"
+        },
+        {
+         "t": "text",
+         "html": "Score your app’s security"
+        },
+        {
+         "t": "text",
+         "html": "Run the audit →"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/blog/app-monetization-models",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Revenue explorer"
+        },
+        {
+         "t": "text",
+         "html": "How will your app make money?"
+        },
+        {
+         "t": "text",
+         "html": "Explore models →"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "form",
+     "id": "leadForm",
+     "fields": [
+      {
+       "name": "lbName",
+       "id": "lbName",
+       "type": "text",
+       "label": "Your name",
+       "placeholder": "Jane Doe",
+       "required": false
+      },
+      {
+       "name": "lbEmail",
+       "id": "lbEmail",
+       "type": "email",
+       "label": "Work email",
+       "placeholder": "jane@company.com",
+       "required": false
+      },
+      {
+       "name": "lbWant",
+       "id": "lbWant",
+       "type": "text",
+       "label": "What are you building?",
+       "placeholder": "One line is plenty — e.g. a patient booking app for 3 clinics",
+       "required": false
+      },
+      {
+       "name": "lbBudget",
+       "id": "lbBudget",
+       "type": "select",
+       "label": "Budget",
+       "required": false,
+       "options": [
+        "Select a range",
+        "Not sure yet",
+        "<$10k",
+        "$10-25k",
+        "$25-60k",
+        "$60k+"
+       ]
+      },
+      {
+       "name": "lbTime",
+       "id": "lbTime",
+       "type": "select",
+       "label": "Timeline",
+       "required": false,
+       "options": [
+        "Select a timeline",
+        "ASAP",
+        "1-3 months",
+        "3-6 months",
+        "Just exploring"
+       ]
+      },
+      {
+       "type": "checkbox",
+       "label": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+       "required": false
+      }
+     ],
+     "submit": "Send →",
+     "kick": "Start here",
+     "title": "Tell us what you’re building.",
+     "sub": "One short form. You get a straight answer on scope and a fixed price within 48 hours — or an honest no if it isn’t a fit.",
+     "note": "Replies within one business day · no upfront fee to talk",
+     "consent": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+     "success": "✓ Thanks — that’s with Het. You’ll get a reply within one business day, usually with either a straight answer or the two or three questions needed to scope it properly."
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Common questions"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Before you get in touch.",
+     "cls": "h2"
+    },
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What services does Soni Consultancy Services offer?",
+       "a": "Five core services: React Native app development, MERN-stack &amp; web development, AI integration (Claude &amp; GPT), DevOps &amp; cloud engineering, and hiring a developer through staff augmentation or a dedicated pod."
+      },
+      {
+       "q": "What's your development process?",
+       "a": "Five steps: Discover (goals, scope, a fixed proposal within 48 hours), Design (clickable UX before code), Build (weekly working software), Launch (App Store &amp; Play Store submission handled for you), and Scale (iterate on real usage while we own the ops)."
+      },
+      {
+       "q": "Do you build the backend as well as the app?",
+       "a": "Yes — one team covers the React Native front end and the MERN backend (APIs, auth, dashboards, real-time), so you're not coordinating separate vendors."
+      },
+      {
+       "q": "Can I hire a single developer instead of a full project team?",
+       "a": "Yes — staff augmentation, dedicated pods or contract placements are available. See our <a href=\"/hire/\">hiring page</a> for engagement models."
+      },
+      {
+       "q": "Do you handle App Store and Google Play submission?",
+       "a": "Yes — submission and approval on both stores is part of our Launch step, done for you."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

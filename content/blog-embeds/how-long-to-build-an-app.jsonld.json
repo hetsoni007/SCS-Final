@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How Long Does It Take to Build a Mobile App in 2026?",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-06-17",
+  "dateModified": "2026-06-17",
+  "articleSection": "Mobile",
+  "description": "A realistic mobile app development timeline for 2026 — the phases, what drives the schedule, MVP vs full build, and why estimates slip."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "How Long Does It Take to Build a Mobile App in 2026?",
+    "item": "https://soniconsultancyservices.com/blog/how-long-to-build-an-app"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "How long does it take to build a mobile app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "A focused MVP typically lands in roughly 2 to 4 months; a more complete product with several integrated features and polish runs longer. The real driver isn't the platform, it's scope — number of screens, integrations, custom backend and how tightly defined the requirements are before the build starts."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What are the phases of app development?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Discovery and scoping, UX and UI design, build (frontend, backend and integrations), QA and testing, then app store submission and launch. After launch comes iteration based on real usage. Design, build and QA usually overlap rather than running strictly one after another."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Does React Native build faster than native?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Usually yes for the same app on both platforms, because one React Native codebase ships to iOS and Android instead of two separate native codebases. The saving is largest when the app is mostly standard product UI and smaller when it leans heavily on platform-specific native features."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Why do app timelines slip?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "The common causes are scope creep, vague requirements that get discovered mid-build, slow feedback and approval loops, third-party APIs that behave differently than documented, and app store review surprises. A tight scope and fast decision-making protect the timeline more than adding developers does."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can you tell me how long my specific app will take?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes — that's what a scoping conversation is for. Try our app cost calculator for a quick estimate by complexity, or book a free call and we'll map your features to a realistic timeline and phased plan."
+    }
+   }
+  ]
+ }
+]

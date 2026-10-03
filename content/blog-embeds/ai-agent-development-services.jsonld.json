@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "AI Agent Development Services in 2026",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-06-01",
+  "dateModified": "2026-06-14",
+  "articleSection": "AI",
+  "description": "What AI agents are in 2026, single vs multi-agent systems, the agent tech stack, guardrails, how to evaluate them, costs, and use cases by industry."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "AI Agent Development Services in 2026",
+    "item": "https://soniconsultancyservices.com/blog/ai-agent-development-services"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "What is the difference between an AI agent and a chatbot?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "A chatbot responds to a message in one turn. An agent runs a multi-step loop, calling real tools and using live data to complete a goal autonomously. The engineering effort is in the tools, guardrails and evaluation, not the prompt."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How long does it take to build an AI agent?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "A focused single-domain agent with a handful of tools, a proper evaluation set and a human review step typically takes 4-8 weeks. Multi-agent systems, heavy integration surface or strict compliance extend that."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Do I need a multi-agent system?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Usually not. A single well-scoped agent handles most production use cases at lower cost and latency. Add more agents only when a problem clearly decomposes into independent specialities and you've proven the simpler version."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How do you control AI agent costs?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Token spend scales with context size and loop count, so we use retrieval instead of stuffing context, prompt caching, a right-sized model per task, and hard caps on iterations and spend."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How do you stop an agent doing something harmful?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Least-privilege tools, human approval for irreversible actions, loop and cost caps, prompt-injection defences and sandboxed execution, plus an evaluation suite that catches regressions before production."
+    }
+   }
+  ]
+ }
+]

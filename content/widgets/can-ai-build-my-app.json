@@ -1,0 +1,187 @@
+{
+ "type": "quiz",
+ "kick": "Interactive · 5 questions",
+ "keys": [
+  "ai",
+  "mix",
+  "eng"
+ ],
+ "results": {
+  "ai": {
+   "label": "AI-led is viable",
+   "name": "You could reasonably build this with AI tools",
+   "why": "Your answers describe a largely standard product without sensitive data or hard integrations, and you are validating rather than betting the business on it. That is exactly the case where AI-assisted building is the fastest, cheapest way to find out whether the idea has legs.",
+   "note": "One condition: treat what you build as a disposable experiment, not a foundation. AI-assisted prototypes are excellent at answering 'is this worth building?' and poor at becoming the thing you scale."
+  },
+  "mix": {
+   "label": "Hybrid",
+   "name": "A hybrid approach fits best",
+   "why": "There is enough standard surface here for AI to genuinely accelerate the build, and enough real complexity — integrations, data sensitivity or scale — that some of it needs an engineer accountable for the design. Draft fast where it is safe; put people on the parts with consequences.",
+   "note": "The practical split: let AI draft routine screens and tests under review, and keep architecture, data modelling and anything touching money or personal data with someone who can answer for it."
+  },
+  "eng": {
+   "label": "Engineer-led",
+   "name": "This one needs engineers leading",
+   "why": "Your answers point to real consequences — sensitive data, money, hard integrations, or a product the business depends on. AI can still accelerate parts of this build, but the architecture and the accountability need to sit with people, because the cost of getting it wrong lands on you.",
+   "note": "That does not mean avoiding AI. It means using it as a drafting tool under expert review, rather than as the thing deciding how your system is put together."
+  }
+ },
+ "questions": [
+  {
+   "q": "What are you trying to find out right now?",
+   "a": [
+    {
+     "t": "Whether the idea is worth pursuing at all",
+     "w": {
+      "ai": 3
+     }
+    },
+    {
+     "t": "Whether we can get early users to pay",
+     "w": {
+      "ai": 1,
+      "mix": 2
+     }
+    },
+    {
+     "t": "We are past that — this is the real build",
+     "w": {
+      "eng": 3
+     }
+    },
+    {
+     "t": "We are scaling something that already works",
+     "w": {
+      "eng": 3
+     }
+    }
+   ]
+  },
+  {
+   "q": "What does the app handle?",
+   "a": [
+    {
+     "t": "Content, forms and profiles",
+     "w": {
+      "ai": 3
+     }
+    },
+    {
+     "t": "Payments or money movement",
+     "w": {
+      "eng": 3
+     }
+    },
+    {
+     "t": "Health, financial or sensitive personal data",
+     "s": "DPDP, HIPAA or similar in scope",
+     "w": {
+      "eng": 3
+     }
+    },
+    {
+     "t": "Mostly standard, with one sensitive area",
+     "w": {
+      "mix": 3
+     }
+    }
+   ]
+  },
+  {
+   "q": "How hard are your integrations?",
+   "a": [
+    {
+     "t": "None to speak of",
+     "w": {
+      "ai": 3
+     }
+    },
+    {
+     "t": "Mainstream services with good SDKs",
+     "w": {
+      "ai": 1,
+      "mix": 2
+     }
+    },
+    {
+     "t": "Several, including at least one awkward one",
+     "w": {
+      "mix": 2,
+      "eng": 1
+     }
+    },
+    {
+     "t": "Industry-specific hardware or legacy systems",
+     "w": {
+      "eng": 3
+     }
+    }
+   ]
+  },
+  {
+   "q": "Can anyone on your side read the code?",
+   "a": [
+    {
+     "t": "Yes — a technical founder",
+     "w": {
+      "ai": 2,
+      "mix": 1
+     }
+    },
+    {
+     "t": "Somewhat — enough to spot obvious problems",
+     "w": {
+      "mix": 2
+     }
+    },
+    {
+     "t": "No, we would be trusting the output",
+     "w": {
+      "eng": 2
+     }
+    },
+    {
+     "t": "We have engineers on the team",
+     "w": {
+      "mix": 2,
+      "eng": 1
+     }
+    }
+   ]
+  },
+  {
+   "q": "What happens if it breaks in six months?",
+   "a": [
+    {
+     "t": "We would shrug and move on",
+     "w": {
+      "ai": 3
+     }
+    },
+    {
+     "t": "Annoying, but survivable",
+     "w": {
+      "mix": 2
+     }
+    },
+    {
+     "t": "We would lose customers",
+     "w": {
+      "eng": 2
+     }
+    },
+    {
+     "t": "The business would be in trouble",
+     "w": {
+      "eng": 3
+     }
+    }
+   ]
+  }
+ ],
+ "cta": {
+  "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+  "label": "Pressure-test this on a free call →"
+ },
+ "badge": "Your result"
+}

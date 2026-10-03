@@ -1,0 +1,396 @@
+{
+ "slug": "app-scoping-guide",
+ "path": "/app-scoping-guide/",
+ "meta": {
+  "title": "Free App Scoping Guide for Founders | Soni Consultancy",
+  "description": "Free guide: How to scope React Native and MERN apps — timeline, cost estimates, and the 5 questions that unlock your project brief. Download now.",
+  "robots": "index,follow,max-image-preview:large",
+  "canonical": "https://soniconsultancyservices.com/app-scoping-guide/",
+  "ogTitle": "Free App Scoping Guide — How to Plan Your App Build",
+  "ogDescription": "Get the guide: Scope your React Native or MERN app accurately. Timeline, cost, and the discovery questions every founder should ask.",
+  "ogType": "website"
+ },
+ "h1": "Scope Your App Like a Founder, Not a Salesperson",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "logo": "https://soniconsultancyservices.com/favicon.svg",
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://www.instagram.com/soni.consultancyservices/",
+    "https://www.facebook.com/soniconsultancyservices",
+    "https://medium.com/@hetsoni9398"
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://soniconsultancyservices.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Free App Scoping Guide",
+     "item": "https://soniconsultancyservices.com/app-scoping-guide/"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What's included in the App Scoping Guide?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The guide covers: how to define your MVP, the five discovery questions every founder should ask, realistic timeline estimates for React Native and MERN projects, cost ranges for different project sizes, and the exact process we use to scope projects within 48 hours."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I get the guide after filling in the form?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The download link appears immediately on the page once you submit — there's no waiting on an email. The PDF is 8 pages and free to keep or share."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Will you use my email to spam me?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. We may follow up once about your project or occasionally share new work — nothing more, and you can opt out any time."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is this guide specific to Soni Consultancy?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No — the scoping methodology is universal. Whether you work with us or another team, this guide will help you scope your app accurately and ask smarter vendor questions."
+     }
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "blocks": [
+    {
+     "t": "group",
+     "cls": "scoping-grid",
+     "blocks": [
+      {
+       "t": "eyebrow",
+       "text": "FREE GUIDE"
+      },
+      {
+       "t": "h",
+       "level": 1,
+       "html": "Scope Your App Like a Founder, Not a Salesperson"
+      },
+      {
+       "t": "p",
+       "html": "The five questions every founder should ask before building. Plus timelines, cost ranges, and the exact methodology we use to give fixed prices in 48 hours."
+      },
+      {
+       "t": "grid",
+       "cls": "benefit-grid",
+       "items": [
+        {
+         "cls": "benefit",
+         "blocks": [
+          {
+           "t": "h",
+           "level": 4,
+           "html": "✓ The 5 Discovery Questions"
+          },
+          {
+           "t": "p",
+           "html": "Ask these of any team and you'll get real answers about feasibility and cost."
+          }
+         ]
+        },
+        {
+         "cls": "benefit",
+         "blocks": [
+          {
+           "t": "h",
+           "level": 4,
+           "html": "✓ Timeline Estimates"
+          },
+          {
+           "t": "p",
+           "html": "MVP vs full product. React Native vs Flutter vs native. Realistic ranges."
+          }
+         ]
+        },
+        {
+         "cls": "benefit",
+         "blocks": [
+          {
+           "t": "h",
+           "level": 4,
+           "html": "✓ Cost Ranges"
+          },
+          {
+           "t": "p",
+           "html": "What you should expect to pay for different project sizes and complexity levels."
+          }
+         ]
+        },
+        {
+         "cls": "benefit",
+         "blocks": [
+          {
+           "t": "h",
+           "level": 4,
+           "html": "✓ Scoping Methodology"
+          },
+          {
+           "t": "p",
+           "html": "The exact process we use to turn your idea into a fixed-price proposal."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "html": "<strong>This is not a sales pitch.</strong> Whether you build with us or another team, this guide will help you ask smarter questions and avoid costly mistakes."
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Get the Guide (Free) →",
+         "href": "#form",
+         "variant": "primary"
+        },
+        {
+         "label": "Or book a call",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "glass"
+        }
+       ]
+      },
+      {
+       "t": "form",
+       "id": "scopingGuideForm",
+       "fields": [
+        {
+         "name": "name",
+         "id": "sgName",
+         "type": "text",
+         "label": "First name",
+         "placeholder": "James",
+         "required": true
+        },
+        {
+         "name": "email",
+         "id": "sgEmail",
+         "type": "email",
+         "label": "Work email",
+         "placeholder": "james@company.com",
+         "required": true
+        },
+        {
+         "name": "company",
+         "id": "sgCompany",
+         "type": "text",
+         "label": "Company",
+         "placeholder": "Acme Inc.",
+         "required": false
+        },
+        {
+         "name": "stage",
+         "id": "sgStage",
+         "type": "select",
+         "label": "Stage",
+         "required": false,
+         "options": [
+          "Select your stage",
+          "Just an idea",
+          "Prototype / MVP started",
+          "MVP ready, raising funds",
+          "Post-launch, scaling"
+         ]
+        }
+       ],
+       "submit": "Get the guide →",
+       "title": "Download the Guide",
+       "sub": "Instant download — no waiting on an email. 8 pages, free.",
+       "note": "No spam. By downloading you agree to our privacy policy.",
+       "success": "<strong>✓ Your guide is ready.</strong> <p>Click below to download it — it opens straight away, nothing to wait for.</p> <a href=\"/assets/app-scoping-guide.pdf\"> Download the PDF (8 pages) </a> <p>Prefer to talk it through? <a href=\"https://calendly.com/het-soni-soniconsultancyservices/introductory\" target=\"_blank\" rel=\"noopener\">Book a free 30-min scoping call →</a></p>"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Why scoping matters"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Most founders get their app wrong because they didn't scope it right.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "items": [
+      {
+       "blocks": [
+        {
+         "t": "text",
+         "html": "❌"
+        },
+        {
+         "t": "p",
+         "html": "<strong>Scope creep</strong> — You add features mid-build because you didn't think through what's actually MVP and what's Phase 2. Timeline doubles, costs triple."
+        }
+       ]
+      },
+      {
+       "blocks": [
+        {
+         "t": "text",
+         "html": "❌"
+        },
+        {
+         "t": "p",
+         "html": "<strong>Wrong tech choice</strong> — You pick a stack based on what your friend used, not what your app needs. Six months in, you realise you chose the wrong framework."
+        }
+       ]
+      },
+      {
+       "blocks": [
+        {
+         "t": "text",
+         "html": "❌"
+        },
+        {
+         "t": "p",
+         "html": "<strong>Bad vendor choice</strong> — You hire the cheapest team because you didn't know what questions to ask. They build you something that can't scale, and you're stuck rewriting."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "html": "This guide teaches you the exact questions and framework we use so you don't make these mistakes — and you know exactly what to expect from any team you work with."
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Who this is for"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Founders. Technical co-founders. Product leads.",
+     "cls": "h2"
+    },
+    {
+     "t": "p",
+     "html": "If you're building a mobile or web app and want to understand how to scope it properly before you talk to any team, this guide is for you."
+    },
+    {
+     "t": "p",
+     "html": "It's agnostic — you might end up working with us, or you might build in-house, or you might hire someone else. Either way, this guide will save you time and money."
+    },
+    {
+     "t": "p",
+     "html": "The only people this <em>won't</em> help: if you've already built your app and it works perfectly, you probably don't need it."
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "FAQ"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Common questions.",
+     "cls": "h2"
+    },
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What's included in the App Scoping Guide?",
+       "a": "The guide covers how to define your MVP, the five discovery questions every founder should ask, realistic timeline estimates for React Native and MERN projects, cost ranges for different project sizes, and the exact process we use to scope projects within 48 hours."
+      },
+      {
+       "q": "How do I get the guide after filling in the form?",
+       "a": "The download link appears immediately on the page once you submit — there's no waiting on an email. The PDF is 8 pages and free to keep or share."
+      },
+      {
+       "q": "Will you use my email to spam me?",
+       "a": "No. We may follow up once about your project or occasionally share new work — nothing more, and you can opt out any time."
+      },
+      {
+       "q": "Is this guide specific to Soni Consultancy?",
+       "a": "No — the scoping methodology is universal. Whether you work with us or another team, this guide will help you scope your app accurately and ask smarter vendor questions."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Ready to scope your app?",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "Download the guide, or skip straight to a 30-minute discovery call with Het.",
+       "cls": "lead"
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Get the Guide (Free)",
+         "href": "#form",
+         "variant": "primary"
+        },
+        {
+         "label": "Book a Call",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "glass"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

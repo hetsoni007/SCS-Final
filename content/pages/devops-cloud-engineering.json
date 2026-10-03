@@ -1,0 +1,1482 @@
+{
+ "slug": "devops-cloud-engineering",
+ "path": "/devops-cloud-engineering/",
+ "meta": {
+  "title": "DevOps & Cloud Engineering | Soni Consultancy Services",
+  "description": "Managed DevOps & cloud engineering — CI/CD, Kubernetes, Terraform IaC, AWS & Azure migration, observability and SRE.",
+  "keywords": "devops consulting services, cloud engineering, ci/cd pipeline setup, kubernetes consulting, infrastructure as code, terraform, aws migration, azure devops, sre as a service, cloud cost optimization",
+  "robots": "index,follow,max-image-preview:large",
+  "canonical": "https://soniconsultancyservices.com/devops-cloud-engineering/",
+  "ogTitle": "DevOps & Cloud Engineering | Soni Consultancy Services",
+  "ogDescription": "CI/CD, Kubernetes, Terraform IaC, AWS & Azure migration, observability and SRE. Ship faster and cut cloud cost.",
+  "ogType": "website"
+ },
+ "h1": "Ship faster. Spend less on cloud.",
+ "breadcrumb": "Home › DevOps & Cloud",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Service",
+   "name": "DevOps & Cloud Engineering",
+   "serviceType": "DevOps and cloud engineering",
+   "provider": {
+    "@type": "Organization",
+    "name": "Soni Consultancy Services",
+    "url": "https://soniconsultancyservices.com"
+   },
+   "areaServed": "Worldwide",
+   "description": "CI/CD pipelines, Kubernetes, Terraform infrastructure-as-code, AWS and Azure cloud migration, observability and SRE for teams that need to ship faster and cut cloud cost.",
+   "url": "https://soniconsultancyservices.com/devops-cloud-engineering/"
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://soniconsultancyservices.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "DevOps & Cloud",
+     "item": "https://soniconsultancyservices.com/devops-cloud-engineering/"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What does a DevOps & cloud engagement include?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It depends on where you are. Common scope: setting up CI/CD pipelines, containerising apps and moving them to Kubernetes, codifying infrastructure with Terraform, migrating to or optimising AWS/Azure, and adding observability so you can catch issues before users do. We scope it on a short call and propose a fixed plan."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you work with both AWS and Azure?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. We design and operate on both AWS and Azure (and the surrounding ecosystem — Docker, Kubernetes, Terraform, GitHub Actions, Prometheus and Grafana). We pick the stack that fits your team and workloads, not the one we want to sell."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can you reduce our cloud bill?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Usually, yes. Most teams over-provision compute, leave idle resources running and miss savings plans. A cloud cost audit identifies the waste; right-sizing, autoscaling and IaC guardrails keep it from coming back. Try our cloud cost calculator for an indicative estimate."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do you set up CI/CD pipelines?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We build automated pipelines (GitHub Actions, GitLab CI, Jenkins or Azure DevOps) that test, security-scan, build and deploy on every commit — with safe rollbacks. The goal is push-button, low-risk releases so your team ships daily instead of monthly."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you support mobile CI/CD for React Native apps?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — automated React Native release pipelines with Fastlane and EAS, signed builds, App Store and Play Store submission, and over-the-air updates. It ties directly into our React Native app development practice."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How quickly can you start?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Most engagements begin within a week of a scoping call. A focused cloud cost audit or CI/CD setup can show results in the first couple of weeks."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "logo": "https://soniconsultancyservices.com/favicon.svg",
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://www.instagram.com/soni.consultancyservices/",
+    "https://www.facebook.com/soniconsultancyservices",
+    "https://medium.com/@hetsoni9398"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "cls": "page-hero",
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "DevOps & Cloud · AWS · Azure"
+    },
+    {
+     "t": "h",
+     "level": 1,
+     "html": "Ship faster.<br>Spend less on cloud.",
+     "cls": "h1"
+    },
+    {
+     "t": "p",
+     "html": "CI/CD pipelines, Kubernetes, Terraform infrastructure-as-code, AWS &amp; Azure migration, and observability — engineered so your team deploys on demand, recovers in minutes, and stops overpaying for idle infrastructure.",
+     "cls": "lead"
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Book a Free Call →",
+       "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+       "variant": "primary"
+      },
+      {
+       "label": "See the live dashboard ↓",
+       "href": "#obs",
+       "variant": "glass"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "group",
+     "cls": "cred-bar",
+     "blocks": [
+      {
+       "t": "text",
+       "html": "Architected by senior engineers",
+       "cls": "lbl"
+      },
+      {
+       "t": "chips",
+       "items": [
+        {
+         "label": "AWS Certified"
+        },
+        {
+         "label": "Azure Solutions Architect Expert"
+        },
+        {
+         "label": "TOGAF 9"
+        },
+        {
+         "label": "15+ yrs · fintech · healthcare · enterprise"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "obs",
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass obs",
+     "blocks": [
+      {
+       "t": "panel",
+       "cls": "obs-head",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Operations &amp; delivery health",
+         "cls": "ti"
+        },
+        {
+         "t": "text",
+         "html": "DORA metrics · pipeline · uptime — the signals we engineer toward"
+        },
+        {
+         "t": "text",
+         "html": "Illustrative demo · sample data",
+         "cls": "demo-badge"
+        }
+       ]
+      },
+      {
+       "t": "grid",
+       "cls": "dora-grid",
+       "items": [
+        {
+         "cls": "dora",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Deploy frequency",
+           "cls": "l"
+          },
+          {
+           "t": "text",
+           "html": "14 / day",
+           "cls": "v"
+          },
+          {
+           "t": "text",
+           "html": "▲ on-demand",
+           "cls": "t"
+          }
+         ]
+        },
+        {
+         "cls": "dora",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Lead time",
+           "cls": "l"
+          },
+          {
+           "t": "text",
+           "html": "42 min",
+           "cls": "v"
+          },
+          {
+           "t": "text",
+           "html": "▼ from 6 days",
+           "cls": "t"
+          }
+         ]
+        },
+        {
+         "cls": "dora",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Change-fail rate",
+           "cls": "l"
+          },
+          {
+           "t": "text",
+           "html": "3.1 %",
+           "cls": "v"
+          },
+          {
+           "t": "text",
+           "html": "▼ elite band",
+           "cls": "t"
+          }
+         ]
+        },
+        {
+         "cls": "dora",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "MTTR",
+           "cls": "l"
+          },
+          {
+           "t": "text",
+           "html": "11 min",
+           "cls": "v"
+          },
+          {
+           "t": "text",
+           "html": "▼ auto-rollback",
+           "cls": "t"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "grid",
+       "cls": "obs-low",
+       "items": [
+        {
+         "cls": "obs-card",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Deployments — last 14 days",
+           "cls": "l"
+          }
+         ]
+        },
+        {
+         "cls": "obs-card",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Uptime · 30 days",
+           "cls": "l"
+          },
+          {
+           "t": "group",
+           "cls": "gauge-wrap",
+           "blocks": [
+            {
+             "t": "text",
+             "html": "<b>99.98%</b><small>SLA met</small>",
+             "cls": "gv"
+            },
+            {
+             "t": "text",
+             "html": "Error budget healthy.<br>2 alerts auto-resolved this week."
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "grid",
+       "cls": "pipe",
+       "items": [
+        {
+         "cls": "pipe-stage done",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Build",
+           "cls": "nm"
+          },
+          {
+           "t": "text",
+           "html": "›",
+           "cls": "ar"
+          }
+         ]
+        },
+        {
+         "cls": "pipe-stage done",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Test",
+           "cls": "nm"
+          },
+          {
+           "t": "text",
+           "html": "›",
+           "cls": "ar"
+          }
+         ]
+        },
+        {
+         "cls": "pipe-stage run",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Scan",
+           "cls": "nm"
+          },
+          {
+           "t": "text",
+           "html": "›",
+           "cls": "ar"
+          }
+         ]
+        },
+        {
+         "cls": "pipe-stage",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Deploy",
+           "cls": "nm"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "grid",
+       "cls": "svc-row",
+       "items": [
+        {
+         "cls": "svc",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "api-gateway"
+          }
+         ]
+        },
+        {
+         "cls": "svc",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "auth-service"
+          }
+         ]
+        },
+        {
+         "cls": "svc",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "payments"
+          }
+         ]
+        },
+        {
+         "cls": "svc",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "worker-queue"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "html": "Illustrative dashboard with sample data — not live telemetry. It shows the kind of delivery and reliability signals we instrument and optimise for your team.",
+     "cls": "dim"
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "grid",
+     "items": [
+      {
+       "cls": "glass feat",
+       "href": "/devops-maturity-assessment/",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "DevOps maturity assessment"
+        },
+        {
+         "t": "p",
+         "html": "Answer a few quick questions and get your maturity score — Foundational to Elite — with tailored next steps. About two minutes."
+        },
+        {
+         "t": "text",
+         "html": "Start the assessment →",
+         "cls": "lk"
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "href": "/cloud-cost-calculator/",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Cloud cost calculator"
+        },
+        {
+         "t": "p",
+         "html": "Estimate how much you could save on AWS/Azure from your current monthly spend. Instant, indicative range — no strings."
+        },
+        {
+         "t": "text",
+         "html": "Estimate your savings →",
+         "cls": "lk"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Is this for you?"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "You're in the<br>right place if…",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "icp",
+     "items": [
+      {
+       "cls": "glass",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 4,
+         "html": "Releases are scary"
+        },
+        {
+         "t": "p",
+         "html": "Deploys are manual, infrequent and stressful — and a bad one means downtime or a late night."
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 4,
+         "html": "The cloud bill keeps climbing"
+        },
+        {
+         "t": "p",
+         "html": "Your AWS or Azure spend grows faster than usage, and nobody's quite sure where the money goes."
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 4,
+         "html": "You're outgrowing click-ops"
+        },
+        {
+         "t": "p",
+         "html": "Scaling, on-call and environments are held together by hand and tribal knowledge — and it's starting to crack."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "What we do"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "From commit to<br>production — automated.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "feat-grid",
+     "items": [
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "CI/CD pipelines"
+        },
+        {
+         "t": "p",
+         "html": "Automated test, security-scan, build and deploy on every commit — with safe rollbacks. Push-button, low-risk releases so you ship daily, not monthly."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Cloud migration · AWS &amp; Azure"
+        },
+        {
+         "t": "p",
+         "html": "Lift-and-shift and re-architecture to AWS or Azure — made highly available, resilient and scalable, with a clear, low-downtime cutover plan."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Kubernetes &amp; containers"
+        },
+        {
+         "t": "p",
+         "html": "Docker and Kubernetes (EKS/AKS) done right — autoscaling, zero-downtime rollouts, health checks and sane resource limits. No 2am pages."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Infrastructure as Code"
+        },
+        {
+         "t": "p",
+         "html": "Your whole stack codified in Terraform (or Bicep/CloudFormation) — versioned, reviewable and reproducible. Spin up identical environments in minutes."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Observability &amp; SRE"
+        },
+        {
+         "t": "p",
+         "html": "Metrics, logs, traces and alerting with Prometheus, Grafana, CloudWatch or Datadog — plus SLOs and error budgets so you catch issues before users do."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Mobile CI/CD"
+        },
+        {
+         "t": "p",
+         "html": "Automated React Native release pipelines — Fastlane &amp; EAS, signed builds, App&nbsp;Store and Play&nbsp;Store submission, and over-the-air updates. Ties into our <a href=\"/react-native-app-development/\">React Native development</a>."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Reference architecture"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Tap any layer to<br>see how it fits.",
+     "cls": "h2"
+    },
+    {
+     "t": "p",
+     "html": "A production-grade cloud architecture we build toward. Explore each layer — what it does and why it matters.",
+     "cls": "lead"
+    },
+    {
+     "t": "group",
+     "cls": "arch",
+     "blocks": [
+      {
+       "t": "group",
+       "cls": "arch-flow",
+       "blocks": [
+        {
+         "t": "panel",
+         "cls": "arch-tier",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Users · Web · Mobile",
+           "cls": "arch-node"
+          }
+         ]
+        },
+        {
+         "t": "panel",
+         "cls": "arch-tier",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "CDN · WAF<small>CloudFront / Front Door</small>",
+           "cls": "arch-node"
+          }
+         ]
+        },
+        {
+         "t": "panel",
+         "cls": "arch-tier",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Load balancer · API gateway",
+           "cls": "arch-node"
+          }
+         ]
+        },
+        {
+         "t": "panel",
+         "cls": "arch-tier",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Kubernetes pods<small>EKS / AKS · autoscaling</small>",
+           "cls": "arch-node"
+          }
+         ]
+        },
+        {
+         "t": "panel",
+         "cls": "arch-tier",
+         "blocks": [
+          {
+           "t": "grid",
+           "cls": "row",
+           "items": [
+            {
+             "cls": "arch-node",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Managed DB"
+              }
+             ]
+            },
+            {
+             "cls": "arch-node",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Cache · Queue"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "t": "panel",
+         "cls": "arch-tier",
+         "blocks": [
+          {
+           "t": "grid",
+           "cls": "row",
+           "items": [
+            {
+             "cls": "arch-node",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "CI/CD · Terraform IaC"
+              }
+             ]
+            },
+            {
+             "cls": "arch-node",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Observability · SRE"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "panel",
+       "cls": "glass arch-cap",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Reference architecture",
+         "cls": "k"
+        },
+        {
+         "t": "h",
+         "level": 4,
+         "html": "Tap any layer above"
+        },
+        {
+         "t": "p",
+         "html": "Each box is a layer of a resilient, scalable cloud platform. Select one to see what it does and why it earns its place — from the edge all the way down to your data and the pipelines that keep it shipping."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 3,
+       "html": "See where your biggest win is."
+      },
+      {
+       "t": "p",
+       "html": "A free 30-minute call — we'll find the one change that moves the needle most for your stack."
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Book a Free Call →",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "primary"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Where this comes from"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Enterprise-grade,<br>not theory.",
+     "cls": "h2"
+    },
+    {
+     "t": "p",
+     "html": "The same patterns we’d bring to your platform — proven on regulated, high-scale systems. A few anonymised examples (client and product names withheld):",
+     "cls": "lead"
+    },
+    {
+     "t": "grid",
+     "cls": "feat-grid",
+     "items": [
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "FinTech case-management platform"
+        },
+        {
+         "t": "p",
+         "html": "Microservices architecture with Kafka event streaming and Kubernetes for a financial-crime / AML platform — built for high throughput and auditability."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "On-prem → AWS migration"
+        },
+        {
+         "t": "p",
+         "html": "Lift-and-shift and re-architecture of a legacy loyalty platform to AWS, making critical components highly available, resilient and scalable."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Multi-cloud integration layer"
+        },
+        {
+         "t": "p",
+         "html": "A custom integration platform spanning AWS and Azure managed services, containerised with Docker/Kubernetes and provisioned via Terraform."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "html": "Anonymised summaries of representative work — client and product names withheld. No confidential details or metrics are shown.",
+     "cls": "dim"
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Engagement models"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Start small.<br>Scale when it pays off.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "tier-grid",
+     "items": [
+      {
+       "cls": "glass tier",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Cloud Cost Audit",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Custom<small> · one-off audit</small>",
+         "cls": "pr"
+        },
+        {
+         "t": "text",
+         "html": "A fast, fixed-scope review of your AWS/Azure bill and architecture.",
+         "cls": "ds"
+        },
+        {
+         "t": "list",
+         "ordered": false,
+         "items": [
+          "Spend &amp; waste analysis",
+          "Right-sizing &amp; savings-plan recommendations",
+          "Prioritised action plan with $ impact"
+         ]
+        },
+        {
+         "t": "buttons",
+         "items": [
+          {
+           "label": "Estimate your savings →",
+           "href": "/cloud-cost-calculator/",
+           "variant": "glass"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "cls": "glass tier",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "DevOps Foundations",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Custom<small> · project</small>",
+         "cls": "pr"
+        },
+        {
+         "t": "text",
+         "html": "Get the core automation in place: pipelines, IaC and observability.",
+         "cls": "ds"
+        },
+        {
+         "t": "list",
+         "ordered": false,
+         "items": [
+          "CI/CD pipeline setup",
+          "Terraform infrastructure-as-code",
+          "Monitoring, logging &amp; alerting",
+          "Runbooks &amp; handover"
+         ]
+        },
+        {
+         "t": "buttons",
+         "items": [
+          {
+           "label": "Scope a project →",
+           "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+           "variant": "glass"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "cls": "glass tier",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Managed SRE / Platform",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Custom<small> · monthly</small>",
+         "cls": "pr"
+        },
+        {
+         "t": "text",
+         "html": "We run and continuously improve your platform as an extension of your team.",
+         "cls": "ds"
+        },
+        {
+         "t": "list",
+         "ordered": false,
+         "items": [
+          "On-going reliability &amp; on-call support",
+          "Cost optimisation &amp; capacity planning",
+          "Security patching &amp; upgrades",
+          "Quarterly architecture reviews"
+         ]
+        },
+        {
+         "t": "buttons",
+         "items": [
+          {
+           "label": "Talk to us →",
+           "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+           "variant": "glass"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "html": "Every engagement is scoped to your stack and goals — we confirm a fixed price after a short discovery call. No obligation.",
+     "cls": "dim"
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "How we work"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Assess. Architect.<br>Automate. Operate.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "proc-grid",
+     "items": [
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "01",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Assess"
+        },
+        {
+         "t": "p",
+         "html": "We map your current stack, pipelines, cloud spend and pain points — and agree the highest-leverage fixes first."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "02",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Architect"
+        },
+        {
+         "t": "p",
+         "html": "A target architecture and migration/automation plan with clear trade-offs, timelines and a fixed price."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "03",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Automate"
+        },
+        {
+         "t": "p",
+         "html": "We build the pipelines, codify infrastructure in Terraform and ship in safe, reviewable increments."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "04",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Operate"
+        },
+        {
+         "t": "p",
+         "html": "Observability, SLOs and optional managed support keep it fast, reliable and cost-efficient as you grow."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Tooling"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "The stack we work in.",
+     "cls": "h2"
+    },
+    {
+     "t": "chips",
+     "items": [
+      {
+       "label": "AWS"
+      },
+      {
+       "label": "Microsoft Azure"
+      },
+      {
+       "label": "Docker"
+      },
+      {
+       "label": "Kubernetes"
+      },
+      {
+       "label": "Terraform"
+      },
+      {
+       "label": "Azure Bicep"
+      },
+      {
+       "label": "CloudFormation"
+      },
+      {
+       "label": "GitHub Actions"
+      },
+      {
+       "label": "GitLab CI"
+      },
+      {
+       "label": "Jenkins"
+      },
+      {
+       "label": "Argo CD"
+      },
+      {
+       "label": "Helm"
+      },
+      {
+       "label": "Prometheus"
+      },
+      {
+       "label": "Grafana"
+      },
+      {
+       "label": "CloudWatch"
+      },
+      {
+       "label": "Datadog"
+      },
+      {
+       "label": "New Relic"
+      },
+      {
+       "label": "Apache Kafka"
+      },
+      {
+       "label": "RabbitMQ"
+      },
+      {
+       "label": "Redis"
+      },
+      {
+       "label": "PostgreSQL"
+      },
+      {
+       "label": "MongoDB"
+      },
+      {
+       "label": "Fastlane"
+      },
+      {
+       "label": "EAS"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Free guides & tools"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Guides for your infrastructure.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "g3",
+     "items": [
+      {
+       "cls": "glass",
+       "href": "/blog/react-native-new-architecture-2026",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Migration check"
+        },
+        {
+         "t": "text",
+         "html": "Is your app on borrowed time?"
+        },
+        {
+         "t": "text",
+         "html": "Check urgency →"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/blog/aws-cloud-migration-guide",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Guide"
+        },
+        {
+         "t": "text",
+         "html": "AWS cloud migration, done right"
+        },
+        {
+         "t": "text",
+         "html": "Read the guide →"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/blog/ci-cd-react-native",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Guide"
+        },
+        {
+         "t": "text",
+         "html": "CI/CD for React Native apps"
+        },
+        {
+         "t": "text",
+         "html": "Read the guide →"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "FAQ"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Common questions.",
+     "cls": "h2"
+    },
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What does a DevOps & cloud engagement include?",
+       "a": "It depends on where you are. Common scope: setting up CI/CD pipelines, containerising apps and moving them to Kubernetes, codifying infrastructure with Terraform, migrating to or optimising AWS/Azure, and adding observability so you catch issues before users do. We scope it on a short call and propose a fixed plan."
+      },
+      {
+       "q": "Do you work with both AWS and Azure?",
+       "a": "Yes. We design and operate on both AWS and Azure (and the surrounding ecosystem — Docker, Kubernetes, Terraform, GitHub Actions, Prometheus, Grafana). We pick the stack that fits your team and workloads, not the one we want to sell."
+      },
+      {
+       "q": "Can you reduce our cloud bill?",
+       "a": "Usually, yes. Most teams over-provision compute, leave idle resources running and miss savings plans. A cloud cost audit identifies the waste; right-sizing, autoscaling and IaC guardrails keep it from coming back. Try our <a href=\"/cloud-cost-calculator/\">cloud cost calculator</a> for an indicative estimate."
+      },
+      {
+       "q": "How do you set up CI/CD pipelines?",
+       "a": "We build automated pipelines (GitHub Actions, GitLab CI, Jenkins or Azure DevOps) that test, security-scan, build and deploy on every commit — with safe rollbacks. The goal is push-button, low-risk releases so your team ships daily instead of monthly."
+      },
+      {
+       "q": "Do you support mobile CI/CD for React Native apps?",
+       "a": "Yes — automated React Native release pipelines with Fastlane and EAS, signed builds, App Store and Play Store submission, and over-the-air updates. It ties directly into our <a href=\"/react-native-app-development/\">React Native app development</a> practice."
+      },
+      {
+       "q": "How quickly can you start?",
+       "a": "Most engagements begin within a week of a scoping call. A focused cloud cost audit or CI/CD setup can show results in the first couple of weeks."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "form",
+     "id": "leadForm",
+     "fields": [
+      {
+       "name": "lbName",
+       "id": "lbName",
+       "type": "text",
+       "label": "Your name",
+       "placeholder": "Jane Doe",
+       "required": false
+      },
+      {
+       "name": "lbEmail",
+       "id": "lbEmail",
+       "type": "email",
+       "label": "Work email",
+       "placeholder": "jane@company.com",
+       "required": false
+      },
+      {
+       "name": "lbWant",
+       "id": "lbWant",
+       "type": "text",
+       "label": "What are you building?",
+       "placeholder": "One line is plenty — e.g. a patient booking app for 3 clinics",
+       "required": false
+      },
+      {
+       "name": "lbBudget",
+       "id": "lbBudget",
+       "type": "select",
+       "label": "Budget",
+       "required": false,
+       "options": [
+        "Select a range",
+        "Not sure yet",
+        "<$10k",
+        "$10-25k",
+        "$25-60k",
+        "$60k+"
+       ]
+      },
+      {
+       "name": "lbTime",
+       "id": "lbTime",
+       "type": "select",
+       "label": "Timeline",
+       "required": false,
+       "options": [
+        "Select a timeline",
+        "ASAP",
+        "1-3 months",
+        "3-6 months",
+        "Just exploring"
+       ]
+      },
+      {
+       "type": "checkbox",
+       "label": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+       "required": false
+      }
+     ],
+     "submit": "Send →",
+     "kick": "Start here",
+     "title": "Tell us about your infrastructure.",
+     "sub": "Migration, CI/CD or a cloud bill that keeps climbing — tell us the problem and we’ll tell you the fix.",
+     "note": "Replies within one business day · no upfront fee to talk",
+     "consent": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+     "success": "✓ Thanks — that’s with Het. You’ll get a reply within one business day, usually with either a straight answer or the two or three questions needed to scope it properly."
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Deploy with confidence.",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "A 30-minute call to find your highest-leverage win — then a fixed-price plan within 48 hours. NDA on request.",
+       "cls": "lead"
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Book a Free Call →",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "primary"
+        },
+        {
+         "label": "Estimate cloud savings",
+         "href": "/cloud-cost-calculator/",
+         "variant": "glass"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

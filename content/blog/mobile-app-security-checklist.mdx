@@ -1,0 +1,80 @@
+---
+slug: "mobile-app-security-checklist"
+title: "Mobile App Security Checklist 2026: Score Your App in 2 Minutes"
+metaTitle: "Mobile App Security Checklist for 2026"
+description: "A practical mobile app security checklist for 2026. Score your app across 10 controls — transport security, token storage, API auth, secrets, dependencies"
+canonical: "https://soniconsultancyservices.com/blog/mobile-app-security-checklist"
+ogTitle: "Mobile App Security Checklist for 2026"
+ogDescription: "10 controls, a live score, and the fixes that matter first — the security audit founders can actually run."
+categories: ["Mobile","Security"]
+lead: "Most mobile breaches aren't clever — they're a token in plain storage, a key shipped in the bundle, an API that trusts the client. Run the 10-point self-audit below, get a live score, and see exactly where to harden first."
+author: "Het Soni"
+readTime: "8 min read"
+dateLabel: "July 2026"
+datePublished: "2026-07-06"
+dateModified: "2026-07-06"
+excerpt: "10 controls, a live score, and the fixes that matter first — run the free self-audit."
+indexOrder: 14
+indexFilter: "mobile"
+cta: {"heading":"Scored below 80? Let's fix that.","body":"Bring your audit score to a free 30-minute call. We'll walk the gaps with you and map the fixes — most take days, not months.","buttons":[{"label":"Book a Free Call →","href":"https://calendly.com/het-soni-soniconsultancyservices/introductory"},{"label":"DevOps & Cloud services","href":"/devops-cloud-engineering/"}]}
+related: ["ai-react-native-app-development","app-store-launch-checklist","ci-cd-react-native"]
+hasWidget: true
+---
+
+<Widget post="mobile-app-security-checklist" />
+
+Nothing you click leaves this page — the score is computed locally in your browser.
+
+## Why the basics beat the exotic
+
+Founders picture app security as defending against sophisticated attackers. The reality is less cinematic: the overwhelming majority of real-world mobile incidents come down to **basics not done** — credentials in plain storage, secrets in the binary, APIs that trust whatever the client sends, and stale dependencies with known CVEs. That's actually good news. It means a disciplined pass over ten controls — the ones in the audit above — removes most of your real-world risk, without a security team on payroll.
+
+## The three layers that matter
+
+### On the device
+
+Assume the phone is lost, rooted or hostile. Tokens and sensitive data belong in the **Keychain (iOS) / Keystore (Android)**, never AsyncStorage or files. Ship no secrets in the bundle — anything in the binary can be extracted by decompiling. Add code obfuscation for high-value targets, but treat it as a speed bump, not a wall.
+
+### In transit
+
+**HTTPS everywhere with modern TLS** is table stakes; certificate pinning adds protection against man-in-the-middle interception for high-stakes apps (fintech, health). Never disable certificate validation "temporarily" in development — those flags have a way of shipping.
+
+### On the server
+
+This is where the real security lives, because it's the only layer you fully control. **Authorize every endpoint server-side** — check not just "is this user logged in" but "may this user touch this resource." Validate and sanitize all input on the server regardless of client checks. Rate-limit auth and expensive endpoints. Keep an audit trail of sensitive operations. Our fintech work (see [FinTech app development](/fintech-app-development/)) lives and dies by this layer.
+
+<Callout>
+
+**Where security fits your pipeline:** dependency scanning and secret scanning belong in CI, so a vulnerable library or a leaked key fails the build instead of reaching the stores. That's part of how we set up [CI/CD for React Native](/blog/ci-cd-react-native).
+
+</Callout>
+
+## What to do with your score
+
+-   **80–100:** solid foundation — keep dependencies moving and consider a periodic external review to stay honest.
+-   **50–79:** you have real gaps, but fixable ones. Prioritise anything touching tokens, secrets and server-side auth first — they're the breach-makers.
+-   **Below 50:** treat hardening as this sprint's work, not backlog. The fixes are well-understood engineering, and most take days, not months.
+
+Security isn't a one-time gate — every new feature, dependency and integration shifts the surface. Re-run this audit quarterly, and after any major release. And remember the flip side: users increasingly *choose* apps that take their data seriously; both stores now force you to declare exactly what you collect (see the privacy section of our [app store launch checklist](/blog/app-store-launch-checklist)).
+
+## Frequently asked questions
+
+### What are the most important mobile app security measures?
+
+HTTPS everywhere with modern TLS, tokens in the platform's secure storage, server-side authorization on every endpoint, no secrets in the app bundle, dependency scanning in CI, and server-side validation of all input. Most real-world breaches trace back to one of these basics.
+
+### Where should a mobile app store auth tokens?
+
+In the iOS Keychain or Android Keystore (or EncryptedSharedPreferences) — never plain AsyncStorage, localStorage or files. Secure storage encrypts at rest and gates access, so a lost device doesn't leak sessions.
+
+### Is it safe to put API keys inside a mobile app?
+
+No — anything in the binary can be extracted. Third-party secrets belong on your server behind an API you control, with per-user auth and rate limits.
+
+### How often should mobile app dependencies be updated?
+
+Continuously — automated scanning (npm audit, Dependabot or similar) in CI on every build, with security patches applied promptly. Known CVEs in stale libraries are the most preventable compromise vector.
+
+### Can you run a security review of our app?
+
+Yes — we review React Native apps and their backends against this checklist and OWASP mobile guidance. Take the self-audit above, then [book a free call](https://calendly.com/het-soni-soniconsultancyservices/introductory) and bring your score.

@@ -1,0 +1,69 @@
+{
+ "type": "checklist",
+ "kick": "Interactive · 10-point readiness check",
+ "bands": [
+  {
+   "min": 90,
+   "t": "Strong position.",
+   "d": "You are ahead of most teams we see. Keep the data map current as you add features and vendors, and re-run this whenever a new integration starts touching personal data."
+  },
+  {
+   "min": 70,
+   "t": "Solid, with real gaps.",
+   "d": "The foundations are there. Close the remaining controls in order — data map first, then consent capture, then withdrawal and deletion — and you will be in good shape well before enforcement."
+  },
+  {
+   "min": 40,
+   "t": "Meaningful work ahead.",
+   "d": "You have started, but the unchecked items include things that take engineering time rather than paperwork. Sequence them: map your data, fix consent capture so the problem stops growing, then build withdrawal and deletion."
+  },
+  {
+   "min": 0,
+   "t": "Start with the data map.",
+   "d": "A low score here is common and fixable, but not on a short timeline. Begin by documenting every field you collect and where it flows — every other control depends on that being right, and it is usually faster than teams expect."
+  }
+ ],
+ "items": [
+  {
+   "t": "We can list every personal data field we collect, and why",
+   "s": "A current data map covering the app, backend, analytics and third-party tools"
+  },
+  {
+   "t": "Consent is unbundled — separate opt-in per purpose",
+   "s": "Analytics, marketing, location and sharing each asked for separately, defaulted off"
+  },
+  {
+   "t": "Our consent notice is in plain language",
+   "s": "Readable by a normal user, not only by a lawyer"
+  },
+  {
+   "t": "Users can withdraw consent as easily as they gave it",
+   "s": "A settings screen with per-purpose toggles, not an email to support"
+  },
+  {
+   "t": "Withdrawal actually stops downstream processing",
+   "s": "The signal propagates to analytics, CRM and any third parties"
+  },
+  {
+   "t": "We can fully delete a user on request",
+   "s": "Including analytics, backups, logs and SaaS tools — not a soft-delete flag"
+  },
+  {
+   "t": "We have defined retention periods and enforce them",
+   "s": "Automated deletion jobs rather than keeping everything indefinitely"
+  },
+  {
+   "t": "We have a path for children's data",
+   "s": "Age assurance and verifiable parental consent if under-18s may use the app"
+  },
+  {
+   "t": "We would detect a breach and know who was affected",
+   "s": "Logging and alerting good enough to notify the Board and users in time"
+  },
+  {
+   "t": "Our vendor contracts cover data processing",
+   "s": "Written terms with every processor that touches personal data"
+  }
+ ],
+ "footnote": "Nothing you tick is sent anywhere — this runs entirely in your browser."
+}

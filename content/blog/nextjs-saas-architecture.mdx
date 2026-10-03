@@ -1,0 +1,126 @@
+---
+slug: "nextjs-saas-architecture"
+title: "Next.js SaaS Architecture: The Patterns We Use on Every Project"
+metaTitle: "Next.js SaaS Architecture Patterns"
+description: "The opinionated Next.js SaaS patterns we use on every build — multi-tenancy, RBAC, the API layer, Stripe webhooks and observability."
+canonical: "https://soniconsultancyservices.com/blog/nextjs-saas-architecture"
+ogTitle: "Next.js SaaS Architecture: The Patterns We Use on Every Project"
+ogDescription: "Multi-tenancy, RBAC, API layers, Stripe webhooks — the patterns behind every SaaS we ship."
+categories: ["Web","Architecture"]
+lead: "Every SaaS we ship starts from the same opinionated skeleton. Here are the patterns — multi-tenancy, auth, the API layer, billing and observability — that let us go from zero to production without rebuilding the foundations halfway through."
+author: "Het Soni"
+readTime: "13 min read"
+dateLabel: "Updated June 2026"
+datePublished: "2026-04-05"
+dateModified: "2026-06-14"
+excerpt: "Multi-tenancy, RBAC, API layers, Stripe — the patterns behind every SaaS we ship."
+indexOrder: 29
+indexFilter: "web"
+cta: {"heading":"Starting a SaaS build?","body":"We'll bring this architecture to your product and ship the first version in weeks, not quarters.","buttons":[{"label":"Book a Free Call →","href":"https://calendly.com/het-soni-soniconsultancyservices/introductory"},{"label":"More articles","href":"/blog/"}]}
+related: ["react-native-new-architecture-2026","ai-agent-development-services","ai-app-development-cost-2026"]
+hasWidget: false
+---
+
+## The stack
+
+Next.js (App Router) on the front and the edge, a typed API layer, PostgreSQL as the source of truth, and a small set of well-chosen services for auth, billing and jobs. TypeScript end to end. Boring, predictable infrastructure so the interesting work goes into the product.
+
+```
+app/            → routes, layouts, server components
+  (marketing)/  → public, SSR/SSG, SEO-indexed
+  (app)/        → authenticated product, per-tenant
+  api/          → route handlers (thin)
+lib/            → domain logic, validation, db access
+db/             → schema, migrations, seed
+```
+
+## Multi-tenancy
+
+We default to a **shared database with a tenant ID on every row**, enforced at the data-access layer — not sprinkled through route handlers. Every query goes through a scoped client that injects the current organisation's ID, so it is structurally impossible to read another tenant's data by forgetting a `WHERE` clause.
+
+<Callout>
+
+**The rule:** tenant isolation lives in one place — the data layer. If a developer can write a query that escapes the tenant scope, the architecture is wrong, not the developer.
+
+</Callout>
+
+## Auth & role-based access
+
+Authentication is a bought commodity — we use a managed provider and never roll our own password storage. **Authorization is ours.** Roles and permissions live in our database, checked in the data layer and surfaced through a single `can(user, action, resource)` helper. UI hides what you can't do; the server *enforces* it.
+
+## The API layer
+
+Route handlers stay thin — parse, authorize, delegate, respond. All the real logic lives in `lib/` as plain functions that are trivial to test without HTTP. Every input is validated with a schema at the boundary.
+
+```
+export async function POST(req) {
+  const session = await requireSession(req);
+  const input = CreateProjectSchema.parse(await req.json());
+  await authorize(session, "project:create");
+  const project = await createProject(session.orgId, input);
+  return Response.json(project, { status: 201 });
+}
+```
+
+## Billing & Stripe webhooks
+
+Stripe is the source of truth for subscription state; our database mirrors it — kept in sync **only** through webhooks, never by trusting the client redirect after checkout. Webhook handlers are idempotent and signature-verified. Entitlements are derived from the mirrored subscription, checked in the same authorization layer as everything else.
+
+## Background jobs
+
+Anything slow, retryable or scheduled goes to a queue, not the request path — emails, exports, AI calls, third-party syncs. A request enqueues; a worker processes with retries and backoff.
+
+## Observability
+
+From day one: structured logs with request and tenant IDs, error tracking with source maps, and basic product analytics. When something breaks you want "which tenant, which request, what input" in seconds.
+
+> A SaaS isn't hard because any one piece is hard. It's hard because the pieces have to compose cleanly under real users. Get the seams right and the features get easy.
+
+If you're starting a SaaS and want a foundation that won't need rebuilding at Series A, let's talk — this is the same disciplined approach behind our [AI app development](/ai-app-development/) and [DevOps & cloud engineering](/devops-cloud-engineering/) work.
+
+## Rendering strategy: where each route lives
+
+The App Router gives you a rendering choice per route, and using it deliberately is half the performance battle. Marketing pages render static (SSG/ISR) so they're fast and fully indexable — your SEO surface. The authenticated product renders on the server with React Server Components, fetching per-tenant data close to the database and shipping minimal JavaScript. Reserve client components for genuinely interactive islands. The rule: **static where you can, server where you must, client only where it earns it.**
+
+## Database & data access
+
+PostgreSQL is the source of truth, accessed through a typed query builder or ORM (Drizzle or Prisma) with versioned migrations checked into the repo. In a serverless deployment, connection pooling matters — a pooler prevents a spike in functions from exhausting Postgres connections. For defence in depth on multi-tenancy, Postgres **row-level security** can enforce tenant isolation at the database itself, beneath the application's scoped client.
+
+## Caching & performance
+
+Layer caching deliberately: the CDN for static assets and ISR pages, the Next.js data cache for expensive server fetches with explicit revalidation tags, and a short-lived cache for hot, read-heavy queries. Cache invalidation is the hard part, so we tie revalidation to the same write paths that change the data — update a project and its cached views are tagged and busted in one place.
+
+## Security checklist
+
+-   **Validate every input** at the boundary with a schema — never trust the client.
+-   **Rate-limit** auth and write endpoints to blunt abuse and brute force.
+-   **Verify webhook signatures** (Stripe and others) and make handlers idempotent.
+-   **Keep secrets server-side**; nothing sensitive in `NEXT_PUBLIC_` variables.
+-   **Test tenant isolation** — an automated test proving one tenant can't read another's data.
+-   **Security headers & a content-security policy** at the edge.
+
+## Scaling from MVP to Series A
+
+The point of this architecture is that it doesn't need a rewrite as you grow. The MVP runs on a single Postgres and the platform's defaults. As load arrives you add a read replica for heavy reporting, push more work to the background queue, introduce caching on the hottest paths, and split out a service only when one part genuinely needs different scaling. Because the seams — data layer, auth layer, job queue — were clean from day one, each of these is an addition, not a teardown.
+
+## Frequently asked questions
+
+### Is Next.js a good choice for a SaaS in 2026?
+
+Yes — for most B2B SaaS it's an excellent default. You get fast, SEO-friendly marketing pages and a server-rendered authenticated app in one codebase and one language, with a large hiring pool. The caveats are real-time-heavy or non-web-first products, where you'd weigh a dedicated backend.
+
+### What's the best multi-tenancy model for a Next.js SaaS?
+
+For most products, a shared database with a tenant ID on every row, enforced in the data-access layer and optionally backed by Postgres row-level security. Database-per-tenant only pays off under strict isolation or compliance requirements, at much higher operational cost.
+
+### Should I build my own authentication for a SaaS?
+
+No. Use a managed auth provider for identity and password storage, and own your *authorization* — roles and permissions — in your database, enforced server-side.
+
+### How do you handle Stripe subscriptions reliably?
+
+Treat Stripe as the source of truth and mirror subscription state into your database only via signed, idempotent webhooks — never by trusting the post-checkout client redirect. Derive entitlements from the mirrored state.
+
+### How much does it cost to build a SaaS MVP?
+
+It depends on scope, but this architecture is designed so the MVP is lean and doesn't need rebuilding as you grow. Our [app cost calculator](/app-cost-calculator/) gives a realistic range, and a [discovery call](https://calendly.com/het-soni-soniconsultancyservices/introductory) tightens it.

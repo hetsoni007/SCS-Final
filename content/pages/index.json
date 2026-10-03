@@ -1,0 +1,637 @@
+{
+ "slug": "index",
+ "path": "/",
+ "meta": {
+  "title": "React Native & AI App Development Company | Soni Consultancy",
+  "description": "React Native, MERN & AI app development for founders. Senior engineers, fixed-price proposals in 48 hours, apps live on both stores. Book a free scoping call.",
+  "keywords": "React Native app development, cross-platform mobile app development, AI app development, MERN stack development, hire React Native developers, custom mobile app development, iOS Android app development",
+  "robots": "index,follow,max-image-preview:large",
+  "canonical": "https://soniconsultancyservices.com",
+  "ogTitle": "React Native & AI App Development — Soni Consultancy Services",
+  "ogDescription": "Cross-platform mobile apps with AI built in. Live on the App Store & Play Store. Ship in weeks.",
+  "ogType": "website"
+ },
+ "h1": "Build iOS & Android apps in 8 weeks.",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "logo": "https://soniconsultancyservices.com/favicon.svg",
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://www.instagram.com/soni.consultancyservices/",
+    "https://www.facebook.com/soniconsultancyservices",
+    "https://medium.com/@hetsoni9398"
+   ],
+   "description": "React Native & MERN-stack mobile app development studio with AI integration.",
+   "founder": {
+    "@type": "Person",
+    "name": "Het Soni"
+   },
+   "knowsAbout": [
+    "React Native",
+    "MERN Stack",
+    "AI App Development",
+    "Cross-platform mobile apps"
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "LocalBusiness",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "description": "React Native and MERN stack app development company. Build iOS and Android apps in 8 weeks with fixed pricing.",
+   "serviceType": [
+    "Mobile App Development",
+    "React Native Development",
+    "MERN Stack Development",
+    "AI Integration",
+    "DevOps & Cloud Engineering"
+   ],
+   "areaServed": [
+    "US",
+    "GB",
+    "AE",
+    "IN",
+    "CA",
+    "AU"
+   ],
+   "telephone": "+91-8160-682185",
+   "email": "het.soni@soniconsultancyservices.com",
+   "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IN"
+   }
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "WebSite",
+   "name": "Soni Consultancy Services",
+   "alternateName": "SCS",
+   "url": "https://soniconsultancyservices.com/",
+   "publisher": {
+    "@type": "Organization",
+    "name": "Soni Consultancy Services",
+    "url": "https://soniconsultancyservices.com/"
+   }
+  }
+ ],
+ "sections": [
+  {
+   "blocks": [
+    {
+     "t": "text",
+     "html": "<span></span>React Native · MERN · AI Integration"
+    },
+    {
+     "t": "h",
+     "level": 1,
+     "html": "Build iOS &amp; Android apps in<br>8 weeks.",
+     "cls": "display"
+    },
+    {
+     "t": "p",
+     "html": "We design and build <strong>cross-platform iOS &amp; Android apps</strong> in React Native &amp; MERN — with AI built in. Real products, live on both stores, shipped by senior engineers.",
+     "cls": "lead"
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Get Free App Scoping (15 min)",
+       "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+       "variant": "primary"
+      },
+      {
+       "label": "Free Guide →",
+       "href": "/app-scoping-guide/",
+       "variant": "glass"
+      }
+     ]
+    },
+    {
+     "t": "text",
+     "html": "Live on the App Store & Google Play · 4+ products shipped · No upfront fee to talk"
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Proof, not promises"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Real apps. Real results.<br>Live on the stores today.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "g4",
+     "items": [
+      {
+       "cls": "glass",
+       "blocks": [
+        {
+         "t": "metric",
+         "num": "4+",
+         "lbl": "Apps live on App Store & Play Store"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "blocks": [
+        {
+         "t": "metric",
+         "num": "35%",
+         "lbl": "More downloads (creator marketplace)"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "blocks": [
+        {
+         "t": "metric",
+         "num": "40%",
+         "lbl": "Less payroll admin (HR platform)"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "blocks": [
+        {
+         "t": "metric",
+         "num": "30+",
+         "lbl": "Countries served"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "What we do"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "One team, from idea<br>to App Store.",
+     "cls": "h2"
+    },
+    {
+     "t": "p",
+     "html": "Mobile-first, AI-ready, senior-only. We own design, build and launch so you ship faster with fewer moving parts.",
+     "cls": "lead"
+    },
+    {
+     "t": "grid",
+     "cls": "g3",
+     "items": [
+      {
+       "cls": "glass",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "React Native App Development",
+         "cls": "h3"
+        },
+        {
+         "t": "p",
+         "html": "iOS &amp; Android from one codebase — native performance, push, maps, payments, offline. Submitted, approved, live.",
+         "cls": "muted"
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "React Native"
+          },
+          {
+           "label": "Expo"
+          },
+          {
+           "label": "iOS + Android"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "MERN-Stack Backends",
+         "cls": "h3"
+        },
+        {
+         "t": "p",
+         "html": "MongoDB, Express, React, Node — the API, auth, dashboards and real-time infrastructure your app runs on, built to scale.",
+         "cls": "muted"
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "Node.js"
+          },
+          {
+           "label": "MongoDB"
+          },
+          {
+           "label": "Next.js"
+          },
+          {
+           "label": "AWS"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "AI Integration",
+         "cls": "h3"
+        },
+        {
+         "t": "p",
+         "html": "Claude &amp; GPT features that earn their place — AI fare prediction, smart matching, assistants, RAG. <a href=\"/ai-app-development/\">See AI app ideas →</a>",
+         "cls": "muted"
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "Claude API"
+          },
+          {
+           "label": "GPT"
+          },
+          {
+           "label": "RAG"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Selected work"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Apps we've shipped.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "g4",
+     "items": [
+      {
+       "cls": "glass",
+       "href": "/work/#hr-payroll",
+       "blocks": [
+        {
+         "t": "img",
+         "src": "/assets/portfolio/hr-payroll-teaser.webp",
+         "alt": "HR and attendance app screen"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "HR &amp; Payroll"
+        },
+        {
+         "t": "p",
+         "html": "Attendance &amp; payroll · MERN + RN",
+         "cls": "dim"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/work/#creator-marketplace",
+       "blocks": [
+        {
+         "t": "img",
+         "src": "/assets/portfolio/creator-marketplace-1.webp",
+         "alt": "Creator marketplace app screen"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Creator Marketplace"
+        },
+        {
+         "t": "p",
+         "html": "Influencer × venues · +35% installs",
+         "cls": "dim"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/work/#retail-ops",
+       "blocks": [
+        {
+         "t": "img",
+         "src": "/assets/portfolio/retail-ops-1.webp",
+         "alt": "Retail operations app screen"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Retail Operations"
+        },
+        {
+         "t": "p",
+         "html": "Retail chain ops · LMS + analytics",
+         "cls": "dim"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/work/#ride-hailing",
+       "blocks": [
+        {
+         "t": "img",
+         "src": "/assets/portfolio/ride-hailing-teaser.webp",
+         "alt": "Ride-hailing cab booking app screen"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Ride-Hailing"
+        },
+        {
+         "t": "p",
+         "html": "Ride-hailing · AI fare prediction",
+         "cls": "dim"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Explore the full portfolio →",
+       "href": "/work/",
+       "variant": "glass"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Why founders pick us"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Less risk. Faster ship.<br>Senior hands only.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "g3",
+     "items": [
+      {
+       "cls": "glass",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Ship in weeks, not quarters",
+         "cls": "h3"
+        },
+        {
+         "t": "p",
+         "html": "A focused MVP on both stores in 6–10 weeks. You see working software every week — no black box.",
+         "cls": "muted"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Senior engineers, no juniors",
+         "cls": "h3"
+        },
+        {
+         "t": "p",
+         "html": "The people on your call are the people writing the code. 5+ years commercial, store-proven.",
+         "cls": "muted"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Fixed scope, fixed price",
+         "cls": "h3"
+        },
+        {
+         "t": "p",
+         "html": "A clear proposal within 48 hours of our call. You know the number before you commit a penny.",
+         "cls": "muted"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "text",
+       "html": "HS",
+       "cls": "tav"
+      },
+      {
+       "t": "eyebrow",
+       "text": "Who you'll work with"
+      },
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Het Soni — Founder &amp; Lead Engineer",
+       "cls": "h3"
+      },
+      {
+       "t": "p",
+       "html": "5+ years building and shipping commercial apps — React Native, MERN and AI — live on the App Store and Google Play. The senior engineer who scopes, builds and ships your product is the person you talk to, not a sales rep who hands it to juniors.",
+       "cls": "muted"
+      },
+      {
+       "t": "p",
+       "html": "Working across UK, US, UAE and India time zones for real-time collaboration, with transparent fixed pricing agreed before a line of code is written. <a href=\"/about/\">More about how we work →</a>",
+       "cls": "muted"
+      },
+      {
+       "t": "text",
+       "html": "Connect on LinkedIn →",
+       "href": "https://www.linkedin.com/in/hetsoni/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "What people say"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Trusted by clients<br>and collaborators.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "g3",
+     "items": [
+      {
+       "cls": "glass tcard",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "★★★★★ <b>5.0</b>",
+         "cls": "tstars"
+        },
+        {
+         "t": "p",
+         "html": "A 5.0-rated engagement for the <b>Sales Automation</b> project — Mobile App Development, on a fixed-price build.",
+         "cls": "tproj"
+        },
+        {
+         "t": "text",
+         "html": "SR <span>Satyam Rathaur</span><span>Verified client review</span><span>GoodFirms</span>",
+         "cls": "twho"
+        }
+       ]
+      },
+      {
+       "cls": "glass tcard",
+       "blocks": [
+        {
+         "t": "quote",
+         "html": "“I've had the pleasure of collaborating with Het. Having strong technical knowledge, particularly in DevOps and Power BI, and always approaching challenges with a solution-oriented mindset.”",
+         "cls": "tquote"
+        },
+        {
+         "t": "text",
+         "html": "SB <span>Shalin Bhatt</span><span>Business Consultant for Startups &amp; SMBs</span><span>LinkedIn</span>",
+         "cls": "twho"
+        }
+       ]
+      },
+      {
+       "cls": "glass tcard",
+       "blocks": [
+        {
+         "t": "quote",
+         "html": "“Het is a friendly, positive, responsible person and it was amazing meeting him on my networking sessions about digital marketing.”",
+         "cls": "tquote"
+        },
+        {
+         "t": "text",
+         "html": "JB <span>Jiri Borc</span><span>Networking &amp; community building</span><span>LinkedIn</span>",
+         "cls": "twho"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Have an app idea?<br>Let's pressure-test it — free.",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "30 minutes with a senior engineer. We'll tell you what it takes to build, what it costs, and whether we're the right team. No pitch, no obligation.",
+       "cls": "lead"
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Book Your Free Call →",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "primary"
+        },
+        {
+         "label": "Send a brief",
+         "href": "/contact/",
+         "variant": "glass"
+        }
+       ]
+      },
+      {
+       "t": "p",
+       "html": "You own all code &amp; IP · NDA on request · Free intro call, no upfront fee · Fixed scope &amp; price up front",
+       "cls": "dim"
+      },
+      {
+       "t": "p",
+       "html": "Or email het.soni@soniconsultancyservices.com",
+       "cls": "dim"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

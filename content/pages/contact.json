@@ -1,0 +1,505 @@
+{
+ "slug": "contact",
+ "path": "/contact/",
+ "meta": {
+  "title": "Contact | Soni Consultancy Services",
+  "description": "Book a free 30-minute call to scope your React Native, MERN or AI app, or send a brief — we reply within one business day.",
+  "robots": "index,follow,max-image-preview:large",
+  "canonical": "https://soniconsultancyservices.com/contact/",
+  "ogTitle": "Contact — Soni Consultancy Services",
+  "ogDescription": "Book a free call or send a brief for your app.",
+  "ogType": "website"
+ },
+ "h1": "Let's scope your app this week.",
+ "breadcrumb": "Home › Contact",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "logo": "https://soniconsultancyservices.com/favicon.svg",
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://www.instagram.com/soni.consultancyservices/",
+    "https://www.facebook.com/soniconsultancyservices",
+    "https://medium.com/@hetsoni9398"
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://soniconsultancyservices.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Contact",
+     "item": "https://soniconsultancyservices.com/contact/"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How quickly can you start?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Fast — average kick-off from signed contract is 48 hours, and discovery calls are bookable same-day. Flag anything urgent in the form and we'll prioritise."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you work with early-stage founders?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — from solo founders on a first MVP to teams at Series B. What matters is a clear problem and the seriousness to ship."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What does a typical app cost?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A focused MVP starts in the low five figures; full products with mobile + AI scale from there. You get a fixed-price proposal within 48 hours of the call."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you sign NDAs?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Always, before any substantive discussion of your product. Your ideas and data stay confidential throughout and after."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Will I work directly with Het?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — directly with Het from first call to delivery. No account managers, and direct access to the engineers building your app."
+     }
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "cls": "page-hero",
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Get in touch"
+    },
+    {
+     "t": "h",
+     "level": 1,
+     "html": "Let's scope your app<br>this week.",
+     "cls": "h1"
+    },
+    {
+     "t": "p",
+     "html": "30 minutes, no pitch deck — just an honest conversation about what you're building and whether we're the right team.",
+     "cls": "lead"
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "group",
+     "cls": "contact-grid",
+     "blocks": [
+      {
+       "t": "panel",
+       "cls": "glass opt",
+       "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Fastest · Recommended",
+         "cls": "lab"
+        },
+        {
+         "t": "text",
+         "html": "Book a Free 30-Min Call",
+         "cls": "t"
+        },
+        {
+         "t": "text",
+         "html": "Calendly with Het directly — UK, US &amp; UAE times available.",
+         "cls": "d"
+        }
+       ]
+      },
+      {
+       "t": "panel",
+       "cls": "glass opt",
+       "href": "mailto:het.soni@soniconsultancyservices.com",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Email",
+         "cls": "lab"
+        },
+        {
+         "t": "text",
+         "html": "het.soni@soniconsultancyservices.com",
+         "cls": "t"
+        },
+        {
+         "t": "text",
+         "html": "Replies within one business day.",
+         "cls": "d"
+        }
+       ]
+      },
+      {
+       "t": "panel",
+       "cls": "glass opt",
+       "href": "https://www.linkedin.com/in/hetsoni/",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "LinkedIn",
+         "cls": "lab"
+        },
+        {
+         "t": "text",
+         "html": "Connect with Het Soni",
+         "cls": "t"
+        },
+        {
+         "t": "text",
+         "html": "Good for a quick intro before reaching out.",
+         "cls": "d"
+        }
+       ]
+      },
+      {
+       "t": "grid",
+       "cls": "glass",
+       "items": [
+        {
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Response times"
+          }
+         ]
+        },
+        {
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Discovery call",
+           "cls": "muted"
+          },
+          {
+           "t": "text",
+           "html": "Same day"
+          }
+         ]
+        },
+        {
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Email",
+           "cls": "muted"
+          },
+          {
+           "t": "text",
+           "html": "1 business day"
+          }
+         ]
+        },
+        {
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Project kick-off",
+           "cls": "muted"
+          },
+          {
+           "t": "text",
+           "html": "Within 48 hours"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "t": "panel",
+       "cls": "glass form-card",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 2,
+         "html": "Send a brief",
+         "cls": "h3"
+        },
+        {
+         "t": "p",
+         "html": "Tell us about your app and we'll come to the call prepared.",
+         "cls": "muted"
+        },
+        {
+         "t": "form",
+         "id": "contactForm",
+         "fields": [
+          {
+           "name": "fn",
+           "id": "fn",
+           "type": "input",
+           "label": "First name",
+           "placeholder": "James",
+           "required": false
+          },
+          {
+           "name": "ln",
+           "id": "ln",
+           "type": "input",
+           "label": "Last name",
+           "placeholder": "Morrison",
+           "required": false
+          },
+          {
+           "name": "em2",
+           "id": "em2",
+           "type": "email",
+           "label": "Work email",
+           "placeholder": "james@company.com",
+           "required": false
+          },
+          {
+           "name": "co",
+           "id": "co",
+           "type": "input",
+           "label": "Company",
+           "placeholder": "Acme Inc.",
+           "required": false
+          },
+          {
+           "name": "svc",
+           "id": "svc",
+           "type": "select",
+           "label": "I'm interested in…",
+           "required": false,
+           "options": [
+            "Select a service",
+            "React Native App Development",
+            "MERN / Web Development",
+            "AI Integration",
+            "DevOps & Cloud",
+            "Hire a Developer",
+            "Something else"
+           ]
+          },
+          {
+           "name": "msg",
+           "id": "msg",
+           "type": "textarea",
+           "label": "Tell us about your project",
+           "placeholder": "What are you building? What stage are you at?",
+           "required": false
+          }
+         ],
+         "submit": "Send brief →",
+         "success": "✓ Brief received. We'll be in touch within one business day — or book a call to speak sooner."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Where we work"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Six countries. One standard.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "region-grid",
+     "items": [
+      {
+       "cls": "glass region",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "🇬🇧",
+         "cls": "fl"
+        },
+        {
+         "t": "text",
+         "html": "United Kingdom",
+         "cls": "c"
+        },
+        {
+         "t": "text",
+         "html": "SaaS · FinTech · Healthcare",
+         "cls": "i"
+        }
+       ]
+      },
+      {
+       "cls": "glass region",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "🇺🇸",
+         "cls": "fl"
+        },
+        {
+         "t": "text",
+         "html": "United States",
+         "cls": "c"
+        },
+        {
+         "t": "text",
+         "html": "SaaS · AI · E-commerce",
+         "cls": "i"
+        }
+       ]
+      },
+      {
+       "cls": "glass region",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "🇦🇪",
+         "cls": "fl"
+        },
+        {
+         "t": "text",
+         "html": "UAE",
+         "cls": "c"
+        },
+        {
+         "t": "text",
+         "html": "Real Estate · Retail",
+         "cls": "i"
+        }
+       ]
+      },
+      {
+       "cls": "glass region",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "🇮🇳",
+         "cls": "fl"
+        },
+        {
+         "t": "text",
+         "html": "India",
+         "cls": "c"
+        },
+        {
+         "t": "text",
+         "html": "EdTech · FinTech · SaaS",
+         "cls": "i"
+        }
+       ]
+      },
+      {
+       "cls": "glass region",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "🇨🇦",
+         "cls": "fl"
+        },
+        {
+         "t": "text",
+         "html": "Canada",
+         "cls": "c"
+        },
+        {
+         "t": "text",
+         "html": "Healthcare · B2B",
+         "cls": "i"
+        }
+       ]
+      },
+      {
+       "cls": "glass region",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "🇦🇺",
+         "cls": "fl"
+        },
+        {
+         "t": "text",
+         "html": "Australia",
+         "cls": "c"
+        },
+        {
+         "t": "text",
+         "html": "PropTech · Marketplace",
+         "cls": "i"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Common questions"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Before you reach out.",
+     "cls": "h2"
+    },
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "How quickly can you start?",
+       "a": "Fast — average kick-off from signed contract is 48 hours, and discovery calls are bookable same-day. Flag anything urgent in the form and we'll prioritise."
+      },
+      {
+       "q": "Do you work with early-stage founders?",
+       "a": "Yes — from solo founders on a first MVP to teams at Series B. What matters is a clear problem and the seriousness to ship."
+      },
+      {
+       "q": "What does a typical app cost?",
+       "a": "A focused MVP starts in the low five figures; full products with mobile + AI scale from there. You get a fixed-price proposal within 48 hours of the call — no vague \"it depends.\""
+      },
+      {
+       "q": "Do you sign NDAs?",
+       "a": "Always, before any substantive discussion of your product. Your ideas and data stay confidential throughout and after."
+      },
+      {
+       "q": "Will I work directly with Het?",
+       "a": "Yes — directly with Het from first call to delivery. No account managers, and direct access to the engineers building your app."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

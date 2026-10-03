@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Validate Your App Idea Before You Build It (2026)",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-06-17",
+  "dateModified": "2026-06-17",
+  "articleSection": "Strategy",
+  "description": "How to validate an app idea in 2026 before spending on development — sharpening the problem, talking to real users, testing demand, prototyping, and the one metric that proves your idea works."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "How to Validate Your App Idea Before You Build It (2026)",
+    "item": "https://soniconsultancyservices.com/blog/validate-app-idea-before-building"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "What does it mean to validate an app idea?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Validation is gathering real evidence that a specific group of people has a problem worth solving and will use (and ideally pay for) your solution — before you commit a full development budget. It replaces 'I think people want this' with 'here is proof they do.'"
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How do you validate an app idea without building the app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Talk to people in the problem space, run a landing page or waitlist to measure real sign-up intent, test a clickable prototype, or deliver the value manually (a concierge test) before automating it. Each gives you evidence of demand without the cost of a finished product."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How many people should I talk to before building?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "There is no magic number, but patterns usually emerge after roughly a dozen focused conversations with people who actually have the problem. Keep going until new interviews stop surprising you — that is your signal you understand the problem well enough to scope a solution."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "When is an app idea validated enough to start building?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "When you can name the specific user, describe the problem in their words, point to evidence they want a solution (sign-ups, pre-orders, repeated manual use), and define the one core loop that delivers value. That is the point to scope an MVP rather than a full product."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can you help validate and build my app idea?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. We help founders pressure-test scope, design a lean MVP around the core loop, and build it. Use our app cost calculator for a tailored budget, then book a free call to talk through the idea."
+    }
+   }
+  ]
+ }
+]

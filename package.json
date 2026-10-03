@@ -1,25 +1,55 @@
 {
-  "name": "site",
+  "name": "soni-consultancy-services",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:e2e": "playwright test",
+    "test:e2e:all": "PW_ALL=1 playwright test",
+    "lhci": "npx --yes @lhci/cli@0.15.x autorun --config=lighthouserc.json",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "budget": "node scripts/js-budget.mjs http://localhost:3100 / /services/ /work/ /work/hr-payroll/ /blog/ /blog/react-native-app-development-cost /blog/mvp-tech-stack-2026 /contact/ /app-cost-calculator/ /ai-app-development/ /devops-cloud-engineering/ /mvp-development/ /privacy/",
+    "content:extract": "node scripts/extract-pages.mjs && node scripts/extract-blog.mjs",
+    "lhci:mobile": "npx --yes @lhci/cli@0.15.x autorun --config=lighthouserc.mobile.json"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.131.0",
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.1",
+    "@react-three/rapier": "^2.2.0",
+    "@vercel/analytics": "^2.0.1",
+    "gray-matter": "^4.0.3",
+    "gsap": "^3.15.0",
+    "lenis": "^1.3.26",
+    "lucide-react": "^1.49.0",
+    "motion": "^13.5.0",
     "next": "16.3.8",
+    "next-mdx-remote": "^6.0.0",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "react-hook-form": "^7.89.0",
+    "remark-gfm": "^4.0.1",
+    "resend": "^6.32.0",
+    "server-only": "^0.0.1",
+    "shiki": "^4.5.0",
+    "three": "^0.186.1",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.63.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/three": "^0.186.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.8",
+    "prettier": "^3.9.9",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

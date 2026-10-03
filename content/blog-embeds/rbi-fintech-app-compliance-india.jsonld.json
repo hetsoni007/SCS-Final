@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "RBI Compliance for Fintech Apps in India (2026): Deadlines and a Readiness Check",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-09-06",
+  "dateModified": "2026-09-06",
+  "articleSection": "Strategy",
+  "description": "RBI's AFA mandate took effect April 2026 and digital lending platforms face a June 2026 compliance deadline. A practical readiness check across 10 real RBI requirements for fintech apps."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "RBI Compliance for Fintech Apps in India (2026): Deadlines and a Readiness Check",
+    "item": "https://soniconsultancyservices.com/blog/rbi-fintech-app-compliance-india"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Do I need a payment aggregator license to build a fintech app in India?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Only if you are collecting and settling funds on behalf of merchants yourself — a non-bank payment aggregator needs RBI authorisation, a minimum net worth of ₹15 crore at application rising to ₹25 crore by the end of the third financial year, and PCI-DSS certification. Most apps instead integrate an already-licensed aggregator like Razorpay or Cashfree, which avoids this requirement entirely."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What is the AFA mandate and does it apply to my app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "AFA (Additional Factor of Authentication) is RBI's requirement for a second authentication factor beyond a password on digital transactions, paired with a fraud compensation framework. It took effect 1 April 2026 and applies broadly across digital payment flows — if your app initiates or processes payments, assume it applies and verify with your payment provider."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What counts as digital lending under RBI's guidelines?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Any app that originates, facilitates or services loans digitally. To operate legally you need either your own NBFC registration (minimum Net Owned Fund ₹2 crore) or a partnership with an RBI-regulated lender as a Lending Service Provider. Digital lending platforms face a 30 June 2026 deadline for operational compliance with RBI's guidelines."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Does payment data have to be stored in India?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. RBI's data localisation requirement means payment system data must be stored only on servers located in India, for entities the requirement covers. This affects your infrastructure choice from day one — retrofitting data residency into an app built on a foreign-only cloud region is a significant rebuild, not a config change."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can you help build a compliant fintech app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes — we build the technical side: data localisation, AFA-compliant auth flows, audit logging, and integration with licensed payment aggregators and lending partners so you are not carrying regulatory scope you do not need. Book a free call to scope yours; the legal and licensing work itself should go to a qualified fintech compliance lawyer."
+    }
+   }
+  ]
+ }
+]

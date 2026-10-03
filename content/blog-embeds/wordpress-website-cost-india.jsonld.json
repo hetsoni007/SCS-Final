@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "WordPress Cost India 2026",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-08-29",
+  "dateModified": "2026-08-29",
+  "articleSection": "Web",
+  "description": "How much does a WordPress website cost in India in 2026? Real market pricing by project type, plus a free interactive calculator to estimate your own."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "WordPress Website Cost in India (2026): Real Numbers + Free Calculator",
+    "item": "https://soniconsultancyservices.com/blog/wordpress-website-cost-india"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "How much does a basic WordPress website cost in India?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "A basic 5–10 page business website with a theme-based design typically runs ₹30,000–₹80,000 in 2026, including a contact form and basic on-page SEO setup."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How much does a WooCommerce online store cost?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "A store with up to 50 products, one payment gateway and basic shipping configuration typically costs ₹1,00,000–₹2,00,000. Larger catalogues, multiple gateways or custom features push this higher."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Is a freelancer cheaper than an agency for WordPress?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Usually, yes on paper — freelancer quotes often run ₹15,000–₹70,000. The trade-off is availability, accountability and what happens if that one person is unavailable when something breaks."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What ongoing costs should I budget beyond the build?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Domain (₹800–₹2,500/year), hosting (₹2,000–₹15,000/month), any premium licenses, and either your own time or a maintenance plan for updates, backups and security."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can you give me a fixed price instead of a range?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes — that's exactly what a free call gets you. Use the calculator to frame your budget, then book a call for a fixed-price proposal within 48 hours."
+    }
+   }
+  ]
+ }
+]

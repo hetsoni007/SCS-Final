@@ -1,0 +1,91 @@
+---
+slug: "react-native-push-notifications"
+title: "React Native Push Notifications: Firebase, OneSignal or Notifee in 2026"
+metaTitle: "React Native Push Notifications: 2026 Setup Guide"
+description: "Firebase, OneSignal or Notifee for React Native push notifications in 2026? Real pricing, setup complexity, and a live cost comparator for your user count."
+keywords: "react native push notifications, firebase cloud messaging react native, onesignal react native, notifee react native, react native notifications setup"
+canonical: "https://soniconsultancyservices.com/blog/react-native-push-notifications"
+ogTitle: "React Native Push Notifications: 2026 Setup Guide"
+ogDescription: "Firebase, OneSignal or Notifee? Real 2026 pricing and a live cost comparator for your user count."
+categories: ["Mobile","Engineering","Interactive"]
+lead: "OneSignal's free tier just got a lot smaller. Here's what Firebase, OneSignal and Notifee each actually do, what OneSignal costs now at real user counts, and how to pick without over-building for a feature most apps could get for free."
+author: "Het Soni"
+readTime: "7 min read"
+dateLabel: "September 2026"
+datePublished: "2026-09-06"
+dateModified: "2026-09-06"
+excerpt: "OneSignal’s free tier just shrank. See the real cost at your user count."
+indexOrder: 3
+indexFilter: "mobile"
+cta: {"heading":"Building a React Native app? Get notifications wired right.","body":"Push setup, deep-linking and platform-specific permission handling are part of every React Native build we ship. Free call, fixed price in 48 hours.","buttons":[{"label":"Book a Free Call →","href":"https://calendly.com/het-soni-soniconsultancyservices/introductory"},{"label":"React Native services","href":"/react-native-app-development/"}]}
+related: ["ai-react-native-app-development","app-store-launch-checklist","ci-cd-react-native"]
+hasWidget: true
+---
+
+Push notifications look like a one-library decision until you notice that "push notifications" is actually three separate jobs: getting a device token, delivering a message to it reliably, and controlling how that message displays and behaves once it arrives. Firebase Cloud Messaging (FCM), OneSignal and Notifee split those jobs differently, and picking wrong means either paying for a platform you don't need or hand-rolling features a library already solved.
+
+## What each one actually is
+
+**Firebase Cloud Messaging** is the delivery layer — it gets a message from your server to a device on either platform, free, with no published usage cap, backed by Google's infrastructure at under 500ms typical latency. It's the default choice for most React Native apps for exactly that reason.
+
+**OneSignal** is not a delivery competitor to FCM so much as a platform built on top of the same delivery mechanics — audience segmentation, in-app messaging, A/B testing on notification copy, delivery analytics, and a client SDK that wraps the platform-specific plumbing for you.
+
+**Notifee** isn't a delivery service at all — it's a display and behaviour library that sits on top of FCM, giving you notification channels, custom actions, foreground display control and richer local notifications than FCM's default handling provides.
+
+## What OneSignal actually costs now
+
+This is the part that changed in 2026 and matters if you're choosing today: OneSignal's free plan introduced a 1,000 monthly active user cap for mobile push — new customers from 1 September 2026, existing customers from 1 October 2026 — replacing the older 10,000-subscriber free allowance. Past that cap, the Growth plan is $19/month plus $0.012 per mobile-push MAU.
+
+<Widget post="react-native-push-notifications" />
+
+Rates shown are standard published pricing as of September 2026 and change over time — always confirm current pricing with the provider before committing.
+
+## Head to head
+
+|  | Firebase Cloud Messaging | OneSignal | Notifee |
+| --- | --- | --- | --- |
+| **What it does** | Message delivery | Delivery + targeting + analytics platform | Notification display & behaviour |
+| **Cost** | Free, no published cap | Free to 1,000 MAU, then $19/mo + $0.012/MAU | Free, open source |
+| **Cross-platform** | iOS & Android | iOS, Android, web, email | iOS & Android (works with FCM) |
+| **Segmentation / targeting** | Topic-based only | Rich audience segmentation built in | Not applicable — not a delivery layer |
+| **Best for** | Most React Native apps | Growth teams running lifecycle campaigns | Custom channels, actions, foreground control |
+
+Snapshot as of September 2026 — pricing and features change; verify with each provider before integrating.
+
+## The setup work that doesn't show up in a pricing page
+
+**Two platforms, two permission models.** iOS requires explicit user permission before any notification shows; Android's model has shifted across versions and now also requires a runtime permission on newer OS versions. Neither platform behaves quite like the other, and testing both properly means real devices, not just simulators.
+
+**Background handling runs outside your component tree.** A notification that arrives while the app is backgrounded or killed needs a handler registered before your React components even mount — a common source of "it works when the app is open but not when it's closed" bugs.
+
+**Token lifecycle management is ongoing, not one-time.** Device tokens rotate, and your backend needs to stay in sync — a stale token means a silently undelivered notification, not an error you'll notice without monitoring.
+
+**Deep-linking a tap to the right screen** means wiring notification payloads into React Navigation, so tapping "Your order shipped" actually opens the order, not the home screen.
+
+<Callout>
+
+**Our default recommendation:** start with Firebase Cloud Messaging plus Notifee for display control — it costs nothing, covers what the overwhelming majority of apps need, and scales without a pricing conversation. Move to OneSignal only when you have a concrete use for its segmentation, in-app messaging or A/B testing — paying for a growth platform before you have a growth motion to run on it is the mistake worth avoiding.
+
+</Callout>
+
+## Frequently asked questions
+
+### Is Firebase Cloud Messaging free for React Native apps?
+
+Yes. FCM has no published usage cap for standard push delivery and works across both iOS and Android, which is why it's the default choice for most React Native apps regardless of scale.
+
+### Is OneSignal still free for a small app in 2026?
+
+The free tier changed in 2026. New customers moved to a 1,000 monthly active user cap from September 2026, and existing customers followed from October 2026 — down from the previous 10,000-subscriber allowance. Past that limit, OneSignal's Growth plan is $19/month plus $0.012 per mobile-push MAU.
+
+### Do I need Notifee if I'm already using Firebase?
+
+Notifee isn't a replacement for FCM — it's a complementary library. FCM delivers the message to the device; Notifee controls how it's displayed and behaves once it arrives, including notification channels, custom actions and richer local-notification control that FCM alone doesn't give you.
+
+### When does OneSignal's cost actually make sense over Firebase?
+
+When you need OneSignal's platform on top of delivery — audience segmentation, in-app messaging, A/B testing notification copy, and analytics on open rates — bundled into one tool. If you only need messages to arrive reliably, FCM plus Notifee for display control costs nothing and gets there.
+
+### Can you set up push notifications for our app?
+
+Yes — FCM and Notifee integration, deep-linking notification taps into React Navigation, and OneSignal setup when the segmentation and analytics are worth the cost, are part of our [React Native builds](/react-native-app-development/). [Book a free call](https://calendly.com/het-soni-soniconsultancyservices/introductory) to scope yours.

@@ -1,0 +1,30 @@
+{
+ "type": "custom",
+ "kick": "✦ Interactive · your user count, live cost",
+ "note": "Estimated monthly cost at each provider's standard published mobile-push pricing as of September 2026. OneSignal also bundles segmentation, in-app messaging and analytics that FCM/Notifee don't include — treat this as a delivery-cost comparison, not a full feature-value comparison.",
+ "ctas": [
+  {
+   "label": "Get notifications set up right →",
+   "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+   "primary": true
+  },
+  {
+   "label": "React Native services",
+   "href": "/react-native-app-development/",
+   "primary": false
+  }
+ ],
+ "cards": [
+  {
+   "id": "gc_fcm",
+   "name": "Firebase + Notifee",
+   "sub": "No published usage cap<br>Delivery + display control"
+  },
+  {
+   "id": "gc_os",
+   "name": "OneSignal",
+   "sub": "$19/mo + $0.012/MAU<br>Above 1,000 free MAU"
+  }
+ ],
+ "out": []
+}

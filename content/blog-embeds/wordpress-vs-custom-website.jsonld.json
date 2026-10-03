@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "WordPress vs Custom Website 2026",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-08-29",
+  "dateModified": "2026-08-29",
+  "articleSection": "Web",
+  "description": "WordPress or a custom-built website? Answer 5 questions in our interactive tool and get an honest recommendation — from a team that builds both."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "WordPress vs Custom Website in 2026: Which Should You Build?",
+    "item": "https://soniconsultancyservices.com/blog/wordpress-vs-custom-website"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Is WordPress good enough for a professional business website?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes — over 40% of the web runs on it, including major brands. Quality depends on who builds and configures it, not the platform itself."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Is WordPress cheaper than a custom website?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Substantially. In India, a professional WordPress site typically runs ₹30,000–₹2,00,000 versus ₹3,00,000–₹20,00,000+ for custom development. The gap widens further with ongoing maintenance."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can WordPress handle e-commerce in India?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes — WooCommerce with an Indian payment gateway (Razorpay, PayU, Cashfree) handles catalogues, payments, shipping and GST invoicing well for standard stores. Very large or unusual stores may outgrow it."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "When should I NOT use WordPress?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "When the website is itself the product — user dashboards, marketplaces, SaaS tools, real-time features — or when a mobile app sharing the same backend is on the roadmap. That's custom (or hybrid) territory."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can you build either one?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes — we ship both WordPress websites and custom MERN/React Native products, which is why our recommendation isn't biased toward one hammer."
+    }
+   }
+  ]
+ }
+]

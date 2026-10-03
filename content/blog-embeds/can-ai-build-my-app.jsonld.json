@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Can AI Build My App? An Honest 2026 Answer for Founders",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-09-03",
+  "dateModified": "2026-09-03",
+  "articleSection": "AI",
+  "description": "AI writes real production code in 2026 — and still cannot ship your app alone. Answer 5 questions to see what AI can genuinely accelerate on your project and what still needs engineers."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Can AI Build My App? An Honest 2026 Answer for Founders",
+    "item": "https://soniconsultancyservices.com/blog/can-ai-build-my-app"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Can AI build a complete mobile app in 2026?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "It can produce a working prototype quickly, and real production code for well-understood parts. It cannot reliably take a product from idea to a maintainable, store-approved app on its own. The expensive parts of an app build — deciding what to build, architecture that survives growth, edge cases, compliance and accountability — are exactly where AI helps least."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Will using AI make my app cheaper to build?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "It reduces the cost of writing code, which on most real projects was never the majority of the work. Expect a meaningful efficiency gain rather than an order-of-magnitude price drop. Teams claiming the latter are usually not counting the last 20% — edge cases, store review, and everything that turns working code into a shipped product."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Is AI-generated code safe for handling payments or personal data?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Not without expert review. Anything touching money, health data or personal data under a regime like India's DPDP Act needs someone accountable for correctness. AI-drafted code can absolutely be part of that, but a qualified engineer has to own the security and data-handling decisions."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What is the risk of building my MVP entirely with AI tools?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "The common failure is not that it fails to work — it usually works. It is that it breaks later in a way nobody can fix, because no human holds a mental model of the system. Rescuing that typically costs more than building it properly would have. If you go this route, treat the result as a disposable experiment rather than a foundation."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "When is building it yourself with AI actually the right call?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "When you are validating an idea rather than launching a business on it, the app is largely standard with few hard integrations, it handles no sensitive data, and you would be comfortable rewriting it if it takes off. Under those conditions it is often the smartest, cheapest way to find out whether the idea deserves a real build."
+    }
+   }
+  ]
+ }
+]

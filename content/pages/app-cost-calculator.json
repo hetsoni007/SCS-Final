@@ -1,0 +1,565 @@
+{
+ "slug": "app-cost-calculator",
+ "path": "/app-cost-calculator/",
+ "meta": {
+  "title": "App Development Cost Calculator | Soni Consultancy Services",
+  "description": "Estimate your React Native or MERN app's timeline and cost in 60 seconds. Pick platforms and features, get an indicative range, then a fixed-price quote.",
+  "keywords": "app development cost calculator, react native app cost, mobile app cost estimate, MERN app cost, how much does an app cost",
+  "robots": "index,follow,max-image-preview:large",
+  "canonical": "https://soniconsultancyservices.com/app-cost-calculator/",
+  "ogTitle": "App Development Cost Calculator — Soni Consultancy Services",
+  "ogDescription": "Estimate your app's timeline and cost in 60 seconds, then get a fixed-price quote.",
+  "ogType": "website"
+ },
+ "h1": "What will your app cost to build?",
+ "breadcrumb": "Home › App Cost Calculator",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "WebApplication",
+   "name": "App Development Cost Calculator",
+   "applicationCategory": "BusinessApplication",
+   "operatingSystem": "Web",
+   "url": "https://soniconsultancyservices.com/app-cost-calculator/",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "provider": {
+    "@type": "Organization",
+    "name": "Soni Consultancy Services",
+    "url": "https://soniconsultancyservices.com"
+   }
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://soniconsultancyservices.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "App Cost Calculator",
+     "item": "https://soniconsultancyservices.com/app-cost-calculator/"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "logo": "https://soniconsultancyservices.com/favicon.svg",
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://www.instagram.com/soni.consultancyservices/",
+    "https://www.facebook.com/soniconsultancyservices",
+    "https://medium.com/@hetsoni9398"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "cls": "page-hero",
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Free tool"
+    },
+    {
+     "t": "h",
+     "level": 1,
+     "html": "What will your app<br>cost to build?",
+     "cls": "h1"
+    },
+    {
+     "t": "p",
+     "html": "Pick your platforms and features. You'll get an indicative timeline and cost range instantly — then a precise, fixed-price quote after a 30-minute call.",
+     "cls": "lead"
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "grid",
+     "cls": "calc-grid",
+     "items": [
+      {
+       "blocks": [
+        {
+         "t": "panel",
+         "cls": "glass calc-block",
+         "blocks": [
+          {
+           "t": "h",
+           "level": 3,
+           "html": "Platforms"
+          },
+          {
+           "t": "grid",
+           "cls": "opt-row",
+           "items": [
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Cross-platform"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "iOS only"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Android only"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "t": "panel",
+         "cls": "glass calc-block",
+         "blocks": [
+          {
+           "t": "h",
+           "level": 3,
+           "html": "Build stage"
+          },
+          {
+           "t": "grid",
+           "cls": "opt-row",
+           "items": [
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "MVP"
+              },
+              {
+               "t": "text",
+               "html": "~4 wk base",
+               "cls": "w"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Market-ready"
+              },
+              {
+               "t": "text",
+               "html": "~8 wk base",
+               "cls": "w"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Scale / enterprise"
+              },
+              {
+               "t": "text",
+               "html": "~14 wk base",
+               "cls": "w"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "t": "panel",
+         "cls": "glass calc-block",
+         "blocks": [
+          {
+           "t": "h",
+           "level": 3,
+           "html": "Features"
+          },
+          {
+           "t": "grid",
+           "cls": "opt-row",
+           "items": [
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "User accounts & profiles"
+              },
+              {
+               "t": "text",
+               "html": "1.5",
+               "cls": "w"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Payments / subscriptions"
+              },
+              {
+               "t": "text",
+               "html": "2.5",
+               "cls": "w"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Chat / messaging"
+              },
+              {
+               "t": "text",
+               "html": "2.5",
+               "cls": "w"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Maps & geolocation"
+              },
+              {
+               "t": "text",
+               "html": "2",
+               "cls": "w"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Push notifications"
+              },
+              {
+               "t": "text",
+               "html": "1",
+               "cls": "w"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Admin dashboard"
+              },
+              {
+               "t": "text",
+               "html": "3",
+               "cls": "w"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "AI integration"
+              },
+              {
+               "t": "text",
+               "html": "3",
+               "cls": "w"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Offline mode / sync"
+              },
+              {
+               "t": "text",
+               "html": "2",
+               "cls": "w"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Analytics dashboards"
+              },
+              {
+               "t": "text",
+               "html": "1.5",
+               "cls": "w"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Social feed"
+              },
+              {
+               "t": "text",
+               "html": "2",
+               "cls": "w"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "t": "panel",
+         "cls": "glass calc-block",
+         "blocks": [
+          {
+           "t": "h",
+           "level": 3,
+           "html": "Design"
+          },
+          {
+           "t": "grid",
+           "cls": "opt-row",
+           "items": [
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Standard"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Custom UI/UX"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Premium / animated"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "t": "panel",
+         "cls": "glass calc-block",
+         "blocks": [
+          {
+           "t": "h",
+           "level": 3,
+           "html": "Backend"
+          },
+          {
+           "t": "grid",
+           "cls": "opt-row",
+           "items": [
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Managed / BaaS"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Custom MERN API"
+              },
+              {
+               "t": "text",
+               "html": "+3",
+               "cls": "w"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Realtime + scale"
+              },
+              {
+               "t": "text",
+               "html": "+5",
+               "cls": "w"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "blocks": [
+        {
+         "t": "panel",
+         "cls": "glass result-card",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Indicative estimate"
+          },
+          {
+           "t": "text",
+           "html": "$14k – $26k",
+           "cls": "result-num"
+          },
+          {
+           "t": "text",
+           "html": "Typical range for this scope · USD",
+           "cls": "result-sub"
+          },
+          {
+           "t": "text",
+           "html": "Timeline~8 weeks",
+           "cls": "result-line"
+          },
+          {
+           "t": "text",
+           "html": "TeamHet + dedicated engineers",
+           "cls": "result-line"
+          },
+          {
+           "t": "text",
+           "html": "Pricing modelFixed-price",
+           "cls": "result-line"
+          },
+          {
+           "t": "form",
+           "id": "calcLeadForm",
+           "fields": [
+            {
+             "name": "cName",
+             "id": "cName",
+             "type": "input",
+             "label": "Your name",
+             "placeholder": "James Morrison",
+             "required": false
+            },
+            {
+             "name": "cEmail",
+             "id": "cEmail",
+             "type": "email",
+             "label": "Work email",
+             "placeholder": "james@company.com",
+             "required": false
+            }
+           ],
+           "submit": "Email me the breakdown →",
+           "success": "✓ Got it. We'll review your scope and reply with a detailed breakdown within one business day — or <a href=\"https://calendly.com/het-soni-soniconsultancyservices/introductory\" target=\"_blank\" rel=\"noopener\">book a call</a> to lock the fixed price now."
+          }
+         ]
+        },
+        {
+         "t": "p",
+         "html": "Estimates are indicative, based on typical project scope — not a quote. Your exact fixed price is confirmed after a short discovery call once requirements are clear.",
+         "cls": "dim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Want the exact number?",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "Book a free 30-minute call — we'll turn this estimate into a fixed-price proposal within 48 hours.",
+       "cls": "lead"
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Book a Free Call →",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "primary"
+        },
+        {
+         "label": "See our work",
+         "href": "/work/",
+         "variant": "glass"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

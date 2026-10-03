@@ -1,0 +1,975 @@
+{
+ "slug": "mvp-development",
+ "path": "/mvp-development/",
+ "meta": {
+  "title": "MVP Development Company | Build Your MVP in 10–16 Weeks",
+  "description": "MVP development for founders — scope it properly, ship in 10–16 weeks, learn from real users. Fixed-price proposal within 48 hours of a free call.",
+  "keywords": "MVP development company, MVP development services, build an MVP, MVP development cost, startup MVP development, minimum viable product development",
+  "robots": "index,follow,max-image-preview:large",
+  "canonical": "https://soniconsultancyservices.com/mvp-development/",
+  "ogTitle": "MVP Development Company | Build Your MVP in 10–16 Weeks",
+  "ogDescription": "MVP development for founders — scope it properly, ship in 10–16 weeks, learn from real users. Fixed-price proposal within 48 hours of a free call.",
+  "ogType": "website"
+ },
+ "h1": "Build the version that proves it works.",
+ "breadcrumb": "Home › MVP Development",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Service",
+   "name": "MVP Development",
+   "serviceType": "Minimum viable product development",
+   "provider": {
+    "@type": "Organization",
+    "name": "Soni Consultancy Services",
+    "url": "https://soniconsultancyservices.com"
+   },
+   "areaServed": "Worldwide",
+   "description": "MVP development for founders — scoping, build and launch of a focused first product in React Native and MERN, typically 10–16 weeks of senior engineering effort.",
+   "url": "https://soniconsultancyservices.com/mvp-development/"
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://soniconsultancyservices.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "MVP Development",
+     "item": "https://soniconsultancyservices.com/mvp-development/"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What exactly is an MVP, and how is it different from a prototype?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A prototype answers \"could this work?\" and is usually throwaway. An MVP answers \"will people actually use this?\" and has to survive real users, real data and real edge cases. That difference is most of the cost. If you only need to test a concept with a few people, a prototype is cheaper and faster — and we will say so on the call."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How long does MVP development take?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Most focused MVPs land in roughly 10–16 weeks of senior engineering effort. That is effort, not calendar time with more people added — adding people to a late project reliably makes it later. For reference, an attendance and payroll platform we built shipped in around 16 weeks, at the fuller end of that band."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How much does an MVP cost?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A focused MVP typically starts in the low five figures (USD), and scales from there with feature depth — particularly the back-end surface: real-time data, payments, offline behaviour, role-based access and third-party integrations move the number far more than screen count does. Use the app cost calculator for a range against your own scope, then a free call gets you a fixed-price proposal within 48 hours."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What should I cut from version one?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sort every feature into Core, Supporting and Later. Core means the product does not do its one job without it. Supporting means the core genuinely depends on it. Everything else is Later — scheduled, not cancelled. A practical test: ask what actually happens if a feature ships three months after launch. If the answer is \"some users would find it inconvenient\", it is not core."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I own the code?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. You own the repository, the infrastructure accounts and the intellectual property. We build in your accounts where possible so there is nothing to extract if you take the product in-house or to another team later."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What happens after the MVP launches?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Launch is the start of the cost, not the end of it. App stores need ongoing releases, OS versions change, and real usage produces work no plan anticipated. We stay for monitoring and iteration sprints, or hand over cleanly if you are building an in-house team — both are normal."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "logo": "https://soniconsultancyservices.com/favicon.svg",
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://www.instagram.com/soni.consultancyservices/",
+    "https://www.facebook.com/soniconsultancyservices",
+    "https://medium.com/@hetsoni9398"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "cls": "page-hero",
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "MVP · Founders · 10–16 weeks"
+    },
+    {
+     "t": "h",
+     "level": 1,
+     "html": "Build the version<br>that proves it works.",
+     "cls": "h1"
+    },
+    {
+     "t": "p",
+     "html": "Most failed builds are not engineering failures — they are scoping failures. We help founders cut to a version one that a real user can actually use, then ship it in roughly 10–16 weeks of senior engineering effort, on a fixed price agreed before any code is written.",
+     "cls": "lead"
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Book a free scoping call →",
+       "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+       "variant": "primary"
+      },
+      {
+       "label": "Estimate your MVP cost",
+       "href": "/app-cost-calculator/",
+       "variant": "glass"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "The hard part"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Deciding what <em>not</em><br>to build.",
+     "cls": "h2"
+    },
+    {
+     "t": "p",
+     "html": "An MVP is not a cheap version of your product. It is the smallest thing that produces a real answer. Sort every feature into three buckets and be strict about the first one.",
+     "cls": "lead"
+    },
+    {
+     "t": "grid",
+     "cls": "scope-grid",
+     "items": [
+      {
+       "cls": "scope",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Core",
+         "cls": "tag"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Without it, there is no product"
+        },
+        {
+         "t": "p",
+         "html": "If you can describe a usable product without the feature, it is not core. Most scopes have far fewer core features than the founder first thinks."
+        }
+       ]
+      },
+      {
+       "cls": "scope",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Supporting",
+         "cls": "tag"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "The core genuinely depends on it"
+        },
+        {
+         "t": "p",
+         "html": "Sign-in, basic settings, the plumbing the core cannot run without. Keep this list short and treat every addition with suspicion."
+        }
+       ]
+      },
+      {
+       "cls": "scope",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Later",
+         "cls": "tag"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Scheduled, not cancelled"
+        },
+        {
+         "t": "p",
+         "html": "Everything else. Writing it down as <em>later</em> matters — a feature with a date stops being argued about every week."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "text",
+     "html": "<strong>A practical test:</strong> for each feature, ask what actually happens if it ships three months after launch. “Some users would find it inconvenient” means it is not core. “The product makes no sense” means it is.",
+     "cls": "article-callout"
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "What you get"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "A real product,<br>not a demo.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "feat-grid",
+     "items": [
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Cross-platform from one codebase"
+        },
+        {
+         "t": "p",
+         "html": "iOS and Android from a single <a href=\"/react-native-app-development/\">React Native</a> codebase, so you are not funding two teams before you have proof anyone wants it."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "A backend that survives launch"
+        },
+        {
+         "t": "p",
+         "html": "MERN or PostgreSQL, real auth, and an architecture that will not need a rewrite the week after you get traction."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "AI only where it earns its place"
+        },
+        {
+         "t": "p",
+         "html": "Claude or GPT features when they solve a real problem — see <a href=\"/ai-app-development/\">AI app development</a>. We will talk you out of it when they do not."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Store submission handled"
+        },
+        {
+         "t": "p",
+         "html": "Review-ready builds, listings and the back-and-forth with Apple and Google, included rather than quoted separately."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Analytics from day one"
+        },
+        {
+         "t": "p",
+         "html": "An MVP that ships without instrumentation cannot answer the question you built it to answer. Events and funnels are part of the build."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Code and accounts you own"
+        },
+        {
+         "t": "p",
+         "html": "Your repository, your infrastructure, your IP. Nothing to extract if you take it in-house or to another team later."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Timeline"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Where an MVP sits.",
+     "cls": "h2"
+    },
+    {
+     "t": "p",
+     "html": "These bands are engineering effort — the working time of a senior team — not calendar time with more people thrown at it. Adding people to a late project reliably makes it later.",
+     "cls": "lead"
+    },
+    {
+     "t": "grid",
+     "cls": "tl",
+     "items": [
+      {
+       "cls": "tl-row",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "~10–16 weeks",
+         "cls": "wk"
+        },
+        {
+         "t": "text",
+         "html": "<b>MVP / focused first product.</b> One core loop, a handful of screens, standard auth, a straightforward backend, one or two integrations. This is what you build to test demand. An attendance and payroll platform we built shipped in around 16 weeks, at the fuller end of this band.",
+         "cls": "bd"
+        }
+       ]
+      },
+      {
+       "cls": "tl-row",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "~24–32 weeks",
+         "cls": "wk"
+        },
+        {
+         "t": "text",
+         "html": "<b>Standard / market-ready.</b> Several connected modules, custom interface work, real-time features, payments and a proper admin side. Most funded products land here — it is a step beyond an MVP, not an MVP.",
+         "cls": "bd"
+        }
+       ]
+      },
+      {
+       "cls": "tl-row",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "32+ weeks",
+         "cls": "wk"
+        },
+        {
+         "t": "text",
+         "html": "<b>Complex / scale.</b> Multi-sided platforms, heavy integrations, strict compliance or high concurrency. If your idea only works at this size, an MVP may not be the right first move — and we will say so.",
+         "cls": "bd"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "p",
+     "html": "More detail on how these are estimated: <a href=\"/blog/how-long-to-build-an-app\">how long it takes to build a mobile app</a>.",
+     "cls": "muted"
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Budget"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "What it costs,<br>honestly.",
+     "cls": "h2"
+    },
+    {
+     "t": "p",
+     "html": "A focused MVP typically starts in the low five figures (USD), and scales from there with feature depth. Anyone quoting a single number for “an app” without asking about your backend is guessing.",
+     "cls": "lead"
+    },
+    {
+     "t": "p",
+     "html": "The thing that moves the number most is not screen count — it is what has to be true underneath. Real-time updates, payments, offline behaviour, role-based access and third-party integrations drive far more cost than another screen does. That is the question we spend most of the scoping call on.",
+     "cls": "muted"
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Estimate your scope →",
+       "href": "/app-cost-calculator/",
+       "variant": "glass"
+      },
+      {
+       "label": "Read the full cost breakdown",
+       "href": "/blog/react-native-app-development-cost",
+       "variant": "glass"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Process"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Idea to launch,<br>without the drama.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "proc-grid",
+     "items": [
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "01",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Scope call"
+        },
+        {
+         "t": "p",
+         "html": "30 minutes on your goals, users and constraints — with an honest read on feasibility. If the idea has a serious problem, you hear it here, not in month three."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "02",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Fixed-price proposal"
+        },
+        {
+         "t": "p",
+         "html": "Scope, timeline and a fixed price within 48 hours. Version one separated from later phases explicitly, with the assumptions written down."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "03",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Build"
+        },
+        {
+         "t": "p",
+         "html": "Weekly demo builds you can hold in your hand from the first sprint — working software, not a status report describing it."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "04",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Launch &amp; learn"
+        },
+        {
+         "t": "p",
+         "html": "Store submission handled, then monitoring and iteration once real usage starts telling you what you actually built."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Proof"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Products we shipped.",
+     "cls": "h2"
+    },
+    {
+     "t": "p",
+     "html": "Real builds, live in users' hands. Product names are withheld under client NDAs — every metric and timeline below is real.",
+     "cls": "lead"
+    },
+    {
+     "t": "grid",
+     "cls": "case-strip",
+     "items": [
+      {
+       "cls": "glass case-card",
+       "href": "/work/#hr-payroll",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "16 weeks",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "HR &amp; payroll platform — the closest of our builds to MVP scale, live on both stores",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      },
+      {
+       "cls": "glass case-card",
+       "href": "/work/#creator-marketplace",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "+35%",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Downloads after launch for a creator–venue marketplace",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      },
+      {
+       "cls": "glass case-card",
+       "href": "/work/#ride-hailing",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "~3 min",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Average booking time on a ride-hailing platform with AI fare prediction",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Before you commit"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Worth reading first.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "feat-grid",
+     "items": [
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Validate before you build"
+        },
+        {
+         "t": "p",
+         "html": "The cheapest MVP is the one you did not need. <a href=\"/blog/validate-app-idea-before-building\">How to validate an app idea</a> before spending on engineering."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Choosing the stack"
+        },
+        {
+         "t": "p",
+         "html": "Framework choice is mostly a hiring decision, not a benchmark one. <a href=\"/blog/mvp-tech-stack-2026\">How to choose your MVP tech stack</a>."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Can AI just build it?"
+        },
+        {
+         "t": "p",
+         "html": "A straight answer rather than a sales one: <a href=\"/blog/can-ai-build-my-app\">what AI genuinely accelerates</a>, and what it still cannot own."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "After launch"
+        },
+        {
+         "t": "p",
+         "html": "What changes once real users arrive: <a href=\"/blog/mvp-to-product-market-fit\">from MVP to product-market fit</a>."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Scope it yourself"
+        },
+        {
+         "t": "p",
+         "html": "The five questions we ask on every scoping call, as a free 8-page guide: <a href=\"/app-scoping-guide/\">the app scoping guide</a>."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Need a team, not a project?"
+        },
+        {
+         "t": "p",
+         "html": "If you have ongoing capacity needs rather than a fixed scope, you can <a href=\"/hire/\">hire a dedicated team</a> instead."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Free guides & tools"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Do your homework first.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "g3",
+     "items": [
+      {
+       "cls": "glass",
+       "href": "/blog/mvp-tech-stack-2026",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Stack picker"
+        },
+        {
+         "t": "text",
+         "html": "Which stack fits your MVP"
+        },
+        {
+         "t": "text",
+         "html": "Get a recommendation →"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/blog/can-ai-build-my-app",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Scope tool"
+        },
+        {
+         "t": "text",
+         "html": "Can AI build your app?"
+        },
+        {
+         "t": "text",
+         "html": "Find out →"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/blog/native-vs-cross-platform-2026",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Decision tool"
+        },
+        {
+         "t": "text",
+         "html": "Native, React Native or Flutter?"
+        },
+        {
+         "t": "text",
+         "html": "Get a recommendation →"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "FAQ"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Common questions.",
+     "cls": "h2"
+    },
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What exactly is an MVP, and how is it different from a prototype?",
+       "a": "A prototype answers “could this work?” and is usually throwaway. An MVP answers “will people actually use this?” and has to survive real users, real data and real edge cases. That difference is most of the cost. If you only need to test a concept with a few people, a prototype is cheaper and faster — and we will say so on the call."
+      },
+      {
+       "q": "How long does MVP development take?",
+       "a": "Most focused MVPs land in roughly 10–16 weeks of senior engineering effort. That is effort, not calendar time with more people added — adding people to a late project reliably makes it later. For reference, an attendance and payroll platform we built shipped in around 16 weeks, at the fuller end of that band."
+      },
+      {
+       "q": "How much does an MVP cost?",
+       "a": "A focused MVP typically starts in the low five figures (USD), and scales from there with feature depth — particularly the back-end surface: real-time data, payments, offline behaviour, role-based access and third-party integrations move the number far more than screen count does. Use the app cost calculator for a range against your own scope, then a free call gets you a fixed-price proposal within 48 hours."
+      },
+      {
+       "q": "What should I cut from version one?",
+       "a": "Sort every feature into Core, Supporting and Later. Core means the product does not do its one job without it. Supporting means the core genuinely depends on it. Everything else is Later — scheduled, not cancelled. A practical test: ask what actually happens if a feature ships three months after launch. If the answer is “some users would find it inconvenient”, it is not core."
+      },
+      {
+       "q": "Do I own the code?",
+       "a": "Yes. You own the repository, the infrastructure accounts and the intellectual property. We build in your accounts where possible so there is nothing to extract if you take the product in-house or to another team later."
+      },
+      {
+       "q": "What happens after the MVP launches?",
+       "a": "Launch is the start of the cost, not the end of it. App stores need ongoing releases, OS versions change, and real usage produces work no plan anticipated. We stay for monitoring and iteration sprints, or hand over cleanly if you are building an in-house team — both are normal."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "form",
+     "id": "leadForm",
+     "fields": [
+      {
+       "name": "lbName",
+       "id": "lbName",
+       "type": "text",
+       "label": "Your name",
+       "placeholder": "Jane Doe",
+       "required": false
+      },
+      {
+       "name": "lbEmail",
+       "id": "lbEmail",
+       "type": "email",
+       "label": "Work email",
+       "placeholder": "jane@company.com",
+       "required": false
+      },
+      {
+       "name": "lbWant",
+       "id": "lbWant",
+       "type": "text",
+       "label": "What are you building?",
+       "placeholder": "One line is plenty — e.g. a patient booking app for 3 clinics",
+       "required": false
+      },
+      {
+       "name": "lbBudget",
+       "id": "lbBudget",
+       "type": "select",
+       "label": "Budget",
+       "required": false,
+       "options": [
+        "Select a range",
+        "Not sure yet",
+        "<$10k",
+        "$10-25k",
+        "$25-60k",
+        "$60k+"
+       ]
+      },
+      {
+       "name": "lbTime",
+       "id": "lbTime",
+       "type": "select",
+       "label": "Timeline",
+       "required": false,
+       "options": [
+        "Select a timeline",
+        "ASAP",
+        "1-3 months",
+        "3-6 months",
+        "Just exploring"
+       ]
+      },
+      {
+       "type": "checkbox",
+       "label": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+       "required": false
+      }
+     ],
+     "submit": "Send →",
+     "kick": "Start here",
+     "title": "Get a fixed-price MVP estimate.",
+     "sub": "Tell us what version one has to prove. You’ll get a scoped, fixed price within 48 hours.",
+     "note": "Replies within one business day · no upfront fee to talk",
+     "consent": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+     "success": "✓ Thanks — that’s with Het. You’ll get a reply within one business day, usually with either a straight answer or the two or three questions needed to scope it properly."
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Get a fixed price<br>for your MVP.",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "A 30-minute scoping call, then a fixed-price proposal within 48 hours. If an MVP is not the right first move, we will tell you on the call. NDA on request.",
+       "cls": "lead"
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Book a free scoping call →",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "primary"
+        },
+        {
+         "label": "See our work",
+         "href": "/work/",
+         "variant": "glass"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

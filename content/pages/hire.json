@@ -1,0 +1,715 @@
+{
+ "slug": "hire",
+ "path": "/hire/",
+ "meta": {
+  "title": "Hire React Native Developers | Soni Consultancy Services",
+  "description": "Hire senior React Native, MERN, Flutter, AI and DevOps engineers — staff augmentation, dedicated teams or contract. IR35-aware, kick-off within 48 hours.",
+  "keywords": "hire React Native developers, hire MERN developers, staff augmentation, dedicated development team, React Native contractors",
+  "robots": "index,follow,max-image-preview:large",
+  "canonical": "https://soniconsultancyservices.com/hire/",
+  "ogTitle": "Hire React Native & MERN Developers",
+  "ogDescription": "Senior engineers, ready this month. IR35-aware.",
+  "ogType": "website"
+ },
+ "h1": "Senior engineers. Ready this month.",
+ "breadcrumb": "Home › Hire a Developer",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "logo": "https://soniconsultancyservices.com/favicon.svg",
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://www.instagram.com/soni.consultancyservices/",
+    "https://www.facebook.com/soniconsultancyservices",
+    "https://medium.com/@hetsoni9398"
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://soniconsultancyservices.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Hire a Developer",
+     "item": "https://soniconsultancyservices.com/hire/"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What engagement models do you offer for hiring developers?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Three models: staff augmentation (embed our engineers into your team), a dedicated team/pod managed by us, or a fixed-price project contract."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How fast can you place a developer?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We match a candidate within 24 hours of your brief and can kick off within 48 hours."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which roles can I hire?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "React Native, MERN/full-stack, AI/Claude, Flutter, and DevOps/Cloud engineers, plus product designers."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Are your contracts IR35-compliant for UK clients?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — we structure engagements with IR35 compliance in mind, inside via umbrella or outside via limited company, and discuss the right structure on the first call."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you provide junior developers?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No — senior-only, with 5+ years commercial experience each. No juniors learning on your budget."
+     }
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "cls": "page-hero",
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Hire a developer"
+    },
+    {
+     "t": "h",
+     "level": 1,
+     "html": "Senior engineers.<br>Ready this month.",
+     "cls": "h1"
+    },
+    {
+     "t": "p",
+     "html": "Staff augmentation, dedicated pods or contract. Senior React Native, MERN, Flutter, AI and DevOps engineers — IR35-aware, UK-based and remote-global.",
+     "cls": "lead"
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Discuss a Placement →",
+       "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+       "variant": "primary"
+      },
+      {
+       "label": "Send a brief",
+       "href": "/contact/",
+       "variant": "glass"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "How we work"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Three ways to work<br>with our engineers.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "model-grid",
+     "items": [
+      {
+       "cls": "glass model",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Staff Augmentation"
+        },
+        {
+         "t": "p",
+         "html": "Embed our senior engineers into your team — your tools, your sprints, your culture."
+        },
+        {
+         "t": "list",
+         "ordered": false,
+         "items": [
+          "Senior-only, no juniors",
+          "Works in your sprint cadence",
+          "Scales up or down monthly",
+          "IR35-compliant contracts"
+         ]
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "From 1 month"
+          },
+          {
+           "label": "Remote/hybrid"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "cls": "glass model",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Most popular",
+         "cls": "badge"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Dedicated Team"
+        },
+        {
+         "t": "p",
+         "html": "A dedicated pod — engineers plus design &amp; DevOps — focused entirely on your roadmap, managed by us."
+        },
+        {
+         "t": "list",
+         "ordered": false,
+         "items": [
+          "Dedicated bandwidth",
+          "Weekly demos &amp; updates",
+          "Design + Dev + DevOps",
+          "Kick-off within 48 hours"
+         ]
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "From 3 months"
+          },
+          {
+           "label": "Full-stack pod"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "cls": "glass model",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Project Contract"
+        },
+        {
+         "t": "p",
+         "html": "A scoped, fixed-price engagement with a defined deliverable — ideal for a discrete feature or MVP."
+        },
+        {
+         "t": "list",
+         "ordered": false,
+         "items": [
+          "Fixed scope, price, timeline",
+          "Senior engineer every sprint",
+          "Full handover &amp; docs",
+          "No retainer after delivery"
+         ]
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "From 4 weeks"
+          },
+          {
+           "label": "Fixed price"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Available skills"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "The engineers we place.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "role-grid",
+     "items": [
+      {
+       "cls": "glass role",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "React Native Engineer"
+        },
+        {
+         "t": "p",
+         "html": "iOS &amp; Android from one codebase — push, maps, biometrics, store submissions."
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "React Native"
+          },
+          {
+           "label": "Expo"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "cls": "glass role",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "MERN / Full-Stack Engineer"
+        },
+        {
+         "t": "p",
+         "html": "React, Node, MongoDB end-to-end — APIs, dashboards, real-time, Stripe."
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "Node.js"
+          },
+          {
+           "label": "MongoDB"
+          },
+          {
+           "label": "Next.js"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "cls": "glass role",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "AI / Claude Engineer"
+        },
+        {
+         "t": "p",
+         "html": "Claude &amp; GPT integration, RAG pipelines, agents, evaluation &amp; cost control."
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "Claude API"
+          },
+          {
+           "label": "RAG"
+          },
+          {
+           "label": "Python"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "cls": "glass role",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Flutter Engineer"
+        },
+        {
+         "t": "p",
+         "html": "Cross-platform mobile with native performance, complex animations, platform channels."
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "Flutter"
+          },
+          {
+           "label": "Dart"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "cls": "glass role",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "DevOps / Cloud Engineer"
+        },
+        {
+         "t": "p",
+         "html": "AWS, Docker, CI/CD, Terraform, monitoring and 99.9% uptime infrastructure."
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "AWS"
+          },
+          {
+           "label": "Docker"
+          },
+          {
+           "label": "CI/CD"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "cls": "glass role",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Product Designer"
+        },
+        {
+         "t": "p",
+         "html": "UX &amp; UI for mobile-first products — research, prototypes, design systems."
+        },
+        {
+         "t": "chips",
+         "items": [
+          {
+           "label": "Figma"
+          },
+          {
+           "label": "UX/UI"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "The process"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "From brief to first commit<br>in 48 hours.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "proc-grid",
+     "items": [
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "01",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Share your brief"
+        },
+        {
+         "t": "p",
+         "html": "Role, skills, timeline, working style. 10 minutes, no long forms."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "02",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Candidate match"
+        },
+        {
+         "t": "p",
+         "html": "We match from our vetted pool within 24 hours — see what we actually <a href=\"/blog/hire-react-native-developers\">screen for</a>."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "03",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Intro call"
+        },
+        {
+         "t": "p",
+         "html": "30 minutes with the engineer — technical &amp; culture fit."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "04",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Kick-off"
+        },
+        {
+         "t": "p",
+         "html": "Contracts, onboarding, first standup — within 48 hours."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "grid",
+     "cls": "gauto glass",
+     "items": [
+      {
+       "blocks": []
+      },
+      {
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "IR35-aware placements for UK clients",
+         "cls": "h3"
+        },
+        {
+         "t": "p",
+         "html": "We understand the UK contractor landscape and structure engagements with IR35 compliance in mind — inside-IR35 via umbrella or outside-IR35 limited company. We'll discuss the right structure on the first call.",
+         "cls": "muted"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Need a developer<br>this month?",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "Tell us what you need — we'll match the right engineer within 24 hours.",
+       "cls": "lead"
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Discuss a Placement →",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "primary"
+        },
+        {
+         "label": "Send a brief",
+         "href": "/contact/",
+         "variant": "glass"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "form",
+     "id": "leadForm",
+     "fields": [
+      {
+       "name": "lbName",
+       "id": "lbName",
+       "type": "text",
+       "label": "Your name",
+       "placeholder": "Jane Doe",
+       "required": false
+      },
+      {
+       "name": "lbEmail",
+       "id": "lbEmail",
+       "type": "email",
+       "label": "Work email",
+       "placeholder": "jane@company.com",
+       "required": false
+      },
+      {
+       "name": "lbWant",
+       "id": "lbWant",
+       "type": "text",
+       "label": "What are you building?",
+       "placeholder": "One line is plenty — e.g. a patient booking app for 3 clinics",
+       "required": false
+      },
+      {
+       "name": "lbBudget",
+       "id": "lbBudget",
+       "type": "select",
+       "label": "Budget",
+       "required": false,
+       "options": [
+        "Select a range",
+        "Not sure yet",
+        "<$10k",
+        "$10-25k",
+        "$25-60k",
+        "$60k+"
+       ]
+      },
+      {
+       "name": "lbTime",
+       "id": "lbTime",
+       "type": "select",
+       "label": "Timeline",
+       "required": false,
+       "options": [
+        "Select a timeline",
+        "ASAP",
+        "1-3 months",
+        "3-6 months",
+        "Just exploring"
+       ]
+      },
+      {
+       "type": "checkbox",
+       "label": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+       "required": false
+      }
+     ],
+     "submit": "Send →",
+     "kick": "Start here",
+     "title": "Tell us the role you need.",
+     "sub": "Senior engineers only. We’ll come back within 24 hours with who’s available and what it costs.",
+     "note": "Replies within one business day · no upfront fee to talk",
+     "consent": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+     "success": "✓ Thanks — that’s with Het. You’ll get a reply within one business day, usually with either a straight answer or the two or three questions needed to scope it properly."
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Common questions"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Before you hire.",
+     "cls": "h2"
+    },
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What engagement models do you offer for hiring developers?",
+       "a": "Three models: staff augmentation (embed our engineers into your team), a dedicated team/pod managed by us, or a fixed-price project contract."
+      },
+      {
+       "q": "How fast can you place a developer?",
+       "a": "We match a candidate within 24 hours of your brief and can kick off within 48 hours."
+      },
+      {
+       "q": "Which roles can I hire?",
+       "a": "React Native, MERN/full-stack, AI/Claude, Flutter, and DevOps/Cloud engineers, plus product designers."
+      },
+      {
+       "q": "Are your contracts IR35-compliant for UK clients?",
+       "a": "Yes — we structure engagements with IR35 compliance in mind, inside via umbrella or outside via limited company, and discuss the right structure on the first call."
+      },
+      {
+       "q": "Do you provide junior developers?",
+       "a": "No — senior-only, with 5+ years commercial experience each. No juniors learning on your budget."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

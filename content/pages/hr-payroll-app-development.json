@@ -1,0 +1,559 @@
+{
+ "slug": "hr-payroll-app-development",
+ "path": "/hr-payroll-app-development/",
+ "meta": {
+  "title": "HR & Payroll App Development | Soni Consultancy Services",
+  "description": "HR and payroll app development — biometric and GPS attendance, branch-level payroll rules and payslips. our HR platform cut payroll processing time by 40%.",
+  "robots": "index,follow,max-image-preview:large",
+  "canonical": "https://soniconsultancyservices.com/hr-payroll-app-development/",
+  "ogTitle": "HR & Payroll App Development | Soni Consultancy Services",
+  "ogDescription": "HR and payroll app development — biometric and GPS attendance, branch-level payroll rules and payslips. our HR platform cut payroll processing time by 40%.",
+  "ogType": "website"
+ },
+ "h1": "Attendance to payslip, no spreadsheets.",
+ "breadcrumb": "Home › HR & Payroll",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Service",
+   "name": "HR & Payroll App Development",
+   "serviceType": "HR and payroll app development",
+   "provider": {
+    "@type": "Organization",
+    "name": "Soni Consultancy Services",
+    "url": "https://soniconsultancyservices.com"
+   },
+   "areaServed": "Worldwide",
+   "description": "Workforce apps connecting attendance to payroll — biometric and GPS check-ins, branch-level pay rules and transparent payslips.",
+   "url": "https://soniconsultancyservices.com/hr-payroll-app-development/"
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://soniconsultancyservices.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "HR &amp; Payroll",
+     "item": "https://soniconsultancyservices.com/hr-payroll-app-development/"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Can it integrate with our existing payroll software?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — we build APIs that feed your existing payroll or accounting system, or replace the spreadsheet layer entirely, as our platform does."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does it support multiple branches?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "That's the core of it — our platform gives company, branch and staff roles their own views, with payroll rules customisable per branch."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How is employee data protected?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Role-based access, encrypted storage and transport, and audit trails — staff see their own data, managers see their branch, head office sees everything."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "logo": "https://soniconsultancyservices.com/favicon.svg",
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://www.instagram.com/soni.consultancyservices/",
+    "https://www.facebook.com/soniconsultancyservices",
+    "https://medium.com/@hetsoni9398"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "cls": "page-hero",
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "HR · Attendance · Payroll"
+    },
+    {
+     "t": "h",
+     "level": 1,
+     "html": "Attendance to payslip,<br>no spreadsheets.",
+     "cls": "h1"
+    },
+    {
+     "t": "p",
+     "html": "We build workforce apps that connect attendance to payroll automatically — like the HR platform we built — live on the App Store and Google Play — which cut payroll processing time by 40%.",
+     "cls": "lead"
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Book a Free Call →",
+       "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+       "variant": "primary"
+      },
+      {
+       "label": "Estimate your app cost",
+       "href": "/app-cost-calculator/",
+       "variant": "glass"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "What we build"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Built for how it's<br>actually used.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "feat-grid",
+     "items": [
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Biometric &amp; GPS attendance"
+        },
+        {
+         "t": "p",
+         "html": "Check-ins that can't be gamed — on-site or in the field."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Payroll rules per branch"
+        },
+        {
+         "t": "p",
+         "html": "Custom pay rules, overtime and deductions per location."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Payslips &amp; breakdowns"
+        },
+        {
+         "t": "p",
+         "html": "Detailed, transparent salary breakdowns staff can check themselves."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Irregularity alerts"
+        },
+        {
+         "t": "p",
+         "html": "Real-time flags for missed punches and anomalies — before payday, not after."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Role-based access"
+        },
+        {
+         "t": "p",
+         "html": "Company, branch and staff views, each with exactly the right data."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Records in one place"
+        },
+        {
+         "t": "p",
+         "html": "Centralised staff records, reports and history across every branch."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Proof"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Case study: HR &amp; Payroll Platform",
+     "cls": "h2"
+    },
+    {
+     "t": "p",
+     "html": "Attendance &amp; Salary Ledger System — built because manual spreadsheets were causing 15–20% payroll errors and zero branch-level visibility.",
+     "cls": "lead"
+    },
+    {
+     "t": "grid",
+     "cls": "case-strip",
+     "items": [
+      {
+       "cls": "glass case-card",
+       "href": "/work/#hr-payroll",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "40% less",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Payroll processing time after switching from spreadsheets",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      },
+      {
+       "cls": "glass case-card",
+       "href": "/work/#hr-payroll",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "3 roles",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Company, branch and staff — each with the right view",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      },
+      {
+       "cls": "glass case-card",
+       "href": "/work/#hr-payroll",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "2 stores",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Live on both the App Store and Google Play",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Process"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Idea to app store,<br>without the drama.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "proc-grid",
+     "items": [
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "01",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Scope call"
+        },
+        {
+         "t": "p",
+         "html": "30 minutes on your goals, users and constraints — with an honest read on feasibility."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "02",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Fixed-price proposal"
+        },
+        {
+         "t": "p",
+         "html": "Scope, timeline and a fixed price within 48 hours. No vague day-rates."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "03",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Build"
+        },
+        {
+         "t": "p",
+         "html": "Weekly demo builds you can hold in your hand from the first sprint."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "04",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Launch &amp; support"
+        },
+        {
+         "t": "p",
+         "html": "Store submission handled, then monitoring and iteration after launch."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "FAQ"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Common questions.",
+     "cls": "h2"
+    },
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "Can it integrate with our existing payroll software?",
+       "a": "Yes — we build APIs that feed your existing payroll or accounting system, or replace the spreadsheet layer entirely, as our platform does."
+      },
+      {
+       "q": "Does it support multiple branches?",
+       "a": "That's the core of it — Our platform gives company, branch and staff roles their own views, with payroll rules customisable per branch."
+      },
+      {
+       "q": "How is employee data protected?",
+       "a": "Role-based access, encrypted storage and transport, and audit trails — staff see their own data, managers see their branch, head office sees everything."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "form",
+     "id": "leadForm",
+     "fields": [
+      {
+       "name": "lbName",
+       "id": "lbName",
+       "type": "text",
+       "label": "Your name",
+       "placeholder": "Jane Doe",
+       "required": false
+      },
+      {
+       "name": "lbEmail",
+       "id": "lbEmail",
+       "type": "email",
+       "label": "Work email",
+       "placeholder": "jane@company.com",
+       "required": false
+      },
+      {
+       "name": "lbWant",
+       "id": "lbWant",
+       "type": "text",
+       "label": "What are you building?",
+       "placeholder": "One line is plenty — e.g. a patient booking app for 3 clinics",
+       "required": false
+      },
+      {
+       "name": "lbBudget",
+       "id": "lbBudget",
+       "type": "select",
+       "label": "Budget",
+       "required": false,
+       "options": [
+        "Select a range",
+        "Not sure yet",
+        "<$10k",
+        "$10-25k",
+        "$25-60k",
+        "$60k+"
+       ]
+      },
+      {
+       "name": "lbTime",
+       "id": "lbTime",
+       "type": "select",
+       "label": "Timeline",
+       "required": false,
+       "options": [
+        "Select a timeline",
+        "ASAP",
+        "1-3 months",
+        "3-6 months",
+        "Just exploring"
+       ]
+      },
+      {
+       "type": "checkbox",
+       "label": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+       "required": false
+      }
+     ],
+     "submit": "Send →",
+     "kick": "Start here",
+     "title": "Building an HR or payroll product?",
+     "sub": "Attendance, payroll runs, compliance and multi-branch structures. Tell us the shape and we’ll scope it.",
+     "note": "Replies within one business day · no upfront fee to talk",
+     "consent": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+     "success": "✓ Thanks — that’s with Het. You’ll get a reply within one business day, usually with either a straight answer or the two or three questions needed to scope it properly."
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Get a fixed price<br>for your app.",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "A 30-minute call, then a fixed-price proposal within 48 hours. NDA on request.",
+       "cls": "lead"
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Book a Free Call →",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "primary"
+        },
+        {
+         "label": "See our work",
+         "href": "/work/",
+         "variant": "glass"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

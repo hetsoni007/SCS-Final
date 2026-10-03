@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "WordPress SEO &amp; Speed Checklist",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-08-29",
+  "dateModified": "2026-08-29",
+  "articleSection": "Web",
+  "description": "Score your WordPress site across 10 speed and SEO controls — hosting, caching, Core Web Vitals, schema, redirects — and see exactly what to fix first."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "WordPress Speed &amp; SEO Checklist 2026: Score Your Site in 2 Minutes",
+    "item": "https://soniconsultancyservices.com/blog/wordpress-seo-speed-checklist"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Why is my WordPress site so slow?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Usually a stack of small causes: cheap shared hosting, a heavy theme, too many plugins, unoptimised images and no caching. Hosting and caching are typically the biggest wins — fix those first."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Does site speed really affect Google rankings?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes — Core Web Vitals are part of Google's page-experience ranking signals, and slow pages also convert worse even when they do rank. Speed is both an SEO and a revenue issue."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How many plugins is too many?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "There's no magic number — 15 lean, well-built plugins beat 5 bloated ones. The real rule: every active plugin must earn its place, and overlapping plugins should be consolidated."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Will a rebuild hurt my existing Google rankings?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Only if it's done carelessly. Preserving URL structure — or 301-redirecting every old URL to its new equivalent — carries your rankings across. Skipping that step is the most common self-inflicted SEO disaster."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can you fix my slow WordPress site?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes — speed fixes, migrations and SEO-preserving rebuilds are core services. Run the audit, then book a free call and bring your score."
+    }
+   }
+  ]
+ }
+]

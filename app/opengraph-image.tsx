@@ -1,0 +1,5 @@
+import { ogContentType, ogImage, ogSize } from "@/lib/og";
+export const alt = "Soni Consultancy Services — Build iOS & Android apps in 8 weeks";
+export const size = ogSize;
+export const contentType = ogContentType;
+export default function Image() { return ogImage("Build iOS & Android apps in 8 weeks."); }

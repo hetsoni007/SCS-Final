@@ -1,0 +1,396 @@
+{
+ "slug": "cloud-cost-calculator",
+ "path": "/cloud-cost-calculator/",
+ "meta": {
+  "title": "Cloud Cost Calculator | Soni Consultancy Services",
+  "description": "Estimate how much you could save on your AWS or Azure bill. Enter your monthly cloud spend and get an indicative savings range from a DevOps cost audit.",
+  "keywords": "cloud cost calculator, aws cost optimization, azure cost savings, reduce cloud bill, cloud cost audit, finops",
+  "robots": "index,follow,max-image-preview:large",
+  "canonical": "https://soniconsultancyservices.com/cloud-cost-calculator/",
+  "ogTitle": "Cloud Cost Calculator — Soni Consultancy Services",
+  "ogDescription": "Estimate your AWS/Azure savings in 60 seconds, then get a fixed-scope cloud cost audit.",
+  "ogType": "website"
+ },
+ "h1": "How much could you save on cloud?",
+ "breadcrumb": "Home › DevOps & Cloud › Cloud Cost Calculator",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "WebApplication",
+   "name": "Cloud Cost Calculator",
+   "applicationCategory": "BusinessApplication",
+   "operatingSystem": "Web",
+   "url": "https://soniconsultancyservices.com/cloud-cost-calculator/",
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "provider": {
+    "@type": "Organization",
+    "name": "Soni Consultancy Services",
+    "url": "https://soniconsultancyservices.com"
+   }
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://soniconsultancyservices.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "DevOps & Cloud",
+     "item": "https://soniconsultancyservices.com/devops-cloud-engineering/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Cloud Cost Calculator",
+     "item": "https://soniconsultancyservices.com/cloud-cost-calculator/"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "logo": "https://soniconsultancyservices.com/favicon.svg",
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://www.instagram.com/soni.consultancyservices/",
+    "https://www.facebook.com/soniconsultancyservices",
+    "https://medium.com/@hetsoni9398"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "cls": "page-hero",
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Free tool"
+    },
+    {
+     "t": "h",
+     "level": 1,
+     "html": "How much could you<br>save on cloud?",
+     "cls": "h1"
+    },
+    {
+     "t": "p",
+     "html": "Tell us your monthly AWS or Azure spend and what's true about your setup today. You'll get an indicative savings range instantly — then a fixed-scope cost audit if you want the exact number.",
+     "cls": "lead"
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "grid",
+     "cls": "calc-grid",
+     "items": [
+      {
+       "blocks": [
+        {
+         "t": "panel",
+         "cls": "glass calc-block",
+         "blocks": [
+          {
+           "t": "h",
+           "level": 3,
+           "html": "Current cloud spend"
+          },
+          {
+           "t": "text",
+           "html": "$15k / mo",
+           "cls": "spend-val"
+          },
+          {
+           "t": "text",
+           "html": "$1k$250k+ / mo"
+          }
+         ]
+        },
+        {
+         "t": "panel",
+         "cls": "glass calc-block",
+         "blocks": [
+          {
+           "t": "h",
+           "level": 3,
+           "html": "Primary cloud"
+          },
+          {
+           "t": "grid",
+           "cls": "opt-row",
+           "items": [
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "AWS"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Azure"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Google Cloud"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Multi-cloud"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "t": "panel",
+         "cls": "glass calc-block",
+         "blocks": [
+          {
+           "t": "h",
+           "level": 3,
+           "html": "What's true today?"
+          },
+          {
+           "t": "p",
+           "html": "Tick what applies — each is a common source of cloud waste."
+          },
+          {
+           "t": "grid",
+           "cls": "opt-row",
+           "items": [
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Compute isn't right-sized"
+              },
+              {
+               "t": "text",
+               "html": "6–12%",
+               "cls": "w"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "No savings plans / reserved instances"
+              },
+              {
+               "t": "text",
+               "html": "5–12%",
+               "cls": "w"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Idle / always-on non-prod resources"
+              },
+              {
+               "t": "text",
+               "html": "4–8%",
+               "cls": "w"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "No autoscaling"
+              },
+              {
+               "t": "text",
+               "html": "3–6%",
+               "cls": "w"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Over-provisioned databases"
+              },
+              {
+               "t": "text",
+               "html": "3–7%",
+               "cls": "w"
+              }
+             ]
+            },
+            {
+             "cls": "opt-pill",
+             "blocks": [
+              {
+               "t": "text",
+               "html": "Unattached storage & old snapshots"
+              },
+              {
+               "t": "text",
+               "html": "1–3%",
+               "cls": "w"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "blocks": [
+        {
+         "t": "panel",
+         "cls": "glass result-card",
+         "blocks": [
+          {
+           "t": "text",
+           "html": "Indicative annual savings"
+          },
+          {
+           "t": "text",
+           "html": "$32k – $58k",
+           "cls": "result-num"
+          },
+          {
+           "t": "text",
+           "html": "Estimated reduction on your annual cloud bill · USD",
+           "cls": "result-sub"
+          },
+          {
+           "t": "text",
+           "html": "<i></i>",
+           "cls": "savings-bar"
+          },
+          {
+           "t": "text",
+           "html": "Savings range18 – 32%",
+           "cls": "result-line"
+          },
+          {
+           "t": "text",
+           "html": "Per month~$2.7k – $4.8k",
+           "cls": "result-line"
+          },
+          {
+           "t": "text",
+           "html": "EngagementCloud Cost Audit",
+           "cls": "result-line"
+          },
+          {
+           "t": "form",
+           "id": "cloudCalcForm",
+           "fields": [
+            {
+             "name": "cName",
+             "id": "cName",
+             "type": "input",
+             "label": "Your name",
+             "placeholder": "James Morrison",
+             "required": false
+            },
+            {
+             "name": "cEmail",
+             "id": "cEmail",
+             "type": "email",
+             "label": "Work email",
+             "placeholder": "james@company.com",
+             "required": false
+            }
+           ],
+           "submit": "Email me the savings plan →",
+           "success": "✓ Got it. We'll review your inputs and reply with where your savings likely are — or <a href=\"https://calendly.com/het-soni-soniconsultancyservices/introductory\" target=\"_blank\" rel=\"noopener\">book a call</a> to start a cloud cost audit."
+          }
+         ]
+        },
+        {
+         "t": "p",
+         "html": "Estimates are indicative, based on typical optimisation outcomes for the items you selected — not a guarantee. Your exact savings are confirmed by a short, fixed-scope cloud cost audit.",
+         "cls": "dim"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Want the exact number?",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "A fixed-scope cloud cost audit pinpoints the waste and hands you a prioritised plan with real dollar impact.",
+       "cls": "lead"
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Book a Free Call →",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "primary"
+        },
+        {
+         "label": "Explore DevOps & Cloud",
+         "href": "/devops-cloud-engineering/",
+         "variant": "glass"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

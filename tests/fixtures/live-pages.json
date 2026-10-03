@@ -1,0 +1,826 @@
+[
+ {
+  "path": "/",
+  "title": "React Native & AI App Development Company | Soni Consultancy",
+  "description": "React Native, MERN & AI app development for founders. Senior engineers, fixed-price proposals in 48 hours, apps live on both stores. Book a free scoping call.",
+  "canonical": "https://soniconsultancyservices.com",
+  "h1": "Build iOS & Android apps in 8 weeks.",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "Organization",
+   "LocalBusiness",
+   "WebSite"
+  ]
+ },
+ {
+  "path": "/about/",
+  "title": "About | Soni Consultancy Services",
+  "description": "A senior-only React Native, MERN & AI app studio founded by Het Soni, shipping apps live on the App Store & Google Play across six countries.",
+  "canonical": "https://soniconsultancyservices.com/about/",
+  "h1": "A senior-only studio that actually ships.",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 4,
+  "jsonLd": [
+   "Organization",
+   "Person",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/ai-app-development/",
+  "title": "AI App Development | Soni Consultancy Services",
+  "description": "Build AI-powered mobile apps — Claude & GPT integration, assistants, RAG and prediction in React Native. 12 AI app ideas and how we ship them.",
+  "canonical": "https://soniconsultancyservices.com/ai-app-development/",
+  "h1": "Build an app that thinks.",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 5,
+  "jsonLd": [
+   "Service",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/app-cost-calculator/",
+  "title": "App Development Cost Calculator | Soni Consultancy Services",
+  "description": "Estimate your React Native or MERN app's timeline and cost in 60 seconds. Pick platforms and features, get an indicative range, then a fixed-price quote.",
+  "canonical": "https://soniconsultancyservices.com/app-cost-calculator/",
+  "h1": "What will your app cost to build?",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "WebApplication",
+   "BreadcrumbList",
+   "Organization"
+  ]
+ },
+ {
+  "path": "/app-scoping-guide/",
+  "title": "Free App Scoping Guide for Founders | Soni Consultancy",
+  "description": "Free guide: How to scope React Native and MERN apps — timeline, cost estimates, and the 5 questions that unlock your project brief. Download now.",
+  "canonical": "https://soniconsultancyservices.com/app-scoping-guide/",
+  "h1": "Scope Your App Like a Founder, Not a Salesperson",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 4,
+  "jsonLd": [
+   "Organization",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/",
+  "title": "Blog — App Development Insights | Soni Consultancy Services",
+  "description": "Practical guides on React Native, MERN and AI app development for founders and CTOs — costs, frameworks, architecture and AI strategy.",
+  "canonical": "https://soniconsultancyservices.com/blog/",
+  "h1": "From the studio.",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "Organization",
+   "BreadcrumbList"
+  ]
+ },
+ {
+  "path": "/cloud-cost-calculator/",
+  "title": "Cloud Cost Calculator | Soni Consultancy Services",
+  "description": "Estimate how much you could save on your AWS or Azure bill. Enter your monthly cloud spend and get an indicative savings range from a DevOps cost audit.",
+  "canonical": "https://soniconsultancyservices.com/cloud-cost-calculator/",
+  "h1": "How much could you save on cloud?",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "WebApplication",
+   "BreadcrumbList",
+   "Organization"
+  ]
+ },
+ {
+  "path": "/contact/",
+  "title": "Contact | Soni Consultancy Services",
+  "description": "Book a free 30-minute call to scope your React Native, MERN or AI app, or send a brief — we reply within one business day.",
+  "canonical": "https://soniconsultancyservices.com/contact/",
+  "h1": "Let's scope your app this week.",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 5,
+  "jsonLd": [
+   "Organization",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/devops-cloud-engineering/",
+  "title": "DevOps & Cloud Engineering | Soni Consultancy Services",
+  "description": "Managed DevOps & cloud engineering — CI/CD, Kubernetes, Terraform IaC, AWS & Azure migration, observability and SRE.",
+  "canonical": "https://soniconsultancyservices.com/devops-cloud-engineering/",
+  "h1": "Ship faster. Spend less on cloud.",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 6,
+  "jsonLd": [
+   "Service",
+   "BreadcrumbList",
+   "FAQPage",
+   "Organization"
+  ]
+ },
+ {
+  "path": "/devops-maturity-assessment/",
+  "title": "DevOps Maturity Assessment | Soni Consultancy Services",
+  "description": "Free 2-minute DevOps maturity assessment. Answer 8 questions and get your score — Foundational to Elite — with tailored next steps to ship faster and cut risk.",
+  "canonical": "https://soniconsultancyservices.com/devops-maturity-assessment/",
+  "h1": "How mature is your DevOps, really?",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "WebApplication",
+   "BreadcrumbList",
+   "Organization"
+  ]
+ },
+ {
+  "path": "/fintech-app-development/",
+  "title": "FinTech App Development | Soni Consultancy Services",
+  "description": "FinTech app development — payments, wallets, KYC-ready onboarding and investing UX in React Native, engineered with security-first practices.",
+  "canonical": "https://soniconsultancyservices.com/fintech-app-development/",
+  "h1": "FinTech apps users trust with money.",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 3,
+  "jsonLd": [
+   "Service",
+   "BreadcrumbList",
+   "FAQPage",
+   "Organization"
+  ]
+ },
+ {
+  "path": "/hire/",
+  "title": "Hire React Native Developers | Soni Consultancy Services",
+  "description": "Hire senior React Native, MERN, Flutter, AI and DevOps engineers — staff augmentation, dedicated teams or contract. IR35-aware, kick-off within 48 hours.",
+  "canonical": "https://soniconsultancyservices.com/hire/",
+  "h1": "Senior engineers. Ready this month.",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 5,
+  "jsonLd": [
+   "Organization",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/hr-payroll-app-development/",
+  "title": "HR & Payroll App Development | Soni Consultancy Services",
+  "description": "HR and payroll app development — biometric and GPS attendance, branch-level payroll rules and payslips. our HR platform cut payroll processing time by 40%.",
+  "canonical": "https://soniconsultancyservices.com/hr-payroll-app-development/",
+  "h1": "Attendance to payslip, no spreadsheets.",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 3,
+  "jsonLd": [
+   "Service",
+   "BreadcrumbList",
+   "FAQPage",
+   "Organization"
+  ]
+ },
+ {
+  "path": "/mvp-development/",
+  "title": "MVP Development Company | Build Your MVP in 10–16 Weeks",
+  "description": "MVP development for founders — scope it properly, ship in 10–16 weeks, learn from real users. Fixed-price proposal within 48 hours of a free call.",
+  "canonical": "https://soniconsultancyservices.com/mvp-development/",
+  "h1": "Build the version that proves it works.",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 6,
+  "jsonLd": [
+   "Service",
+   "BreadcrumbList",
+   "FAQPage",
+   "Organization"
+  ]
+ },
+ {
+  "path": "/react-native-app-development-dubai/",
+  "title": "React Native App Development Dubai & UAE",
+  "description": "React Native app development for Dubai & UAE founders — near-zero time-zone gap, MERN backends, and a fixed-price proposal within 48 hours.",
+  "canonical": "https://soniconsultancyservices.com/react-native-app-development-dubai/",
+  "h1": "React Native development for Dubai founders.",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 4,
+  "jsonLd": [
+   "Service",
+   "BreadcrumbList",
+   "FAQPage",
+   "Organization"
+  ]
+ },
+ {
+  "path": "/react-native-app-development-uk/",
+  "title": "React Native App Development UK | Soni Consultancy Services",
+  "description": "React Native app development for UK founders — overlapping hours, GDPR-aware builds, and a fixed-price proposal within 48 hours of our first call.",
+  "canonical": "https://soniconsultancyservices.com/react-native-app-development-uk/",
+  "h1": "React Native development for UK founders.",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 4,
+  "jsonLd": [
+   "Service",
+   "BreadcrumbList",
+   "FAQPage",
+   "Organization"
+  ]
+ },
+ {
+  "path": "/react-native-app-development-usa/",
+  "title": "React Native App Development USA | Soni Consultancy Services",
+  "description": "React Native app development for US founders — follow-the-sun delivery, weekly demos, MERN backends, and a fixed-price proposal within 48 hours.",
+  "canonical": "https://soniconsultancyservices.com/react-native-app-development-usa/",
+  "h1": "React Native development for US founders.",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 4,
+  "jsonLd": [
+   "Service",
+   "BreadcrumbList",
+   "FAQPage",
+   "Organization"
+  ]
+ },
+ {
+  "path": "/react-native-app-development/",
+  "title": "Hire React Native Developers | Development Company",
+  "description": "Hire senior React Native developers for iOS & Android. Fixed pricing, no setup fees, apps live on both stores.",
+  "canonical": "https://soniconsultancyservices.com/react-native-app-development/",
+  "h1": "Hire expert React Native developers. Ship to both app stores.",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 4,
+  "jsonLd": [
+   "Service",
+   "BreadcrumbList",
+   "FAQPage",
+   "Organization"
+  ]
+ },
+ {
+  "path": "/retail-app-development/",
+  "title": "Retail App Development | Soni Consultancy Services",
+  "description": "Retail app development — store operations checklists, gamified staff training and head-office analytics. Our retail operations platform is live on both stores.",
+  "canonical": "https://soniconsultancyservices.com/retail-app-development/",
+  "h1": "Every store, run to one standard.",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 3,
+  "jsonLd": [
+   "Service",
+   "BreadcrumbList",
+   "FAQPage",
+   "Organization"
+  ]
+ },
+ {
+  "path": "/ride-hailing-app-development/",
+  "title": "Ride-Hailing App Development | Soni Consultancy Services",
+  "description": "Ride-hailing and taxi app development — rider and driver apps with real-time tracking, AI fare prediction and safety features.",
+  "canonical": "https://soniconsultancyservices.com/ride-hailing-app-development/",
+  "h1": "Ride-hailing apps riders trust.",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 3,
+  "jsonLd": [
+   "Service",
+   "BreadcrumbList",
+   "FAQPage",
+   "Organization"
+  ]
+ },
+ {
+  "path": "/services/",
+  "title": "App Development Services | Soni Consultancy Services",
+  "description": "React Native, MERN, AI integration, DevOps and developer hiring — mobile-first app development services from idea to App Store.",
+  "canonical": "https://soniconsultancyservices.com/services/",
+  "h1": "From idea to App Store — one senior team.",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 5,
+  "jsonLd": [
+   "Organization",
+   "Service",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/wordpress-website-development-india/",
+  "title": "WordPress Development India | Soni Consultancy Services",
+  "description": "Custom WordPress & WooCommerce websites for Indian businesses, built by senior engineers. Fixed price, fast turnaround. Get a free quote.",
+  "canonical": "https://soniconsultancyservices.com/wordpress-website-development-india/",
+  "h1": "A WordPress website that actually grows your business.",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 6,
+  "jsonLd": [
+   "Service",
+   "BreadcrumbList",
+   "FAQPage",
+   "Organization"
+  ]
+ },
+ {
+  "path": "/work/",
+  "title": "Case Studies: React Native Apps & Enterprise Platforms",
+  "description": "Real React Native and MERN products we shipped — HR, retail, ride-hailing, B2B and healthcare platforms, with the problem, approach and measured result.",
+  "canonical": "https://soniconsultancyservices.com/work/",
+  "h1": "Apps we've shipped, live on the stores.",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 6,
+  "jsonLd": [
+   "CollectionPage",
+   "Organization",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/ai-agent-development-services",
+  "title": "AI Agent Development Services in 2026",
+  "description": "What AI agents are in 2026, what they cost, where they deliver ROI — and when not to build one. A practical guide for founders and CTOs.",
+  "canonical": "https://soniconsultancyservices.com/blog/ai-agent-development-services",
+  "h1": "AI Agent Development Services in 2026",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/ai-app-development-cost-2026",
+  "title": "How Much Does It Cost to Build an AI App in 2026?",
+  "description": "A real pricing breakdown for building an AI app in 2026 — infrastructure, dev time, model costs and the hidden drivers of scope creep. No vague 'it depends'.",
+  "canonical": "https://soniconsultancyservices.com/blog/ai-app-development-cost-2026",
+  "h1": "How Much Does It Cost to Build an AI App in 2026?",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/ai-chatbot-app-react-native",
+  "title": "AI Chatbot App with React Native: Cost & Timeline",
+  "description": "What it takes to build an AI chatbot app in React Native — architecture, the four complexity tiers, realistic timelines and what really drives the cost.",
+  "canonical": "https://soniconsultancyservices.com/blog/ai-chatbot-app-react-native",
+  "h1": "Building an AI Chatbot App with React Native: Scope, Cost & Timeline",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/ai-react-native-app-development",
+  "title": "How to Build an AI-Powered React Native App (2026)",
+  "description": "A founder's guide to building AI into a React Native app in 2026 — on-device vs cloud, LLM integration, architecture, security, cost drivers and timeline.",
+  "canonical": "https://soniconsultancyservices.com/blog/ai-react-native-app-development",
+  "h1": "How to Build an AI-Powered React Native App in 2026",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/app-maintenance-cost",
+  "title": "What App Maintenance Really Costs After Launch (2026)",
+  "description": "What mobile app maintenance actually costs after launch in 2026 — the five buckets of ongoing work, the 15-20% rule of thumb, what drives the number up.",
+  "canonical": "https://soniconsultancyservices.com/blog/app-maintenance-cost",
+  "h1": "What App Maintenance Really Costs After Launch",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/app-monetization-models",
+  "title": "App Monetization Models 2026 — Interactive Revenue Explorer",
+  "description": "Subscription, freemium, ads or commission? Compare app monetization models in 2026 with an interactive revenue explorer",
+  "canonical": "https://soniconsultancyservices.com/blog/app-monetization-models",
+  "h1": "App Monetization Models in 2026: An Interactive Revenue Explorer",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/app-store-launch-checklist",
+  "title": "App Store & Google Play Launch: A 2026 Submission Checklist",
+  "description": "A practical 2026 checklist for launching on the App Store and Google Play — developer accounts, store listing and ASO, privacy labels, screenshots, common",
+  "canonical": "https://soniconsultancyservices.com/blog/app-store-launch-checklist",
+  "h1": "App Store & Google Play Launch: A 2026 Submission Checklist",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/aws-cloud-migration-guide",
+  "title": "AWS Cloud Migration: A Practical Guide for 2026",
+  "description": "A practical AWS cloud migration guide for 2026 — the 6 R's, lift-and-shift vs re-architecture, a migration roadmap, the Well-Architected pillars, FinOps.",
+  "canonical": "https://soniconsultancyservices.com/blog/aws-cloud-migration-guide",
+  "h1": "AWS Cloud Migration: A Practical Guide for 2026",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/bsa-aml-software-build-vs-buy",
+  "title": "BSA/AML Software: Build vs Buy in 2026",
+  "description": "BSA/AML software build vs buy in 2026 — what AML systems must do, when to buy, when to build, a decision framework, the architecture underneath.",
+  "canonical": "https://soniconsultancyservices.com/blog/bsa-aml-software-build-vs-buy",
+  "h1": "BSA/AML Software: Build vs Buy in 2026",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/build-vs-buy-ai-cto-framework",
+  "title": "Build vs Buy AI: A CTO's Decision Framework",
+  "description": "The most expensive AI mistake is building what you should have bought. A four-axis decision framework to help CTOs get build-vs-buy right the first time.",
+  "canonical": "https://soniconsultancyservices.com/blog/build-vs-buy-ai-cto-framework",
+  "h1": "Build vs Buy AI: A CTO's Decision Framework",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/can-ai-build-my-app",
+  "title": "Can AI Build My App? An Honest 2026 Answer for Founders",
+  "description": "AI writes real production code in 2026 — and still cannot ship your app alone. Answer 5 questions to see what AI can genuinely accelerate on your project.",
+  "canonical": "https://soniconsultancyservices.com/blog/can-ai-build-my-app",
+  "h1": "Can AI Build My App? An Honest 2026 Answer for Founders",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 5,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/ci-cd-react-native",
+  "title": "CI/CD for React Native Apps: A 2026 Setup Guide",
+  "description": "How to set up CI/CD for a React Native app in 2026 — the pipeline stages, Fastlane, EAS and GitHub Actions, code signing, automated store releases.",
+  "canonical": "https://soniconsultancyservices.com/blog/ci-cd-react-native",
+  "h1": "CI/CD for React Native Apps: A 2026 Setup Guide",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/dpdp-act-app-compliance-india",
+  "title": "DPDP Act for Apps: 2026 Deadlines & Readiness Check",
+  "description": "India's DPDP Act reaches full enforcement in May 2027, with Consent Manager registration closing in November 2026.",
+  "canonical": "https://soniconsultancyservices.com/blog/dpdp-act-app-compliance-india",
+  "h1": "India's DPDP Act for Apps (2026): Deadlines, Consent, and a Readiness Check",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 5,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/hire-react-native-developers",
+  "title": "How to Hire React Native Developers in 2026",
+  "description": "How to hire React Native developers in 2026 — in-house vs freelance vs agency, the skills to screen for, interview questions, red flags and what it really",
+  "canonical": "https://soniconsultancyservices.com/blog/hire-react-native-developers",
+  "h1": "How to Hire React Native Developers in 2026",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/how-long-to-build-an-app",
+  "title": "How Long Does It Take to Build a Mobile App in 2026?",
+  "description": "A realistic mobile app development timeline for 2026 — the phases, what drives the schedule, MVP vs full build, and why estimates slip.",
+  "canonical": "https://soniconsultancyservices.com/blog/how-long-to-build-an-app",
+  "h1": "How Long Does It Take to Build a Mobile App in 2026?",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/kotlin-multiplatform-vs-react-native",
+  "title": "Kotlin Multiplatform vs React Native (2026)",
+  "description": "Kotlin Multiplatform adoption has climbed fast, but React Native still owns the talent pool.",
+  "canonical": "https://soniconsultancyservices.com/blog/kotlin-multiplatform-vs-react-native",
+  "h1": "Kotlin Multiplatform vs React Native (2026): Which Should You Pick?",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 5,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/mobile-app-security-checklist",
+  "title": "Mobile App Security Checklist for 2026",
+  "description": "A practical mobile app security checklist for 2026. Score your app across 10 controls — transport security, token storage, API auth, secrets, dependencies",
+  "canonical": "https://soniconsultancyservices.com/blog/mobile-app-security-checklist",
+  "h1": "Mobile App Security Checklist 2026: Score Your App in 2 Minutes",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/mvp-tech-stack-2026",
+  "title": "How to Choose Your MVP Tech Stack in 2026",
+  "description": "Which tech stack should your MVP use in 2026? Answer 5 questions in our interactive stack picker and get a recommendation",
+  "canonical": "https://soniconsultancyservices.com/blog/mvp-tech-stack-2026",
+  "h1": "How to Choose Your MVP Tech Stack in 2026",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/mvp-to-product-market-fit",
+  "title": "From MVP to Product-Market Fit: What Changes After Launch",
+  "description": "The mistakes founders make in the first 90 days after launch — and how to structure your iteration loop to find product-market fit faster.",
+  "canonical": "https://soniconsultancyservices.com/blog/mvp-to-product-market-fit",
+  "h1": "From MVP to Product-Market Fit: What Changes After Launch",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/native-vs-cross-platform-2026",
+  "title": "Native vs Cross-Platform in 2026: Decision Tool",
+  "description": "Should you build native, React Native or Flutter in 2026? Use our interactive decision tool to get a recommendation for your app",
+  "canonical": "https://soniconsultancyservices.com/blog/native-vs-cross-platform-2026",
+  "h1": "Native vs Cross-Platform in 2026: An Interactive Decision Tool",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/nextjs-saas-architecture",
+  "title": "Next.js SaaS Architecture Patterns",
+  "description": "The opinionated Next.js SaaS patterns we use on every build — multi-tenancy, RBAC, the API layer, Stripe webhooks and observability.",
+  "canonical": "https://soniconsultancyservices.com/blog/nextjs-saas-architecture",
+  "h1": "Next.js SaaS Architecture: The Patterns We Use on Every Project",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/on-device-ai-react-native",
+  "title": "On-Device AI in React Native (Offline & Private)",
+  "description": "Run AI models on-device in React Native with ExecuTorch and react-native-ai — full privacy, offline support and no per-call API cost. When it's worth it.",
+  "canonical": "https://soniconsultancyservices.com/blog/on-device-ai-react-native",
+  "h1": "On-Device AI in React Native: Private, Offline, $0 per Call",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/rbi-fintech-app-compliance-india",
+  "title": "RBI Compliance for Fintech Apps in India (2026)",
+  "description": "RBI's AFA mandate and digital lending rules reach full compliance in 2026. A practical checklist for fintech app founders — deadlines, requirements, and gaps.",
+  "canonical": "https://soniconsultancyservices.com/blog/rbi-fintech-app-compliance-india",
+  "h1": "RBI Compliance for Fintech Apps in India (2026): Deadlines and a Readiness Check",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 5,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/react-native-app-development-cost",
+  "title": "React Native App Development Cost in 2026",
+  "description": "How much does a React Native app cost in 2026? A transparent breakdown by complexity, the factors that move the price, hidden costs, and how to budget.",
+  "canonical": "https://soniconsultancyservices.com/blog/react-native-app-development-cost",
+  "h1": "React Native App Development Cost in 2026",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/react-native-chatgpt-integration",
+  "title": "Integrate ChatGPT & LLMs into a React Native App",
+  "description": "How to add ChatGPT or any LLM to a React Native app the right way — backend proxy vs direct calls, streaming responses, API-key security and cost control.",
+  "canonical": "https://soniconsultancyservices.com/blog/react-native-chatgpt-integration",
+  "h1": "Integrating ChatGPT & LLMs into a React Native App",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/react-native-new-architecture-2026",
+  "title": "React Native New Architecture: 2026 Migration Guide",
+  "description": "React Native 0.82 permanently disabled the old bridge. A practical migration guide for 2026 — what changed, what it costs, and an urgency check for your app.",
+  "canonical": "https://soniconsultancyservices.com/blog/react-native-new-architecture-2026",
+  "h1": "React Native's New Architecture in 2026: What Changed and How to Migrate",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 5,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/react-native-push-notifications",
+  "title": "React Native Push Notifications: 2026 Setup Guide",
+  "description": "Firebase, OneSignal or Notifee for React Native push notifications in 2026? Real pricing, setup complexity, and a live cost comparator for your user count.",
+  "canonical": "https://soniconsultancyservices.com/blog/react-native-push-notifications",
+  "h1": "React Native Push Notifications: Firebase, OneSignal or Notifee in 2026",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/react-native-vs-flutter-2026",
+  "title": "React Native vs Flutter in 2026",
+  "description": "An honest React Native vs Flutter comparison from a studio that ships both — performance, ecosystem, hiring and long-term maintenance.",
+  "canonical": "https://soniconsultancyservices.com/blog/react-native-vs-flutter-2026",
+  "h1": "React Native vs Flutter in 2026: Which Should You Choose?",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/super-app-development",
+  "title": "Super Apps & Mini Apps in 2026: Worth Building?",
+  "description": "Super apps dominate in Asia and keep tempting Western product teams. Answer 5 questions to see whether a mini-app platform fits your product",
+  "canonical": "https://soniconsultancyservices.com/blog/super-app-development",
+  "h1": "Super Apps and Mini Apps in 2026: Should Your Product Become a Platform?",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 5,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/validate-app-idea-before-building",
+  "title": "How to Validate Your App Idea Before You Build It (2026)",
+  "description": "How to validate an app idea in 2026 before spending on development — sharpening the problem, talking to real users, testing demand, prototyping, and the one",
+  "canonical": "https://soniconsultancyservices.com/blog/validate-app-idea-before-building",
+  "h1": "How to Validate Your App Idea Before You Build It",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/woocommerce-payment-gateway-india",
+  "title": "Razorpay vs PayU vs Cashfree | Soni Consultancy Services",
+  "description": "Razorpay, PayU or Cashfree for your WooCommerce store? 2026 fees, plugin status, UPI and settlement speed compared — with a live fee calculator.",
+  "canonical": "https://soniconsultancyservices.com/blog/woocommerce-payment-gateway-india",
+  "h1": "Razorpay vs PayU vs Cashfree: Best WooCommerce Payment Gateway for India (2026)",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/wordpress-seo-speed-checklist",
+  "title": "WordPress SEO & Speed Checklist | Soni Consultancy Services",
+  "description": "Score your WordPress site across 10 speed and SEO controls — hosting, caching, Core Web Vitals, schema, redirects — and see exactly what to fix first.",
+  "canonical": "https://soniconsultancyservices.com/blog/wordpress-seo-speed-checklist",
+  "h1": "WordPress Speed & SEO Checklist 2026: Score Your Site in 2 Minutes",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/wordpress-vs-custom-website",
+  "title": "WordPress vs Custom Website 2026 | Soni Consultancy Services",
+  "description": "WordPress or a custom-built website? Answer 5 questions in our interactive tool and get an honest recommendation — from a team that builds both.",
+  "canonical": "https://soniconsultancyservices.com/blog/wordpress-vs-custom-website",
+  "h1": "WordPress vs Custom Website in 2026: Which Should You Build?",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/blog/wordpress-website-cost-india",
+  "title": "WordPress Cost India 2026 | Soni Consultancy Services",
+  "description": "How much does a WordPress website cost in India in 2026? Real market pricing by project type, plus a free interactive calculator to estimate your own.",
+  "canonical": "https://soniconsultancyservices.com/blog/wordpress-website-cost-india",
+  "h1": "WordPress Website Cost in India (2026): Real Numbers + Free Calculator",
+  "robots": "index,follow,max-image-preview:large",
+  "faqCount": 0,
+  "jsonLd": [
+   "BlogPosting",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ },
+ {
+  "path": "/privacy/",
+  "title": "Privacy Policy | Soni Consultancy Services",
+  "description": "How Soni Consultancy Services collects, uses and protects your personal data, in line with UK GDPR and the Data Protection Act 2018.",
+  "canonical": "https://soniconsultancyservices.com/privacy/",
+  "h1": "Privacy Policy",
+  "robots": "index,follow",
+  "faqCount": 0,
+  "jsonLd": [
+   "Organization",
+   "BreadcrumbList"
+  ]
+ }
+]

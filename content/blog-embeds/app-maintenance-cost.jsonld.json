@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What App Maintenance Really Costs After Launch (2026)",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-06-17",
+  "dateModified": "2026-06-17",
+  "articleSection": "Strategy",
+  "description": "What mobile app maintenance actually costs after launch in 2026 — the five buckets of ongoing work, the 15-20% rule of thumb, what drives the number up or down, and how build-time decisions keep it low."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "What App Maintenance Really Costs After Launch (2026)",
+    "item": "https://soniconsultancyservices.com/blog/app-maintenance-cost"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "How much does it cost to maintain an app per year?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "A common rule of thumb is roughly 15-20% of the original build cost per year, covering bug fixes, OS and library updates, infrastructure and small improvements. The figure rises with complexity, integrations and active iteration, and falls for a simple, stable app. The most reliable way to estimate yours is to scope it against your actual feature set."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Why does an app need ongoing maintenance?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Because the ground keeps moving. iOS and Android release yearly updates that can break apps, libraries and SDKs get security patches and deprecations, third-party APIs change, devices change, and your users ask for more. An app left untouched degrades and is eventually removed from the stores for being out of date."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What's included in app maintenance?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Five things: corrective work (bug and crash fixes), adaptive work (keeping up with OS, library and API changes), perfective work (small improvements and UX polish), infrastructure (hosting, databases, monitoring and third-party fees), and iteration (the new features that drive growth). The first four keep the app alive; the fifth makes it succeed."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How can I reduce app maintenance costs?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Most of it is decided at build time: a clean codebase, automated tests and CI/CD, a single React Native codebase instead of two native ones, mainstream well-supported libraries, and good monitoring. These reduce the time every future fix and update takes — which is what maintenance cost actually is."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Do you offer ongoing app maintenance and support?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. We maintain and evolve the apps we build — updates, fixes, infrastructure and iteration on a predictable basis. Use our app cost calculator to estimate the build, then book a call to talk through an ongoing plan."
+    }
+   }
+  ]
+ }
+]

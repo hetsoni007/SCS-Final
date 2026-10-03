@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Super Apps and Mini Apps in 2026: Should Your Product Become a Platform?",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-09-03",
+  "dateModified": "2026-09-03",
+  "articleSection": "Mobile",
+  "description": "Super apps dominate in Asia and keep tempting Western product teams. Answer 5 questions to see whether a mini-app platform fits your product — or would quietly break it."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Super Apps and Mini Apps in 2026: Should Your Product Become a Platform?",
+    "item": "https://soniconsultancyservices.com/blog/super-app-development"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "What is the difference between a super app and a regular app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "A regular app does one thing. A super app hosts many services — often built by third parties as mini apps — behind one identity, one payment method and one download. The host provides distribution and infrastructure; the mini apps provide the services."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Do I need millions of users before a super app makes sense?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Scale matters less than habit. The precondition is that people already open your app without being prompted, because that habit is what makes a second service cheaper to distribute inside your app than as its own download. A smaller, genuinely habitual audience beats a larger, occasional one."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Will Apple and Google allow a super app on their stores?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes — plenty exist on both. But both platforms have specific positions on apps hosting other apps and on how payments flow through them, so the model needs to be designed with those rules in mind rather than discovered during review."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What is the most common way super app strategies fail?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Launching one when the host app is not habitually used. Adding services does not create engagement that was not already there, so teams end up with a larger, slower app, more code to maintain, and the same traffic they started with."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Is there a cheaper way to test the idea first?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes, and most teams should. Add two or three adjacent services that you build and own natively inside your existing app. You get most of the distribution benefit without the SDK, sandboxing and governance burden, and you find out whether users actually want more from you before committing to a platform."
+    }
+   }
+  ]
+ }
+]

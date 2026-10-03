@@ -1,0 +1,718 @@
+{
+ "slug": "react-native-app-development",
+ "path": "/react-native-app-development/",
+ "meta": {
+  "title": "Hire React Native Developers | Development Company",
+  "description": "Hire senior React Native developers for iOS & Android. Fixed pricing, no setup fees, apps live on both stores.",
+  "robots": "index,follow,max-image-preview:large",
+  "canonical": "https://soniconsultancyservices.com/react-native-app-development/",
+  "ogTitle": "React Native App Development | Soni Consultancy Services",
+  "ogDescription": "React Native app development for iOS and Android from one codebase — four apps live on the App Store and Google Play. Fixed-price proposals within 48 hours.",
+  "ogType": "website"
+ },
+ "h1": "Hire expert React Native developers. Ship to both app stores.",
+ "breadcrumb": "Home › React Native Development",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Service",
+   "name": "React Native App Development",
+   "serviceType": "Mobile app development",
+   "provider": {
+    "@type": "Organization",
+    "name": "Soni Consultancy Services",
+    "url": "https://soniconsultancyservices.com"
+   },
+   "areaServed": "Worldwide",
+   "description": "Cross-platform iOS and Android apps built in React Native with MERN backends and AI integration, live on the App Store and Google Play.",
+   "url": "https://soniconsultancyservices.com/react-native-app-development/"
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://soniconsultancyservices.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "React Native Development",
+     "item": "https://soniconsultancyservices.com/react-native-app-development/"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How much does a React Native app cost?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A focused MVP typically starts in the low five figures (USD); full products scale with feature depth. Get an instant range with our app cost calculator, then a fixed-price proposal within 48 hours of a call."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How long does a React Native app take to build?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Most MVPs land in 6–12 weeks. The four products in our portfolio took 16–32 weeks each to reach full market release on both stores."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is React Native better than Flutter or going fully native?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "For most products, yes — one codebase, native performance, the largest ecosystem and over-the-air updates. We compare the options honestly in our React Native vs Flutter guide."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Who actually builds my app?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Het Soni and senior engineers — no handoffs to juniors and no account managers between you and the people writing the code."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "logo": "https://soniconsultancyservices.com/favicon.svg",
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://www.instagram.com/soni.consultancyservices/",
+    "https://www.facebook.com/soniconsultancyservices",
+    "https://medium.com/@hetsoni9398"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "cls": "page-hero",
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "React Native · Cross-platform"
+    },
+    {
+     "t": "h",
+     "level": 1,
+     "html": "Hire expert React Native developers.<br>Ship to both app stores.",
+     "cls": "h1"
+    },
+    {
+     "t": "p",
+     "html": "Hire senior React Native developers (5+ years) to build your iOS and Android app. Fixed pricing, no upfront fees, 8-week timeline. We've shipped 4 production apps to both stores. Direct access to Het and the team—no middlemen.",
+     "cls": "lead"
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Get Free App Scoping (15 min) →",
+       "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+       "variant": "primary"
+      },
+      {
+       "label": "Download Free Guide",
+       "href": "/app-scoping-guide/",
+       "variant": "glass"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "What we build"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Built for how it's<br>actually used.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "feat-grid",
+     "items": [
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Cross-platform by default"
+        },
+        {
+         "t": "p",
+         "html": "One React Native codebase compiles to native iOS and Android, so you ship to both stores without paying for two teams."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Native performance"
+        },
+        {
+         "t": "p",
+         "html": "We build on <a href=\"/blog/react-native-new-architecture-2026\">React Native's New Architecture</a>, 60fps animation and native modules where it matters. Users can't tell it isn't Swift or Kotlin — and don't care."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "MERN backends"
+        },
+        {
+         "t": "p",
+         "html": "Node.js APIs, MongoDB, real-time data and AWS infrastructure, built by the same team that builds your app."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "AI where it earns its place"
+        },
+        {
+         "t": "p",
+         "html": "Claude and GPT integration, retrieval and agents — see our <a href=\"/ai-app-development/\">AI app development services</a>."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Store submission handled"
+        },
+        {
+         "t": "p",
+         "html": "Review-ready builds, listings, screenshots and the back-and-forth with Apple and Google — included."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Support after launch"
+        },
+        {
+         "t": "p",
+         "html": "Monitoring, updates and iteration sprints, with direct access to the engineers who built your app. Need ongoing capacity instead of a fixed project? You can <a href=\"/hire/\">hire a dedicated React Native team</a>."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Proof"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Four React Native apps, live on the stores",
+     "cls": "h2"
+    },
+    {
+     "t": "p",
+     "html": "Every case study below is a real product you can download today.",
+     "cls": "lead"
+    },
+    {
+     "t": "grid",
+     "cls": "case-strip",
+     "items": [
+      {
+       "cls": "glass case-card",
+       "href": "/work/#hr-payroll",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "HR &amp; Payroll",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "HR &amp; payroll — 40% faster payroll processing",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      },
+      {
+       "cls": "glass case-card",
+       "href": "/work/#creator-marketplace",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Creator Marketplace",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Creator marketplace — +35% downloads",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      },
+      {
+       "cls": "glass case-card",
+       "href": "/work/#retail-ops",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Retail Ops",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Retail SaaS — multi-store operations standardised",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      },
+      {
+       "cls": "glass case-card",
+       "href": "/work/#ride-hailing",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Ride-Hailing",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Ride-hailing — ~3 minute average booking",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Process"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Idea to app store,<br>without the drama.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "proc-grid",
+     "items": [
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "01",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Scope call"
+        },
+        {
+         "t": "p",
+         "html": "30 minutes on your goals, users and constraints — with an honest read on feasibility."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "02",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Fixed-price proposal"
+        },
+        {
+         "t": "p",
+         "html": "Scope, timeline and a fixed price within 48 hours. No vague day-rates."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "03",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Build"
+        },
+        {
+         "t": "p",
+         "html": "Weekly demo builds you can hold in your hand from the first sprint."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "04",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Launch &amp; support"
+        },
+        {
+         "t": "p",
+         "html": "Store submission handled, then monitoring and iteration after launch."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Where we work"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Founders we build for, by region.",
+     "cls": "h2"
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "React Native development — UK",
+       "href": "/react-native-app-development-uk/",
+       "variant": "glass"
+      },
+      {
+       "label": "React Native development — Dubai",
+       "href": "/react-native-app-development-dubai/",
+       "variant": "glass"
+      },
+      {
+       "label": "React Native development — USA",
+       "href": "/react-native-app-development-usa/",
+       "variant": "glass"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Free guides & tools"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Free tools for your decision.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "g4",
+     "items": [
+      {
+       "cls": "glass",
+       "href": "/blog/native-vs-cross-platform-2026",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Decision tool"
+        },
+        {
+         "t": "text",
+         "html": "Native, React Native or Flutter?"
+        },
+        {
+         "t": "text",
+         "html": "Get a recommendation →"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/blog/kotlin-multiplatform-vs-react-native",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Decision tool"
+        },
+        {
+         "t": "text",
+         "html": "Kotlin Multiplatform or React Native?"
+        },
+        {
+         "t": "text",
+         "html": "Get a recommendation →"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/blog/react-native-new-architecture-2026",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Migration check"
+        },
+        {
+         "t": "text",
+         "html": "Is your app on borrowed time?"
+        },
+        {
+         "t": "text",
+         "html": "Check urgency →"
+        }
+       ]
+      },
+      {
+       "cls": "glass",
+       "href": "/blog/mobile-app-security-checklist",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Self-audit"
+        },
+        {
+         "t": "text",
+         "html": "Score your app’s security"
+        },
+        {
+         "t": "text",
+         "html": "Run the audit →"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "FAQ"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Common questions.",
+     "cls": "h2"
+    },
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "How much does a React Native app cost?",
+       "a": "A focused MVP typically starts in the low five figures (USD); full products scale with feature depth. Get an instant range with our <a href=\"/app-cost-calculator/\">app cost calculator</a>, then a fixed-price proposal within 48 hours of a call."
+      },
+      {
+       "q": "How long does a React Native app take to build?",
+       "a": "Most MVPs land in 6–12 weeks. The four products in our portfolio took 16–32 weeks each to reach full market release on both stores."
+      },
+      {
+       "q": "Is React Native better than Flutter or going fully native?",
+       "a": "For most products, yes — one codebase, native performance, the largest ecosystem and over-the-air updates. We compare the options honestly in our <a href=\"/blog/react-native-vs-flutter-2026\">React Native vs Flutter guide</a>."
+      },
+      {
+       "q": "Who actually builds my app?",
+       "a": "Het Soni and senior engineers — no handoffs to juniors and no account managers between you and the people writing the code."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "form",
+     "id": "leadForm",
+     "fields": [
+      {
+       "name": "lbName",
+       "id": "lbName",
+       "type": "text",
+       "label": "Your name",
+       "placeholder": "Jane Doe",
+       "required": false
+      },
+      {
+       "name": "lbEmail",
+       "id": "lbEmail",
+       "type": "email",
+       "label": "Work email",
+       "placeholder": "jane@company.com",
+       "required": false
+      },
+      {
+       "name": "lbWant",
+       "id": "lbWant",
+       "type": "text",
+       "label": "What are you building?",
+       "placeholder": "One line is plenty — e.g. a patient booking app for 3 clinics",
+       "required": false
+      },
+      {
+       "name": "lbBudget",
+       "id": "lbBudget",
+       "type": "select",
+       "label": "Budget",
+       "required": false,
+       "options": [
+        "Select a range",
+        "Not sure yet",
+        "<$10k",
+        "$10-25k",
+        "$25-60k",
+        "$60k+"
+       ]
+      },
+      {
+       "name": "lbTime",
+       "id": "lbTime",
+       "type": "select",
+       "label": "Timeline",
+       "required": false,
+       "options": [
+        "Select a timeline",
+        "ASAP",
+        "1-3 months",
+        "3-6 months",
+        "Just exploring"
+       ]
+      },
+      {
+       "type": "checkbox",
+       "label": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+       "required": false
+      }
+     ],
+     "submit": "Send →",
+     "kick": "Start here",
+     "title": "Get a fixed-price estimate.",
+     "sub": "One short form. A scoped, fixed price within 48 hours — no hourly guesswork, no upfront fee to talk.",
+     "note": "Replies within one business day · no upfront fee to talk",
+     "consent": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+     "success": "✓ Thanks — that’s with Het. You’ll get a reply within one business day, usually with either a straight answer or the two or three questions needed to scope it properly."
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Get a fixed price for your React Native app.",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "30-minute scoping call with Het → fixed-price proposal within 48 hours → senior developers start in 2 days. No setup fees. NDA on request.",
+       "cls": "lead"
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Get Free App Scoping (15 min) →",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "primary"
+        },
+        {
+         "label": "Download Free Guide",
+         "href": "/app-scoping-guide/",
+         "variant": "glass"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

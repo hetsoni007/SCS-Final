@@ -1,0 +1,71 @@
+{
+ "tiers": [
+  [
+   {
+    "label": "Users · Web · Mobile",
+    "k": "Clients",
+    "t": "Users & devices",
+    "d": "Web, mobile (React Native) and API clients hit your platform from anywhere. Everything downstream is designed to keep their experience fast and available."
+   }
+  ],
+  [
+   {
+    "label": "CDN · WAF",
+    "small": "CloudFront / Front Door",
+    "k": "Edge",
+    "t": "Edge, CDN & WAF",
+    "d": "A CDN (CloudFront / Azure Front Door) caches content close to users and a Web Application Firewall blocks malicious traffic before it ever reaches your servers. Faster pages, smaller attack surface."
+   }
+  ],
+  [
+   {
+    "label": "Load balancer · API gateway",
+    "k": "Routing",
+    "t": "Load balancing & API gateway",
+    "d": "Traffic is spread across healthy instances and routed by an API gateway. Unhealthy nodes are removed automatically, so a single failure never takes the system down."
+   }
+  ],
+  [
+   {
+    "label": "Kubernetes pods",
+    "small": "EKS / AKS · autoscaling",
+    "k": "Compute",
+    "t": "Kubernetes app tier",
+    "d": "Your services run as containers on Kubernetes (EKS/AKS). Pods autoscale with demand, roll out with zero downtime, and self-heal when a container dies. You pay for what you actually use."
+   }
+  ],
+  [
+   {
+    "label": "Managed DB",
+    "k": "Data",
+    "t": "Managed database",
+    "d": "Managed databases (RDS / Azure SQL / MongoDB Atlas) with automated backups, failover replicas and point-in-time recovery — durability without the babysitting."
+   },
+   {
+    "label": "Cache · Queue",
+    "k": "Data",
+    "t": "Cache & queue",
+    "d": "A cache (Redis) absorbs read load and a message queue (Kafka / SQS) decouples services so spikes are smoothed out instead of cascading into outages."
+   }
+  ],
+  [
+   {
+    "label": "CI/CD · Terraform IaC",
+    "k": "Delivery",
+    "t": "CI/CD & IaC",
+    "d": "Every commit flows through an automated pipeline (build → test → scan → deploy) and all infrastructure is defined as code in Terraform — so environments are reproducible and releases are boring, in the best way."
+   },
+   {
+    "label": "Observability · SRE",
+    "k": "Ops",
+    "t": "Observability",
+    "d": "Metrics, logs and traces feed dashboards and alerts (Prometheus / Grafana / CloudWatch). SLOs and error budgets tell you when to ship and when to slow down."
+   }
+  ]
+ ],
+ "cap": {
+  "k": "Reference architecture",
+  "t": "Tap any layer above",
+  "d": "Each box is a layer of a resilient, scalable cloud platform. Select one to see what it does and why it earns its place — from the edge all the way down to your data and the pipelines that keep it shipping."
+ }
+}

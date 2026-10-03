@@ -1,0 +1,592 @@
+{
+ "slug": "react-native-app-development-dubai",
+ "path": "/react-native-app-development-dubai/",
+ "meta": {
+  "title": "React Native App Development Dubai & UAE",
+  "description": "React Native app development for Dubai & UAE founders — near-zero time-zone gap, MERN backends, and a fixed-price proposal within 48 hours.",
+  "robots": "index,follow,max-image-preview:large",
+  "canonical": "https://soniconsultancyservices.com/react-native-app-development-dubai/",
+  "ogTitle": "React Native App Development Dubai & UAE",
+  "ogDescription": "React Native app development for Dubai & UAE founders — near-zero time zone gap, MERN backends, AI built in, fixed-price proposals within 48 hours.",
+  "ogType": "website"
+ },
+ "h1": "React Native development for Dubai founders.",
+ "breadcrumb": "Home › React Native Development › Dubai",
+ "jsonLd": [
+  {
+   "@context": "https://schema.org",
+   "@type": "Service",
+   "name": "React Native App Development Dubai",
+   "serviceType": "Mobile app development",
+   "provider": {
+    "@type": "Organization",
+    "name": "Soni Consultancy Services",
+    "url": "https://soniconsultancyservices.com"
+   },
+   "areaServed": "United Arab Emirates",
+   "description": "Cross-platform iOS and Android apps built in React Native with MERN backends and AI integration, for Dubai and wider UAE founders and teams.",
+   "url": "https://soniconsultancyservices.com/react-native-app-development-dubai/"
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://soniconsultancyservices.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "React Native Development Dubai",
+     "item": "https://soniconsultancyservices.com/react-native-app-development-dubai/"
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What time zone overlap do you have with Dubai?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Almost none — India is roughly an hour and a half ahead of UAE time, so our full working day overlaps with yours. Calls, demos and reviews happen live."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can you build apps for fintech or regulated UAE businesses?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes — we've built BSA/AML and sanctions-screening platforms for financial institutions, and apply the same compliance-first approach to regulated builds in the UAE."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How much does a React Native app cost for a Dubai-based founder?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pricing isn't region-specific — it's driven by scope and complexity. Get an instant range with our app cost calculator, then a fixed-price proposal within 48 hours of a call."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Who actually builds my app?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Het Soni and senior engineers — no handoffs to juniors and no account managers between you and the people writing the code."
+     }
+    }
+   ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "Organization",
+   "name": "Soni Consultancy Services",
+   "url": "https://soniconsultancyservices.com",
+   "logo": "https://soniconsultancyservices.com/favicon.svg",
+   "sameAs": [
+    "https://www.linkedin.com/in/hetsoni/",
+    "https://www.instagram.com/soni.consultancyservices/",
+    "https://www.facebook.com/soniconsultancyservices",
+    "https://medium.com/@hetsoni9398"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "cls": "page-hero",
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "React Native · Dubai & UAE"
+    },
+    {
+     "t": "h",
+     "level": 1,
+     "html": "React Native development<br>for Dubai founders.",
+     "cls": "h1"
+    },
+    {
+     "t": "p",
+     "html": "One codebase, both app stores, and a working day that's almost exactly your working day — India sits barely 90 minutes ahead of UAE time. MERN backends and AI built in where it earns its place.",
+     "cls": "lead"
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Book a Free Call →",
+       "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+       "variant": "primary"
+      },
+      {
+       "label": "Estimate your app cost",
+       "href": "/app-cost-calculator/",
+       "variant": "glass"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Why Dubai teams work with us"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Built for how it's<br>actually used.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "feat-grid",
+     "items": [
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Same working day"
+        },
+        {
+         "t": "p",
+         "html": "Roughly a 90-minute offset from UAE time means our full working day overlaps with yours — live calls and reviews, not an overnight wait."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Compliance-aware builds"
+        },
+        {
+         "t": "p",
+         "html": "We've built BSA/AML and sanctions-screening platforms for regulated financial institutions — see our <a href=\"/fintech-app-development/\">fintech work</a>."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Cross-platform by default"
+        },
+        {
+         "t": "p",
+         "html": "One React Native codebase compiles to native iOS and Android, so you ship to both stores without paying for two teams."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "MERN backends"
+        },
+        {
+         "t": "p",
+         "html": "Node.js APIs, MongoDB, real-time data and AWS infrastructure, built by the same team that builds your app."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "AI where it earns its place"
+        },
+        {
+         "t": "p",
+         "html": "Claude and GPT integration, retrieval and agents — see our <a href=\"/ai-app-development/\">AI app development services</a>."
+        }
+       ]
+      },
+      {
+       "cls": "glass feat",
+       "blocks": [
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Fixed-price proposals"
+        },
+        {
+         "t": "p",
+         "html": "A scoped, fixed price within 48 hours of a call — no open-ended day-rate billing."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Proof"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Four React Native apps, live on the stores",
+     "cls": "h2"
+    },
+    {
+     "t": "p",
+     "html": "Every case study below is a real product you can download today.",
+     "cls": "lead"
+    },
+    {
+     "t": "grid",
+     "cls": "case-strip",
+     "items": [
+      {
+       "cls": "glass case-card",
+       "href": "/work/#hr-payroll",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "HR &amp; Payroll",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "HR &amp; payroll — 40% faster payroll processing",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      },
+      {
+       "cls": "glass case-card",
+       "href": "/work/#creator-marketplace",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Creator Marketplace",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Creator marketplace — +35% downloads",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      },
+      {
+       "cls": "glass case-card",
+       "href": "/work/#retail-ops",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Retail Ops",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Retail SaaS — multi-store operations standardised",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      },
+      {
+       "cls": "glass case-card",
+       "href": "/work/#ride-hailing",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Ride-Hailing",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Ride-hailing — ~3 minute average booking",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "Process"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Idea to app store,<br>without the drama.",
+     "cls": "h2"
+    },
+    {
+     "t": "grid",
+     "cls": "proc-grid",
+     "items": [
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "01",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Scope call"
+        },
+        {
+         "t": "p",
+         "html": "30 minutes on your goals, users and constraints — with an honest read on feasibility."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "02",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Fixed-price proposal"
+        },
+        {
+         "t": "p",
+         "html": "Scope, timeline and a fixed price within 48 hours. No vague day-rates."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "03",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Build"
+        },
+        {
+         "t": "p",
+         "html": "Weekly demo builds you can hold in your hand from the first sprint."
+        }
+       ]
+      },
+      {
+       "cls": "glass proc",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "04",
+         "cls": "n"
+        },
+        {
+         "t": "h",
+         "level": 3,
+         "html": "Launch &amp; support"
+        },
+        {
+         "t": "p",
+         "html": "Store submission handled, then monitoring and iteration after launch."
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "FAQ"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Common questions.",
+     "cls": "h2"
+    },
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What time zone overlap do you have with Dubai?",
+       "a": "Almost none — India is roughly an hour and a half ahead of UAE time, so our full working day overlaps with yours. Calls, demos and reviews happen live."
+      },
+      {
+       "q": "Can you build apps for fintech or regulated UAE businesses?",
+       "a": "Yes — we've built BSA/AML and sanctions-screening platforms for financial institutions, and apply the same compliance-first approach to regulated builds in the UAE."
+      },
+      {
+       "q": "How much does a React Native app cost for a Dubai-based founder?",
+       "a": "Pricing isn't region-specific — it's driven by scope and complexity. Get an instant range with our <a href=\"/app-cost-calculator/\">app cost calculator</a>, then a fixed-price proposal within 48 hours of a call."
+      },
+      {
+       "q": "Who actually builds my app?",
+       "a": "Het Soni and senior engineers — no handoffs to juniors and no account managers between you and the people writing the code."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "form",
+     "id": "leadForm",
+     "fields": [
+      {
+       "name": "lbName",
+       "id": "lbName",
+       "type": "text",
+       "label": "Your name",
+       "placeholder": "Jane Doe",
+       "required": false
+      },
+      {
+       "name": "lbEmail",
+       "id": "lbEmail",
+       "type": "email",
+       "label": "Work email",
+       "placeholder": "jane@company.com",
+       "required": false
+      },
+      {
+       "name": "lbWant",
+       "id": "lbWant",
+       "type": "text",
+       "label": "What are you building?",
+       "placeholder": "One line is plenty — e.g. a patient booking app for 3 clinics",
+       "required": false
+      },
+      {
+       "name": "lbBudget",
+       "id": "lbBudget",
+       "type": "select",
+       "label": "Budget",
+       "required": false,
+       "options": [
+        "Select a range",
+        "Not sure yet",
+        "<$10k",
+        "$10-25k",
+        "$25-60k",
+        "$60k+"
+       ]
+      },
+      {
+       "name": "lbTime",
+       "id": "lbTime",
+       "type": "select",
+       "label": "Timeline",
+       "required": false,
+       "options": [
+        "Select a timeline",
+        "ASAP",
+        "1-3 months",
+        "3-6 months",
+        "Just exploring"
+       ]
+      },
+      {
+       "type": "checkbox",
+       "label": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+       "required": false
+      }
+     ],
+     "submit": "Send →",
+     "kick": "Start here",
+     "title": "Building from the UAE?",
+     "sub": "Near-identical time zone, on-site visits when a project needs them, and a fixed price within 48 hours.",
+     "note": "Replies within one business day · no upfront fee to talk",
+     "consent": "I agree to Soni Consultancy Services storing these details to reply to my enquiry. No newsletter, no sharing with anyone else. Privacy.",
+     "success": "✓ Thanks — that’s with Het. You’ll get a reply within one business day, usually with either a straight answer or the two or three questions needed to scope it properly."
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "panel",
+     "cls": "glass",
+     "blocks": [
+      {
+       "t": "h",
+       "level": 2,
+       "html": "Get a fixed price<br>for your app.",
+       "cls": "h2"
+      },
+      {
+       "t": "p",
+       "html": "A 30-minute call, then a fixed-price proposal within 48 hours. NDA on request.",
+       "cls": "lead"
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Book a Free Call →",
+         "href": "https://calendly.com/het-soni-soniconsultancyservices/introductory",
+         "variant": "primary"
+        },
+        {
+         "label": "See our work",
+         "href": "/work/",
+         "variant": "glass"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

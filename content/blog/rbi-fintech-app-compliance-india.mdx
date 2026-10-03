@@ -1,0 +1,104 @@
+---
+slug: "rbi-fintech-app-compliance-india"
+title: "RBI Compliance for Fintech Apps in India (2026): Deadlines and a Readiness Check"
+metaTitle: "RBI Compliance for Fintech Apps in India (2026)"
+description: "RBI's AFA mandate and digital lending rules reach full compliance in 2026. A practical checklist for fintech app founders — deadlines, requirements, and gaps."
+keywords: "RBI compliance fintech app, RBI fintech app india, digital lending guidelines app, payment aggregator license india, fintech app compliance checklist"
+canonical: "https://soniconsultancyservices.com/blog/rbi-fintech-app-compliance-india"
+ogTitle: "RBI Compliance for Fintech Apps in India (2026)"
+ogDescription: "RBI's AFA mandate and digital lending rules reach full compliance in 2026. Score your fintech app against 10 real requirements."
+categories: ["Strategy","FinTech","Interactive"]
+lead: "RBI's Additional Factor of Authentication mandate took effect 1 April 2026. Digital lending platforms face an operational compliance deadline of 30 June 2026. If your app moves money or lends it in India, both apply to you regardless of your funding stage. Score your readiness against 10 real requirements below."
+author: "Het Soni"
+readTime: "9 min read"
+dateLabel: "September 2026"
+datePublished: "2026-09-06"
+dateModified: "2026-09-06"
+excerpt: "AFA and digital lending rules are live in 2026. Score your app against 10 requirements."
+indexOrder: 2
+indexFilter: "strategy mobile"
+cta: {"heading":"Building a fintech app in India?","body":"We handle the technical side — data localisation, auth flows, audit logging, aggregator integration. A 30-minute scoping call, then a fixed-price proposal within 48 hours.","buttons":[{"label":"Book a free scoping call →","href":"https://calendly.com/het-soni-soniconsultancyservices/introductory"},{"label":"See our FinTech work","href":"/fintech-app-development/"}]}
+related: ["bsa-aml-software-build-vs-buy","dpdp-act-app-compliance-india","woocommerce-payment-gateway-india"]
+hasWidget: true
+---
+
+<Callout>
+
+**Not legal advice.** This is an engineering-side readiness guide written by an app development studio, not a law firm or compliance consultancy. RBI's rules carry real legal and licensing complexity. Use this to understand what your product and infrastructure need to support, then take the specifics — especially licensing — to a qualified fintech compliance lawyer.
+
+</Callout>
+
+Two deadlines define 2026 for fintech apps in India. RBI's Additional Factor of Authentication (AFA) mandate and its paired fraud compensation framework took effect on 1 April 2026, applying broadly across digital payment flows. Digital lending platforms separately face a 30 June 2026 deadline to reach operational compliance with RBI's Digital Lending Guidelines. Neither has a revenue threshold or a "we're pre-seed" exemption — the obligations attach to what your app does, not how big your company is.
+
+## Score your app
+
+Tick what's genuinely in place today. The score updates live.
+
+<Widget post="rbi-fintech-app-compliance-india" />
+
+## The two deadlines, in plain terms
+
+### AFA and fraud compensation — live since 1 April 2026
+
+AFA requires a genuine second authentication factor beyond a password on digital transactions, paired with a fraud compensation framework that puts real obligations on the entity when fraud does occur. If your app initiates or processes payments in any form, treat this as already in force and verify your exact obligations with your payment provider — most licensed aggregators handle the authentication mechanics for you, but the compensation framework is a business process you still own.
+
+### Digital lending — operational compliance due 30 June 2026
+
+Any app that originates, facilitates or services loans digitally falls under RBI's Digital Lending Guidelines. There are exactly two legitimate paths: register your own entity as an NBFC (minimum Net Owned Fund of ₹2 crore) or partner with an existing RBI-regulated lender as a Lending Service Provider. There is no third option where an unregistered app quietly does the lending itself.
+
+## Do you need a payment aggregator license?
+
+Only if you are collecting and settling funds on behalf of merchants yourself. That path requires RBI authorisation, a minimum net worth of ₹15 crore at the time of application rising to ₹25 crore by the end of the third financial year, PCI-DSS certification, and data localisation — a serious undertaking that takes months. Almost no early-stage app needs to go this route: integrating an already-licensed aggregator like Razorpay, Cashfree or PayU moves the licensing burden onto a provider that already carries it, at the cost of their transaction fee.
+
+| Requirement | What it actually means |
+| --- | --- |
+| **AFA + fraud compensation** | Second authentication factor on transactions; a defined compensation process when fraud occurs. Live since 1 April 2026. |
+| **Digital lending guidelines** | NBFC registration (₹2 crore min. Net Owned Fund) or an LSP partnership with a regulated lender. Compliance due 30 June 2026. |
+| **Payment aggregator license** | Only if you hold and settle merchant funds yourself. ₹15 crore net worth at application, ₹25 crore by year three, PCI-DSS. |
+| **Data localisation** | Payment system data stored only on servers in India. An infrastructure decision, not a policy document. |
+| **Annual VAPT** | Covers app, infrastructure and APIs against the OWASP Top 10 plus business logic flaws, with verified remediation. |
+| **5-year record retention** | Transaction records, KYC documents and audit logs — enforced by the system, not left to manual discipline. |
+
+## The build decisions this actually drives
+
+**Choose your cloud region before you choose anything else.** Data localisation means payment-related data has to live on Indian servers. Deciding this after the app is built on a foreign-only region is a genuine rebuild, not a settings change — get this right at architecture time.
+
+**Integrate, don't build, the licensed pieces.** Payment collection and lending origination both have a well-worn path through an already-licensed partner. Building your own version of either means taking on licensing requirements — capital, certification, months of process — that most products never need to touch directly.
+
+**Design for the audit you'll eventually get.** VAPT, 5-year retention and fraud-window reporting all assume your system can answer questions about what happened and when. Logging and audit trails are cheap to build in from day one and expensive to retrofit after a regulator, or an incident, asks for them.
+
+<Callout>
+
+**Where founders actually get this wrong:** not by ignoring RBI entirely, but by assuming a payment gateway integration handles all of it. AFA and PCI-DSS obligations are largely covered by a licensed aggregator. Data localisation, audit logging, retention and your DPDP Act obligations are not — those are your application's responsibility regardless of which payment provider you use.
+
+</Callout>
+
+## Frequently asked questions
+
+<FaqList>
+<Faq q="Do I need a payment aggregator license to build a fintech app in India?">
+
+Only if you are collecting and settling funds on behalf of merchants yourself — a non-bank payment aggregator needs RBI authorisation, a minimum net worth of ₹15 crore at application rising to ₹25 crore by the end of the third financial year, and PCI-DSS certification. Most apps instead integrate an already-licensed aggregator like Razorpay or Cashfree, which avoids this requirement entirely.
+
+</Faq>
+<Faq q="What is the AFA mandate and does it apply to my app?">
+
+AFA (Additional Factor of Authentication) is RBI's requirement for a second authentication factor beyond a password on digital transactions, paired with a fraud compensation framework. It took effect 1 April 2026 and applies broadly across digital payment flows — if your app initiates or processes payments, assume it applies and verify with your payment provider.
+
+</Faq>
+<Faq q="What counts as digital lending under RBI's guidelines?">
+
+Any app that originates, facilitates or services loans digitally. To operate legally you need either your own NBFC registration (minimum Net Owned Fund ₹2 crore) or a partnership with an RBI-regulated lender as a Lending Service Provider. Digital lending platforms face a 30 June 2026 deadline for operational compliance with RBI's guidelines.
+
+</Faq>
+<Faq q="Does payment data have to be stored in India?">
+
+Yes. RBI's data localisation requirement means payment system data must be stored only on servers located in India, for entities the requirement covers. This affects your infrastructure choice from day one — retrofitting data residency into an app built on a foreign-only cloud region is a significant rebuild, not a config change.
+
+</Faq>
+<Faq q="Can you help build a compliant fintech app?">
+
+Yes — we build the technical side: data localisation, AFA-compliant auth flows, audit logging, and integration with licensed payment aggregators and lending partners so you are not carrying regulatory scope you do not need. Book a free call to scope yours; the legal and licensing work itself should go to a qualified fintech compliance lawyer.
+
+</Faq>
+</FaqList>

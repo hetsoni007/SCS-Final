@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Razorpay vs PayU vs Cashfree",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-08-29",
+  "dateModified": "2026-08-29",
+  "articleSection": "Web",
+  "description": "Razorpay, PayU or Cashfree for your WooCommerce store? 2026 fees, plugin status, UPI and settlement speed compared — with a live fee calculator."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Razorpay vs PayU vs Cashfree: Best WooCommerce Payment Gateway for India (2026)",
+    "item": "https://soniconsultancyservices.com/blog/woocommerce-payment-gateway-india"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Which payment gateway is cheapest for WooCommerce in India?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "On standard published rates, Cashfree (1.95%) edges out Razorpay (~2%), while PayU adds a ₹4,999/year AMC on top of transaction fees. At typical small-store volumes the rate difference is small — success rates and settlement speed usually matter more."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Does Razorpay work with WooCommerce?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes — Razorpay maintains an official WooCommerce plugin, making integration a configuration task. It's the smoothest setup of the three for most stores."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can I use PayU with WooCommerce in 2026?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "PayU's WordPress.org plugin was withdrawn in June 2026, so there's currently no supported official plugin — integrating it means custom development. Choose it only if you specifically need its international/EMI strengths."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Do these gateways support UPI AutoPay for subscriptions?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Razorpay and Cashfree both support UPI AutoPay for recurring payments — relevant if your store sells subscriptions or memberships."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can you set up my store and gateway?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes — gateway integration, webhook verification, GST invoicing and refund flows are part of our WooCommerce builds. Book a free call to scope yours."
+    }
+   }
+  ]
+ }
+]
