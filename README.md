@@ -90,17 +90,20 @@ animations (`animation-timeline: view()` in `app/globals.css`): it rises out of 
 it is read and tilts back as it leaves. Headings flip up, cards fan in from alternate sides, media drifts. The
 movement runs on the compositor and reverses with the scroll. Browsers without scroll-driven animations (Firefox
 today) get a one-time fade-and-rise from an IntersectionObserver; reduced motion switches both off.
-Four details worth knowing before changing it:
+Five details worth knowing before changing it:
 
 - **Opacity is never tied to the scroll position.** The fade-in is a one-time transition that plays when the reveal
   observer adds `.in`; only the movement is scroll-linked. Text on screen is therefore either not shown yet or at
   full strength, never half-faded at the edge of the viewport (which fails contrast checks and is hard to read).
 
-- The animations use the individual `translate` / `rotate` / `scale` properties, so a card's pointer tilt (which
-  uses `transform`; classes `spot` and `tilt-3d`) composes with them.
+- **Every pose stays inside the element's own layout box.** Each element has its own perspective (the vanishing
+  point is the element, not a shared parent: a parent's perspective shears and pushes anything far from the middle of
+  a tall container), it turns about the edge away from its direction of travel, and it is never moved up or down.
+  Nothing can drift over its neighbours, which also keeps touch targets from being covered.
+- A card's pointer tilt (class `spot`; `--px` / `--py` from the pointer handler) is part of the same transform,
+  through the typed properties `--tx` / `--ty`, so it eases and composes with the scroll pose.
 - A block taller than the screen (a form, a long tool) is marked `data-tall` by the reveal observer in
-  `AppProviders.tsx` and only fades in. Tilting it would push its near edge past the screen edge and fade it while
-  it is still in use.
+  `AppProviders.tsx` and does not move at all; it only fades in and stays put while it is in use.
 - A gold hairline at the top of every page shows scroll progress (`.scroll-progress`; blog posts use the article's
   own `ReadingProgress` instead) and the home page's values fill in as they scroll into view (`.manifesto-line`).
 
@@ -241,11 +244,15 @@ Every scene is listed on **`/lab/`** (noindex) next to the tokens, type scale an
 Each one receives a `tier` prop and has a static poster; with "Reduce motion" on (OS setting or the footer toggle)
 no canvas is created at all and pages show posters and static layouts with opacity-only reveals.
 
-**Two rules every scene follows.** (1) Colours come from `const HEX = usePalette()` inside the component, never from
+**Three rules every scene follows.** (1) Colours come from `const HEX = usePalette()` inside the component, never from
 a hard-coded hex: the light theme swaps champagne, cream and white for deep gold, bronze and charcoal so the scene
 stays visible on white. (2) A `<shaderMaterial>` gets its uniforms through `args={useShaderArgs(uniforms, vert, frag)}`,
 not a `uniforms` prop: React Three Fiber copies that prop, so per-frame writes would never reach the shader
-(`tests/webgl.spec.ts` guards this). Cards that contain a scene have no fill on the light theme, because the canvas
+(`tests/webgl.spec.ts` guards this). (3) Lines, wireframes and points take their opacity through
+`const A = useLineAlpha()` (`opacity={A(0.28)}`): the values are tuned for gold glowing on black, and a hairline at
+25% disappears on a white page, so the light theme draws thin geometry about 2.5× stronger. The globe goes further
+on light (tinted body, bronze grid, solid routes) and its static poster follows the theme through the
+`.poster-*` classes in `app/globals.css`. Cards that contain a scene have no fill on the light theme, because the canvas
 sits behind the page and a translucent white card would wash the scene out.
 
 To add a scene: create `components/three/scenes/MyScene.tsx` (default export taking `SceneProps`), add its key to
@@ -280,7 +287,7 @@ A DOM component can drive a scene by passing a `useRef` object in `props` and mu
 | Suite | Checks |
 |---|---|
 | `tests/urls.spec.ts` | All 58 live sitemap URLs return 200 with the live title, description, canonical, robots and H1; both slash forms; redirects; sitemap and robots; a crawl of every internal link |
-| `tests/smoke.spec.ts` | Navigation, Calendly modal and focus return, ⌘K search, the calculator formula, every form (validation and success), the PDF download, blog widgets scoring, work filters, every interactive section (service explorer, engagement models, region picker, screen tour, embedded tools, consent switch, post feedback, 404 search), reduced motion, consent gating, phone-width overflow on 16 pages and the mobile menu, and axe (WCAG 2.2 AA) on 15 pages in the dark theme and 10 in the light theme |
+| `tests/smoke.spec.ts` | Navigation, Calendly modal and focus return, ⌘K search, the calculator formula, every form (validation and success), the PDF download, blog widgets scoring, work filters, every interactive section (service explorer, engagement models, region picker, screen tour, embedded tools, consent switch, post feedback, 404 search), scroll poses staying inside their own box, reduced motion, consent gating, phone-width overflow on 16 pages and the mobile menu, and axe (WCAG 2.2 AA) on 15 pages in the dark theme and 10 in the light theme |
 | `tests/webgl.spec.ts` | One shared canvas, scenes attach, no console errors, and at phone width the 3D layout never widens the page (before and after the canvas mounts). Needs a hardware GPU and skips itself without one |
 
 Functional tests launch Chrome with `--disable-gpu`, so the site takes its no-WebGL path: fast, deterministic and
@@ -321,6 +328,9 @@ when Total Blocking Time moves.
 
 `node scripts/overflow.mjs <url> [width]` lists the elements that stick out of a phone-width viewport, for when the
 overflow test fails.
+
+`node scripts/reveal-bounds.mjs <baseUrl> <path>…` scrolls each page at desktop and phone width and reports any
+revealed element whose scroll pose leaves its own layout box (run it after changing the motion keyframes).
 
 `scripts/shots.mjs` takes full-resolution screenshots through headless Chrome with the GPU on, for reviewing 3D work:
 

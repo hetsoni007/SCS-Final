@@ -263,6 +263,37 @@ test("blog post: one-tap feedback thanks the reader; 404 offers search", async (
   await expect(page.getByRole("combobox", { name: "Search" })).toBeFocused();
 });
 
+// A pose that leaves its box drifts over the neighbours: it once pushed a card over the blog filters at the fold.
+test("scroll motion: every revealed element stays inside its own layout box", async ({ page }) => {
+  for (const path of ["/blog/", "/services/", "/about/"]) {
+    await page.goto(path, { waitUntil: "domcontentloaded" });
+    await page.waitForTimeout(800);
+    await page.addStyleTag({ content: "html{scroll-behavior:auto!important}.probe main [data-reveal]{animation:none!important;transform:none!important}" });
+    const max = await page.evaluate(() => document.documentElement.scrollHeight - innerHeight);
+    for (let y = 0; y <= max; y += 400) {
+      await page.evaluate((v) => window.scrollTo(0, v), y);
+      await page.waitForTimeout(50);
+      const worst = await page.evaluate(() => {
+        // outermost revealed elements: one nested inside a revealed card moves with that card
+        const els = [...document.querySelectorAll<HTMLElement>("main section:not([data-loc='hero']) [data-reveal]")].filter((e) => !e.parentElement?.closest("[data-reveal]"));
+        const posed = els.map((e) => e.getBoundingClientRect());
+        document.documentElement.classList.add("probe");
+        const flat = els.map((e) => e.getBoundingClientRect());
+        document.documentElement.classList.remove("probe");
+        let over = 0, key = "";
+        els.forEach((e, i) => {
+          const a = posed[i], b = flat[i];
+          if (!b.width || b.bottom < -200 || b.top > innerHeight + 200) return;
+          const o = Math.max(b.left - a.left, a.right - b.right, b.top - a.top, a.bottom - b.bottom);
+          if (o > over) { over = o; key = `<${e.tagName.toLowerCase()}> ${(e.textContent ?? "").trim().slice(0, 40)}`; }
+        });
+        return { over: Math.round(over), key };
+      });
+      expect(worst.over, `${path} at ${y}px: ${worst.key} leaves its box by ${worst.over}px`).toBeLessThanOrEqual(4);
+    }
+  }
+});
+
 test("reduced motion: no WebGL canvas, content fully visible", async ({ browser }) => {
   const ctx = await browser.newContext({ reducedMotion: "reduce" });
   const page = await ctx.newPage();

@@ -453,17 +453,23 @@ html[data-intro="live"] [data-loc="hero"] [data-reveal] { animation-name: none; 
   transition-delay: calc(var(--i, 0) * 60ms);
 }
 /* a revealed card keeps its pointer tilt (the reveal would otherwise reset `transform`) */
-.js .spot[data-reveal].in { transform: rotateX(calc(var(--py, 0) * -7deg)) rotateY(calc(var(--px, 0) * 9deg)); }
+.js .spot[data-reveal].in { transform: perspective(1400px) rotateX(calc(var(--py, 0) * -7deg)) rotateY(calc(var(--px, 0) * 9deg)); }
 /* ───────────────────────── Scroll-linked 3D (every page) ─────────────────────────
    Where the browser supports scroll-driven animations (Chrome/Edge 115+, Safari 26+), every revealed element in a
-   page section is tied to its own position in the viewport: it fades in once, rises out of depth as it enters, sits
-   flat while it is read, and tilts back into the page as it leaves at the top. Headings flip up, cards fan in from alternate
-   sides, media drifts in parallax. It is scroll-linked and reversible, runs on the compositor (no JavaScript), and
-   animates the individual translate/rotate/scale properties so hover tilts (which use `transform`) still compose.
-   Other browsers keep the IntersectionObserver reveal above; reduced motion switches all of it off. */
+   page section is tied to its own position in the viewport: it fades in once, stands up out of the page as it
+   enters, sits flat while it is read, and leans back into the page as it leaves at the top. Headings flip up, cards
+   fan in from alternate sides, media drifts in parallax. The movement is scroll-linked and reversible and runs on
+   the compositor (no JavaScript). Other browsers keep the IntersectionObserver reveal above; reduced motion
+   switches all of it off.
+
+   Every pose keeps the element inside its own layout box: it has its own perspective (the vanishing point is the
+   element itself, not a shared parent, which would shear and push elements that sit far from the middle of a tall
+   container), it turns about the edge away from its direction of travel, and it is never moved up or down. So
+   nothing drifts over its neighbours while it enters or leaves. */
+/* the card tilt (see .spot) as typed properties, so it can ease and take part in the keyframes below */
+@property --tx { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+@property --ty { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
 @supports (animation-timeline: view()) {
-  /* depth: every container of revealed content gets a perspective */
-  .js main section:not([data-loc="hero"]) :has(> [data-reveal]) { perspective: 1600px; }
   /* Only the movement is tied to the scroll position. The fade is the one-time transition that plays when the
      reveal observer adds .in, so text on screen is always at full strength: nothing is left half-faded (and below
      contrast) at the edge of the viewport, it is either not shown yet or fully shown. */
@@ -475,47 +481,53 @@ html[data-intro="live"] [data-loc="hero"] [data-reveal] { animation-name: none; 
     animation-range: cover calc(var(--i, 0) * 1.5%) cover 100%;
   }
   .js main section:not([data-loc="hero"]) [data-reveal].in { transition: opacity 0.7s var(--ease-expo) calc(var(--i, 0) * 60ms); }
+  /* cards: the pointer tilt (--px / --py from the delegated pointer handler) is part of the same transform */
   .js main section:not([data-loc="hero"]) .spot[data-reveal],
   .js main section:not([data-loc="hero"]) .spot[data-reveal].in {
-    transform: rotateX(calc(var(--py, 0) * -7deg)) rotateY(calc(var(--px, 0) * 9deg)); transition: transform 0.45s var(--ease-expo);
+    --tx: calc(var(--px, 0) * 9deg); --ty: calc(var(--py, 0) * -7deg);
+    transform: perspective(1400px) rotateX(var(--ty)) rotateY(var(--tx));
+    transition: --tx 0.45s var(--ease-expo), --ty 0.45s var(--ease-expo);
   }
-  .js main section:not([data-loc="hero"]) .spot[data-reveal].in { transition: transform 0.45s var(--ease-expo), opacity 0.7s var(--ease-expo) calc(var(--i, 0) * 60ms); }
-  .js main section:not([data-loc="hero"]) :is(h2, .h2)[data-reveal] { transform-origin: 50% 100%; animation-name: flip-through; }
+  .js main section:not([data-loc="hero"]) .spot[data-reveal].in { transition: --tx 0.45s var(--ease-expo), --ty 0.45s var(--ease-expo), opacity 0.7s var(--ease-expo) calc(var(--i, 0) * 60ms); }
+  .js main section:not([data-loc="hero"]) :is(h2, .h2)[data-reveal] { animation-name: flip-through; }
   .js main section:not([data-loc="hero"]) .glass[data-reveal] { animation-name: deal-through; }
   .js main section:not([data-loc="hero"]) .glass[data-reveal]:nth-child(even) { --side: 1; }
-  /* blocks taller than the screen (marked by the reveal observer): a plain entrance, and they stay put while in use */
+  /* blocks taller than the screen (marked by the reveal observer) do not move: they fade in and stay put while in use */
   .js main section:not([data-loc="hero"]) [data-reveal][data-tall],
-  .js main section:not([data-loc="hero"]) [data-reveal][data-tall].in { animation-name: tall-in; animation-range: entry 0% entry 35%; }
+  .js main section:not([data-loc="hero"]) [data-reveal][data-tall].in { animation: none; }
   /* media and 3D boxes drift through the viewport */
   .js main :is(.scene-box, .phone-frame):not([data-loc="hero"] *) { animation: drift linear both; animation-timeline: view(); animation-range: cover 0% cover 100%; }
-  /* long-form reading (blog posts): entrances only, nothing fades while it is being read */
+  /* long-form reading (blog posts): entrances only, nothing moves while it is being read */
   .js .prose > :is(h2, h3, pre, table, figure, .legacy-art, blockquote, aside) {
     animation: depth-in linear both; animation-timeline: view(); animation-range: entry 0% cover 25%;
   }
-  .js .prose > h2 { transform-origin: 50% 100%; animation-name: flip-in; }
+  .js .prose > h2 { animation-name: flip-in; }
 }
+/* entering: pivot on the bottom edge, the top stands up; leaving: pivot on the top edge, the bottom leans back */
 @keyframes depth-through {
-  0% { translate: 0 64px -140px; rotate: x 18deg; }
-  24%, 80% { translate: 0 0 0; rotate: x 0deg; }
-  100% { translate: 0 -24px -90px; rotate: x -9deg; }
+  0% { transform: perspective(1400px) rotateX(calc(20deg + var(--ty))) rotateY(var(--tx)) scale(0.95); transform-origin: 50% 100%; }
+  24% { transform: perspective(1400px) rotateX(var(--ty)) rotateY(var(--tx)) scale(1); transform-origin: 50% 100%; }
+  80% { transform: perspective(1400px) rotateX(var(--ty)) rotateY(var(--tx)) scale(1); transform-origin: 50% 0%; }
+  100% { transform: perspective(1400px) rotateX(calc(-10deg + var(--ty))) rotateY(var(--tx)) scale(0.97); transform-origin: 50% 0%; }
 }
 @keyframes flip-through {
-  0% { translate: 0 40px -60px; rotate: x 52deg; }
-  26%, 80% { translate: 0 0 0; rotate: x 0deg; }
-  100% { translate: 0 -20px -80px; rotate: x -12deg; }
+  0% { transform: perspective(900px) rotateX(55deg); transform-origin: 50% 100%; }
+  26% { transform: perspective(900px) rotateX(0deg); transform-origin: 50% 100%; }
+  80% { transform: perspective(900px) rotateX(0deg); transform-origin: 50% 0%; }
+  100% { transform: perspective(900px) rotateX(-14deg); transform-origin: 50% 0%; }
 }
+/* cards turn about their centre (so the pointer tilt stays centred) and are scaled down enough to stay in their box */
 @keyframes deal-through {
-  0% { translate: 0 90px -240px; rotate: y calc((var(--side, -1)) * 22deg); scale: 0.92; }
-  26%, 80% { translate: 0 0 0; rotate: y 0deg; scale: 1; }
-  100% { translate: 0 -30px -120px; rotate: x -10deg; scale: 0.97; }
+  0% { transform: perspective(1400px) rotateX(calc(7deg + var(--ty))) rotateY(calc(var(--side, -1) * 12deg + var(--tx))) scale(0.88); }
+  26%, 80% { transform: perspective(1400px) rotateX(var(--ty)) rotateY(var(--tx)) scale(1); }
+  100% { transform: perspective(1400px) rotateX(calc(-8deg + var(--ty))) rotateY(var(--tx)) scale(0.95); }
 }
 @keyframes drift {
   from { translate: 0 56px; rotate: x 7deg; }
   to { translate: 0 -56px; rotate: x -7deg; }
 }
-@keyframes tall-in { from { translate: 0 48px; } }
-@keyframes depth-in { from { translate: 0 48px -100px; rotate: x 14deg; } }
-@keyframes flip-in { from { translate: 0 32px -40px; rotate: x 30deg; } }
+@keyframes depth-in { from { transform: perspective(1200px) rotateX(14deg) scale(0.97); transform-origin: 50% 100%; } }
+@keyframes flip-in { from { transform: perspective(900px) rotateX(34deg); transform-origin: 50% 100%; } }
 
 /* Reading progress: a hairline of brand gold across the top of every page, driven by the scroll position */
 .scroll-progress { position: fixed; inset: 0 0 auto 0; height: 2px; z-index: 110; background: var(--grad); transform-origin: 0 50%; transform: scaleX(0); pointer-events: none; }
@@ -538,9 +550,9 @@ html[data-article] .scroll-progress { display: none; }
 }
 @keyframes line-fill { to { background-position: 0 0; } }
 
-/* Cards lean toward the pointer (the delegated pointer handler sets --px / --py on .spot and [data-tilt]) */
-:has(> .spot) { perspective: 1400px; }
-.spot { transform: rotateX(calc(var(--py, 0) * -7deg)) rotateY(calc(var(--px, 0) * 9deg)); transition: transform 0.45s var(--ease-expo); }
+/* Cards lean toward the pointer (the delegated pointer handler sets --px / --py on .spot and [data-tilt]).
+   Each card carries its own perspective, so the lean looks the same wherever the card sits on the page. */
+.spot { transform: perspective(1400px) rotateX(calc(var(--py, 0) * -7deg)) rotateY(calc(var(--px, 0) * 9deg)); transition: transform 0.45s var(--ease-expo); }
 
 .split-char { display: inline-block; transform-origin: 50% 100%; will-change: transform, opacity; }
 .split-word { display: inline-block; white-space: nowrap; }
