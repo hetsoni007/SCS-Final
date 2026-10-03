@@ -2,10 +2,12 @@
 import { useEffect, useRef } from "react";
 import { X } from "lucide-react";
 import { site } from "@/content/site";
+import CalendlyBlocked, { useCalendlyBlocked } from "./CalendlyBlocked";
 
 /** Calendly inline in a modal: focus-trapped, Esc to close, scroll locked by the provider (Lenis stop). */
 export default function CalendlyModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const ref = useRef<HTMLDivElement>(null), last = useRef<Element | null>(null);
+  const blocked = useCalendlyBlocked();
   useEffect(() => {
     if (!open) return;
     last.current = document.activeElement;
@@ -27,8 +29,12 @@ export default function CalendlyModal({ open, onClose }: { open: boolean; onClos
           <p className="text-[14px] text-mid"><span className="text-hi">Book Your Free Call</span> · 30 minutes with a senior engineer</p>
           <button onClick={onClose} aria-label="Close booking dialog" className="grid h-9 w-9 place-items-center rounded-full border border-line hover:bg-white/5"><X size={16} /></button>
         </div>
-        <iframe src={src} title="Calendly scheduling" className="h-[calc(100%-56px)] w-full" loading="lazy" />
-        <a href={site.calendly} target="_blank" rel="noopener" data-no-modal className="sr-only focus:not-sr-only focus:absolute focus:bottom-3 focus:left-3 focus:rounded focus:bg-bg-2 focus:p-2">Open Calendly in a new tab</a>
+        {blocked ? <CalendlyBlocked className="h-[calc(100%-56px)]" /> : (
+          <>
+            <iframe src={src} title="Calendly scheduling" className="h-[calc(100%-56px)] w-full" loading="lazy" />
+            <a href={site.calendly} target="_blank" rel="noopener" data-no-modal className="sr-only focus:not-sr-only focus:absolute focus:bottom-3 focus:left-3 focus:rounded focus:bg-bg-2 focus:p-2">Open Calendly in a new tab</a>
+          </>
+        )}
       </div>
     </div>
   );

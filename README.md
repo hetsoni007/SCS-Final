@@ -16,8 +16,11 @@ npm run dev          # http://localhost:3000
 ```
 
 ```bash
-npm run build        # static build of all 139 routes
+npm run build        # production build of all 139 routes (what the tests run against)
 npm run start        # serve the production build
+npm run build:static # static export for S3 + CloudFront: out/ then dist/ (see "Deploying to S3 + CloudFront")
+npm run serve:dist   # serve dist/ locally with the CloudFront URL rewrite, http://127.0.0.1:3200
+npm run deploy:aws   # build, upload to S3, invalidate CloudFront (add -- --dry-run to preview)
 npm run lint         # ESLint (must be clean)
 npm run typecheck    # tsc --noEmit
 npm run test:e2e     # Playwright: URL parity, smoke, mobile, accessibility, WebGL (needs a build first)
@@ -37,8 +40,6 @@ app/
   blog/, blog/[slug]/         Blog index and MDX post template
   contact/, app-cost-calculator/, cloud-cost-calculator/, devops-maturity-assessment/,
   app-scoping-guide/, privacy/, lab/, not-found.tsx
-  actions/lead.ts             One server action for every form
-  api/assistant/route.ts      Optional AI demo (off by default)
   sitemap.ts, robots.ts, */opengraph-image.tsx
 components/
   providers/AppProviders.tsx  Motion preference, GPU tier, Lenis, Calendly modal, ⌘K palette
@@ -261,10 +262,12 @@ A DOM component can drive a scene by passing a `useRef` object in `props` and mu
 
 ## Forms, analytics, integrations
 
-- **Forms** use React Hook Form in the browser (`components/ui/LeadForm.tsx`) and post through the
-  `app/actions/lead.ts` server action, which validates again with Zod (the source of truth), then applies the
-  honeypot, a per-IP rate limit and optional Turnstile. Delivery is Resend email and/or a JSON webhook. Nothing is
-  stored. Success replaces the form in place.
+- **Forms** use React Hook Form in the browser (`components/ui/LeadForm.tsx`). `submitLead` (`lib/lead.ts`) checks
+  the honeypot and the email, trims the fields and POSTs one JSON object `{ kind, name, email, …fields, page, utm_* }`
+  from the browser to the lead API (API Gateway → the `scs-lead-mailer` Lambda, which emails the owner and stores the
+  lead; the old site posted the same shape to the same URL). The URL is `NEXT_PUBLIC_LEAD_ENDPOINT`, read at build
+  time; when it is empty (dev, tests, previews) nothing is sent and the form still shows its success state, so a test
+  can never create a real lead. Rate limiting and spam handling live in the Lambda. Success replaces the form in place.
 - **Calendly** opens in a modal from any Calendly link (the plain link is the no-JS fallback). On `/contact/` the
   inline scheduler loads in place when the visitor clicks "Show available times": Calendly sets its own cookies as
   soon as its frame loads, so it is never loaded unasked (see `CONTENT-QUESTIONS.md` to change this).
@@ -273,7 +276,9 @@ A DOM component can drive a scene by passing a `useRef` object in `props` and mu
   Events: `cta_click {location,label}`, `calc_complete {config}`, `form_submit {form}`, `guide_download`,
   `calendly_open`, `calendly_booked`, `calculator_estimate`, `post_feedback {slug,useful}` (the "Was this guide
   useful?" buttons under a post; nothing else is stored). UTM and blog attribution are attached to every lead.
-- **AI assistant demo** (`/ai-app-development/`): off by default. Set `ASSISTANT_ENABLED=true`,
+- **AI assistant demo** (`/ai-app-development/`): off by default and **not part of the S3 deployment**, because it
+  needs a server. Its route handler is kept in `docs/optional/assistant-route.ts`; to use it, host the site on a
+  Node platform (for example Vercel), move that file back to `app/api/assistant/route.ts` and set `ASSISTANT_ENABLED=true`,
   `NEXT_PUBLIC_ASSISTANT_ENABLED=true` and `ANTHROPIC_API_KEY`. It calls Claude Opus 5.5 (`claude-opus-5-5`) through the
   official SDK with streaming, low effort, a 10-requests-per-10-minutes courtesy limit per IP and a 6-question cap
   per visit. Server-side fallback is switched on (`fallbacks: "default"`), so a request the model declines is retried
@@ -321,7 +326,7 @@ Rules that keep it there:
   splits a lazily imported client component when the `dynamic()` call is itself in a client file.
 - Client components get **props from the server** instead of importing big content files (`content/work.ts` is
   18 KB; the home carousel and the work index receive just the fields they render).
-- No class-merging or validation library ships to the browser: Zod runs in the server action only.
+- No class-merging or validation library ships to the browser: `submitLead` uses plain checks and the Lambda is the authority.
 
 `node scripts/profile.mjs <url>` records a CPU profile under 4× throttling and prints the hottest functions, for
 when Total Blocking Time moves.
@@ -338,15 +343,50 @@ revealed element whose scroll pose leaves its own layout box (run it after chang
 node scripts/shots.mjs http://localhost:3000 ./shots 1440x900 "/#home" "/@[data-loc=work]#work"
 ```
 
+## Deploying to S3 + CloudFront
+
+The live site is a static site: bucket `scs-site-prod-043174661808` behind CloudFront distribution `E3HVJHFD5CQPVI`
+(aliases `soniconsultancyservices.com`, `www.` and `portfolio.`). `npm run deploy:aws` (`scripts/deploy-aws.sh`) does
+the whole job with the AWS CLI profile `prod`:
+
+1. `STATIC_EXPORT=1 next build` writes the plain-files site to `out/` (`NEXT_PUBLIC_LEAD_ENDPOINT` and `NEXT_PUBLIC_GA_ID`
+   are baked in; the script refuses to upload a build without the endpoint).
+2. `scripts/prepare-static.mjs` produces `dist/`: every `x.html` becomes `x/index.html` (the CloudFront function
+   `scs-url-rewrite` maps `/x` and `/x/` to that key), every `opengraph-image` becomes `opengraph-image.png` (the
+   function would otherwise treat the extensionless name as a page), and the hidden `/lab` page is left out.
+3. Upload in four passes with `aws s3 sync`, **never with `--delete`**: hashed `_next/` files (immutable cache), assets,
+   payloads/sitemap/robots/OG images, then the HTML last, all with `max-age=0, must-revalidate`.
+4. `aws cloudfront create-invalidation --paths "/*"`.
+
+Things that behave differently from `next start`, on purpose:
+
+- Redirects are the CloudFront function's, not Next's: `/usa`, `/uk`, `/uae`, `/australia`, `/canada` still 301 to the
+  home page as on the old site. The two redirects in `next.config.ts` (`/usa` → the US landing page, `/hire-developers`
+  → `/hire/`) only apply on a Node host; add them to the function if you want them on S3.
+- Unknown URLs get `404.html` with status 404 (the distribution's custom error response).
+- **Security headers**: the distribution's response headers policy `scs-security-headers` sends a Content-Security-Policy
+  written for the old site. It allows Tawk.to, Meta, LinkedIn, GoodFirms and Google Analytics, and the lead API
+  (`connect-src`), but **not Calendly** (`frame-src`) and it sets no `worker-src` (blob workers fall back to
+  `script-src`). The site copes: the Calendly embeds detect the blocked frame (`components/ui/CalendlyBlocked.tsx`) and
+  offer the booking page in a new tab, and the GPU probe (`lib/gpu-tier.ts`) falls back to the main thread (one harmless
+  console error on the home page). To restore the in-page calendar and silence the error, edit that policy in the
+  CloudFront console (Policies → Response headers) and add `https://calendly.com` to `frame-src` and
+  `worker-src 'self' blob:`. A change to this policy was deliberately left to the owner.
+- The bucket also holds `_3d/` (the content of `portfolio.soniconsultancyservices.com`), the Google Search Console
+  verification file, `llms.txt` and older assets. They are left alone.
+- To test the deploy artefact locally: `npm run build:static && npm run serve:dist`, then
+  `STATIC_HOST=1 BASE_URL=http://127.0.0.1:3200 npm run test:e2e`.
+- Roll back by syncing a previous backup of the bucket (or the previous git commit's build) the same way and invalidating again.
+
 ## Launch checklist
 
 1. **Decide the open items** in `CONTENT-QUESTIONS.md`.
-2. **Vercel**: import the repo, framework preset Next.js, production domain `soniconsultancyservices.com`.
-3. **Environment variables** (from `.env.example`): `RESEND_API_KEY`, `LEAD_FROM_EMAIL` (verified domain),
-   `LEAD_TO_EMAIL`, and/or `LEAD_WEBHOOK_URL`; `NEXT_PUBLIC_GA_ID`; Turnstile keys if wanted.
-4. **Send a test submission from every form** on the preview deployment and confirm it arrives.
-5. **Enable Vercel Analytics** in the project.
-6. **Run the URL suite against the preview**: `BASE_URL=https://<preview>.vercel.app npm run test:e2e -- tests/urls.spec.ts`.
+2. **Host**: S3 + CloudFront as above (`npm run deploy:aws`). On Vercel instead, import the repo and set the
+   variables from `.env.example`; there the redirects in `next.config.ts` and the assistant route apply.
+3. **Environment variables** (build time): `NEXT_PUBLIC_LEAD_ENDPOINT`, `NEXT_PUBLIC_GA_ID` (both default in the deploy script).
+4. **Send a test submission from every form** on the live site and confirm it arrives.
+5. **Vercel Analytics** is only on Vercel deployments; on S3 the site relies on GA4 (after consent).
+6. **Run the URL suite against the deployed site**: `STATIC_HOST=1 BASE_URL=https://soniconsultancyservices.com npm run test:e2e -- tests/urls.spec.ts`.
 7. **Run Lighthouse** on the preview (the budgets above) and keep the reports.
 8. **Real-device pass**: iOS Safari, Samsung Internet and a low-end Android. Check the hero, the pinned sections,
    the calculator and the mobile menu, then again with Reduce Motion on.
@@ -376,7 +416,7 @@ Each of these was a deliberate trade, not an omission.
 | AVIF posters pre-rendered from each scene | CSS/SVG poster compositions | They weigh nothing, follow the theme and never go stale when a scene changes. |
 | Storybook or `/lab` | `/lab` | One of the two was asked for. |
 | Motion (Framer Motion) for UI micro-interactions | CSS transitions for the menu, accordion and testimonial deck; Motion's `animate` only for the calculators' number morph, loaded after hydration | Motion's React layer is ~40 KB gzipped; with React and Next.js at ~130 KB it does not fit the 180 KB first-load budget. The motion language (expo ease, durations) is unchanged and lives in `lib/motion.ts` and `app/globals.css`. |
-| React Hook Form + Zod | React Hook Form in the browser, Zod in the server action | Zod adds ~17 KB gzipped to every page with a form. The browser rules are generated from the same field definitions and use Zod's own e-mail pattern; the server remains the authority. |
+| React Hook Form + Zod | React Hook Form in the browser; plain checks in `submitLead`; the Lambda validates | Zod adds ~17 KB gzipped to every page with a form, so it is not shipped. The browser rules are generated from the same field definitions. |
 | Lenis velocity → skew and chromatic aberration | Scroll velocity drives particle size, marquee speed and globe spin | Whole-page skew and aberration hurt legibility of long text pages; the velocity uniform (`shared.scrollVel`) is available to any shader that wants it. |
 
 Rapier physics is used where the brief specifies it (the MVP scope sorter). It loads only on that page.

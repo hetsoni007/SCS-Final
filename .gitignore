@@ -46,3 +46,7 @@ next-env.d.ts
 /playwright-report/
 /lhci-reports/
 /.lighthouseci/
+
+# static deploy artefacts
+/dist/
+/dist-test/

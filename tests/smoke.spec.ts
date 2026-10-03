@@ -1,5 +1,5 @@
 import AxeBuilder from "@axe-core/playwright";
-import { expect, test } from "@playwright/test";
+import { expect, test, type Page } from "@playwright/test";
 import { quiet, watchConsole } from "./helpers";
 
 test.beforeEach(async ({ page }) => { await quiet(page); });
@@ -39,6 +39,37 @@ test("Calendly: CTA opens the booking dialog, Escape closes it and focus returns
   await page.keyboard.press("Escape");
   await expect(dialog).toBeHidden();
   await expect(cta).toBeFocused();
+});
+
+// The live distribution sends a Content-Security-Policy written for the old site; its frame-src does not list Calendly.
+// When the browser blocks the frame the embeds must fall back to a link instead of showing an empty window.
+const blockFrames = (page: Page) => page.route("**/*", async (route) => {
+  if (route.request().resourceType() !== "document") return route.continue();
+  const res = await route.fetch();
+  await route.fulfill({ response: res, headers: { ...res.headers(), "content-security-policy": "frame-src 'self'" } });
+});
+
+test("Calendly blocked by the host's CSP: the booking dialog offers the page in a new tab", async ({ page, isMobile }) => {
+  test.skip(isMobile, "the header button is inside the menu on phones");
+  await blockFrames(page);
+  await page.goto("/services/");
+  await page.getByRole("navigation", { name: "Primary" }).getByRole("link", { name: "Book a Call" }).click();
+  const dialog = page.getByRole("dialog", { name: /Book a call/i });
+  const open = dialog.getByRole("link", { name: "Open Calendly", exact: true });
+  await expect(open).toBeVisible();
+  await expect(open).toHaveAttribute("href", /calendly\.com/);
+  await expect(open).toHaveAttribute("target", "_blank");
+  await expect(dialog.locator("iframe")).toHaveCount(0);
+});
+
+test("Calendly blocked by the host's CSP: the contact page shows the same fallback @all", async ({ page }) => {
+  await blockFrames(page);
+  await page.goto("/contact/");
+  await page.getByRole("button", { name: /Show available times/ }).click();
+  const open = page.getByRole("link", { name: "Open Calendly", exact: true });
+  await expect(open).toBeVisible();
+  await expect(open).toHaveAttribute("href", /calendly\.com/);
+  await expect(page.locator("iframe")).toHaveCount(0);
 });
 
 test("command palette: Ctrl+K searches and navigates", async ({ page }) => {

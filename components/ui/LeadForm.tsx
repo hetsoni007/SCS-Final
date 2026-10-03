@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { useForm } from "react-hook-form";
 import Script from "next/script";
-import { submitLead, type LeadInput } from "@/app/actions/lead";
+import { submitLead, type LeadInput } from "@/lib/lead";
 import { track } from "@/lib/analytics";
 import { getAttribution } from "@/lib/attribution";
 import { parseInline } from "./Rich";
@@ -19,8 +19,8 @@ const rules = (f: FieldDef) =>
   : {};
 
 /**
- * Generic form: React Hook Form validates in the browser, then the `submitLead` server action
- * validates again with Zod (the source of truth) and delivers the lead.
+ * Generic form: React Hook Form validates in the browser, then `submitLead` (lib/lead.ts)
+ * re-checks the email, trims the fields and posts the lead to the lead API.
  * Success replaces the form in place (no reload) and is announced via aria-live.
  */
 export default function LeadForm({

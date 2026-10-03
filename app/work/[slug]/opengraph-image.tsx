@@ -3,6 +3,7 @@ import { ogContentType, ogImage, ogSize } from "@/lib/og";
 export const alt = "Soni Consultancy Services — Work";
 export const size = ogSize;
 export const contentType = ogContentType;
+export const dynamic = "force-static"; // required for the static export
 export const generateStaticParams = () => cases.map((c) => ({ slug: c.slug }));
 export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
   const c = caseBySlug((await params).slug);

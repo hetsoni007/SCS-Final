@@ -15,6 +15,8 @@ const eslintConfig = defineConfig([
   globalIgnores([
     ".next/**",
     "out/**",
+    "dist/**",
+    "dist-test/**",
     "build/**",
     "next-env.d.ts",
     // reference copies of the live site's inline scripts (not part of the build)

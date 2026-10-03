@@ -4,6 +4,7 @@ import { ogContentType, ogImage, ogSize } from "@/lib/og";
 export const alt = "Soni Consultancy Services";
 export const size = ogSize;
 export const contentType = ogContentType;
+export const dynamic = "force-static"; // required for the static export
 export const generateStaticParams = () => templatePages.map((slug) => ({ slug }));
 export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

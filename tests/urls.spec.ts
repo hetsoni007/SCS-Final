@@ -36,9 +36,15 @@ test.describe("live URL parity", () => {
 
   test("redirects and 404", async ({ request }) => {
     const usa = await request.get("/usa", { maxRedirects: 0 });
-    expect(usa.status()).toBe(308);
-    expect(usa.headers().location).toContain("/react-native-app-development-usa/");
-    expect((await request.get("/hire-developers/", { maxRedirects: 0 })).headers().location).toContain("/hire/");
+    if (process.env.STATIC_HOST) {
+      // S3 + CloudFront: the `scs-url-rewrite` function keeps the live site's behaviour, /usa → home page (301).
+      expect(usa.status()).toBe(301);
+      expect(new URL(usa.headers().location, "http://x").pathname).toBe("/");
+    } else {
+      expect(usa.status()).toBe(308);
+      expect(usa.headers().location).toContain("/react-native-app-development-usa/");
+      expect((await request.get("/hire-developers/", { maxRedirects: 0 })).headers().location).toContain("/hire/");
+    }
     const missing = await request.get("/definitely-not-a-page/");
     expect(missing.status()).toBe(404);
     expect(await missing.text()).toContain("didn");

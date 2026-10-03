@@ -14,7 +14,10 @@
     "typecheck": "tsc --noEmit",
     "budget": "node scripts/js-budget.mjs http://localhost:3100 / /services/ /work/ /work/hr-payroll/ /blog/ /blog/react-native-app-development-cost /blog/mvp-tech-stack-2026 /contact/ /app-cost-calculator/ /ai-app-development/ /devops-cloud-engineering/ /mvp-development/ /privacy/",
     "content:extract": "node scripts/extract-pages.mjs && node scripts/extract-blog.mjs",
-    "lhci:mobile": "npx --yes @lhci/cli@0.15.x autorun --config=lighthouserc.mobile.json"
+    "lhci:mobile": "npx --yes @lhci/cli@0.15.x autorun --config=lighthouserc.mobile.json",
+    "build:static": "STATIC_EXPORT=1 next build && node scripts/prepare-static.mjs out dist",
+    "serve:dist": "node scripts/serve-dist.mjs dist 3200",
+    "deploy:aws": "scripts/deploy-aws.sh"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.131.0",

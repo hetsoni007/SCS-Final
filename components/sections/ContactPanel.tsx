@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import ViewSlot from "@/components/three/ViewSlot";
 import { Poster } from "@/components/ui/Poster";
 import LeadForm from "@/components/ui/LeadForm";
+import CalendlyBlocked, { useCalendlyBlocked } from "@/components/ui/CalendlyBlocked";
 import type { FieldDef } from "@/content/forms";
 import { site } from "@/content/site";
 import { track } from "@/lib/analytics";
@@ -14,6 +15,7 @@ type Opt = { lab: string; t: string; d: string; href: string };
  */
 function InlineCalendly() {
   const [open, setOpen] = useState(false);
+  const blocked = useCalendlyBlocked();
   const newTab = { href: site.calendly, "data-no-modal": true, target: "_blank", rel: "noopener", className: "text-accent-2 underline underline-offset-4" };
   if (!open) {
     return (
@@ -27,6 +29,7 @@ function InlineCalendly() {
       </div>
     );
   }
+  if (blocked) return <CalendlyBlocked className="min-h-[340px]" />;
   return (
     <div className="relative h-[660px] w-full">
       <p className="muted absolute inset-0 grid place-items-center p-6 text-center text-[15px]">Loading the scheduler… If it doesn&apos;t appear, <a {...newTab}>open Calendly in a new tab</a>.</p>
