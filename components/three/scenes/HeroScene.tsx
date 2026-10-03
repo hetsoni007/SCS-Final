@@ -58,8 +58,8 @@ void main(){
   float a = smoothstep(.5, .05, r);
   vec3 col = mix(uA, uB, vSeed);
   col = mix(col, vec3(1.), (vNear * .6 + vMix * .25) * (1. - uLight));
-  col = mix(col, vec3(.6, .45, .16), uLight * .7);   // deeper bronze on white
-  gl_FragColor = vec4(col, a * uAlpha * mix(.55, .9, vMix) * mix(1., .85, uLight) * clear);
+  col = mix(col, vec3(.55, .38, .08), uLight * .85); // deep gold on white, so the field reads as gold rather than dust
+  gl_FragColor = vec4(col, min(1., a * uAlpha * mix(.55, .9, vMix) * mix(1., 1.4, uLight)) * clear);
 }`;
 
 function phonePoints(n: number, rand: () => number) {
