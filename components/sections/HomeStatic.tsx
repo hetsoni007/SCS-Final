@@ -27,7 +27,7 @@ export function Stats() {
           ))}
         </div>
         <p className="dim mt-6" data-reveal>
-          <a href="https://www.goodfirms.co/" target="_blank" rel="noopener" className="underline underline-offset-4 hover:text-hi">Reviewed on GoodFirms</a> · ★★★★★ 5.0 verified client review
+          <a href="https://www.goodfirms.co/company/soni-consultancy-services" target="_blank" rel="noopener" className="underline underline-offset-4 hover:text-hi">Reviewed on GoodFirms</a> · ★★★★★ 5.0 verified client review
         </p>
       </div>
     </section>

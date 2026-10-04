@@ -2589,12 +2589,12 @@
         },
         {
          "t": "p",
-         "html": "A 5.0-rated engagement for the <b>Sales Automation</b> project — Mobile App Development, on a fixed-price build.",
+         "html": "A 5.0-rated <b>Sales Automation</b> project — Mobile App Development, on a fixed-price build. <b>5.0</b> for quality, communication and schedule.",
          "cls": "tproj"
         },
         {
          "t": "text",
-         "html": "SR <span>Satyam Rathaur</span><span>Verified client review</span><span>GoodFirms</span>",
+         "html": "SR <span>Satyam Rathaur</span><span>CEO · Verified client review</span><span>GoodFirms</span>",
          "cls": "twho"
         }
        ]

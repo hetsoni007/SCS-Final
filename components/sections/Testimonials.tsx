@@ -17,10 +17,10 @@ export default function Testimonials() {
         <div>
           <p className="eyebrow" data-reveal>What people say</p>
           <h2 id="t-h" className="h2 mt-4" data-reveal>Trusted by clients<br />and collaborators.</h2>
-          <div className="glass mt-8 inline-flex items-center gap-4 p-4 pr-6 [perspective:600px]" data-reveal>
+          <a href="https://www.goodfirms.co/company/soni-consultancy-services" target="_blank" rel="noopener" className="glass mt-8 inline-flex items-center gap-4 p-4 pr-6 [perspective:600px]" data-reveal>
             <span className="font-display grid h-16 w-16 place-items-center rounded-2xl text-[22px] font-bold text-on-accent" style={{ background: "var(--grad)", transform: "rotateY(-18deg) rotateX(8deg)", boxShadow: "8px 10px 0 rgba(201,162,75,.35)" }}>5.0</span>
-            <span><span className="block text-[15px] text-hi">GoodFirms · ★★★★★</span><span className="dim">Verified client review</span></span>
-          </div>
+            <span><span className="block text-[15px] text-hi">GoodFirms · ★★★★★</span><span className="dim">Verified client review · read it on GoodFirms ↗</span></span>
+          </a>
           <div className="mt-8 flex gap-2">
             <button onClick={() => next(-1)} aria-label="Previous testimonial" className="grid h-12 w-12 place-items-center rounded-full border border-line-strong hover:bg-white/10"><ChevronLeft size={20} /></button>
             <button onClick={() => next(1)} aria-label="Next testimonial" className="grid h-12 w-12 place-items-center rounded-full border border-line-strong hover:bg-white/10"><ChevronRight size={20} /></button>

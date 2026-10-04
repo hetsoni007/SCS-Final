@@ -46,7 +46,7 @@ export const homeServices = [
 ];
 
 export const testimonials = [
-  { name: "Satyam Rathaur", role: "Verified client review", source: "GoodFirms", initials: "SR", rating: "5.0", html: "A 5.0-rated engagement for the <b>Sales Automation</b> project — Mobile App Development, on a fixed-price build." },
+  { name: "Satyam Rathaur", role: "CEO · Verified client review", source: "GoodFirms", initials: "SR", rating: "5.0", html: "A 5.0-rated <b>Sales Automation</b> project — Mobile App Development, on a fixed-price build. <b>5.0</b> for quality, communication and schedule." },
   { name: "Shalin Bhatt", role: "Business Consultant for Startups & SMBs", source: "LinkedIn", initials: "SB", html: "“I've had the pleasure of collaborating with Het. Having strong technical knowledge, particularly in DevOps and Power BI, and always approaching challenges with a solution-oriented mindset.”" },
   { name: "Jiri Borc", role: "Networking & community building", source: "LinkedIn", initials: "JB", html: "“Het is a friendly, positive, responsible person and it was amazing meeting him on my networking sessions about digital marketing.”" },
 ];
