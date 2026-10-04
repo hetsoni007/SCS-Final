@@ -69,7 +69,7 @@
      "name": "What does a typical app cost?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "MVP apps start from $12,000, smaller builds from $5,000 and websites from $500; full products scale from there. You get a fixed-price proposal within 48 hours of the call."
+      "text": "MVP apps start from $2,500, smaller builds from $1,000 and websites from $500; full products scale from there. You get a fixed-price proposal within 48 hours of the call."
      }
     },
     {
@@ -255,7 +255,7 @@
         {
          "t": "form",
          "id": "contactForm",
-   "price": "Websites from $500 · app features from $5,000 · MVP apps from $12,000",
+   "price": "Websites from $500 · app features from $1,000 · MVP apps from $2,500",
          "fields": [
           {
            "name": "fn",
@@ -488,7 +488,7 @@
       },
       {
        "q": "What does a typical app cost?",
-       "a": "MVP apps start from $12,000, smaller builds from $5,000 and websites from $500; full products scale from there. You get a fixed-price proposal within 48 hours of the call — no vague \"it depends.\""
+       "a": "MVP apps start from $2,500, smaller builds from $1,000 and websites from $500; full products scale from there. You get a fixed-price proposal within 48 hours of the call — no vague \"it depends.\""
       },
       {
        "q": "Do you sign NDAs?",

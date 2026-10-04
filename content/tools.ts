@@ -5,9 +5,9 @@
 
 /* ───────────── App cost calculator (/app-cost-calculator/) ───────────── */
 export const appCalc = {
-  /** Indicative blended $/week. The live script notes: "adjust to your real pricing". */
-  rateLo: 1800,
-  rateHi: 3200,
+  /** Indicative blended $/week (about $9–$15 an hour): the studio's own low-cost pricing, set 2026-10-04. */
+  rateLo: 360,
+  rateHi: 600,
   minWeeks: 3,
   platforms: [
     { value: "cross", label: "Cross-platform", mult: 1 },
@@ -51,15 +51,15 @@ export const appCalc = {
 export type AppCalcConfig = { platform: number; stage: number; features: boolean[]; design: number; backend: number };
 export const appCalcDefault: AppCalcConfig = { platform: 0, stage: 0, features: appCalc.features.map((f) => !!f.on), design: 0, backend: 0 };
 
-/** weeks = round((base + Σfeatures + backend) × platform × design), min 3; cost = weeks × rate, rounded to $1k. */
+/** weeks = round((base + Σfeatures + backend) × platform × design), min 3; cost = weeks × rate, rounded to $500. */
 export function estimateApp(c: AppCalcConfig) {
   const feat = appCalc.features.reduce((s, f, i) => s + (c.features[i] ? f.weeks : 0), 0);
   let weeks = Math.round((appCalc.stages[c.stage].base + feat + appCalc.backends[c.backend].add) * appCalc.platforms[c.platform].mult * appCalc.designs[c.design].mult);
   if (weeks < appCalc.minWeeks) weeks = appCalc.minWeeks;
-  const lo = Math.round((weeks * appCalc.rateLo) / 1000) * 1000, hi = Math.round((weeks * appCalc.rateHi) / 1000) * 1000;
+  const lo = Math.round((weeks * appCalc.rateLo) / 500) * 500, hi = Math.round((weeks * appCalc.rateHi) / 500) * 500;
   return { weeks, lo, hi };
 }
-export const fmtK = (n: number) => `$${Math.round(n / 1000)}k`;
+export const fmtK = (n: number) => `$${Math.round(n / 100) / 10}k`; // one decimal when needed: $2.5k, $4k
 
 /* ───────────── Cloud cost calculator (/cloud-cost-calculator/) ───────────── */
 export const cloudCalc = {

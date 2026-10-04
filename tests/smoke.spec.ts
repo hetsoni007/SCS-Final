@@ -87,22 +87,22 @@ test("command palette: Ctrl+K searches and navigates", async ({ page }) => {
 test("cost calculator: formula matches the live site", async ({ page }) => {
   await page.goto("/app-cost-calculator/");
   const result = page.locator('[aria-live="polite"]').first();
-  // default: MVP 4wk + accounts 1.5 → 6 weeks → $11k–$19k
+  // default: MVP 4wk + accounts 1.5 → 6 weeks → $2k–$3.5k
   await expect(result).toContainText("~6 weeks");
-  await expect(result).toContainText("$11k – $19k");
+  await expect(result).toContainText("$2k – $3.5k");
   await page.getByText("Payments / subscriptions").click();
   await page.getByText("Custom MERN API").click();
-  // (4 + 1.5 + 2.5 + 3) × 1 × 1 = 11 weeks → 11×1800 = $20k, 11×3200 = $35k
+  // (4 + 1.5 + 2.5 + 3) × 1 × 1 = 11 weeks → 11×360 = $4k, 11×600 = $6.5k (rounded to $500)
   await expect(result).toContainText("~11 weeks");
-  await expect(result).toContainText("$20k – $35k");
+  await expect(result).toContainText("$4k – $6.5k");
   await page.getByText("Premium / animated").click();
-  // 11 × 1.4 = 15.4 → 15 weeks → $27k–$48k
+  // 11 × 1.4 = 15.4 → 15 weeks → $5.5k–$9k
   await expect(result).toContainText("~15 weeks");
-  await expect(result).toContainText("$27k – $48k");
+  await expect(result).toContainText("$5.5k – $9k");
   await page.getByText("iOS only").click();
-  // 11 × 0.9 × 1.4 = 13.86 → 14 weeks → $25k–$45k
+  // 11 × 0.9 × 1.4 = 13.86 → 14 weeks → $5k–$8.5k
   await expect(result).toContainText("~14 weeks");
-  await expect(result).toContainText("$25k – $45k");
+  await expect(result).toContainText("$5k – $8.5k");
 });
 
 test("calculator lead form validates, then submits in place", async ({ page }) => {
