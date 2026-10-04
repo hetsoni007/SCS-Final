@@ -30,7 +30,7 @@
  },
  {
   "path": "/ai-app-development/",
-  "title": "AI App Development | Soni Consultancy Services",
+  "title": "AI App Development Company | Soni Consultancy Services",
   "description": "Build AI-powered mobile apps — Claude & GPT integration, assistants, RAG and prediction in React Native. 12 AI app ideas and how we ship them.",
   "canonical": "https://soniconsultancyservices.com/ai-app-development/",
   "h1": "Build an app that thinks.",
@@ -49,11 +49,12 @@
   "canonical": "https://soniconsultancyservices.com/app-cost-calculator/",
   "h1": "What will your app cost to build?",
   "robots": "index,follow,max-image-preview:large",
-  "faqCount": 0,
+  "faqCount": 6,
   "jsonLd": [
    "WebApplication",
    "BreadcrumbList",
-   "Organization"
+   "Organization",
+   "FAQPage"
   ]
  },
  {
@@ -85,7 +86,7 @@
  },
  {
   "path": "/cloud-cost-calculator/",
-  "title": "Cloud Cost Calculator | Soni Consultancy Services",
+  "title": "Cloud Cost Calculator: Estimate Your Cloud Savings (Free)",
   "description": "Estimate how much you could save on your AWS or Azure bill. Enter your monthly cloud spend and get an indicative savings range from a DevOps cost audit.",
   "canonical": "https://soniconsultancyservices.com/cloud-cost-calculator/",
   "h1": "How much could you save on cloud?",
@@ -113,7 +114,7 @@
  },
  {
   "path": "/devops-cloud-engineering/",
-  "title": "DevOps & Cloud Engineering | Soni Consultancy Services",
+  "title": "DevOps & Cloud Engineering Services | Soni Consultancy",
   "description": "Managed DevOps & cloud engineering — CI/CD, Kubernetes, Terraform IaC, AWS & Azure migration, observability and SRE.",
   "canonical": "https://soniconsultancyservices.com/devops-cloud-engineering/",
   "h1": "Ship faster. Spend less on cloud.",
@@ -128,7 +129,7 @@
  },
  {
   "path": "/devops-maturity-assessment/",
-  "title": "DevOps Maturity Assessment | Soni Consultancy Services",
+  "title": "DevOps Maturity Assessment: Free Online Self-Check",
   "description": "Free 2-minute DevOps maturity assessment. Answer 8 questions and get your score — Foundational to Elite — with tailored next steps to ship faster and cut risk.",
   "canonical": "https://soniconsultancyservices.com/devops-maturity-assessment/",
   "h1": "How mature is your DevOps, really?",
@@ -142,7 +143,7 @@
  },
  {
   "path": "/fintech-app-development/",
-  "title": "FinTech App Development | Soni Consultancy Services",
+  "title": "FinTech App Development Company | Soni Consultancy",
   "description": "FinTech app development — payments, wallets, KYC-ready onboarding and investing UX in React Native, engineered with security-first practices.",
   "canonical": "https://soniconsultancyservices.com/fintech-app-development/",
   "h1": "FinTech apps users trust with money.",
@@ -171,7 +172,7 @@
  },
  {
   "path": "/hr-payroll-app-development/",
-  "title": "HR & Payroll App Development | Soni Consultancy Services",
+  "title": "HR & Payroll App Development Company | Soni Consultancy",
   "description": "HR and payroll app development — biometric and GPS attendance, branch-level payroll rules and payslips. our HR platform cut payroll processing time by 40%.",
   "canonical": "https://soniconsultancyservices.com/hr-payroll-app-development/",
   "h1": "Attendance to payslip, no spreadsheets.",
@@ -201,7 +202,7 @@
  },
  {
   "path": "/react-native-app-development-dubai/",
-  "title": "React Native App Development Dubai & UAE",
+  "title": "React Native App Development Company in Dubai & UAE",
   "description": "React Native app development for Dubai & UAE founders — near-zero time-zone gap, MERN backends, and a fixed-price proposal within 48 hours.",
   "canonical": "https://soniconsultancyservices.com/react-native-app-development-dubai/",
   "h1": "React Native development for Dubai founders.",
@@ -216,7 +217,7 @@
  },
  {
   "path": "/react-native-app-development-uk/",
-  "title": "React Native App Development UK | Soni Consultancy Services",
+  "title": "React Native App Development Company UK | Soni Consultancy",
   "description": "React Native app development for UK founders — overlapping hours, GDPR-aware builds, and a fixed-price proposal within 48 hours of our first call.",
   "canonical": "https://soniconsultancyservices.com/react-native-app-development-uk/",
   "h1": "React Native development for UK founders.",
@@ -231,7 +232,7 @@
  },
  {
   "path": "/react-native-app-development-usa/",
-  "title": "React Native App Development USA | Soni Consultancy Services",
+  "title": "React Native App Development Company USA | Soni Consultancy",
   "description": "React Native app development for US founders — follow-the-sun delivery, weekly demos, MERN backends, and a fixed-price proposal within 48 hours.",
   "canonical": "https://soniconsultancyservices.com/react-native-app-development-usa/",
   "h1": "React Native development for US founders.",
@@ -246,7 +247,7 @@
  },
  {
   "path": "/react-native-app-development/",
-  "title": "Hire React Native Developers | Development Company",
+  "title": "React Native App Development Company | iOS & Android Apps",
   "description": "Hire senior React Native developers for iOS & Android. Fixed pricing, no setup fees, apps live on both stores.",
   "canonical": "https://soniconsultancyservices.com/react-native-app-development/",
   "h1": "Hire expert React Native developers. Ship to both app stores.",
@@ -261,7 +262,7 @@
  },
  {
   "path": "/retail-app-development/",
-  "title": "Retail App Development | Soni Consultancy Services",
+  "title": "Retail App Development Company | Soni Consultancy",
   "description": "Retail app development — store operations checklists, gamified staff training and head-office analytics. Our retail operations platform is live on both stores.",
   "canonical": "https://soniconsultancyservices.com/retail-app-development/",
   "h1": "Every store, run to one standard.",
@@ -276,7 +277,7 @@
  },
  {
   "path": "/ride-hailing-app-development/",
-  "title": "Ride-Hailing App Development | Soni Consultancy Services",
+  "title": "Ride-Hailing App Development Company | Soni Consultancy",
   "description": "Ride-hailing and taxi app development — rider and driver apps with real-time tracking, AI fare prediction and safety features.",
   "canonical": "https://soniconsultancyservices.com/ride-hailing-app-development/",
   "h1": "Ride-hailing apps riders trust.",
@@ -291,7 +292,7 @@
  },
  {
   "path": "/services/",
-  "title": "App Development Services | Soni Consultancy Services",
+  "title": "App Development Services: React Native, MERN & AI",
   "description": "React Native, MERN, AI integration, DevOps and developer hiring — mobile-first app development services from idea to App Store.",
   "canonical": "https://soniconsultancyservices.com/services/",
   "h1": "From idea to App Store — one senior team.",
@@ -306,7 +307,7 @@
  },
  {
   "path": "/wordpress-website-development-india/",
-  "title": "WordPress Development India | Soni Consultancy Services",
+  "title": "WordPress Website Development Company in India",
   "description": "Custom WordPress & WooCommerce websites for Indian businesses, built by senior engineers. Fixed price, fast turnaround. Get a free quote.",
   "canonical": "https://soniconsultancyservices.com/wordpress-website-development-india/",
   "h1": "A WordPress website that actually grows your business.",

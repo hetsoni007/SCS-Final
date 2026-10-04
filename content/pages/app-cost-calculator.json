@@ -62,6 +62,60 @@
     "https://www.facebook.com/soniconsultancyservices",
     "https://medium.com/@hetsoni9398"
    ]
+  },
+  {
+   "@context": "https://schema.org",
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How does the app cost calculator work?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It estimates the weeks of senior engineering your app needs from the stage, features, backend, platforms and design you choose, then multiplies by an indicative weekly rate. Our guide to how an app cost estimator works explains the method."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How accurate is the estimate?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It is an indicative planning range, not a quote. Your exact fixed price is confirmed after a short discovery call once requirements are clear."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How much does it cost to build a mobile app?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It depends on scope. In our model a lean MVP is about 7 weeks and a market-ready product about 25 weeks. See three worked examples with real numbers."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is it cheaper to build only for iOS or only for Android?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Slightly. A single platform is about 10 percent less than building both from one shared codebase, because most of the work is shared. See Android app development cost."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which features add the most to the cost?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Payments, chat, maps, offline sync, AI integration and an admin dashboard each add real weeks. Accounts and push notifications are comparatively cheap."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is the calculator free, and do I need to sign up?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It is free and the estimate appears instantly. You only enter an email if you want the detailed breakdown sent to you."
+     }
+    }
+   ]
   }
  ],
  "sections": [
@@ -520,6 +574,71 @@
          "cls": "dim"
         }
        ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "How it works"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "How the estimate is calculated.",
+     "cls": "h2"
+    },
+    {
+     "t": "p",
+     "html": "Every app estimate comes down to the weeks of engineering multiplied by a rate. The calculator starts from a base for your build stage, adds weeks for each feature and for the backend you choose, then adjusts for platforms and design depth. The result is an indicative range in weeks and US dollars."
+    },
+    {
+     "t": "p",
+     "html": "Want the detail? Read <a href=\"/blog/app-cost-estimator\">how an app cost estimator works</a>, compare <a href=\"/blog/mobile-app-cost-examples\">three worked examples</a>, or see the specifics for <a href=\"/blog/app-development-cost-india\">India</a>, <a href=\"/blog/android-app-development-cost\">Android</a> and <a href=\"/blog/mvp-app-development-guide\">MVPs</a>."
+    }
+   ]
+  },
+  {
+   "blocks": [
+    {
+     "t": "eyebrow",
+     "text": "FAQ"
+    },
+    {
+     "t": "h",
+     "level": 2,
+     "html": "Common questions.",
+     "cls": "h2"
+    },
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "How does the app cost calculator work?",
+       "a": "It estimates the weeks of senior engineering your app needs from the stage, features, backend, platforms and design you choose, then multiplies by an indicative weekly rate. Our guide to <a href=\"/blog/app-cost-estimator\">how an app cost estimator works</a> explains the method."
+      },
+      {
+       "q": "How accurate is the estimate?",
+       "a": "It is an indicative planning range, not a quote. Your exact fixed price is confirmed after a short discovery call once requirements are clear."
+      },
+      {
+       "q": "How much does it cost to build a mobile app?",
+       "a": "It depends on scope. In our model a lean MVP is about 7 weeks and a market-ready product about 25 weeks. See <a href=\"/blog/mobile-app-cost-examples\">three worked examples with real numbers</a>."
+      },
+      {
+       "q": "Is it cheaper to build only for iOS or only for Android?",
+       "a": "Slightly. A single platform is about 10 percent less than building both from one shared codebase, because most of the work is shared. See <a href=\"/blog/android-app-development-cost\">Android app development cost</a>."
+      },
+      {
+       "q": "Which features add the most to the cost?",
+       "a": "Payments, chat, maps, offline sync, AI integration and an admin dashboard each add real weeks. Accounts and push notifications are comparatively cheap."
+      },
+      {
+       "q": "Is the calculator free, and do I need to sign up?",
+       "a": "It is free and the estimate appears instantly. You only enter an email if you want the detailed breakdown sent to you."
       }
      ]
     }
