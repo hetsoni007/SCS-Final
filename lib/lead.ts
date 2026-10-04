@@ -19,7 +19,7 @@ export type LeadInput = {
   page?: string;
   attribution?: Record<string, string>;
   hp?: string; // honeypot: must stay empty
-  turnstile?: string; // accepted for the optional widget; the static site has no server to verify it
+  turnstile?: string; // Cloudflare Turnstile token; the lead API verifies it when its TURNSTILE_SECRET is set
 };
 export type LeadResult = { ok: true } | { ok: false; error: string };
 
@@ -37,7 +37,7 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
   for (const [k, v] of Object.entries(input.fields ?? {})) fields[clip(k, 60)] = clip(v, 4000);
   const attribution: Record<string, string> = {};
   for (const [k, v] of Object.entries(input.attribution ?? {})) attribution[clip(k, 40)] = clip(v, 300);
-  const payload = { kind: input.kind, name: clip(input.name, 200).trim(), email, ...fields, page: clip(input.page, 300), ...attribution };
+  const payload = { kind: input.kind, name: clip(input.name, 200).trim(), email, ...fields, page: clip(input.page, 300), ...attribution, ...(input.turnstile ? { turnstile_token: clip(input.turnstile, 2100) } : {}) };
 
   if (!ENDPOINT) {
     console.info("[lead] dry run (NEXT_PUBLIC_LEAD_ENDPOINT is empty):", payload.kind);

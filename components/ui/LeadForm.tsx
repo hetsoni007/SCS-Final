@@ -50,8 +50,13 @@ export default function LeadForm({
     const name = [values.name, values.firstName, values.lastName].filter(Boolean).join(" ").trim();
     const ex = typeof extra === "function" ? extra() : (extra ?? {});
     const token = form.current?.querySelector<HTMLInputElement>('[name="cf-turnstile-response"]')?.value;
+    if (TURNSTILE && !token) { setError("Please complete the verification check above, then send again."); return; }
     const res = await submitLead({ kind, email, name, fields: { ...values, ...ex }, page: location.pathname, attribution: getAttribution(), hp: hp.current?.value || undefined, turnstile: token }).catch(() => ({ ok: false as const, error: "Network error. Please try again." }));
-    if (!res.ok && !alwaysSucceed) { setError(res.error); return; }
+    if (!res.ok && !alwaysSucceed) {
+      (window as { turnstile?: { reset: () => void } }).turnstile?.reset(); // a token can only be verified once
+      setError(res.error);
+      return;
+    }
     track("form_submit", { form: kind });
     setDone(true);
     onSuccess?.(values);
@@ -93,7 +98,7 @@ export default function LeadForm({
           {err.consent && <p role="alert" className="mt-1.5 text-[13px] text-danger">{err.consent.message}</p>}
         </div>
       )}
-      {TURNSTILE && (<div className="sm:col-span-2"><Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="lazyOnload" /><div className="cf-turnstile" data-sitekey={TURNSTILE} data-theme="dark" data-size="flexible" /></div>)}
+      {TURNSTILE && (<div className="sm:col-span-2"><Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="lazyOnload" /><div className="cf-turnstile" data-sitekey={TURNSTILE} data-theme="auto" data-size="flexible" /></div>)}
       <div className="flex flex-wrap items-center gap-4 sm:col-span-2">
         <button type="submit" disabled={isSubmitting} className="btn btn-primary btn-lg disabled:opacity-60" data-magnetic="0.2">{isSubmitting ? "Sending…" : submit}</button>
         {note && <span className="text-[13.5px] text-lo">{note}</span>}
