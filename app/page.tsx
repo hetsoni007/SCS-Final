@@ -6,11 +6,18 @@ import Testimonials from "@/components/sections/Testimonials";
 import { Bento, Founder, Manifesto, Stats, ToolsTeaser } from "@/components/sections/HomeStatic";
 import BlogCard, { ThumbWarpFilter } from "@/components/sections/BlogCard";
 import { SectionHead } from "@/components/sections/SectionHead";
+import { RenderForm } from "@/components/sections/Blocks";
 import { getPage, getPosts, pageMetadata } from "@/lib/content";
 import { JsonLd, personSchema } from "@/lib/schema";
 import { liveCases } from "@/content/work";
+import type { Block } from "@/lib/content";
 
 const page = getPage("index");
+// The same "Start here" form as the service pages, for visitors who would rather write two lines than book a call.
+const startForm: Extract<Block, { t: "form" }> = {
+  t: "form", id: "leadForm", fields: [], submit: "Send →", kick: "Start here", title: "Tell us what you’re building.",
+  sub: "One short form. You get a straight answer on scope and a fixed price within 48 hours — or an honest no if it isn’t a fit.",
+};
 export const metadata = pageMetadata(page.meta, "/");
 
 export default function Home() {
@@ -39,6 +46,9 @@ export default function Home() {
           </div>
           <div className="mt-12 grid gap-4 md:grid-cols-3">{latest.map((p, i) => <BlogCard key={p.slug} post={p} i={i} />)}</div>
         </div>
+      </section>
+      <section className="section" data-loc="home-form">
+        <div className="wrap"><RenderForm b={startForm} /></div>
       </section>
       <FinalCTA />
       <JsonLd data={[personSchema()]} />
