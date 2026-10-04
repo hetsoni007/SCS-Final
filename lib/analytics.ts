@@ -16,6 +16,8 @@ export function track(name: EventName, params: Record<string, unknown> = {}) {
   if (typeof window === "undefined") return;
   try {
     window.gtag?.("event", name, params);
+    // the same event as a plain dataLayer object, which is the form Tag Manager triggers ("Custom Event") read
+    if (process.env.NEXT_PUBLIC_GTM_ID) window.dataLayer?.push({ event: name, ...params });
     window.va?.("event", { name, data: flatten(params) });
   } catch {}
 }
