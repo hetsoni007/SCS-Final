@@ -12,8 +12,6 @@ import { useApp } from "@/components/providers/AppProviders";
 import { prefs, serverPrefs } from "@/lib/prefs";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
-// Cloudflare Web Analytics: cookieless, no personal data, so it runs without consent and counts every visit.
-const CF_BEACON = process.env.NEXT_PUBLIC_CF_BEACON_TOKEN;
 
 function Cursor() {
   const dot = useRef<HTMLDivElement>(null), ring = useRef<HTMLDivElement>(null);
@@ -55,8 +53,8 @@ function ConsentBanner({ consent }: { consent: string }) {
     <div role="dialog" aria-label="Cookie consent" className="glass fixed bottom-20 left-3 right-3 z-[90] mx-auto max-w-[560px] p-3.5 md:bottom-5 md:left-auto md:right-5 md:mx-0 md:max-w-[380px] md:p-5" style={{ background: "color-mix(in srgb, var(--bg-2) 94%, transparent)" }}>
       <p className="text-[13px] leading-snug text-mid md:text-[14px] md:leading-relaxed">
         We use analytics cookies to understand which pages are useful. They load only if you accept.
-        {/* only true where a cookieless script is actually served: Vercel Analytics or the Cloudflare beacon */}
-        {process.env.VERCEL_ANALYTICS || CF_BEACON ? " Essential, cookieless measurement always runs." : ""} See our{" "}
+        {/* only true where the cookieless Vercel Analytics script is served (see next.config.ts) */}
+        {process.env.VERCEL_ANALYTICS ? " Essential, cookieless measurement always runs." : ""} See our{" "}
         <Link href="/privacy/" className="underline text-hi">Privacy Policy</Link>.
       </p>
       <div className="mt-3 flex gap-2 md:mt-4">
@@ -113,7 +111,6 @@ export default function ChromeExtras() {
       <ConsentBanner consent={consent} />
       <ExitIntent />
       {process.env.VERCEL_ANALYTICS ? <Analytics /> : null}
-      {CF_BEACON && <Script src="https://static.cloudflareinsights.com/beacon.min.js" strategy="afterInteractive" data-cf-beacon={JSON.stringify({ token: CF_BEACON })} />}
       {GA_ID && consent === "granted" && (
         <>
           <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />

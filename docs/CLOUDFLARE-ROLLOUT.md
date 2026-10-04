@@ -1,14 +1,13 @@
-# Cloudflare rollout: Turnstile (form spam check) and Web Analytics (cookieless visit counting)
+# Cloudflare rollout: Turnstile (form spam check)
 
-The site code for both is already in place and switched off. Each turns on when its key is set at build time.
-Follow the steps in this order. Step 1 must be live before step 3, or the widgets are blocked by the site's own
+The site code is already in place and switched off. It turns on when the site key is set at build time.
+Follow the steps in this order. Step 1 must be live before step 3, or the widget is blocked by the site's own
 Content-Security-Policy and visitors could not submit forms.
 
 ## 0. Get the keys (Cloudflare dashboard, free account)
 
 - **Turnstile** → Add widget → hostname `soniconsultancyservices.com`, mode "Managed". Gives a **site key** (public)
   and a **secret key** (private: never commit it or paste it into chat).
-- **Analytics & Logs → Web Analytics** → add `soniconsultancyservices.com`. Gives a **token** (public).
 
 ## 1. Allow Cloudflare in the CloudFront security policy
 
@@ -17,8 +16,7 @@ additions and nothing removed:
 
 | Directive | Added |
 |---|---|
-| `script-src` | `https://challenges.cloudflare.com` `https://static.cloudflareinsights.com` |
-| `connect-src` | `https://cloudflareinsights.com` |
+| `script-src` | `https://challenges.cloudflare.com` |
 | `frame-src` | `https://challenges.cloudflare.com` `https://calendly.com` |
 | `worker-src` | `'self' blob:` (new directive) |
 
@@ -41,20 +39,19 @@ variables; the CLI's `update-function-configuration --environment` replaces all 
 
 From this moment the Lambda rejects any submission without a valid token, so do step 3 straight away.
 
-## 3. Deploy the site with the public keys
+## 3. Deploy the site with the site key
 
 ```bash
-NEXT_PUBLIC_TURNSTILE_SITE_KEY=<site key> NEXT_PUBLIC_CF_BEACON_TOKEN=<token> scripts/deploy-aws.sh
+NEXT_PUBLIC_TURNSTILE_SITE_KEY=<site key> scripts/deploy-aws.sh
 ```
 
-To make them permanent, export both in your shell profile or put them in the deploy command you normally run. A deploy
-without them switches both features off again (and the Lambda would then reject every form), so keep them set.
+To make it permanent, export it in your shell profile or put it in the deploy command you normally run. A deploy
+without it switches the check off again (and the Lambda would then reject every form), so keep it set.
 
 ## 4. Verify
 
 - Submit a form on the live site: the Turnstile check appears, the email arrives, and the Lambda log shows no
   `turnstile: not configured` line.
-- Cloudflare → Web Analytics shows visits within a few minutes.
 
 ## 5. Later: the visitor auto-reply
 
@@ -63,4 +60,4 @@ Needs SES production access first (SES → Account dashboard → Request product
 
 ## Rolling back
 
-Deploy without the two keys and remove `TURNSTILE_SECRET` from the Lambda. The policy additions can stay.
+Deploy without the site key and remove `TURNSTILE_SECRET` from the Lambda. The policy additions can stay.
