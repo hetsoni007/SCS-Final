@@ -68,7 +68,7 @@
       },
       {
        "t": "text",
-       "html": "Last updated: June 2026",
+       "html": "Last updated: October 2026",
        "cls": "article-meta"
       }
      ]
@@ -157,7 +157,11 @@
       },
       {
        "t": "p",
-       "html": "We use only essential and basic analytics cookies — no advertising or cross-site tracking. You can block cookies in your browser; the site still works."
+       "html": "We use only essential and basic analytics cookies — no advertising or cross-site tracking. Analytics cookies are set only if you accept them in the cookie notice. You can block cookies in your browser; the site still works."
+      },
+      {
+       "t": "p",
+       "html": "We use Google Tag Manager to manage measurement tags. It loads for every visitor and sets no cookies of its own. Until you accept analytics cookies, Google's tags run in a restricted consent mode: they set no cookies and may send limited, cookieless signals, such as a page view, to Google. You can change your choice at any time with the cookie controls on this page."
       },
       {
        "t": "h",

@@ -12,8 +12,6 @@ import { useApp } from "@/components/providers/AppProviders";
 import { prefs, serverPrefs } from "@/lib/prefs";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
-// Google Tag Manager container. Loaded on the same consent as GA4; it shares window.dataLayer with the tag below.
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
 function Cursor() {
   const dot = useRef<HTMLDivElement>(null), ring = useRef<HTMLDivElement>(null);
@@ -118,9 +116,6 @@ export default function ChromeExtras() {
           <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
           <Script id="ga4" strategy="afterInteractive">{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config','${GA_ID}',{anonymize_ip:true});`}</Script>
         </>
-      )}
-      {GTM_ID && consent === "granted" && (
-        <Script id="gtm" strategy="afterInteractive">{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`}</Script>
       )}
     </>
   );

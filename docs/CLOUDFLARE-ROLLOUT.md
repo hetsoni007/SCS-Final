@@ -17,7 +17,7 @@ additions and nothing removed:
 | Directive | Added |
 |---|---|
 | `script-src` | `https://challenges.cloudflare.com` |
-| `frame-src` | `https://challenges.cloudflare.com` `https://calendly.com` |
+| `frame-src` | `https://challenges.cloudflare.com` `https://calendly.com` `https://www.googletagmanager.com` (Tag Manager's noscript frame) |
 | `worker-src` | `'self' blob:` (new directive) |
 
 The Calendly and `worker-src` entries are the two fixes the README already recommends: they restore the in-page

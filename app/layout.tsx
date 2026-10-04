@@ -33,13 +33,23 @@ export const viewport: Viewport = { themeColor: site.themeColor, width: "device-
  */
 const boot = `(function(){var d=document.documentElement;try{var t=localStorage.getItem('scs-theme'),m=localStorage.getItem('scs-motion');d.dataset.theme=t==='light'?'light':'dark';d.dataset.motion=m||(matchMedia('(prefers-reduced-motion: reduce)').matches?'reduce':'full');d.classList.add('js')}catch(e){d.dataset.theme='dark'}try{var k='${preloader.storageKey}',s=sessionStorage.getItem(k),c=navigator.connection;sessionStorage.setItem(k,'1');if(!s&&d.dataset.motion==='full'&&matchMedia('(min-width: 768px)').matches&&!(c&&c.saveData))d.dataset.intro='1'}catch(e){}})();`;
 
+// Google Tag Manager with Consent Mode: the container loads for every visitor, with storage denied until the
+// visitor accepts analytics cookies (a returning visitor's stored choice is applied at once). Ad storage stays
+// denied: the banner only asks about analytics. lib/prefs.ts sends the update when the choice changes.
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+const gtmBoot = GTM_ID
+  ? `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;(function(){var a='denied';try{if(localStorage.getItem('scs-consent')==='granted')a='granted'}catch(e){}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:a})})();(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`
+  : "";
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" data-theme="dark" className={`${display.variable} ${body.variable} ${mono.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: boot }} />
+        {gtmBoot && <script dangerouslySetInnerHTML={{ __html: gtmBoot }} />}
       </head>
       <body>
+        {GTM_ID && <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`} height="0" width="0" style={{ display: "none", visibility: "hidden" }} /></noscript>}
         {/* first-visit intro cover: shown by the boot script's data-intro flag, animated by ui/Preloader */}
         <div className="intro-cover" aria-hidden><span className="intro-mark">SCS</span></div>
         <a href="#main" className="skip-link">Skip to content</a>

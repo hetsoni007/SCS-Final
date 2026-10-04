@@ -25,7 +25,12 @@ export const prefs = {
   consent: (): Consent | "unset" => (ls(CONSENT_KEY) as Consent | null) ?? "unset",
   setReduced(v: boolean) { set("scs-motion", v ? "reduce" : "full"); document.documentElement.dataset.motion = v ? "reduce" : "full"; emit(); },
   toggleTheme() { const n = prefs.theme() === "dark" ? "light" : "dark"; document.documentElement.dataset.theme = n; set("scs-theme", n); emit(); },
-  setConsent(c: Consent) { set(CONSENT_KEY, c); emit(); },
+  setConsent(c: Consent) {
+    set(CONSENT_KEY, c);
+    // Consent Mode: tell Google Tag Manager straight away, before anything that loads on consent runs
+    (window as { gtag?: (...a: unknown[]) => void }).gtag?.("consent", "update", { analytics_storage: c });
+    emit();
+  },
 };
 /** Server snapshots: nothing is known before hydration. */
 export const serverPrefs = { reduced: () => false, theme: () => "dark" as const, consent: () => "pending" as const };
