@@ -1,0 +1,117 @@
+---
+slug: "core-elements-of-an-ai-agent"
+title: "What Are the Core Elements of an AI Agent? A Plain-English Guide (2026)"
+metaTitle: "What Are the Core Elements of an AI Agent? (2026 Guide)"
+description: "The core elements of an AI agent explained in plain English: the model, instructions, tools, memory, the planning loop and guardrails, with a worked example."
+canonical: "https://soniconsultancyservices.com/blog/core-elements-of-an-ai-agent"
+ogTitle: "What Are the Core Elements of an AI Agent?"
+ogDescription: "The model, instructions, tools, memory, the planning loop and guardrails, with a worked example."
+categories: ["AI","Strategy"]
+lead: "An AI agent is a language model that can take actions, see the results and decide what to do next until a goal is met. Every agent, simple or complex, is built from the same six elements. Knowing them makes it far easier to judge a vendor's proposal or scope your own."
+author: "Het Soni"
+readTime: "7 min read"
+dateLabel: "October 2026"
+datePublished: "2026-10-04"
+dateModified: "2026-10-04"
+excerpt: "The model, instructions, tools, memory, the planning loop and guardrails, with a worked example."
+indexOrder: 45
+indexFilter: "ai strategy"
+cta: {"heading":"Thinking about an AI agent?","body":"Describe the task you want automated. We will tell you whether it needs an agent, a simpler workflow or no AI at all.","buttons":[{"label":"Book a Free Call →","href":"https://calendly.com/het-soni-soniconsultancyservices/introductory"},{"label":"See AI app development","href":"/ai-app-development/"}]}
+related: ["ai-agent-development-services","build-vs-buy-ai-cto-framework","ai-app-development-cost-2026"]
+hasWidget: false
+---
+
+## The six core elements
+
+### 1. The model
+
+The language model is the reasoning engine. It reads the situation and decides the next step. Model choice affects quality, speed and running cost, and the best choice is often the smallest model that does the job reliably.
+
+### 2. Instructions
+
+Also called the system prompt. Instructions tell the agent its goal, its role, the rules it must follow and what a good result looks like. Vague instructions are the most common cause of an unreliable agent.
+
+### 3. Tools
+
+Tools are the actions the agent can take: search a database, call an API, send an email, create a ticket, run code. Without tools a model can only write text. With them it can do work. Each tool needs a clear description, defined inputs and sensible limits.
+
+### 4. Memory and context
+
+The agent needs the right information at the right moment:
+
+-   **Short-term context:** the current task and what has happened so far.
+-   **Retrieved knowledge:** documents, records or policies fetched when needed.
+-   **Long-term memory:** facts kept between sessions, such as a customer's preferences.
+
+Giving an agent too much context is as harmful as giving it too little.
+
+### 5. The planning loop
+
+This is what separates an agent from a single prompt. The agent decides on a step, acts, observes the result and decides again, repeating until the goal is reached or a stop condition is met. The loop needs limits on steps, time and cost.
+
+### 6. Guardrails and evaluation
+
+-   **Guardrails:** permission checks, approval steps for risky actions, input and output filtering, and spending limits.
+-   **Evaluation:** a set of test cases that measures whether the agent does the job correctly, run every time something changes.
+
+Teams skip this element most often, and it is the one that decides whether an agent is safe to put in front of customers.
+
+## A worked example: a support agent
+
+A customer writes: "Where is my order?"
+
+1.  **Instructions** tell the agent it handles order queries and must never issue refunds without approval.
+2.  The **model** decides it needs the order status.
+3.  It calls a **tool** to look up the order.
+4.  **Memory** supplies the customer's earlier messages and the delivery policy.
+5.  The **loop** continues: the order is delayed, so the agent checks the courier tool for a new date.
+6.  **Guardrails** stop it promising compensation. It replies with the new date and offers to hand over to a person.
+
+Six elements, one short conversation.
+
+## Agent, chatbot or workflow?
+
+| | Chatbot | Workflow | Agent |
+|---|---|---|---|
+| Takes actions | no | yes, fixed steps | yes, chosen steps |
+| Decides the next step | no | no | yes |
+| Best for | answering questions | predictable processes | variable, multi-step tasks |
+
+If the steps are always the same, a workflow is cheaper and more reliable than an agent. Our guide to [AI agent development](/blog/ai-agent-development-services) covers when not to build one.
+
+## What this means for cost
+
+Each element is work. Tools and integrations usually take the most time, and evaluation is the part most often left out of a cheap quote. When you compare proposals, ask what is included for each of the six.
+
+For budgets, see [AI app development cost](/blog/ai-app-development-cost-2026). For whether to build at all, see our [build vs buy framework](/blog/build-vs-buy-ai-cto-framework).
+
+## Questions to ask a vendor
+
+-   Which model, and why that one?
+-   What tools will the agent have, and what limits apply to each?
+-   What can it never do without human approval?
+-   How will you test it, and what is the pass mark?
+-   What does it cost to run per task?
+-   What happens when it gets something wrong?
+
+## Frequently asked questions
+
+### What are the core elements of an AI agent?
+
+A model that reasons, instructions that set its goal and rules, tools that let it act, memory and context that inform it, a planning loop that repeats until the goal is met, and guardrails with evaluation that keep it safe and reliable.
+
+### What is the difference between an AI agent and a chatbot?
+
+A chatbot answers questions. An agent takes actions through tools and decides its own next step until a task is complete.
+
+### Does every AI agent need memory?
+
+Every agent needs short-term context for the current task. Long-term memory between sessions is optional and should be added only when the task needs it.
+
+### What are guardrails in an AI agent?
+
+Controls that limit what the agent can do: permissions, human approval for risky actions, filtering of inputs and outputs, and caps on steps and spending.
+
+### When should I not build an AI agent?
+
+When the steps are always the same. A fixed workflow is cheaper, faster and more predictable than an agent for a predictable process.

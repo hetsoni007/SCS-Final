@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Hire React Native Developers in India (2026): Models, Vetting and Contracts",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-10-04",
+  "dateModified": "2026-10-04",
+  "articleSection": "Mobile",
+  "description": "How to hire React Native developers in India: freelancer, dedicated team or agency, how to vet from abroad, time zones, contracts, IP and the mistakes to avoid."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "How to Hire React Native Developers in India (2026): Models, Vetting and Contracts",
+    "item": "https://soniconsultancyservices.com/blog/hire-react-native-developers-india"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "How do I hire React Native developers in India?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Decide between a freelancer, a dedicated team and a fixed-scope agency, shortlist teams with live apps on both stores, meet the engineers who will do the work, run a short paid trial, and sign a contract that assigns IP to you."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Is it safe to outsource app development to India?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes, with the usual safeguards: IP assignment in the contract, the repository and store accounts in your name, an NDA, and payments tied to demonstrated milestones."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How do I manage the time difference with an Indian team?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Agree a fixed daily overlap, ask for written updates and a weekly demo, and keep work visible on a shared task board. UK and European clients share most of the working day. US clients need a planned overlap."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Should I hire a freelancer or an agency in India?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "A freelancer suits a small, well-defined task. An agency suits a full product, especially if you do not have a technical lead of your own."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How much does it cost to hire React Native developers in India?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "It depends on seniority, model and scope. Compare vendors on the weeks they estimate for the same written scope, and use the cost calculator for an indicative range."
+    }
+   }
+  ]
+ }
+]

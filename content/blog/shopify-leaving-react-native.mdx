@@ -1,0 +1,125 @@
+---
+slug: "shopify-leaving-react-native"
+title: "Shopify Is Leaving React Native: What It Means for Your App (2026)"
+metaTitle: "Shopify Is Leaving React Native: What It Means for Your App"
+description: "Shopify is moving its apps from React Native to native Swift and Kotlin. What it announced, why AI coding agents changed the maths, and whether you should follow."
+canonical: "https://soniconsultancyservices.com/blog/shopify-leaving-react-native"
+ogTitle: "Shopify Is Leaving React Native: What It Means for Your App"
+ogDescription: "What Shopify announced, why AI coding agents changed the maths, and whether your app should follow."
+categories: ["Mobile","Strategy"]
+lead: "In September 2026 Shopify said it is moving its mobile apps from React Native back to native Swift and Kotlin. We build with React Native, so here is our honest reading: what was announced, why it happened, and what it does and does not mean for a founder choosing a stack today."
+author: "Het Soni"
+readTime: "8 min read"
+dateLabel: "October 2026"
+datePublished: "2026-10-04"
+dateModified: "2026-10-04"
+excerpt: "What Shopify announced, why AI coding agents changed the maths, and whether your app should follow."
+indexOrder: 41
+indexFilter: "mobile strategy"
+cta: {"heading":"Not sure which stack fits your app?","body":"Tell us about your product, team and budget. We will give you a straight recommendation, including when native is the better choice.","buttons":[{"label":"Book a Free Call →","href":"https://calendly.com/het-soni-soniconsultancyservices/introductory"},{"label":"Estimate your app cost","href":"/app-cost-calculator/"}]}
+related: ["native-vs-cross-platform-2026","react-native-new-architecture-2026","react-native-vs-flutter-2026"]
+hasWidget: false
+---
+
+## What Shopify announced
+
+On 10 September 2026, Shopify's engineering team published a post titled "Native is now the future of mobile at Shopify". The company is moving its Shopify, Shop, Point of Sale and Inbox apps from React Native to native Swift and Kotlin.
+
+The key facts from Shopify's post and InfoQ's report:
+
+-   **Shop is already native.** It went from proof of concept to a published native app in 12 weeks. InfoQ reports that six engineers did the rebuild.
+-   **The main Shopify app is under way**, with Point of Sale and Inbox to follow.
+-   **Shopify did not call React Native a failure.** It described it as an excellent framework that served the company well from 2020 to 2025.
+
+## Why Shopify made the move
+
+Shopify gave one main reason: **AI coding agents have cut the cost of building a feature twice.**
+
+The case for a shared codebase has always been economic. Writing every feature once for iOS and once for Android was expensive, so sharing code saved money. Shopify says agents can now implement a feature on one platform using the other as a reference, help engineers work across both stacks, and keep the two apps in step through shared specs and tests.
+
+InfoQ adds a second factor: Shopify faced a significant refactor to adopt React Native's New Architecture, so a rewrite of some kind was coming either way.
+
+## What Shopify gained
+
+InfoQ reports these results for the native Shop app:
+
+-   iOS cold start about 23 percent faster, Android about 50 percent faster
+-   Crash-free sessions up from 99.5 percent to 99.95 percent
+-   Android release builds about 75 percent faster
+
+Critics quoted in the same report point out that the comparison is against the old React Native architecture, not the new one, and that going native gives up over-the-air updates.
+
+## What happens to Shopify's open-source libraries
+
+Many React Native apps depend on Shopify's libraries. According to Shopify's post:
+
+-   **React Native Skia:** sponsored to the end of 2026. Its creator, William Candillon, will continue it under a new name.
+-   **FlashList:** Shopify will keep making critical fixes and is looking for long-term maintainers from the community.
+-   **Restyle:** being archived, and open to community forks.
+
+If your app uses FlashList, Skia or Restyle, nothing breaks today. Add a note to review those dependencies over the next year.
+
+## Does this mean React Native is finished?
+
+No. Shopify's decision rests on conditions that most companies do not share:
+
+1.  **A large mobile team** that can own two native codebases.
+2.  **Mature AI tooling and process** to keep two apps in parity.
+3.  **Apps at very large scale**, where a few percent of start-up time matters commercially.
+4.  **A forced rewrite anyway**, because of the New Architecture migration.
+
+React Native itself keeps shipping. See our guides to the [New Architecture](/blog/react-native-new-architecture-2026) and [Expo SDK 57](/blog/expo-sdk-57-upgrade-guide).
+
+## What it means if you are choosing a stack now
+
+### Stay with a shared codebase if
+
+-   You have a small team or are hiring an agency.
+-   You are building an MVP or a first version.
+-   You need both platforms on one budget.
+-   You value shipping fixes without waiting for store review.
+
+For most products being started this year, one codebase is still the economical choice. Our [native vs cross-platform guide](/blog/native-vs-cross-platform-2026) sets out the trade-offs.
+
+### Consider native if
+
+-   The app leans heavily on platform features such as widgets, watch apps or deep system integration.
+-   You already have separate iOS and Android engineers.
+-   Performance at very large scale is a commercial issue.
+
+### If you already have a React Native app
+
+Do not rewrite because of a headline. Measure first: start-up time, crash rate and how often the framework blocks a feature. If those are healthy, a rewrite buys little. If they are not, a [consulting review](/blog/react-native-consulting-services) is cheaper than a rebuild.
+
+## Our view
+
+Shopify's move is a real signal: AI agents are changing the cost of maintaining two codebases, and that weakens the oldest argument for cross-platform. It will matter more each year.
+
+It is not yet a reason for a startup to double its codebase. The saving Shopify describes depends on a team and tooling that most early-stage companies do not have. Choose the stack that fits your team and your first year, and keep the code clean enough to change your mind later.
+
+## Sources
+
+-   [Native is now the future of mobile at Shopify](https://shopify.engineering/back-to-native), Shopify Engineering, 10 September 2026
+-   [Shopify Drops React Native for Swift and Kotlin](https://www.infoq.com/news/2026/09/shopify-drops-react-native/), InfoQ, September 2026
+
+## Frequently asked questions
+
+### Is Shopify really leaving React Native?
+
+Yes. On 10 September 2026 Shopify announced it is moving its Shopify, Shop, Point of Sale and Inbox apps from React Native to native Swift and Kotlin. The Shop app has already shipped as a native app.
+
+### Why did Shopify leave React Native?
+
+Shopify says AI coding agents have reduced the cost of building each feature twice, which was the main reason to share a codebase. InfoQ also reports that Shopify faced a large refactor to adopt React Native's New Architecture.
+
+### Is React Native dead after Shopify's decision?
+
+No. Shopify called React Native an excellent framework, and it continues to be developed. The decision reflects Shopify's scale, team and tooling more than a flaw in the framework.
+
+### Should I rewrite my React Native app in Swift and Kotlin?
+
+Not because of this news alone. Measure start-up time, crash rate and how often the framework blocks you. If those are healthy, a rewrite is hard to justify.
+
+### What happens to FlashList and React Native Skia?
+
+Shopify will keep making critical fixes to FlashList while it looks for community maintainers. It sponsors React Native Skia to the end of 2026, after which its creator will continue it under a new name. Restyle is being archived.

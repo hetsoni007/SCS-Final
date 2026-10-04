@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Expo SDK 57: What's New and How to Upgrade (React Native 0.86)",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-10-04",
+  "dateModified": "2026-10-04",
+  "articleSection": "Mobile",
+  "description": "Expo SDK 57 brings React Native 0.86 with no breaking changes. What is new, the two behaviour changes to watch, known issues and a safe upgrade checklist."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Expo SDK 57: What's New and How to Upgrade (React Native 0.86)",
+    "item": "https://soniconsultancyservices.com/blog/expo-sdk-57-upgrade-guide"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "What version of React Native does Expo SDK 57 use?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Expo SDK 57 uses React Native 0.86 with React 19.2. SDK 56 used React Native 0.85 with the same React version."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Does Expo SDK 57 have breaking changes?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "React Native 0.86 is intended to have no breaking changes from 0.85. Two behaviour changes need attention: expo prebuild now regenerates native folders by default, and apps built with the iOS 27 SDK need the scene-based lifecycle."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How do I upgrade to Expo SDK 57?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Run npx expo install expo@^57.0.0 --fix, then npx expo-doctor, rebuild your development client and test on real devices."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Are there known bugs in Expo SDK 57?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Two early ones: a memory regression with Hermes V1 in apps using reanimated or worklets, fixed in expo 57.0.9, and slower development start-up, fixed in expo 57.0.17. Use the latest patch."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Will expo prebuild delete my native changes?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "In SDK 57 it clears and regenerates the android and ios directories by default. Pass --no-clean to keep existing folders, or move manual edits into config plugins."
+    }
+   }
+  ]
+ }
+]

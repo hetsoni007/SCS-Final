@@ -1,0 +1,108 @@
+---
+slug: "expo-sdk-57-upgrade-guide"
+title: "Expo SDK 57: What's New and How to Upgrade (React Native 0.86)"
+metaTitle: "Expo SDK 57: What's New and How to Upgrade"
+description: "Expo SDK 57 brings React Native 0.86 with no breaking changes. What is new, the two behaviour changes to watch, known issues and a safe upgrade checklist."
+canonical: "https://soniconsultancyservices.com/blog/expo-sdk-57-upgrade-guide"
+ogTitle: "Expo SDK 57: What's New and How to Upgrade"
+ogDescription: "React Native 0.86, two behaviour changes to watch, known issues and a safe upgrade checklist."
+categories: ["Mobile","Engineering"]
+lead: "Expo SDK 57 is a small release by design. It moves you to React Native 0.86 with one command and is intended to have no breaking changes. There are still two behaviour changes and two early bugs worth knowing about before you upgrade."
+author: "Het Soni"
+readTime: "6 min read"
+dateLabel: "October 2026"
+datePublished: "2026-10-04"
+dateModified: "2026-10-04"
+excerpt: "React Native 0.86, two behaviour changes to watch, known issues and a safe upgrade checklist."
+indexOrder: 42
+indexFilter: "mobile"
+cta: {"heading":"Stuck on an upgrade?","body":"We upgrade and maintain React Native and Expo apps. Tell us your current SDK and what is blocking you.","buttons":[{"label":"Book a Free Call →","href":"https://calendly.com/het-soni-soniconsultancyservices/introductory"},{"label":"See React Native services","href":"/react-native-app-development/"}]}
+related: ["react-native-new-architecture-2026","ci-cd-react-native","shopify-leaving-react-native"]
+hasWidget: false
+---
+
+## The short version
+
+-   **Released:** 30 June 2026
+-   **React Native:** 0.85 to 0.86
+-   **React:** 19.2, unchanged from SDK 56
+-   **Breaking changes:** none intended in React Native 0.86
+-   **Upgrade command:** `npx expo install expo@^57.0.0 --fix`
+
+Expo describes SDK 57 as a first step towards a new cadence: optional, low-friction upgrades between the larger SDK releases.
+
+## What is new
+
+### From React Native 0.86
+
+-   Fixes and improvements to edge-to-edge support on Android
+-   Light and dark mode emulation in React Native DevTools
+-   Rendering, layout and animation fixes
+
+### From Expo
+
+-   **expo-dev-client:** the iOS launcher can now auto-launch your most recent project or show the launcher menu.
+-   **expo-image:** new `writeToCacheAsync` and `readFromCacheAsync` methods to seed and read the image cache by key.
+-   **expo-router:** `Stack.Toolbar.Badge` works in more placements on Android.
+-   **expo-navigation-bar:** `setStyle` and `setHidden` now apply to React Native `Modal` windows.
+-   **Bundled libraries:** react-native-reanimated 4.5, react-native-worklets 0.10 and react-native-gesture-handler 2.32.
+
+## Two behaviour changes to watch
+
+### 1. `expo prebuild` now cleans by default
+
+`expo prebuild` now clears and regenerates the native `android` and `ios` directories by default. If you have made manual edits inside those folders, they will be lost. Pass `--no-clean` to apply changes to the existing folders, or move your edits into config plugins.
+
+### 2. iOS 27 SDK needs the scene lifecycle
+
+Apps built with Xcode 27 and the iOS 27 SDK require the scene-based lifecycle. SDK 57 adds an opt-in through the `ios.enableSceneSupport` config option.
+
+## Known issues, and the versions that fix them
+
+-   **Memory regression with Hermes V1** in apps using reanimated or worklets. Resolved in `expo@57.0.9`.
+-   **Slower development start-up.** Resolved in `expo@57.0.17`.
+
+Upgrade to the latest 57 patch, not the first one.
+
+## A safe upgrade checklist
+
+1.  **Start from SDK 56.** If you are further behind, upgrade one SDK at a time.
+2.  **Create a branch** and make sure the current build is green.
+3.  **Run the upgrade:** `npx expo install expo@^57.0.0 --fix`
+4.  **Check for problems:** `npx expo-doctor`
+5.  **Review prebuild.** If you keep native folders in git, decide between config plugins and `--no-clean` before you run `expo prebuild`.
+6.  **Rebuild development clients.** A new SDK needs a new development build.
+7.  **Test on real devices**, especially Android edge-to-edge layouts, animations and any screen using reanimated.
+8.  **Ship through your normal pipeline.** See [CI/CD for React Native](/blog/ci-cd-react-native).
+
+## Should you upgrade now?
+
+For most apps on SDK 56, yes. The change is small, the known bugs are fixed in later patches, and staying current keeps future upgrades easy. Wait if you depend on manual native edits that you have not yet moved into config plugins.
+
+If you are still on the old architecture, read our [New Architecture guide](/blog/react-native-new-architecture-2026) first.
+
+## Sources
+
+-   [Expo SDK 57 changelog](https://expo.dev/changelog/sdk-57), Expo, 30 June 2026
+
+## Frequently asked questions
+
+### What version of React Native does Expo SDK 57 use?
+
+Expo SDK 57 uses React Native 0.86 with React 19.2. SDK 56 used React Native 0.85 with the same React version.
+
+### Does Expo SDK 57 have breaking changes?
+
+React Native 0.86 is intended to have no breaking changes from 0.85. Two behaviour changes need attention: `expo prebuild` now regenerates native folders by default, and apps built with the iOS 27 SDK need the scene-based lifecycle.
+
+### How do I upgrade to Expo SDK 57?
+
+Run `npx expo install expo@^57.0.0 --fix`, then `npx expo-doctor`, rebuild your development client and test on real devices.
+
+### Are there known bugs in Expo SDK 57?
+
+Two early ones: a memory regression with Hermes V1 in apps using reanimated or worklets, fixed in expo 57.0.9, and slower development start-up, fixed in expo 57.0.17. Use the latest patch.
+
+### Will expo prebuild delete my native changes?
+
+In SDK 57 it clears and regenerates the android and ios directories by default. Pass `--no-clean` to keep existing folders, or move manual edits into config plugins.

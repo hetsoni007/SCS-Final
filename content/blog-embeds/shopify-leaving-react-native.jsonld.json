@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Shopify Is Leaving React Native: What It Means for Your App (2026)",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-10-04",
+  "dateModified": "2026-10-04",
+  "articleSection": "Mobile",
+  "description": "Shopify is moving its apps from React Native to native Swift and Kotlin. What it announced, why AI coding agents changed the maths, and whether you should follow."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Shopify Is Leaving React Native: What It Means for Your App (2026)",
+    "item": "https://soniconsultancyservices.com/blog/shopify-leaving-react-native"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Is Shopify really leaving React Native?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. On 10 September 2026 Shopify announced it is moving its Shopify, Shop, Point of Sale and Inbox apps from React Native to native Swift and Kotlin. The Shop app has already shipped as a native app."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Why did Shopify leave React Native?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Shopify says AI coding agents have reduced the cost of building each feature twice, which was the main reason to share a codebase. InfoQ also reports that Shopify faced a large refactor to adopt React Native's New Architecture."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Is React Native dead after Shopify's decision?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "No. Shopify called React Native an excellent framework, and it continues to be developed. The decision reflects Shopify's scale, team and tooling more than a flaw in the framework."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Should I rewrite my React Native app in Swift and Kotlin?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Not because of this news alone. Measure start-up time, crash rate and how often the framework blocks you. If those are healthy, a rewrite is hard to justify."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What happens to FlashList and React Native Skia?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Shopify will keep making critical fixes to FlashList while it looks for community maintainers. It sponsors React Native Skia to the end of 2026, after which its creator will continue it under a new name. Restyle is being archived."
+    }
+   }
+  ]
+ }
+]

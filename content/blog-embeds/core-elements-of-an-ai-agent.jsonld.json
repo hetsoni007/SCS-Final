@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What Are the Core Elements of an AI Agent? A Plain-English Guide (2026)",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-10-04",
+  "dateModified": "2026-10-04",
+  "articleSection": "AI",
+  "description": "The core elements of an AI agent explained in plain English: the model, instructions, tools, memory, the planning loop and guardrails, with a worked example."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "What Are the Core Elements of an AI Agent? A Plain-English Guide (2026)",
+    "item": "https://soniconsultancyservices.com/blog/core-elements-of-an-ai-agent"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "What are the core elements of an AI agent?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "A model that reasons, instructions that set its goal and rules, tools that let it act, memory and context that inform it, a planning loop that repeats until the goal is met, and guardrails with evaluation that keep it safe and reliable."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What is the difference between an AI agent and a chatbot?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "A chatbot answers questions. An agent takes actions through tools and decides its own next step until a task is complete."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Does every AI agent need memory?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Every agent needs short-term context for the current task. Long-term memory between sessions is optional and should be added only when the task needs it."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What are guardrails in an AI agent?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Controls that limit what the agent can do: permissions, human approval for risky actions, filtering of inputs and outputs, and caps on steps and spending."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "When should I not build an AI agent?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "When the steps are always the same. A fixed workflow is cheaper, faster and more predictable than an agent for a predictable process."
+    }
+   }
+  ]
+ }
+]
