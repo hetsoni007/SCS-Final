@@ -11,7 +11,7 @@
   "ogDescription": "Cross-platform mobile apps with AI built in. Live on the App Store & Play Store. Ship in weeks.",
   "ogType": "website"
  },
- "h1": "Build iOS & Android apps in 8 weeks.",
+ "h1": "Build iOS & Android MVPs from 8 weeks.",
  "jsonLd": [
   {
    "@context": "https://schema.org",
@@ -42,7 +42,7 @@
    "@type": "LocalBusiness",
    "name": "Soni Consultancy Services",
    "url": "https://soniconsultancyservices.com",
-   "description": "React Native and MERN stack app development company. Build iOS and Android apps in 8 weeks with fixed pricing.",
+   "description": "React Native and MERN stack app development company. Build iOS and Android MVPs from 8 weeks with fixed pricing.",
    "serviceType": [
     "Mobile App Development",
     "React Native Development",
@@ -88,7 +88,7 @@
     {
      "t": "h",
      "level": 1,
-     "html": "Build iOS &amp; Android apps in<br>8 weeks.",
+     "html": "Build iOS &amp; Android MVPs from<br>8 weeks.",
      "cls": "display"
     },
     {
@@ -436,7 +436,7 @@
         },
         {
          "t": "p",
-         "html": "A focused MVP on both stores in 6–10 weeks. You see working software every week — no black box.",
+         "html": "A focused MVP on both stores from 8 weeks. You see working software every week — no black box.",
          "cls": "muted"
         }
        ]

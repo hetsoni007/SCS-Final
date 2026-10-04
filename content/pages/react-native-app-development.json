@@ -62,7 +62,7 @@
      "name": "How long does a React Native app take to build?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Most MVPs land in 6–12 weeks. The four products in our portfolio took 16–32 weeks each to reach full market release on both stores."
+      "text": "MVPs start from 8 weeks, and most land in 10–16. The four products in our portfolio took 16–32 weeks each to reach full market release on both stores."
      }
     },
     {
@@ -113,7 +113,7 @@
     },
     {
      "t": "p",
-     "html": "Hire senior React Native developers (5+ years) to build your iOS and Android app. Fixed pricing, no upfront fees, 8-week timeline. We've shipped 4 production apps to both stores. Direct access to Het and the team—no middlemen.",
+     "html": "Hire senior React Native developers (5+ years) to build your iOS and Android app. Fixed pricing, no upfront fees, MVPs from 8 weeks. We've shipped 4 production apps to both stores. Direct access to Het and the team—no middlemen.",
      "cls": "lead"
     },
     {
@@ -589,7 +589,7 @@
       },
       {
        "q": "How long does a React Native app take to build?",
-       "a": "Most MVPs land in 6–12 weeks. The four products in our portfolio took 16–32 weeks each to reach full market release on both stores."
+       "a": "MVPs start from 8 weeks, and most land in 10–16. The four products in our portfolio took 16–32 weeks each to reach full market release on both stores."
       },
       {
        "q": "Is React Native better than Flutter or going fully native?",

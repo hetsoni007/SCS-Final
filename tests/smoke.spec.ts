@@ -7,7 +7,7 @@ test.beforeEach(async ({ page }) => { await quiet(page); });
 test("home: hero renders as HTML with the primary CTA @all", async ({ page }) => {
   const errors = watchConsole(page);
   await page.goto("/");
-  await expect(page.getByRole("heading", { level: 1 })).toHaveAccessibleName("Build iOS & Android apps in 8 weeks.");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveAccessibleName("Build iOS & Android MVPs from 8 weeks.");
   // the home hero carries exactly two actions: the portfolio and the contact page
   const hero = page.locator('[data-loc="hero"]');
   await expect(hero.getByRole("link")).toHaveCount(2);

@@ -10,7 +10,7 @@ export const values = [
 
 /** Trust strip / guarantees. Bodies for the first three are the live home-page copy. */
 export const guarantees = [
-  { key: "weeks", title: "Ship in weeks, not quarters", body: "A focused MVP on both stores in 6–10 weeks. You see working software every week — no black box." },
+  { key: "weeks", title: "Ship in weeks, not quarters", body: "A focused MVP on both stores from 8 weeks. You see working software every week — no black box." },
   { key: "senior", title: "Senior engineers, no juniors", body: "The people on your call are the people writing the code. 5+ years commercial, store-proven." },
   { key: "price", title: "Fixed scope, fixed price", body: "A clear proposal within 48 hours of our call. You know the number before you commit a penny." },
   { key: "ip", title: "You own all code & IP", body: "" },

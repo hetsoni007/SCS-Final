@@ -6,7 +6,7 @@ import { useApp } from "@/components/providers/AppProviders";
 import { useProgress } from "@/lib/use-progress";
 import { site } from "@/content/site";
 
-const LINE1 = ["Build", "iOS", "&", "Android", "apps", "in"], LINE2 = ["8", "weeks."];
+const LINE1 = ["Build", "iOS", "&", "Android", "MVPs", "from"], LINE2 = ["8", "weeks."];
 // each character's position in the headline, for the staggered CSS reveal (--ci).
 // Words are inline-blocks, so the spaces sit between them (a trailing space inside one would be trimmed).
 const OFFSET = [...LINE1, ...LINE2].reduce<number[]>((a, w, i, all) => [...a, i ? a[i - 1] + all[i - 1].length : 0], []);
@@ -55,7 +55,7 @@ export default function Hero() {
         )}
         <div ref={copy} className="wrap relative z-10 flex flex-col justify-center pb-16 pt-[calc(var(--nav-h)+48px)] will-change-transform">
           <p className="eyebrow">{site.positioning}</p>
-          <h1 className="display mt-6 max-w-[14ch]" aria-label="Build iOS & Android apps in 8 weeks." style={{ perspective: 900 }}>
+          <h1 className="display mt-6 max-w-[14ch]" aria-label="Build iOS & Android MVPs from 8 weeks." style={{ perspective: 900 }}>
             {LINE1.map((w, i) => <Fragment key={w}>{i > 0 && " "}<Word w={w} at={OFFSET[i]} /></Fragment>)}
             <br aria-hidden />
             {LINE2.map((w, i) => <Fragment key={w}>{i > 0 && " "}<Word w={w} at={OFFSET[LINE1.length + i]} grad /></Fragment>)}
