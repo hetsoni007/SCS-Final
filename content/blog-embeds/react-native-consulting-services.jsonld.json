@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "React Native Consulting: What a Consultant Does and When to Hire One (2026)",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-10-04",
+  "dateModified": "2026-10-04",
+  "articleSection": "Mobile",
+  "description": "What React Native consulting covers, when a consultant beats hiring a full team, what a good engagement looks like and the questions to ask before you sign."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "React Native Consulting: What a Consultant Does and When to Hire One (2026)",
+    "item": "https://soniconsultancyservices.com/blog/react-native-consulting-services"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "What does a React Native consultant do?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "They review architecture and performance, plan migrations, set up release pipelines, advise on technology choices and support in-house teams. The output is a decision, a plan or an unblocked team more than a finished product."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "When should I hire a React Native consultant instead of an agency?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "When you already have engineers and need senior judgement on a specific problem or decision. If you need a product built from scratch with no team of your own, a development team is the better fit."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How long does a consulting engagement last?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Typically days to a few weeks, with a defined question and a defined end. Longer support can follow, but it should be a choice and not the default."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can a consultant work with my existing developers?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. Code review, pairing and working inside your existing tools and process are a normal part of consulting, and the aim is to leave your team able to continue alone."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Do I need a consultant before rebuilding my app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "An independent review before a rebuild is usually worth it. Rebuilds are expensive, and many problems that prompt them can be fixed in the existing codebase."
+    }
+   }
+  ]
+ }
+]

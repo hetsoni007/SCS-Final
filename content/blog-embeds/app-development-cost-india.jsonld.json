@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "App Development Cost in India (2026): What Drives It and How to Estimate",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-10-04",
+  "dateModified": "2026-10-04",
+  "articleSection": "Cost",
+  "description": "What it costs to build an app in India in 2026: indicative ranges by app type, the India-specific factors that move the price, and how to estimate your own."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "App Development Cost in India (2026): What Drives It and How to Estimate",
+    "item": "https://soniconsultancyservices.com/blog/app-development-cost-india"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "How much does it cost to build an app in India in 2026?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "It depends on scope. Using our method, a lean MVP is about 7 weeks and roughly $13k to $22k, and a market-ready product with payments, an admin dashboard and a custom backend is about 25 weeks and roughly $45k to $80k. These are indicative ranges for a senior team."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Why do app development quotes in India vary so much?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Vendors assume different scope, team seniority and rates. Ask each for the weeks behind the number and compare against the same written feature list."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Does GST apply to app development in India?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "GST applies to software services billed in India. Confirm the current rate and treatment for your case with your accountant."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What India-specific features add cost?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "UPI and gateway payments, DPDP consent and data handling, RBI requirements for fintech, support for lower-end Android devices and poor networks, and regional languages."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How can I estimate my own app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "List your features, pick platforms and backend, and put them into the cost calculator for an indicative range. A fixed price follows a short discovery call."
+    }
+   }
+  ]
+ }
+]
