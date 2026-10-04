@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Mobile App Development Cost: 3 Worked Examples With Real Numbers (2026)",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-10-04",
+  "dateModified": "2026-10-04",
+  "articleSection": "Cost",
+  "description": "What does a mobile app cost to build? Three worked examples, an MVP, a market-ready app and an AI-powered platform, with weeks, budget ranges and where to save."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Mobile App Development Cost: 3 Worked Examples With Real Numbers (2026)",
+    "item": "https://soniconsultancyservices.com/blog/mobile-app-cost-examples"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "How much does it cost to build a mobile app in 2026?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "It depends on scope. Using our method, a lean MVP is about 7 weeks and roughly $13k to $22k, a market-ready product is about 25 weeks and roughly $45k to $80k, and an AI-powered platform is about 48 weeks and roughly $86k to $154k. These are indicative ranges, confirmed by a discovery call."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What makes one app cost more than another?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Stage, the number of expensive features (payments, chat, maps, AI, offline), backend complexity, the number of platforms and design depth. Features that touch money or real-time data cost the most."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can I reduce the cost without lowering quality?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. Build a true MVP, keep the backend managed at first, buy commodity capabilities instead of building them, and ship on one shared codebase for iOS and Android."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Are these prices fixed?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "No. They are planning ranges based on typical scope. A fixed price is agreed after discovery, once requirements and risks are clear."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How long does it take to build each type of app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Roughly 7 weeks for the MVP example, 25 for the market-ready example and 48 for the AI platform example, using the same method. See how long it takes to build an app for timelines in more detail."
+    }
+   }
+  ]
+ }
+]

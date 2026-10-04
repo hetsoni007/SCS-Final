@@ -24,6 +24,12 @@ const nextConfig: NextConfig = {
         { source: "/usa/", destination: "/react-native-app-development-usa/", permanent: true },
         { source: "/hire-developers", destination: "/hire/", permanent: true },
         { source: "/hire-developers/", destination: "/hire/", permanent: true },
+        // Old-site paths Google still reports as 404 (Search Console, Page indexing)
+        { source: "/portfolio", destination: "/work/", permanent: true },
+        { source: "/portfolio/:slug*", destination: "/work/", permanent: true },
+        { source: "/case-study", destination: "/work/", permanent: true },
+        { source: "/estimate", destination: "/app-cost-calculator/", permanent: true },
+        { source: "/services/enterprise-software-development", destination: "/services/", permanent: true },
       ];
     },
     async headers() {

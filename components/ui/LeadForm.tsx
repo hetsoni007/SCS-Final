@@ -38,6 +38,8 @@ export default function LeadForm({
   const [error, setError] = useState("");
   const hp = useRef<HTMLInputElement>(null), form = useRef<HTMLFormElement>(null), status = useRef<HTMLDivElement>(null);
   useEffect(() => { if (done) status.current?.focus(); }, [done]);
+  const started = useRef(false);
+  const onStart = () => { if (started.current) return; started.current = true; track("form_start", { form: kind }); };
 
   const onSubmit = (ev: React.FormEvent<HTMLFormElement>) => handleSubmit(async (raw) => {
     setError("");
@@ -64,7 +66,7 @@ export default function LeadForm({
   }
   const err = errors as Record<string, { message?: string } | undefined>;
   return (
-    <form ref={form} onSubmit={onSubmit} noValidate className={`grid gap-4 sm:grid-cols-2 ${className}`}>
+    <form ref={form} onSubmit={onSubmit} onFocus={onStart} noValidate className={`grid gap-4 sm:grid-cols-2 ${className}`}>
       {fields.map((f) => {
         const id = `${kind}-${f.name}`, e = err[f.name]?.message, common = { id, "aria-invalid": !!e, "aria-describedby": e ? `${id}-err` : undefined, className: "field", placeholder: f.placeholder, autoComplete: f.autoComplete, ...register(f.name, rules(f)) };
         return (

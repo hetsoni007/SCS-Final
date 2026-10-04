@@ -40,7 +40,11 @@ export function DecisionTool({ data, title }: { data: QuizData; title: string })
   const score = useMemo(() => { const s: Record<string, number> = {}; data.keys.forEach((k) => (s[k] = 0)); picks.forEach((n, qi) => Object.entries(Q[qi].a[n].w ?? {}).forEach(([k, v]) => (s[k] += v))); return s; }, [picks, Q, data.keys]);
   const max = [...data.keys].sort((a, b) => score[b] - score[a])[0];
   const total = data.keys.reduce((s, k) => s + Math.max(0, score[k]), 0) || 1;
-  useEffect(() => { if (done) track("cta_click", { location: "tool_complete", label: `${title.slice(0, 60)}: ${max}` }); }, [done, max, title]);
+  useEffect(() => {
+    if (!done) return;
+    track("cta_click", { location: "tool_complete", label: `${title.slice(0, 60)}: ${max}` });
+    track("tool_complete", { tool: title.slice(0, 60), result: max });
+  }, [done, max, title]);
   return (
     <Shell kick={data.kick}>
       <Bar pct={done ? 100 : (i / Q.length) * 100} />

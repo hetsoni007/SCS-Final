@@ -201,6 +201,7 @@ export default function AppProviders({ children }: { children: ReactNode }) {
   const openCalendly = useCallback((location = "unknown") => {
     setCalendlyLoaded(true); setCalendly(true);
     track("calendly_open", { location });
+    track("book_call_click", { location });
   }, []);
   const openPalette = useCallback(() => { setPaletteLoaded(true); setPalette(true); }, []);
   useEffect(() => {
@@ -225,6 +226,19 @@ export default function AppProviders({ children }: { children: ReactNode }) {
     window.addEventListener("message", onMsg);
     return () => { document.removeEventListener("click", onClick); window.removeEventListener("keydown", onKey); window.removeEventListener("message", onMsg); };
   }, [openCalendly, openPalette]);
+
+  // ── scroll depth: one event per page at 50% and 90%, so a visitor who reads is not counted as a bounce
+  useEffect(() => {
+    const sent = new Set<number>();
+    const onScroll = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      if (max <= 0) return;
+      const pct = (window.scrollY / max) * 100;
+      for (const mark of [50, 90]) if (pct >= mark && !sent.has(mark)) { sent.add(mark); track("scroll_depth", { percent: mark, page: pathname }); }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [pathname]);
 
   useEffect(() => { const l = lenisRef.current; if (!l) return; if (calendly || palette) l.stop(); else l.start(); }, [calendly, palette]);
 

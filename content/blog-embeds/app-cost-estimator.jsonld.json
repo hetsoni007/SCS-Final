@@ -1,0 +1,89 @@
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "App Cost Estimator: How to Estimate What Your App Will Cost (2026)",
+  "author": {
+   "@type": "Person",
+   "name": "Het Soni"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "Soni Consultancy Services"
+  },
+  "datePublished": "2026-10-04",
+  "dateModified": "2026-10-04",
+  "articleSection": "Cost",
+  "description": "How an app cost estimator really works: the weeks-times-rate method, the five inputs that move the number, and how to sanity-check any estimate before you commit budget."
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+   {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://soniconsultancyservices.com/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Blog",
+    "item": "https://soniconsultancyservices.com/blog/"
+   },
+   {
+    "@type": "ListItem",
+    "position": 3,
+    "name": "App Cost Estimator: How to Estimate What Your App Will Cost (2026)",
+    "item": "https://soniconsultancyservices.com/blog/app-cost-estimator"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "How accurate is an app cost estimator?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Indicative, not binding. A well-built estimator is typically within a reasonable band of the final number when your scope is clear, and wider when it is not. Treat the output as a planning range and confirm it with a discovery call."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How do I estimate the cost of an app myself?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "List your features, assign each a number of weeks, add backend and design adjustments, then multiply the total by a blended weekly rate. The calculator on this site follows that same method."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Why do app estimates vary so much between agencies?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Because they assume different scope, different team seniority and different rates. Compare quotes against the same written feature list and ask for the weeks behind each number."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Is a free app cost calculator reliable?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "It is a good first pass if it shows its assumptions. Be cautious of any tool that returns a single exact price from a handful of questions without explaining how it got there."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "What is the cheapest way to build an app?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Build a true MVP: one core loop, a managed backend, standard design and a single codebase for both platforms. Then add features as real users ask for them."
+    }
+   }
+  ]
+ }
+]

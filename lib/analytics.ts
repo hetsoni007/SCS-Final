@@ -2,9 +2,11 @@
 /**
  * Event names (brief §10): cta_click{location,label}, calc_complete{config}, form_submit{form},
  * guide_download, calendly_open, calendly_booked.
+ * book_call_click, tool_complete, form_start and scroll_depth keep the names the previous site sent, so the GA4
+ * key events and history built on them carry on unbroken.
  * GA4 only loads after consent; Vercel Analytics is cookieless and always on.
  */
-export type EventName = "cta_click" | "calc_complete" | "form_submit" | "guide_download" | "calendly_open" | "calendly_booked" | "calculator_estimate" | "post_feedback";
+export type EventName = "cta_click" | "calc_complete" | "form_submit" | "guide_download" | "calendly_open" | "calendly_booked" | "calculator_estimate" | "post_feedback" | "book_call_click" | "tool_complete" | "form_start" | "scroll_depth";
 
 declare global {
   interface Window { gtag?: (...a: unknown[]) => void; dataLayer?: unknown[]; va?: (e: string, p?: unknown) => void }
