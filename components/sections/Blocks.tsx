@@ -51,7 +51,8 @@ export function RenderForm({ b, kind }: { b: Extract<Block, { t: "form" }>; kind
   const std = b.id === "leadForm";
   return (
     <div id={std ? "start" : undefined} className={std ? "glass spot mx-auto max-w-[880px] p-7 md:p-10" : ""}>
-      {std && (<><p className="eyebrow">{b.kick ?? "Start here"}</p><h2 className="h3 mt-3 !text-[clamp(26px,3vw,38px)]">{b.title}</h2>{b.sub && <p className="muted mt-3">{b.sub}</p>}<div className="h-7" /></>)}
+      {std && (<><p className="eyebrow">{b.kick ?? "Start here"}</p><h2 className="h3 mt-3 !text-[clamp(26px,3vw,38px)]">{b.title}</h2>{b.sub && <p className="muted mt-3">{b.sub}</p>}{b.price && <p className="mono mt-4 text-[13px] uppercase tracking-[.12em] text-accent-2">{b.price}</p>}<div className="h-7" /></>)}
+      {!std && b.price && <p className="mono mb-5 text-[13px] uppercase tracking-[.12em] text-accent-2">{b.price}</p>}
       <LeadForm kind={k} fields={formFields(b)} submit={b.submit || "Send →"} note={std ? START_NOTE : b.note} consent={std ? START_CONSENT : b.consent} success={std ? START_SUCCESS : b.success} />
     </div>
   );

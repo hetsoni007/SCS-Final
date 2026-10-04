@@ -515,6 +515,7 @@
         {
          "t": "form",
          "id": "wpForm",
+   "price": "WordPress websites from $500",
          "fields": [
           {
            "name": "wpName",

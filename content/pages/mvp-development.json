@@ -71,7 +71,7 @@
      "name": "How much does an MVP cost?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "A focused MVP typically starts in the low five figures (USD), and scales from there with feature depth — particularly the back-end surface: real-time data, payments, offline behaviour, role-based access and third-party integrations move the number far more than screen count does. Use the app cost calculator for a range against your own scope, then a free call gets you a fixed-price proposal within 48 hours."
+      "text": "A focused MVP starts from $12,000 (USD) and scales from there with feature depth — particularly the back-end surface: real-time data, payments, offline behaviour, role-based access and third-party integrations move the number far more than screen count does. Use the app cost calculator for a range against your own scope, then a free call gets you a fixed-price proposal within 48 hours."
      }
     },
     {
@@ -430,7 +430,7 @@
     },
     {
      "t": "p",
-     "html": "A focused MVP typically starts in the low five figures (USD), and scales from there with feature depth. Anyone quoting a single number for “an app” without asking about your backend is guessing.",
+     "html": "A focused MVP starts from $12,000 (USD) and scales from there with feature depth. Anyone quoting a single number for “an app” without asking about your backend is guessing.",
      "cls": "lead"
     },
     {
@@ -842,7 +842,7 @@
       },
       {
        "q": "How much does an MVP cost?",
-       "a": "A focused MVP typically starts in the low five figures (USD), and scales from there with feature depth — particularly the back-end surface: real-time data, payments, offline behaviour, role-based access and third-party integrations move the number far more than screen count does. Use the app cost calculator for a range against your own scope, then a free call gets you a fixed-price proposal within 48 hours."
+       "a": "A focused MVP starts from $12,000 (USD) and scales from there with feature depth — particularly the back-end surface: real-time data, payments, offline behaviour, role-based access and third-party integrations move the number far more than screen count does. Use the app cost calculator for a range against your own scope, then a free call gets you a fixed-price proposal within 48 hours."
       },
       {
        "q": "What should I cut from version one?",
@@ -865,6 +865,7 @@
     {
      "t": "form",
      "id": "leadForm",
+   "price": "MVP apps from $12,000 · smaller builds from $5,000",
      "fields": [
       {
        "name": "lbName",

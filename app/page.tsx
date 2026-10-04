@@ -15,7 +15,7 @@ import type { Block } from "@/lib/content";
 const page = getPage("index");
 // The same "Start here" form as the service pages, for visitors who would rather write two lines than book a call.
 const startForm: Extract<Block, { t: "form" }> = {
-  t: "form", id: "leadForm", fields: [], submit: "Send →", kick: "Start here", title: "Tell us what you’re building.",
+  t: "form", id: "leadForm", fields: [], submit: "Send →", kick: "Start here", title: "Tell us what you’re building.", price: "Websites from $500 · app features from $5,000 · MVP apps from $12,000",
   sub: "One short form. You get a straight answer on scope and a fixed price within 48 hours — or an honest no if it isn’t a fit.",
 };
 export const metadata = pageMetadata(page.meta, "/");

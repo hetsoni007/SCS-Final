@@ -21,7 +21,7 @@ export type Block =
   | { t: "metric"; num: string; lbl: string }
   | { t: "quote"; html: string; cls?: string }
   | { t: "faq"; items: { q: string; a: string }[] }
-  | { t: "form"; id?: string; fields: FormField[]; submit: string; kick?: string; title?: string; sub?: string; note?: string; consent?: string; success?: string }
+  | { t: "form"; id?: string; fields: FormField[]; submit: string; kick?: string; title?: string; sub?: string; price?: string; note?: string; consent?: string; success?: string }
   | { t: "grid"; cls?: string; items: { cls?: string; href?: string; id?: string; blocks: Block[] }[] }
   | { t: "panel"; cls?: string; href?: string; id?: string; blocks: Block[] }
   | { t: "group"; cls?: string; id?: string; blocks: Block[] };
