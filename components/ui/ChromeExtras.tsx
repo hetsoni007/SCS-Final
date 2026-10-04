@@ -49,12 +49,15 @@ function Cursor() {
 function ConsentBanner({ consent }: { consent: string }) {
   if (consent !== "unset") return null; // "pending" on the server / before hydration, then the stored choice
   return (
-    <div role="dialog" aria-label="Cookie consent" className="glass fixed bottom-20 left-3 right-3 z-[90] mx-auto max-w-[560px] p-5 md:bottom-5 md:left-5 md:right-auto">
-      <p className="text-[14px] leading-relaxed text-mid">
-        We use analytics cookies to understand which pages are useful. They load only if you accept. Essential, cookieless measurement always runs. See our{" "}
+    // Bottom-right on desktop and compact on phones, so it never sits on the hero's buttons (which are left-aligned).
+    <div role="dialog" aria-label="Cookie consent" className="glass fixed bottom-20 left-3 right-3 z-[90] mx-auto max-w-[560px] p-3.5 md:bottom-5 md:left-auto md:right-5 md:mx-0 md:max-w-[380px] md:p-5" style={{ background: "color-mix(in srgb, var(--bg-2) 94%, transparent)" }}>
+      <p className="text-[13px] leading-snug text-mid md:text-[14px] md:leading-relaxed">
+        We use analytics cookies to understand which pages are useful. They load only if you accept.
+        {/* only true where the cookieless Vercel Analytics script is served (see next.config.ts) */}
+        {process.env.VERCEL_ANALYTICS ? " Essential, cookieless measurement always runs." : ""} See our{" "}
         <Link href="/privacy/" className="underline text-hi">Privacy Policy</Link>.
       </p>
-      <div className="mt-4 flex gap-2">
+      <div className="mt-3 flex gap-2 md:mt-4">
         <button className="btn btn-primary !min-h-[40px] !px-5 !text-[14px]" onClick={() => prefs.setConsent("granted")}>Accept analytics</button>
         <button className="btn btn-glass !min-h-[40px] !px-5 !text-[14px]" onClick={() => prefs.setConsent("denied")}>Decline</button>
       </div>
