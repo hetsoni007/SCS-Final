@@ -164,6 +164,10 @@
        "html": "We use Google Tag Manager to manage measurement tags. It loads for every visitor and sets no cookies of its own. Until you accept analytics cookies, Google's tags run in a restricted consent mode: they set no cookies and may send limited, cookieless signals, such as a page view, to Google. You can change your choice at any time with the cookie controls on this page."
       },
       {
+       "t": "p",
+       "html": "If you accept analytics cookies, we also use Microsoft Clarity to understand how the site is used, through heatmaps and session recordings of clicks, scrolling and page navigation. Clarity sets its own cookies and masks sensitive content, including what you type into forms, by default. It does not run unless you accept. See the <a href=\"https://privacy.microsoft.com/privacystatement\" target=\"_blank\" rel=\"noopener\">Microsoft Privacy Statement</a>."
+      },
+      {
        "t": "h",
        "level": 2,
        "html": "Changes"

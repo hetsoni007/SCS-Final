@@ -28,7 +28,10 @@ export const prefs = {
   setConsent(c: Consent) {
     set(CONSENT_KEY, c);
     // Consent Mode: tell Google Tag Manager straight away, before anything that loads on consent runs
-    (window as { gtag?: (...a: unknown[]) => void }).gtag?.("consent", "update", { analytics_storage: c });
+    const w = window as { gtag?: (...a: unknown[]) => void; dataLayer?: unknown[] };
+    w.gtag?.("consent", "update", { analytics_storage: c });
+    // lets consent-gated tags (session recording) start on this page instead of waiting for the next page view
+    if (c === "granted") w.dataLayer?.push({ event: "analytics_consent_granted" });
     emit();
   },
 };
