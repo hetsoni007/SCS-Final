@@ -142,7 +142,7 @@ The fifth store-live app is now "Retail Operations Platform" (a retail operation
 
 Also reworded: the `/work/` meta description, the About and Services "Recent work" lists, the legacy extracted article in `content/pages/work.json`, `docs/URL-MAP.md`, the smoke-test comment. No store links or badges were added.
 
-**Open question:** there are now two cases titled "Retail Operations Platform" (`retail-ops` and `store-ops`). If they are the same product, the store-app count should be 4 and one case should go.
+**Confirmed separate products:** `retail-ops` and `store-ops` are two different apps, so the store-app count stays 5. Both cards still carry the title "Retail Operations Platform"; a distinguishing short name is pending from the owner.
 
 ## Task 6: GA4 and bot noise
 
