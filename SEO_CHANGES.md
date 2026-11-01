@@ -1,6 +1,6 @@
 # SEO changes, November 2026 (branch `seo-fixes-nov-2026`)
 
-Nothing here has been deployed or merged. Review the PR, then deploy with `npm run deploy:aws` (see "After you merge").
+**Deployed 2026-11-01:** merged to `main` together with the Meta Pixel work, deployed with `scripts/deploy-aws.sh`, and the CloudFront function `scs-url-rewrite` was updated with the new redirects (previous code backed up locally as `scs-url-rewrite.backup.js` in the session scratchpad). Remaining manual items are in "After you merge", steps 2 to 5.
 
 ## What the repo is
 
