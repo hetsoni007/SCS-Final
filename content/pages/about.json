@@ -29,6 +29,7 @@
   {
    "@context": "https://schema.org",
    "@type": "Person",
+   "@id": "https://soniconsultancyservices.com/#het-soni",
    "name": "Het Soni",
    "jobTitle": "Founder & Lead Engineer",
    "url": "https://soniconsultancyservices.com/about/",
@@ -100,7 +101,7 @@
      "name": "How many apps has Soni Consultancy Services shipped?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "4+ apps live across 8 store listings, serving users in 30+ countries."
+      "text": "{{storeApps}} apps live in the app stores and {{projectsDelivered}} projects delivered, serving users in 30+ countries."
      }
     }
    ]
@@ -193,12 +194,12 @@
        "blocks": [
         {
          "t": "text",
-         "html": "4+",
+         "html": "{{storeApps}}",
          "cls": "num"
         },
         {
          "t": "text",
-         "html": "Apps shipped",
+         "html": "Apps live in the app stores",
          "cls": "lbl"
         }
        ]
@@ -223,12 +224,12 @@
        "blocks": [
         {
          "t": "text",
-         "html": "8",
+         "html": "{{projectsDelivered}}",
          "cls": "num"
         },
         {
          "t": "text",
-         "html": "Store listings",
+         "html": "Projects delivered",
          "cls": "lbl"
         }
        ]
@@ -317,6 +318,10 @@
        ]
       }
      ]
+    },
+    {
+     "t": "p",
+     "html": "Recent work includes the <a href=\"/work/hr-payroll/\">HR &amp; Payroll Platform</a>, <a href=\"/work/retail-ops/\">Retail Operations Platform</a>, <a href=\"/work/ride-hailing/\">Ride-Hailing Platform</a>, <a href=\"/work/creator-marketplace/\">Creator–Venue Marketplace</a>, <a href=\"/work/store-ops/\">Retail Operations Platform</a> and <a href=\"/work/healthcare-staffing/\">Healthcare Staffing Platform</a>, plus two product and UI/UX design concepts: <a href=\"/work/web3-creator/\">Web3 Creator Platform</a> and <a href=\"/work/fan-investing/\">Fan Investment Platform</a>. We build for <a href=\"/fintech-app-development/\">FinTech</a>, <a href=\"/retail-app-development/\">retail</a>, <a href=\"/ride-hailing-app-development/\">ride-hailing</a> and <a href=\"/hr-payroll-app-development/\">HR &amp; payroll</a> products."
     }
    ]
   },
@@ -457,6 +462,10 @@
        ]
       }
      ]
+    },
+    {
+     "t": "p",
+     "html": "We work with founders across six countries; see our React Native development pages for the <a href=\"/react-native-app-development-uk/\">UK</a>, <a href=\"/react-native-app-development-dubai/\">Dubai</a> and <a href=\"/react-native-app-development-usa/\">USA</a>."
     }
    ]
   },
@@ -496,7 +505,7 @@
     {
      "t": "form",
      "id": "leadForm",
-   "price": "Websites from $500 · app features from $1,000 · MVP apps from $2,500",
+     "price": "Websites from $500 · app features from $1,000 · MVP apps from $2,500",
      "fields": [
       {
        "name": "lbName",
@@ -596,7 +605,7 @@
       },
       {
        "q": "How many apps has Soni Consultancy Services shipped?",
-       "a": "4+ apps live across 8 store listings, serving users in 30+ countries."
+       "a": "{{storeApps}} apps live in the app stores and {{projectsDelivered}} projects delivered, serving users in 30+ countries."
       }
      ]
     }

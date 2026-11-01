@@ -36,7 +36,7 @@ export const organizationSchema = () => ({
   telephone: site.phone,
   description: "React Native & MERN-stack mobile app development studio with AI integration.",
   founder: { "@type": "Person", "@id": `${site.url}/#het-soni`, name: site.founder.name },
-  sameAs: Object.values(site.socials),
+  sameAs: [...Object.values(site.socials), ...Object.values(site.profiles)],
   areaServed: site.areaServed,
   address: { "@type": "PostalAddress", addressCountry: "IN" },
   knowsAbout: ["React Native", "MERN Stack", "AI App Development", "Cross-platform mobile apps", "DevOps & Cloud Engineering"],

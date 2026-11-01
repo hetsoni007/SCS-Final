@@ -246,7 +246,7 @@
     {
      "t": "h",
      "level": 2,
-     "html": "Four React Native apps, live on the stores",
+     "html": "{{rnStoreApps}} React Native apps live in the app stores",
      "cls": "h2"
     },
     {
@@ -333,6 +333,27 @@
         {
          "t": "text",
          "html": "Ride-hailing — ~3 minute average booking",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      },
+      {
+       "cls": "glass case-card",
+       "href": "/work/store-ops/",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Store Operations",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Retail operations platform — checklists, forms, staff monitoring and training",
          "cls": "ds"
         },
         {
@@ -482,7 +503,7 @@
     {
      "t": "form",
      "id": "leadForm",
-   "price": "MVP apps from $2,500 · smaller builds from $1,000",
+     "price": "MVP apps from $2,500 · smaller builds from $1,000",
      "fields": [
       {
        "name": "lbName",

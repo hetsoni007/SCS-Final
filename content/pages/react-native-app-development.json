@@ -7,7 +7,7 @@
   "robots": "index,follow,max-image-preview:large",
   "canonical": "https://soniconsultancyservices.com/react-native-app-development/",
   "ogTitle": "React Native App Development | Soni Consultancy Services",
-  "ogDescription": "React Native app development for iOS and Android from one codebase — four apps live on the App Store and Google Play. Fixed-price proposals within 48 hours.",
+  "ogDescription": "React Native app development for iOS and Android from one codebase — {{rnStoreApps}} React Native apps live in the app stores. Fixed-price proposals within 48 hours.",
   "ogType": "website"
  },
  "h1": "Hire expert React Native developers. Ship to both app stores.",
@@ -62,7 +62,7 @@
      "name": "How long does a React Native app take to build?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "MVPs start from 8 weeks, and most land in 10–16. The four products in our portfolio took 16–32 weeks each to reach full market release on both stores."
+      "text": "MVPs start from 8 weeks, and most land in 10–16. The {{rnTimedAppsWord}} React Native products in our portfolio with recorded build times took 16–32 weeks each to reach full market release on both stores."
      }
     },
     {
@@ -246,7 +246,7 @@
     {
      "t": "h",
      "level": 2,
-     "html": "Four React Native apps, live on the stores",
+     "html": "{{rnStoreApps}} React Native apps live in the app stores",
      "cls": "h2"
     },
     {
@@ -333,6 +333,27 @@
         {
          "t": "text",
          "html": "Ride-hailing — ~3 minute average booking",
+         "cls": "ds"
+        },
+        {
+         "t": "text",
+         "html": "See the case study →",
+         "cls": "lk"
+        }
+       ]
+      },
+      {
+       "cls": "glass case-card",
+       "href": "/work/store-ops/",
+       "blocks": [
+        {
+         "t": "text",
+         "html": "Store Operations",
+         "cls": "nm"
+        },
+        {
+         "t": "text",
+         "html": "Retail operations platform — checklists, forms, staff monitoring and training",
          "cls": "ds"
         },
         {
@@ -589,7 +610,7 @@
       },
       {
        "q": "How long does a React Native app take to build?",
-       "a": "MVPs start from 8 weeks, and most land in 10–16. The four products in our portfolio took 16–32 weeks each to reach full market release on both stores."
+       "a": "MVPs start from 8 weeks, and most land in 10–16. The {{rnTimedAppsWord}} React Native products in our portfolio with recorded build times took 16–32 weeks each to reach full market release on both stores."
       },
       {
        "q": "Is React Native better than Flutter or going fully native?",
@@ -608,7 +629,7 @@
     {
      "t": "form",
      "id": "leadForm",
-   "price": "MVP apps from $2,500 · smaller builds from $1,000",
+     "price": "MVP apps from $2,500 · smaller builds from $1,000",
      "fields": [
       {
        "name": "lbName",

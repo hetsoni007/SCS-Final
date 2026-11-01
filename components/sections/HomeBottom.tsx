@@ -9,6 +9,8 @@ import { SectionHead } from "./SectionHead";
 import { useApp } from "@/components/providers/AppProviders";
 import { site } from "@/content/site";
 
+const NDA_SCREEN = "/assets/portfolio/nda-screen.svg";
+
 /** The fields of a case study the carousel shows; the page passes them in so the full portfolio copy stays on the server. */
 export type ShowcaseCase = { slug: string; short: string; tagline: string; status: string; metrics: { num: string; lbl: string }[]; shots: { src: string; alt: string }[] };
 
@@ -19,7 +21,8 @@ export function WorkShowcase({ cases: liveCases }: { cases: ShowcaseCase[] }) {
   const state = useRef({ angle: 0, hover: -1 });
   const [idx, setIdx] = useState(0);
   const drag = useRef<{ x: number; a: number } | null>(null);
-  const items = useMemo(() => liveCases.map((c) => ({ screens: c.shots.map((s) => s.src) })), [liveCases]);
+  // a case with no screenshots (client NDA) shows the "Screens under NDA" stand-in on its phone
+  const items = useMemo(() => liveCases.map((c) => ({ screens: c.shots.length ? c.shots.map((s) => s.src) : [NDA_SCREEN] })), [liveCases]);
   const go = (i: number) => { setIdx(i); state.current.angle = -i * step; state.current.hover = ((i % n) + n) % n; };
   const cur = ((idx % n) + n) % n, c = liveCases[cur];
   const front = (i: number) => { if (expectGl && i !== cur) go(idx + (((i - cur + n + n / 2) % n) - n / 2)); }; // shortest way round
@@ -54,7 +57,7 @@ export function WorkShowcase({ cases: liveCases }: { cases: ShowcaseCase[] }) {
             </div>
           </>
         ) : null}
-        {/* Editorial index of the four live apps: the crawlable list, the only UI without WebGL, and (with it) a
+        {/* Editorial index of the live apps: the crawlable list, the only UI without WebGL, and (with it) a
             remote for the carousel above — pointing at a row spins its phone to the front. */}
         <ol className={`border-t border-line ${expectGl ? "mt-8" : "mt-12"}`}>
           {liveCases.map((w, i) => (
@@ -63,7 +66,7 @@ export function WorkShowcase({ cases: liveCases }: { cases: ShowcaseCase[] }) {
                 className={`group grid items-center gap-x-6 gap-y-2 border-b py-6 transition-[border-color] duration-300 md:grid-cols-[56px_minmax(0,1fr)_auto] ${expectGl && cur === i ? "border-accent" : "border-line"}`}>
                 <span className="mono text-[12px] text-accent-2">0{i + 1}</span>
                 <span className="flex min-w-0 items-center gap-5">
-                  {!expectGl && <PhoneFrame src={w.shots[0]?.src} alt={w.shots[0]?.alt} className="w-14 shrink-0" />}
+                  {!expectGl && <PhoneFrame src={w.shots[0]?.src} alt={w.shots[0]?.alt} placeholder={!w.shots[0]} className="w-14 shrink-0 !p-[2px]" />}
                   <span className="min-w-0">
                     <span className="font-display block text-[clamp(26px,3.6vw,54px)] font-semibold leading-[1.02] tracking-tight transition-transform duration-500 group-hover:translate-x-3">{w.short}</span>
                     <span className="dim mt-2 block">{w.tagline}</span>

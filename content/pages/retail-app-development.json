@@ -410,6 +410,10 @@
        ]
       }
      ]
+    },
+    {
+     "t": "p",
+     "html": "See how this played out in practice: the full <a href=\"/work/retail-ops/\">Retail Operations Platform case study</a>."
     }
    ]
   },
@@ -449,7 +453,7 @@
     {
      "t": "form",
      "id": "leadForm",
-   "price": "MVP apps from $2,500 · smaller builds from $1,000",
+     "price": "MVP apps from $2,500 · smaller builds from $1,000",
      "fields": [
       {
        "name": "lbName",

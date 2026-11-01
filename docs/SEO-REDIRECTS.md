@@ -6,15 +6,27 @@ before the existing rewrite logic. Strip a trailing slash and a leading `www.` h
 
 | Old path | 301 to |
 |---|---|
-| `/portfolio` and `/portfolio/*` | `/work/` |
+| `/portfolio/station-driver-chauffeurs` | `/work/ride-hailing/` |
+| `/portfolio/attendance-salary-ledger` | `/work/hr-payroll/` |
+| `/portfolio/retail-supply-chain` | `/work/retail-ops/` |
+| `/portfolio` and any other `/portfolio/*` | `/work/` |
+| `/work/b2b-wholesale` (renamed case study) | `/work/store-ops/` |
 | `/case-study` | `/work/` |
+| `/hire/fullstack-developer` | `/hire/` |
 | `/estimate` | `/app-cost-calculator/` |
 | `/services/enterprise-software-development` | `/services/` |
 
+`/work/healthcare-staffing/` is deliberately **not** in this list: it is a real case-study page in this build.
+
 ```js
 var MOVED = {
+  '/portfolio/station-driver-chauffeurs': '/work/ride-hailing/',
+  '/portfolio/attendance-salary-ledger': '/work/hr-payroll/',
+  '/portfolio/retail-supply-chain': '/work/retail-ops/',
   '/portfolio': '/work/',
+  '/work/b2b-wholesale': '/work/store-ops/',
   '/case-study': '/work/',
+  '/hire/fullstack-developer': '/hire/',
   '/estimate': '/app-cost-calculator/',
   '/services/enterprise-software-development': '/services/'
 };
@@ -27,6 +39,8 @@ function redirectFor(uri) {
 // inside handler(event): var to = redirectFor(event.request.uri);
 // if (to) return { statusCode: 301, statusDescription: 'Moved Permanently', headers: { location: { value: to } } };
 ```
+
+The same mapping lives in `next.config.ts` for builds that run a Node server (`npm run dev`, `npm run start`, Vercel).
 
 After deploying: in Search Console open each 404 group and click **Validate fix**.
 (`/search?q={search_term_string}` is a template placeholder from the old site's search markup; ignore it.)

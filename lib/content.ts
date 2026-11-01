@@ -4,6 +4,7 @@ import path from "node:path";
 import matter from "gray-matter";
 import type { Metadata } from "next";
 import { site } from "@/content/site";
+import { projectsDelivered, rnStoreAppCount, rnStoreAppWeeks, rnTimedAppCount, storeAppCount } from "@/content/work";
 
 const ROOT = path.join(process.cwd(), "content");
 
@@ -30,8 +31,11 @@ export type Section = { id?: string; cls?: string; blocks: Block[] };
 export type PageMeta = { title: string; description?: string; keywords?: string; robots?: string; canonical?: string; ogTitle?: string; ogDescription?: string; ogType?: string };
 export type PageContent = { slug: string; path: string; meta: PageMeta; h1: string; breadcrumb?: string; jsonLd: Record<string, unknown>[]; sections: Section[] };
 
+const NUMBER_WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+/** Page copy may use {{storeApps}}, {{rnStoreApps}} ({{rnStoreAppsWord}} in words), {{rnWeeks}} and {{projectsDelivered}}; they are filled from content/work.ts so each claim has one source. */
 export function getPage(slug: string): PageContent {
-  return JSON.parse(fs.readFileSync(path.join(ROOT, "pages", `${slug}.json`), "utf8"));
+  const raw = fs.readFileSync(path.join(ROOT, "pages", `${slug}.json`), "utf8");
+  return JSON.parse(raw.replaceAll("{{storeApps}}", String(storeAppCount)).replaceAll("{{rnTimedAppsWord}}", NUMBER_WORDS[rnTimedAppCount] ?? String(rnTimedAppCount)).replaceAll("{{rnStoreAppsWord}}", NUMBER_WORDS[rnStoreAppCount] ?? String(rnStoreAppCount)).replaceAll("{{rnStoreApps}}", String(rnStoreAppCount)).replaceAll("{{rnWeeks}}", String(rnStoreAppWeeks)).replaceAll("{{projectsDelivered}}", projectsDelivered));
 }
 export function allPageSlugs(): string[] {
   return fs.readdirSync(path.join(ROOT, "pages")).filter((f) => f.endsWith(".json")).map((f) => f.replace(".json", ""));
@@ -89,4 +93,6 @@ export const getPost = (slug: string) => getPosts().find((p) => p.slug === slug)
 export const readEmbed = (id: string) => { try { return fs.readFileSync(path.join(ROOT, "blog-embeds", `${id}.html`), "utf8"); } catch { return ""; } };
 export const readThumb = (slug: string) => { try { return fs.readFileSync(path.join(ROOT, "blog-embeds", `${slug}.thumb.svg`), "utf8"); } catch { return ""; } };
 export const readPostJsonLd = (slug: string): Record<string, unknown>[] => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, "blog-embeds", `${slug}.jsonld.json`), "utf8")); } catch { return []; } };
+/** "4 October 2026" from an ISO date (UTC, so the day never shifts with the server timezone). */
+export const longDate = (iso: string) => new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
 export const postDate = (p: PostMeta) => p.dateLabel || new Date(p.datePublished).toLocaleDateString("en-GB", { month: "long", year: "numeric" });

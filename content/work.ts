@@ -149,24 +149,17 @@ export const cases: CaseStudy[] = [
     industryPage: "/ride-hailing-app-development/",
   },
   {
-    slug: "b2b-wholesale",
-    kind: "shipped",
-    title: "B2B Wholesale Platform",
-    short: "B2B Wholesale",
-    tagline: "Wholesale ordering & loyalty rewards for retailers",
-    eyebrow: "B2B Retail · Loyalty Platform · Name withheld (NDA)",
-    industry: "B2B retail / loyalty",
+    slug: "store-ops",
+    kind: "live",
+    title: "Retail Operations Platform",
+    short: "Store Operations",
+    tagline: "Digital checklists, forms, staff monitoring & training",
+    eyebrow: "Retail Operations · Name withheld (NDA)",
+    industry: "Retail operations",
     status: "Live on the App Store & Google Play",
-    summary: "A B2B wholesale ordering platform for retailers, with a points-based loyalty engine, tiered pricing catalogue and real-time inventory tracking.",
-    problem: "Retailers had no streamlined way to bulk-order, track inventory or earn loyalty rewards — existing systems were outdated and manual.",
-    solution: "Dynamic points tied to purchasing volume, tiered wholesale pricing, predictive inventory analytics and ERP-synced ordering.",
-    result: "Order placement time cut by <strong>30%</strong> and customer retention up <strong>20%</strong> post-launch.",
-    metrics: [
-      { num: "-30%", lbl: "Order time", count: 30, prefix: "-", suffix: "%" },
-      { num: "+20%", lbl: "Retention", count: 20, prefix: "+", suffix: "%" },
-      { num: "60%", lbl: "Redeemed in mo. 1", count: 60, suffix: "%" },
-    ],
-    stack: ["React.js", "Node.js", "ERP Integration"],
+    summary: "Operations platform for retail teams: digital checklists, forms, staff monitoring and training.",
+    metrics: [],
+    stack: ["React Native", "MongoDB", "Express.js", "React", "Node.js"],
     shots: [],
     industryPage: "/retail-app-development/",
   },
@@ -247,12 +240,25 @@ export const cases: CaseStudy[] = [
 
 export const caseBySlug = (slug: string) => cases.find((c) => c.slug === slug);
 export const liveCases = cases.filter((c) => c.kind === "live");
+/** Apps whose status says they are live on the stores: the single source for every site-wide "N apps live" claim. */
+export const storeApps = cases.filter((c) => /^Live on the App Store/.test(c.status));
+export const storeAppCount = storeApps.length;
+/** The React Native subset (the stack list includes "React Native"). Only the React Native pages and the /work/ build-time tile use it;
+ *  never show the site-wide count there. */
+export const rnStoreApps = storeApps.filter((c) => c.stack.includes("React Native"));
+export const rnStoreAppCount = rnStoreApps.length;
+/** Those with a recorded build duration: the only ones the build-time claims can honestly cover. */
+export const rnTimedApps = rnStoreApps.filter((c) => parseInt(c.duration ?? "", 10) > 0);
+export const rnTimedAppCount = rnTimedApps.length;
+/** Sum of the recorded build durations of those apps (each `duration` is "N weeks"). */
+export const rnStoreAppWeeks = rnStoreApps.reduce((sum, c) => sum + (parseInt(c.duration ?? "", 10) || 0), 0);
+/** The owner's own figure: web, enterprise and mobile projects. Never use it as a claim about store apps. */
+export const projectsDelivered = "10+";
 
 export const workStats = [
-  { num: "4", lbl: "Apps shipped", count: 4 },
-  { num: "8", lbl: "Store listings (iOS+Android)", count: 8 },
-  { num: "97wk", lbl: "Combined build time", count: 97, suffix: "wk" },
-  { num: "100%", lbl: "React Native + MERN", count: 100, suffix: "%" },
+  { num: String(storeAppCount), lbl: "Apps live in the app stores", count: storeAppCount },
+  { num: `${rnStoreAppWeeks}wk`, lbl: `Combined build time (${rnTimedAppCount} of ${rnStoreAppCount} live React Native apps)`, count: rnStoreAppWeeks, suffix: "wk" },
+  { text: "React Native + MERN", lbl: "stack" },
 ];
 
 export type EnterpriseProject = { id: string; title: string; role: string; html: string; tech: string[] };

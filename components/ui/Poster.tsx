@@ -1,16 +1,23 @@
 import type { CSSProperties } from "react";
+import { Lock } from "lucide-react";
 
 /**
  * Static stand-ins for 3D scenes. Shown before WebGL mounts and permanently for
  * reduced-motion / no-GPU visitors. Pure CSS/SVG, so they cost nothing to load.
  */
-export function PhoneFrame({ src, alt = "", className = "", style, eager = false }: { src?: string; alt?: string; className?: string; style?: CSSProperties; eager?: boolean }) {
+export function PhoneFrame({ src, alt = "", className = "", style, eager = false, placeholder = false }: { src?: string; alt?: string; className?: string; style?: CSSProperties; eager?: boolean; placeholder?: boolean }) {
   return (
     <div className={`phone-frame relative aspect-[1.5/3.1] overflow-hidden rounded-[13%/6.4%] border border-line-strong bg-[#12141a] p-[3.5%] shadow-[0_40px_120px_-30px_rgba(201,162,75,.6)] ${className}`} style={style}>
       <div className="relative h-full w-full overflow-hidden rounded-[10%/5%] bg-[#0d0f16]">
         {src ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={src} alt={alt} loading={eager ? "eager" : "lazy"} decoding="async" className="h-full w-full object-cover object-top" />
+        ) : placeholder ? (
+          // no screenshot exists (client NDA): a branded stand-in that says so, instead of a blank screen
+          <div className="absolute inset-0 grid place-content-center justify-items-center gap-1 bg-[radial-gradient(closest-side,rgba(201,162,75,.2),transparent_75%)] px-[8%] text-center [container-type:size]">
+            <Lock aria-hidden className="h-[24cqw] w-[24cqw] text-accent" strokeWidth={1.6} />
+            <span className="text-[15cqw] font-semibold leading-tight text-accent-2">Screens under NDA</span>
+          </div>
         ) : null}
         <span className="absolute left-1/2 top-[2.2%] h-[2.4%] w-[26%] -translate-x-1/2 rounded-full bg-black" />
       </div>

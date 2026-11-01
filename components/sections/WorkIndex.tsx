@@ -21,12 +21,14 @@ const FILTERS = [
 ] as const;
 type Filter = (typeof FILTERS)[number]["key"];
 
-export function WorkStats({ stats: workStats }: { stats: { count: number; suffix?: string; lbl: string }[] }) {
+export function WorkStats({ stats: workStats }: { stats: { count?: number; suffix?: string; text?: string; lbl: string }[] }) {
   return (
-    <section className="pb-6"><div className="wrap grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <section className="pb-6"><div className={`wrap grid gap-4 sm:grid-cols-2 ${workStats.length === 3 ? "lg:grid-cols-3" : "lg:grid-cols-4"}`}>
       {workStats.map((s, i) => (
         <div key={s.lbl} className="glass spot p-6" data-reveal style={{ "--i": i } as React.CSSProperties}>
-          <span className="font-display block text-[clamp(44px,5vw,72px)] font-bold leading-none tracking-tighter"><span className="grad-text"><Counter value={s.count} suffix={s.suffix ?? ""} /></span></span>
+          {s.text
+            ? <span className="font-display block text-[clamp(26px,3vw,40px)] font-bold leading-tight tracking-tight"><span className="grad-text">{s.text}</span></span>
+            : <span className="font-display block text-[clamp(44px,5vw,72px)] font-bold leading-none tracking-tighter"><span className="grad-text"><Counter value={s.count ?? 0} suffix={s.suffix ?? ""} /></span></span>}
           <span className="muted mt-3 block text-[15px]">{s.lbl}</span>
         </div>
       ))}

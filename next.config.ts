@@ -24,12 +24,24 @@ const nextConfig: NextConfig = {
         { source: "/usa/", destination: "/react-native-app-development-usa/", permanent: true },
         { source: "/hire-developers", destination: "/hire/", permanent: true },
         { source: "/hire-developers/", destination: "/hire/", permanent: true },
-        // Old-site paths Google still reports as 404 (Search Console, Page indexing)
-        { source: "/portfolio", destination: "/work/", permanent: true },
-        { source: "/portfolio/:slug*", destination: "/work/", permanent: true },
-        { source: "/case-study", destination: "/work/", permanent: true },
-        { source: "/estimate", destination: "/app-cost-calculator/", permanent: true },
-        { source: "/services/enterprise-software-development", destination: "/services/", permanent: true },
+        // Old-site paths Google still reports as 404 (Search Console, Page indexing). The specific /portfolio/* pages
+        // come before the catch-all so each lands on its matching case study. `statusCode: 301` (not `permanent`, which Next sends as 308) matches the CloudFront function. Every path is listed with and
+        // without the trailing slash because skipTrailingSlashRedirect is on. Keep in step with docs/SEO-REDIRECTS.md.
+        ...[
+          ["/portfolio/station-driver-chauffeurs", "/work/ride-hailing/"],
+          ["/portfolio/attendance-salary-ledger", "/work/hr-payroll/"],
+          ["/portfolio/retail-supply-chain", "/work/retail-ops/"],
+          ["/portfolio", "/work/"],
+          ["/case-study", "/work/"],
+          ["/work/b2b-wholesale", "/work/store-ops/"],
+          ["/hire/fullstack-developer", "/hire/"],
+          ["/estimate", "/app-cost-calculator/"],
+          ["/services/enterprise-software-development", "/services/"],
+        ].flatMap(([from, to]) => [
+          { source: from, destination: to, statusCode: 301 },
+          { source: `${from}/`, destination: to, statusCode: 301 },
+        ]),
+        { source: "/portfolio/:slug*", destination: "/work/", statusCode: 301 },
       ];
     },
     async headers() {

@@ -484,6 +484,10 @@
        ]
       }
      ]
+    },
+    {
+     "t": "p",
+     "html": "For the product and UI/UX side of investing apps, see our <a href=\"/work/fan-investing/\">Fan Investment Platform design concept</a>."
     }
    ]
   },
@@ -523,7 +527,7 @@
     {
      "t": "form",
      "id": "leadForm",
-   "price": "MVP apps from $2,500 · smaller builds from $1,000",
+     "price": "MVP apps from $2,500 · smaller builds from $1,000",
      "fields": [
       {
        "name": "lbName",

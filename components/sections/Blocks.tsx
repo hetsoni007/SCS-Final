@@ -16,7 +16,8 @@ function cols(cls = "", n: number) {
   if (/\bg4\b|dora-grid|svc-row|\bpipe\b/.test(cls)) return 4;
   if (/\bg2\b|gauto|benefit-grid|obs-low/.test(cls)) return 2;
   if (/proc-grid/.test(cls)) return Math.min(n, 5);
-  if (/why-grid|case-strip/.test(cls)) return Math.min(n, 4);
+  if (/case-strip/.test(cls)) return Math.min(n, 5);
+  if (/why-grid/.test(cls)) return Math.min(n, 4);
   if (/\btl\b/.test(cls)) return 1;
   if (/idea-grid/.test(cls)) return 3;
   return Math.min(n, 3);

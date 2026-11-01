@@ -69,10 +69,14 @@ export function AppCostCalculator() {
   const est = useMemo(() => estimateApp(c), [c]);
   const scene = useRef<{ features: boolean[]; weeks: number }>({ features: appCalcDefault.features, weeks: 0 });
   useEffect(() => { scene.current.features = c.features; scene.current.weeks = est.weeks; }, [c.features, est.weeks]);
-  const first = useRef(true);
+  const first = useRef(true), completed = useRef(false);
   useEffect(() => {
     if (first.current) { first.current = false; return; }
-    const t = setTimeout(() => track("calculator_estimate", { weeks: est.weeks, low: est.lo, high: est.hi }), 800);
+    const t = setTimeout(() => {
+      track("calculator_estimate", { weeks: est.weeks, low: est.lo, high: est.hi });
+      // once per visit: the visitor changed the scope and the calculator showed them a new result
+      if (!completed.current) { completed.current = true; track("calculator_complete", { calculator: "app", page_path: location.pathname }); }
+    }, 800);
     return () => clearTimeout(t);
   }, [est]);
   const chosen = appCalc.features.filter((_, i) => c.features[i]).map((f) => f.label);

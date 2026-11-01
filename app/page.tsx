@@ -9,7 +9,7 @@ import { SectionHead } from "@/components/sections/SectionHead";
 import { RenderForm } from "@/components/sections/Blocks";
 import { getPage, getPosts, pageMetadata } from "@/lib/content";
 import { JsonLd, personSchema } from "@/lib/schema";
-import { liveCases } from "@/content/work";
+import { liveCases, storeAppCount } from "@/content/work";
 import type { Block } from "@/lib/content";
 
 const page = getPage("index");
@@ -26,7 +26,7 @@ export default function Home() {
   const showcase = liveCases.map((c) => ({ slug: c.slug, short: c.short, tagline: c.tagline, status: c.status, metrics: c.metrics.map((m) => ({ num: m.num, lbl: m.lbl })), shots: c.shots.slice(0, 3).map((s) => ({ src: s.src, alt: s.alt })) }));
   return (
     <>
-      <Hero />
+      <Hero storeApps={storeAppCount} />
       <TrustMarquee />
       <Stats />
       <Manifesto />

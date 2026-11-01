@@ -23,7 +23,7 @@ const Word = ({ w, at, grad = false }: { w: string; at: number; grad?: boolean }
  * sticky track from first paint (so nothing shifts when the canvas arrives) and scroll assembles the
  * particles into the device pair. Reduced motion / no GPU: a normal one-screen hero with a static composition.
  */
-export default function Hero() {
+export default function Hero({ storeApps }: { storeApps: number }) {
   const track = useRef<HTMLElement>(null), copy = useRef<HTMLDivElement>(null), cap = useRef<HTMLDivElement>(null);
   const state = useRef({ progress: 0 });
   const { expectGl } = useApp();
@@ -70,7 +70,7 @@ export default function Hero() {
           </div>
           <p className="dim mt-7 flex items-center gap-2">
             <span className="inline-block h-2 w-2 rounded-full bg-success shadow-[0_0_10px_var(--success)]" aria-hidden />
-            Live on the App Store &amp; Google Play · 4+ products shipped · No upfront fee to talk
+            {storeApps} apps live in the app stores · No upfront fee to talk
           </p>
         </div>
         {expectGl && (

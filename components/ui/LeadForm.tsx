@@ -58,6 +58,7 @@ export default function LeadForm({
       return;
     }
     track("form_submit", { form: kind });
+    if (res.ok) track("generate_lead", { form: kind, page_path: location.pathname });
     setDone(true);
     onSuccess?.(values);
   })(ev);

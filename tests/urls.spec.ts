@@ -50,6 +50,22 @@ test.describe("live URL parity", () => {
     expect(await missing.text()).toContain("didn");
   });
 
+  test("old-site URLs 301 to their new home, with and without a trailing slash", async ({ request }) => {
+    const moved: [string, string][] = [
+      ["/portfolio", "/work/"], ["/case-study", "/work/"], ["/estimate", "/app-cost-calculator/"], ["/hire/fullstack-developer", "/hire/"],
+      ["/services/enterprise-software-development", "/services/"],
+      ["/portfolio/station-driver-chauffeurs", "/work/ride-hailing/"], ["/portfolio/attendance-salary-ledger", "/work/hr-payroll/"],
+      ["/portfolio/retail-supply-chain", "/work/retail-ops/"], ["/work/b2b-wholesale", "/work/store-ops/"], ["/portfolio/some-other-old-page", "/work/"],
+    ];
+    for (const [from, to] of moved) {
+      for (const path of [from, `${from}/`]) {
+        const res = await request.get(path, { maxRedirects: 0 });
+        expect(res.status(), path).toBe(301);
+        expect(new URL(res.headers().location, "http://x").pathname, path).toBe(to);
+      }
+    }
+  });
+
   test("sitemap lists every live URL, robots points at it", async ({ request }) => {
     const xml = await (await request.get("/sitemap.xml")).text();
     for (const p of live) expect(xml, p.path).toContain(`<loc>${p.canonical || "https://soniconsultancyservices.com" + p.path}</loc>`);

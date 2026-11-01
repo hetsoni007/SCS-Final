@@ -7,15 +7,21 @@ import { BadgeDollarSign, KeyRound, PhoneCall, ShieldCheck, Timer, UsersRound } 
 import { Counter } from "@/components/ui/Bits";
 import { SectionHead } from "./SectionHead";
 import { site } from "@/content/site";
-import { guarantees, stats, tools, values } from "@/content/home";
+import { guarantees, stats as otherStats, tools, values } from "@/content/home";
+import { projectsDelivered, storeAppCount } from "@/content/work";
 
 /* S3 — stats: extruded-looking numbers that tilt with the cursor (CSS 3D; the numbers stay real text) */
+const stats = [
+  { value: storeAppCount, suffix: "", label: "Apps live in the app stores", href: "/work/", more: "See the apps" },
+  { value: parseInt(projectsDelivered, 10), suffix: projectsDelivered.replace(/\d/g, ""), label: "Projects delivered (web, enterprise and mobile)", href: "/work/", more: "See the work" },
+  ...otherStats,
+];
 export function Stats() {
   return (
     <section className="section" data-loc="stats">
       <div className="wrap">
         <SectionHead eyebrow="Proof, not promises" title="Real apps. Real results.<br>Live on the stores today." />
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {stats.map((s, i) => (
             <Link key={s.label} href={s.href} className="glass spot group block p-7 [perspective:800px]" data-tilt data-reveal data-cursor="View" style={{ "--i": i } as React.CSSProperties}>
               <div className="tilt-3d stat-num font-display text-[clamp(64px,7vw,112px)] font-bold leading-none tracking-tighter">
