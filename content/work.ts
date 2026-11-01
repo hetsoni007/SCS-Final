@@ -150,7 +150,7 @@ export const cases: CaseStudy[] = [
   },
   {
     slug: "b2b-wholesale",
-    kind: "shipped",
+    kind: "live",
     title: "B2B Wholesale Platform",
     short: "B2B Wholesale",
     tagline: "Wholesale ordering & loyalty rewards for retailers",
@@ -247,17 +247,22 @@ export const cases: CaseStudy[] = [
 
 export const caseBySlug = (slug: string) => cases.find((c) => c.slug === slug);
 export const liveCases = cases.filter((c) => c.kind === "live");
-/** Apps whose status says they are live on the stores. Not the same set as `liveCases` (which drives the home carousel):
- *  B2B Wholesale is live on the stores but is a "shipped" case. This is the single source for every "N apps live" claim. */
+/** Apps whose status says they are live on the stores: the single source for every site-wide "N apps live" claim. */
 export const storeApps = cases.filter((c) => /^Live on the App Store/.test(c.status));
 export const storeAppCount = storeApps.length;
+/** The React Native subset (B2B Wholesale is React.js + Node.js). Only the React Native pages and the /work/ build-time tile use it;
+ *  never show the site-wide count there. */
+export const rnStoreApps = storeApps.filter((c) => c.stack.includes("React Native"));
+export const rnStoreAppCount = rnStoreApps.length;
+/** Sum of the recorded build durations of those apps (each `duration` is "N weeks"). */
+export const rnStoreAppWeeks = rnStoreApps.reduce((sum, c) => sum + (parseInt(c.duration ?? "", 10) || 0), 0);
 /** The owner's own figure: web, enterprise and mobile projects. Never use it as a claim about store apps. */
 export const projectsDelivered = "10+";
 
 export const workStats = [
-  { num: String(storeAppCount), lbl: "Apps live on the App Store & Google Play", count: storeAppCount },
-  { num: "97wk", lbl: "Combined build time", count: 97, suffix: "wk" },
-  { num: "100%", lbl: "React Native + MERN", count: 100, suffix: "%" },
+  { num: String(storeAppCount), lbl: "Apps live in the app stores", count: storeAppCount },
+  { num: `${rnStoreAppWeeks}wk`, lbl: `Combined build time (${rnStoreAppCount} live React Native apps)`, count: rnStoreAppWeeks, suffix: "wk" },
+  { text: "React Native + MERN", lbl: "stack" },
 ];
 
 export type EnterpriseProject = { id: string; title: string; role: string; html: string; tech: string[] };

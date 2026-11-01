@@ -113,7 +113,7 @@
     },
     {
      "t": "text",
-     "html": "{{storeApps}} apps live on the App Store & Google Play · No upfront fee to talk"
+     "html": "{{storeApps}} apps live in the app stores · No upfront fee to talk"
     }
    ]
   },
@@ -139,7 +139,7 @@
         {
          "t": "metric",
          "num": "{{storeApps}}",
-         "lbl": "Apps live on the App Store & Google Play"
+         "lbl": "Apps live in the app stores"
         }
        ]
       },

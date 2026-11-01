@@ -12,7 +12,7 @@ import { projectsDelivered, storeAppCount } from "@/content/work";
 
 /* S3 — stats: extruded-looking numbers that tilt with the cursor (CSS 3D; the numbers stay real text) */
 const stats = [
-  { value: storeAppCount, suffix: "", label: "Apps live on the App Store & Google Play", href: "/work/", more: "See the apps" },
+  { value: storeAppCount, suffix: "", label: "Apps live in the app stores", href: "/work/", more: "See the apps" },
   { value: parseInt(projectsDelivered, 10), suffix: projectsDelivered.replace(/\d/g, ""), label: "Projects delivered (web, enterprise and mobile)", href: "/work/", more: "See the work" },
   ...otherStats,
 ];

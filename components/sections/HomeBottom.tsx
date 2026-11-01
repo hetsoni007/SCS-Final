@@ -54,7 +54,7 @@ export function WorkShowcase({ cases: liveCases }: { cases: ShowcaseCase[] }) {
             </div>
           </>
         ) : null}
-        {/* Editorial index of the four live apps: the crawlable list, the only UI without WebGL, and (with it) a
+        {/* Editorial index of the live apps: the crawlable list, the only UI without WebGL, and (with it) a
             remote for the carousel above — pointing at a row spins its phone to the front. */}
         <ol className={`border-t border-line ${expectGl ? "mt-8" : "mt-12"}`}>
           {liveCases.map((w, i) => (

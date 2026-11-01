@@ -87,30 +87,36 @@ Done as specified except for one number, which is a decision for you.
 
 ## App-count wording (final, approved)
 
-- **Store apps:** "N apps live on the App Store & Google Play", N computed in `content/work.ts` as the number of cases whose `status` starts with "Live on the App Store" (`storeAppCount`). Today **N = 5**: HR & Payroll, Creator–Venue Marketplace, Retail Operations, Ride-Hailing, B2B Wholesale. No "+" and no hand-typed number: page JSON uses the `{{storeApps}}` token, filled by `getPage()` in `lib/content.ts`; the hero receives it as a prop.
-- **Total delivered:** "10+ projects delivered" (`projectsDelivered` in `content/work.ts`, your figure: web, enterprise and mobile). Used only on the home stat and About, never as a store-app claim.
-- Creator–Venue Marketplace keeps its own label "Live on the App Store" (not both stores). "8 store listings" is removed everywhere.
+Two counts, each computed in `content/work.ts`, never typed by hand. Page JSON uses tokens that `getPage()` (`lib/content.ts`) fills in; the hero receives its number as a prop.
 
-Everything that changed:
+| Count | Definition | Today | Used on |
+|---|---|---|---|
+| `storeAppCount` (`{{storeApps}}`) | cases whose `status` starts with "Live on the App Store": HR & Payroll, Creator–Venue Marketplace, Retail Operations, Ride-Hailing, B2B Wholesale | **5** | hero strip, home stat, About, the `/work/` counter. Wording: "N apps live in the app stores" (Creator–Venue is App Store only, so no "both stores") |
+| `rnStoreAppCount` (`{{rnStoreApps}}`, `{{rnStoreAppsWord}}`) | the subset above whose stack includes React Native (B2B Wholesale is React.js + Node.js) | **4** | the React Native pages only; never the site-wide count there |
+| `projectsDelivered` | your figure, "10+" (web, enterprise and mobile) | 10+ | home stat tile and About tile only, never as a store-app claim |
+
+"8 store listings" is removed everywhere. Creator–Venue keeps its own label "Live on the App Store".
+
+B2B Wholesale is now `kind: "live"` in `content/work.ts`, so it appears in the home 3D carousel and list and in the `/work/` "Live apps" group (before: "Other shipped products"). It has no screenshots (NDA), so its carousel phone is a blank screen, and its stack label stays "React.js · Node.js · ERP Integration". Healthcare Staffing remains "shipped" (delivered, not public on the stores).
+
+### Before / after, every place that changed
 
 | Where | Before | After |
 |---|---|---|
-| Hero strip, `components/sections/Hero.tsx` (+ prop from `app/page.tsx`), copy in `content/pages/index.json` | "Live on the App Store & Google Play · 4+ products shipped · No upfront fee to talk" | "5 apps live on the App Store & Google Play · No upfront fee to talk" |
-| Home stats, `components/sections/HomeStatic.tsx`, `content/home.ts` | "4+ Apps live on App Store & Play Store" | "5 Apps live on the App Store & Google Play", plus a new tile "10+ Projects delivered (web, enterprise and mobile)"; the grid is 3 columns at lg, 5 at xl (five tiles do not fit four columns) |
-| About metric tiles, `content/pages/about.json` | "4+ Apps shipped", "8 Store listings" | "5 Apps live on the App Store & Google Play", "10+ Projects delivered" |
-| About FAQ answer (visible text and FAQPage JSON-LD, same string), `content/pages/about.json` | "4+ apps live across 8 store listings, serving users in 30+ countries." | "5 apps live on the App Store & Google Play and 10+ projects delivered, serving users in 30+ countries." |
-| `/work/` counter, `content/work.ts` `workStats`, `components/sections/WorkIndex.tsx`, static copy in `content/pages/work.json` | "4 Apps shipped", "8 Store listings (iOS+Android)" | "5 Apps live on the App Store & Google Play"; the listings tile is dropped, so the row is 3 tiles wide |
-| `/react-native-app-development/` and the UK, Dubai, USA pages (heading, `content/pages/react-native-app-development*.json`) | "Four React Native apps, live on the stores" | "5 apps live on the App Store & Google Play" |
-| `/react-native-app-development/` og description | "four apps live on the App Store and Google Play" | "5 apps live on the App Store and Google Play" |
+| Hero strip (`components/sections/Hero.tsx`, prop from `app/page.tsx`; copy in `content/pages/index.json`) | "Live on the App Store & Google Play · 4+ products shipped · No upfront fee to talk" | "5 apps live in the app stores · No upfront fee to talk" |
+| Home stats (`components/sections/HomeStatic.tsx`, `content/home.ts`) | "4+ Apps live on App Store & Play Store" | "5 Apps live in the app stores" and a new tile "10+ Projects delivered (web, enterprise and mobile)"; grid is 3 columns at lg, 5 at xl |
+| About tiles (`content/pages/about.json`) | "4+ Apps shipped", "8 Store listings" | "5 Apps live in the app stores", "10+ Projects delivered" |
+| About FAQ (visible text and FAQPage JSON-LD, same string) | "4+ apps live across 8 store listings, serving users in 30+ countries." | "5 apps live in the app stores and 10+ projects delivered, serving users in 30+ countries." |
+| `/work/` tile 1 (`content/work.ts` `workStats`, copy in `content/pages/work.json`) | "4 Apps shipped" | "5 Apps live in the app stores" |
+| `/work/` tile "8 Store listings (iOS+Android)" | present | removed (row is 3 tiles wide) |
+| `/work/` build-time tile | "97wk Combined build time" | "97wk Combined build time (4 live React Native apps)"; 97 is computed from the four apps' recorded durations (16 + 24 + 32 + 25). Healthcare Staffing's 26 weeks is not included because it is not live on the stores; B2B Wholesale has no recorded duration and none was invented |
+| `/work/` tile "100% React Native + MERN" | "100%" + "React Native + MERN" | "React Native + MERN" + "stack", no percentage (`WorkStats` now supports a text tile) |
+| React Native pages' heading (`/react-native-app-development/` and the UK, Dubai, USA pages) | "Four React Native apps, live on the stores" | "4 React Native apps live in the app stores" |
+| `/react-native-app-development/` og description | "four apps live on the App Store and Google Play" | "4 React Native apps live in the app stores" |
+| `/react-native-app-development/` page copy and FAQ answer (visible text and FAQ JSON-LD) | "The four products in our portfolio took 16–32 weeks each to reach full market release on both stores." | "The four React Native products in our portfolio took 16–32 weeks each to reach full market release on both stores." (the word is computed, so it follows the count) |
+| `/work/` "Live apps" group and home carousel / list | 4 cards (B2B Wholesale under "Other shipped products", absent from the carousel) | 5 cards including B2B Wholesale |
 
-**Labels this makes inaccurate or inconsistent (not changed, because you asked for no other changes):**
-1. **B2B Wholesale is not a React Native app** (its stack in `content/work.ts` is React.js, Node.js, ERP integration). The old heading said "React Native apps"; the new one drops "React Native" so it stays true, but the section under it still shows only the four `liveCases` cards, not five.
-2. `/work/` tile "100% React Native + MERN" now contradicts B2B Wholesale's stack.
-3. `/work/` tile "97wk Combined build time" is the sum for four apps (16 + 24 + 32 + 25); B2B Wholesale has no duration.
-4. React Native pages (copy and FAQ): "The four products in our portfolio took 16–32 weeks each to reach full market release on both stores" still says four on purpose (it is true only of those four, and Creator–Venue is App Store only).
-5. Home carousel / editorial list and the `/work/` cards use `liveCases` (four), so the page lists four apps while the stat says five; B2B Wholesale is `kind: "shipped"`.
-6. "5 apps live on the App Store & Google Play" includes Creator–Venue, which is on the App Store only (you chose to keep that label).
-7. The meta description / hero copy elsewhere says "apps live on both stores" with no number; left as is.
+Not changed, for you to know: the About meta description ("shipping apps live on the App Store & Google Play across six countries") and the "apps live on both stores" lines in meta descriptions have no number and were out of scope; the RN-page sentence "…reach full market release on both stores" is unchanged apart from the count word (Creator–Venue is App Store only).
 
 ## Task 6: GA4 and bot noise
 

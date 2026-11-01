@@ -203,7 +203,7 @@ test("home: proof tiles link to their evidence; the work index lists the live ap
   await expect(stats.getByRole("link", { name: /Less payroll admin/ })).toHaveAttribute("href", "/work/hr-payroll/");
   await expect(page.locator('[data-loc="manifesto"]').getByText("Ship over slideware.")).toBeVisible();
   const index = page.locator('[data-loc="work"] ol');
-  await expect(index.getByRole("link")).toHaveCount(4);
+  await expect(index.getByRole("link")).toHaveCount(5); // every app live in the stores: the four React Native apps and B2B Wholesale
   await expect(index.getByRole("link").first()).toHaveAttribute("href", /^\/work\/[a-z-]+\/$/);
 });
 

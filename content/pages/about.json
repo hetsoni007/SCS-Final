@@ -101,7 +101,7 @@
      "name": "How many apps has Soni Consultancy Services shipped?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "{{storeApps}} apps live on the App Store & Google Play and {{projectsDelivered}} projects delivered, serving users in 30+ countries."
+      "text": "{{storeApps}} apps live in the app stores and {{projectsDelivered}} projects delivered, serving users in 30+ countries."
      }
     }
    ]
@@ -199,7 +199,7 @@
         },
         {
          "t": "text",
-         "html": "Apps live on the App Store & Google Play",
+         "html": "Apps live in the app stores",
          "cls": "lbl"
         }
        ]
@@ -605,7 +605,7 @@
       },
       {
        "q": "How many apps has Soni Consultancy Services shipped?",
-       "a": "{{storeApps}} apps live on the App Store & Google Play and {{projectsDelivered}} projects delivered, serving users in 30+ countries."
+       "a": "{{storeApps}} apps live in the app stores and {{projectsDelivered}} projects delivered, serving users in 30+ countries."
       }
      ]
     }

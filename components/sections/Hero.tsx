@@ -70,7 +70,7 @@ export default function Hero({ storeApps }: { storeApps: number }) {
           </div>
           <p className="dim mt-7 flex items-center gap-2">
             <span className="inline-block h-2 w-2 rounded-full bg-success shadow-[0_0_10px_var(--success)]" aria-hidden />
-            {storeApps} apps live on the App Store &amp; Google Play · No upfront fee to talk
+            {storeApps} apps live in the app stores · No upfront fee to talk
           </p>
         </div>
         {expectGl && (

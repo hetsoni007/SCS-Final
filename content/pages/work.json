@@ -145,7 +145,7 @@
         },
         {
          "t": "text",
-         "html": "Apps live on the App Store & Google Play",
+         "html": "Apps live in the app stores",
          "cls": "lbl"
         }
        ]
@@ -155,12 +155,12 @@
        "blocks": [
         {
          "t": "text",
-         "html": "97wk",
+         "html": "{{rnWeeks}}wk",
          "cls": "num"
         },
         {
          "t": "text",
-         "html": "Combined build time",
+         "html": "Combined build time ({{rnStoreApps}} live React Native apps)",
          "cls": "lbl"
         }
        ]
@@ -168,14 +168,14 @@
       {
        "cls": "metric",
        "blocks": [
-        {
-         "t": "text",
-         "html": "100%",
-         "cls": "num"
-        },
         {
          "t": "text",
          "html": "React Native + MERN",
+         "cls": "num"
+        },
+        {
+         "t": "text",
+         "html": "stack",
          "cls": "lbl"
         }
        ]
