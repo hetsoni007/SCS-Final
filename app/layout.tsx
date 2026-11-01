@@ -41,12 +41,19 @@ const gtmBoot = GTM_ID
   ? `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;(function(){var a='denied';try{if(localStorage.getItem('scs-consent')==='granted')a='granted'}catch(e){}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:a})})();(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`
   : "";
 
+// Meta Pixel in <head> on the production hostname only. It runs in Meta's consent mode: the base code loads for every
+// visitor (so the pixel is detectable), but with consent revoked it sends no events and sets no cookies until the visitor
+// accepts analytics cookies (lib/prefs.ts then grants it and records the page view). A returning visitor's choice applies at once.
+const prodHostPattern = new URL(site.url).hostname.replace(/\./g, "\\.");
+const metaBoot = `if(/^(www\\.)?${prodHostPattern}$/.test(location.hostname)){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');var c='revoke';try{if(localStorage.getItem('scs-consent')==='granted')c='grant'}catch(e){}fbq('consent',c);fbq('init','${site.metaPixelId}');fbq('track','PageView');}`;
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" data-theme="dark" className={`${display.variable} ${body.variable} ${mono.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: boot }} />
         {gtmBoot && <script dangerouslySetInnerHTML={{ __html: gtmBoot }} />}
+        <script dangerouslySetInnerHTML={{ __html: metaBoot }} />
       </head>
       <body>
         {GTM_ID && <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`} height="0" width="0" style={{ display: "none", visibility: "hidden" }} /></noscript>}

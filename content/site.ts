@@ -29,6 +29,8 @@ export const site = {
     facebook: "https://www.facebook.com/soniconsultancyservices",
     medium: "https://medium.com/@hetsoni9398",
   },
+  /** Meta (Facebook) Pixel ID. Loads on the production hostname only, in Meta's consent mode (no events or cookies until analytics cookies are accepted). */
+  metaPixelId: "1437470517808016",
   areaServed: ["GB", "US", "AE", "IN", "CA", "AU"],
   markets: [
     { code: "GB", name: "UK", lat: 51.5, lon: -0.12 },

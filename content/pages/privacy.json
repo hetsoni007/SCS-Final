@@ -157,7 +157,7 @@
       },
       {
        "t": "p",
-       "html": "We use only essential and basic analytics cookies — no advertising or cross-site tracking. Analytics cookies are set only if you accept them in the cookie notice. You can block cookies in your browser; the site still works."
+       "html": "We use essential cookies and, only if you accept them in the cookie notice, analytics and advertising-measurement cookies (see Google, Microsoft Clarity and Meta below). You can block cookies in your browser; the site still works."
       },
       {
        "t": "p",
@@ -166,6 +166,10 @@
       {
        "t": "p",
        "html": "If you accept analytics cookies, we also use Microsoft Clarity to understand how the site is used, through heatmaps and session recordings of clicks, scrolling and page navigation. Clarity sets its own cookies and masks sensitive content, including what you type into forms, by default. It does not run unless you accept. See the <a href=\"https://privacy.microsoft.com/privacystatement\" target=\"_blank\" rel=\"noopener\">Microsoft Privacy Statement</a>."
+      },
+      {
+       "t": "p",
+       "html": "If you accept analytics cookies, we also use the Meta Pixel (Meta Platforms). It sends information about your visit, such as the pages you view, to Meta, which may set its own cookies and use the data under its own policies, including to measure and optimise ads. The Meta script loads on every page but runs in consent mode: until you accept, it sends no events and sets no cookies. See the <a href=\"https://www.facebook.com/privacy/policy/\" target=\"_blank\" rel=\"noopener\">Meta Privacy Policy</a>."
       },
       {
        "t": "h",
