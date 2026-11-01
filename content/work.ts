@@ -159,8 +159,7 @@ export const cases: CaseStudy[] = [
     status: "Live on the App Store & Google Play",
     summary: "Operations platform for retail teams: digital checklists, forms, staff monitoring and training.",
     metrics: [],
-    // TODO(owner): confirm the real stack. React.js + Node.js is what was recorded before; an unconfirmed integration tag was removed.
-    stack: ["React.js", "Node.js"],
+    stack: ["React Native", "MongoDB", "Express.js", "React", "Node.js"],
     shots: [],
     industryPage: "/retail-app-development/",
   },
@@ -244,10 +243,13 @@ export const liveCases = cases.filter((c) => c.kind === "live");
 /** Apps whose status says they are live on the stores: the single source for every site-wide "N apps live" claim. */
 export const storeApps = cases.filter((c) => /^Live on the App Store/.test(c.status));
 export const storeAppCount = storeApps.length;
-/** The React Native subset (the store-ops platform is React.js + Node.js). Only the React Native pages and the /work/ build-time tile use it;
+/** The React Native subset (the stack list includes "React Native"). Only the React Native pages and the /work/ build-time tile use it;
  *  never show the site-wide count there. */
 export const rnStoreApps = storeApps.filter((c) => c.stack.includes("React Native"));
 export const rnStoreAppCount = rnStoreApps.length;
+/** Those with a recorded build duration: the only ones the build-time claims can honestly cover. */
+export const rnTimedApps = rnStoreApps.filter((c) => parseInt(c.duration ?? "", 10) > 0);
+export const rnTimedAppCount = rnTimedApps.length;
 /** Sum of the recorded build durations of those apps (each `duration` is "N weeks"). */
 export const rnStoreAppWeeks = rnStoreApps.reduce((sum, c) => sum + (parseInt(c.duration ?? "", 10) || 0), 0);
 /** The owner's own figure: web, enterprise and mobile projects. Never use it as a claim about store apps. */
@@ -255,7 +257,7 @@ export const projectsDelivered = "10+";
 
 export const workStats = [
   { num: String(storeAppCount), lbl: "Apps live in the app stores", count: storeAppCount },
-  { num: `${rnStoreAppWeeks}wk`, lbl: `Combined build time (${rnStoreAppCount} live React Native apps)`, count: rnStoreAppWeeks, suffix: "wk" },
+  { num: `${rnStoreAppWeeks}wk`, lbl: `Combined build time (${rnTimedAppCount} of ${rnStoreAppCount} live React Native apps)`, count: rnStoreAppWeeks, suffix: "wk" },
   { text: "React Native + MERN", lbl: "stack" },
 ];
 

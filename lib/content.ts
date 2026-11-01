@@ -4,7 +4,7 @@ import path from "node:path";
 import matter from "gray-matter";
 import type { Metadata } from "next";
 import { site } from "@/content/site";
-import { projectsDelivered, rnStoreAppCount, rnStoreAppWeeks, storeAppCount } from "@/content/work";
+import { projectsDelivered, rnStoreAppCount, rnStoreAppWeeks, rnTimedAppCount, storeAppCount } from "@/content/work";
 
 const ROOT = path.join(process.cwd(), "content");
 
@@ -35,7 +35,7 @@ const NUMBER_WORDS = ["zero", "one", "two", "three", "four", "five", "six", "sev
 /** Page copy may use {{storeApps}}, {{rnStoreApps}} ({{rnStoreAppsWord}} in words), {{rnWeeks}} and {{projectsDelivered}}; they are filled from content/work.ts so each claim has one source. */
 export function getPage(slug: string): PageContent {
   const raw = fs.readFileSync(path.join(ROOT, "pages", `${slug}.json`), "utf8");
-  return JSON.parse(raw.replaceAll("{{storeApps}}", String(storeAppCount)).replaceAll("{{rnStoreAppsWord}}", NUMBER_WORDS[rnStoreAppCount] ?? String(rnStoreAppCount)).replaceAll("{{rnStoreApps}}", String(rnStoreAppCount)).replaceAll("{{rnWeeks}}", String(rnStoreAppWeeks)).replaceAll("{{projectsDelivered}}", projectsDelivered));
+  return JSON.parse(raw.replaceAll("{{storeApps}}", String(storeAppCount)).replaceAll("{{rnTimedAppsWord}}", NUMBER_WORDS[rnTimedAppCount] ?? String(rnTimedAppCount)).replaceAll("{{rnStoreAppsWord}}", NUMBER_WORDS[rnStoreAppCount] ?? String(rnStoreAppCount)).replaceAll("{{rnStoreApps}}", String(rnStoreAppCount)).replaceAll("{{rnWeeks}}", String(rnStoreAppWeeks)).replaceAll("{{projectsDelivered}}", projectsDelivered));
 }
 export function allPageSlugs(): string[] {
   return fs.readdirSync(path.join(ROOT, "pages")).filter((f) => f.endsWith(".json")).map((f) => f.replace(".json", ""));

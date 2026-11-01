@@ -93,7 +93,7 @@ Two counts, each computed in `content/work.ts`, never typed by hand. Page JSON u
 | Count | Definition | Today | Used on |
 |---|---|---|---|
 | `storeAppCount` (`{{storeApps}}`) | cases whose `status` starts with "Live on the App Store": HR & Payroll, Creator–Venue Marketplace, Retail Operations, Ride-Hailing, and the store-ops Retail Operations Platform | **5** | hero strip, home stat, About, the `/work/` counter. Wording: "N apps live in the app stores" (Creator–Venue is App Store only, so no "both stores") |
-| `rnStoreAppCount` (`{{rnStoreApps}}`, `{{rnStoreAppsWord}}`) | the subset above whose stack includes React Native (the store-ops platform is React.js + Node.js) | **4** | the React Native pages only; never the site-wide count there |
+| `rnStoreAppCount` (`{{rnStoreApps}}`) | the subset above whose stack includes React Native (HR & Payroll, Creator–Venue, Retail Operations, Ride-Hailing and the store-ops platform, which is MERN + React Native) | **5** | the React Native pages only; never the site-wide count there |
 | `projectsDelivered` | your figure, "10+" (web, enterprise and mobile) | 10+ | home stat tile and About tile only, never as a store-app claim |
 
 "8 store listings" is removed everywhere. Creator–Venue keeps its own label "Live on the App Store".
@@ -110,11 +110,11 @@ The store-ops Retail Operations Platform (`slug: "store-ops"`) is `kind: "live"`
 | About FAQ (visible text and FAQPage JSON-LD, same string) | "4+ apps live across 8 store listings, serving users in 30+ countries." | "5 apps live in the app stores and 10+ projects delivered, serving users in 30+ countries." |
 | `/work/` tile 1 (`content/work.ts` `workStats`, copy in `content/pages/work.json`) | "4 Apps shipped" | "5 Apps live in the app stores" |
 | `/work/` tile "8 Store listings (iOS+Android)" | present | removed (row is 3 tiles wide) |
-| `/work/` build-time tile | "97wk Combined build time" | "97wk Combined build time (4 live React Native apps)"; 97 is computed from the four apps' recorded durations (16 + 24 + 32 + 25). Healthcare Staffing's 26 weeks is not included because it is not live on the stores; the store-ops platform has no recorded duration and none was invented |
+| `/work/` build-time tile | "97wk Combined build time" | "97wk Combined build time (4 of 5 live React Native apps)"; 97 is computed from the four apps' recorded durations (16 + 24 + 32 + 25). Healthcare Staffing's 26 weeks is not included because it is not live on the stores; the store-ops platform has no recorded duration and none was invented |
 | `/work/` tile "100% React Native + MERN" | "100%" + "React Native + MERN" | "React Native + MERN" + "stack", no percentage (`WorkStats` now supports a text tile) |
-| React Native pages' heading (`/react-native-app-development/` and the UK, Dubai, USA pages) | "Four React Native apps, live on the stores" | "4 React Native apps live in the app stores" |
-| `/react-native-app-development/` og description | "four apps live on the App Store and Google Play" | "4 React Native apps live in the app stores" |
-| `/react-native-app-development/` page copy and FAQ answer (visible text and FAQ JSON-LD) | "The four products in our portfolio took 16–32 weeks each to reach full market release on both stores." | "The four React Native products in our portfolio took 16–32 weeks each to reach full market release on both stores." (the word is computed, so it follows the count) |
+| React Native pages' heading (`/react-native-app-development/` and the UK, Dubai, USA pages) | "Four React Native apps, live on the stores" | "5 React Native apps live in the app stores" |
+| `/react-native-app-development/` og description | "four apps live on the App Store and Google Play" | "5 React Native apps live in the app stores" |
+| `/react-native-app-development/` page copy and FAQ answer (visible text and FAQ JSON-LD) | "The four products in our portfolio took 16–32 weeks each to reach full market release on both stores." | "The four React Native products in our portfolio with recorded build times took 16–32 weeks each to reach full market release on both stores." (the word is computed, so it follows the count) |
 | `/work/` "Live apps" group and home carousel / list | 4 cards (the store-ops platform under "Other shipped products", absent from the carousel) | 5 cards including the store-ops platform |
 
 Not changed, for you to know: the About meta description ("shipping apps live on the App Store & Google Play across six countries") and the "apps live on both stores" lines in meta descriptions have no number and were out of scope; the RN-page sentence "…reach full market release on both stores" is unchanged apart from the count word (Creator–Venue is App Store only).
@@ -138,11 +138,16 @@ The fifth store-live app is now "Retail Operations Platform" (a retail operation
 | description | "Operations platform for retail teams: digital checklists, forms, staff monitoring and training." |
 | stack | React.js · Node.js (an unconfirmed integration tag removed). **TODO(owner): confirm the real stack** (see the comment in `content/work.ts`) |
 | problem / solution / result / metrics | removed (no metrics or outcomes) |
-| status, store count, React Native count | unchanged: live in the app stores, N = 5, React Native 4 |
+| status, store count | unchanged: live in the app stores, N = 5. **React Native count is now 5, not 4**, because the confirmed stack includes React Native; the React Native pages follow it automatically |
 
 Also reworded: the `/work/` meta description, the About and Services "Recent work" lists, the legacy extracted article in `content/pages/work.json`, `docs/URL-MAP.md`, the smoke-test comment. No store links or badges were added.
 
 **Confirmed separate products:** `retail-ops` and `store-ops` are two different apps, so the store-app count stays 5. Both cards still carry the title "Retail Operations Platform"; the `store-ops` card's short name is "Store Operations" (home carousel and list) to tell them apart.
+
+**Consequences of the confirmed stack (MERN + React Native):**
+- The React Native pages now read "5 React Native apps live in the app stores" and their proof strip has a fifth card, "Store Operations" (description only, no metrics), so the list matches the count; the strip is 5 columns wide.
+- The build-time claims still cover only the four apps with recorded durations: the `/work/` tile reads "97wk Combined build time (4 of 5 live React Native apps)" and the FAQ line reads "The four React Native products in our portfolio with recorded build times took 16–32 weeks each…". No duration was invented for the fifth app.
+- The `/work/` tile "React Native + MERN stack" is now true of the whole set.
 
 ## Task 6: GA4 and bot noise
 
