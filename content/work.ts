@@ -149,24 +149,18 @@ export const cases: CaseStudy[] = [
     industryPage: "/ride-hailing-app-development/",
   },
   {
-    slug: "b2b-wholesale",
+    slug: "store-ops",
     kind: "live",
-    title: "B2B Wholesale Platform",
-    short: "B2B Wholesale",
-    tagline: "Wholesale ordering & loyalty rewards for retailers",
-    eyebrow: "B2B Retail · Loyalty Platform · Name withheld (NDA)",
-    industry: "B2B retail / loyalty",
+    title: "Retail Operations Platform",
+    short: "Retail Operations",
+    tagline: "Digital checklists, forms, staff monitoring & training",
+    eyebrow: "Retail Operations · Name withheld (NDA)",
+    industry: "Retail operations",
     status: "Live on the App Store & Google Play",
-    summary: "A B2B wholesale ordering platform for retailers, with a points-based loyalty engine, tiered pricing catalogue and real-time inventory tracking.",
-    problem: "Retailers had no streamlined way to bulk-order, track inventory or earn loyalty rewards — existing systems were outdated and manual.",
-    solution: "Dynamic points tied to purchasing volume, tiered wholesale pricing, predictive inventory analytics and ERP-synced ordering.",
-    result: "Order placement time cut by <strong>30%</strong> and customer retention up <strong>20%</strong> post-launch.",
-    metrics: [
-      { num: "-30%", lbl: "Order time", count: 30, prefix: "-", suffix: "%" },
-      { num: "+20%", lbl: "Retention", count: 20, prefix: "+", suffix: "%" },
-      { num: "60%", lbl: "Redeemed in mo. 1", count: 60, suffix: "%" },
-    ],
-    stack: ["React.js", "Node.js", "ERP Integration"],
+    summary: "Operations platform for retail teams: digital checklists, forms, staff monitoring and training.",
+    metrics: [],
+    // TODO(owner): confirm the real stack. React.js + Node.js is what was recorded before; an unconfirmed integration tag was removed.
+    stack: ["React.js", "Node.js"],
     shots: [],
     industryPage: "/retail-app-development/",
   },
@@ -250,7 +244,7 @@ export const liveCases = cases.filter((c) => c.kind === "live");
 /** Apps whose status says they are live on the stores: the single source for every site-wide "N apps live" claim. */
 export const storeApps = cases.filter((c) => /^Live on the App Store/.test(c.status));
 export const storeAppCount = storeApps.length;
-/** The React Native subset (B2B Wholesale is React.js + Node.js). Only the React Native pages and the /work/ build-time tile use it;
+/** The React Native subset (the store-ops platform is React.js + Node.js). Only the React Native pages and the /work/ build-time tile use it;
  *  never show the site-wide count there. */
 export const rnStoreApps = storeApps.filter((c) => c.stack.includes("React Native"));
 export const rnStoreAppCount = rnStoreApps.length;

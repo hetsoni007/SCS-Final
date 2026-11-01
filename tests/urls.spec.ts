@@ -55,7 +55,7 @@ test.describe("live URL parity", () => {
       ["/portfolio", "/work/"], ["/case-study", "/work/"], ["/estimate", "/app-cost-calculator/"], ["/hire/fullstack-developer", "/hire/"],
       ["/services/enterprise-software-development", "/services/"],
       ["/portfolio/station-driver-chauffeurs", "/work/ride-hailing/"], ["/portfolio/attendance-salary-ledger", "/work/hr-payroll/"],
-      ["/portfolio/retail-supply-chain", "/work/retail-ops/"], ["/portfolio/some-other-old-page", "/work/"],
+      ["/portfolio/retail-supply-chain", "/work/retail-ops/"], ["/work/b2b-wholesale", "/work/store-ops/"], ["/portfolio/some-other-old-page", "/work/"],
     ];
     for (const [from, to] of moved) {
       for (const path of [from, `${from}/`]) {

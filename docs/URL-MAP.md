@@ -92,6 +92,6 @@ All rendered by `app/blog/[slug]/page.tsx` from `content/blog/<slug>.mdx`. Canon
 
 ## New URLs (not on the live site)
 
-- `/work/hr-payroll/`, `/work/creator-marketplace/`, `/work/retail-ops/`, `/work/ride-hailing/`, `/work/b2b-wholesale/`, `/work/healthcare-staffing/`, `/work/web3-creator/`, `/work/fan-investing/`
+- `/work/hr-payroll/`, `/work/creator-marketplace/`, `/work/retail-ops/`, `/work/ride-hailing/`, `/work/store-ops/`, `/work/healthcare-staffing/`, `/work/web3-creator/`, `/work/fan-investing/`
 - `/lab/` — component and 3D scene showcase (`noindex`, disallowed in robots.txt)
 - `/sitemap.xml`, `/robots.txt`, `/search-index.json`, per-page `/…/opengraph-image`

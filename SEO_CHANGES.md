@@ -41,6 +41,7 @@ Checked against the live site on 2026-11-01: it is already this Next.js build (7
 | Old path (with and without trailing slash) | 301 to | Live today (2026-11-01) |
 |---|---|---|
 | `/portfolio` | `/work/` | 301 to `/work/` already |
+| `/work/b2b-wholesale` (renamed case study) | `/work/store-ops/` | new mapping needed |
 | `/case-study` | `/work/` | 301 already |
 | `/portfolio/station-driver-chauffeurs` | `/work/ride-hailing/` | 301 to `/work/` (**needs the new mapping**) |
 | `/portfolio/attendance-salary-ledger` | `/work/hr-payroll/` | 301 to `/work/` (**needs the new mapping**) |
@@ -91,13 +92,13 @@ Two counts, each computed in `content/work.ts`, never typed by hand. Page JSON u
 
 | Count | Definition | Today | Used on |
 |---|---|---|---|
-| `storeAppCount` (`{{storeApps}}`) | cases whose `status` starts with "Live on the App Store": HR & Payroll, Creator–Venue Marketplace, Retail Operations, Ride-Hailing, B2B Wholesale | **5** | hero strip, home stat, About, the `/work/` counter. Wording: "N apps live in the app stores" (Creator–Venue is App Store only, so no "both stores") |
-| `rnStoreAppCount` (`{{rnStoreApps}}`, `{{rnStoreAppsWord}}`) | the subset above whose stack includes React Native (B2B Wholesale is React.js + Node.js) | **4** | the React Native pages only; never the site-wide count there |
+| `storeAppCount` (`{{storeApps}}`) | cases whose `status` starts with "Live on the App Store": HR & Payroll, Creator–Venue Marketplace, Retail Operations, Ride-Hailing, and the store-ops Retail Operations Platform | **5** | hero strip, home stat, About, the `/work/` counter. Wording: "N apps live in the app stores" (Creator–Venue is App Store only, so no "both stores") |
+| `rnStoreAppCount` (`{{rnStoreApps}}`, `{{rnStoreAppsWord}}`) | the subset above whose stack includes React Native (the store-ops platform is React.js + Node.js) | **4** | the React Native pages only; never the site-wide count there |
 | `projectsDelivered` | your figure, "10+" (web, enterprise and mobile) | 10+ | home stat tile and About tile only, never as a store-app claim |
 
 "8 store listings" is removed everywhere. Creator–Venue keeps its own label "Live on the App Store".
 
-B2B Wholesale is now `kind: "live"` in `content/work.ts`, so it appears in the home 3D carousel and list and in the `/work/` "Live apps" group (before: "Other shipped products"). It has no screenshots (NDA), so its carousel phone is a blank screen, and its stack label stays "React.js · Node.js · ERP Integration". Healthcare Staffing remains "shipped" (delivered, not public on the stores).
+The store-ops Retail Operations Platform (`slug: "store-ops"`) is `kind: "live"` in `content/work.ts`, so it appears in the home 3D carousel and list and in the `/work/` "Live apps" group (before: "Other shipped products"). It has no screenshots (NDA), so its carousel phone is a blank screen, and its stack label is "React.js · Node.js". Healthcare Staffing remains "shipped" (delivered, not public on the stores).
 
 ### Before / after, every place that changed
 
@@ -109,20 +110,39 @@ B2B Wholesale is now `kind: "live"` in `content/work.ts`, so it appears in the h
 | About FAQ (visible text and FAQPage JSON-LD, same string) | "4+ apps live across 8 store listings, serving users in 30+ countries." | "5 apps live in the app stores and 10+ projects delivered, serving users in 30+ countries." |
 | `/work/` tile 1 (`content/work.ts` `workStats`, copy in `content/pages/work.json`) | "4 Apps shipped" | "5 Apps live in the app stores" |
 | `/work/` tile "8 Store listings (iOS+Android)" | present | removed (row is 3 tiles wide) |
-| `/work/` build-time tile | "97wk Combined build time" | "97wk Combined build time (4 live React Native apps)"; 97 is computed from the four apps' recorded durations (16 + 24 + 32 + 25). Healthcare Staffing's 26 weeks is not included because it is not live on the stores; B2B Wholesale has no recorded duration and none was invented |
+| `/work/` build-time tile | "97wk Combined build time" | "97wk Combined build time (4 live React Native apps)"; 97 is computed from the four apps' recorded durations (16 + 24 + 32 + 25). Healthcare Staffing's 26 weeks is not included because it is not live on the stores; the store-ops platform has no recorded duration and none was invented |
 | `/work/` tile "100% React Native + MERN" | "100%" + "React Native + MERN" | "React Native + MERN" + "stack", no percentage (`WorkStats` now supports a text tile) |
 | React Native pages' heading (`/react-native-app-development/` and the UK, Dubai, USA pages) | "Four React Native apps, live on the stores" | "4 React Native apps live in the app stores" |
 | `/react-native-app-development/` og description | "four apps live on the App Store and Google Play" | "4 React Native apps live in the app stores" |
 | `/react-native-app-development/` page copy and FAQ answer (visible text and FAQ JSON-LD) | "The four products in our portfolio took 16–32 weeks each to reach full market release on both stores." | "The four React Native products in our portfolio took 16–32 weeks each to reach full market release on both stores." (the word is computed, so it follows the count) |
-| `/work/` "Live apps" group and home carousel / list | 4 cards (B2B Wholesale under "Other shipped products", absent from the carousel) | 5 cards including B2B Wholesale |
+| `/work/` "Live apps" group and home carousel / list | 4 cards (the store-ops platform under "Other shipped products", absent from the carousel) | 5 cards including the store-ops platform |
 
 Not changed, for you to know: the About meta description ("shipping apps live on the App Store & Google Play across six countries") and the "apps live on both stores" lines in meta descriptions have no number and were out of scope; the RN-page sentence "…reach full market release on both stores" is unchanged apart from the count word (Creator–Venue is App Store only).
 
-### B2B Wholesale placeholder and NDA check
+### Store-ops platform placeholder and NDA check
 
-- B2B Wholesale has no screenshots (NDA), so its phone no longer shows a blank screen: the 3D carousel loads `public/assets/portfolio/nda-screen.svg` (lock icon + "Screens under NDA", `role="img"` with the same label), and the no-WebGL list uses a DOM stand-in in `PhoneFrame` (`placeholder` prop; the icon is `aria-hidden`, the text is real text, gold on near-black). axe passes on `/` and all other tested pages.
+- The store-ops platform has no screenshots (NDA), so its phone no longer shows a blank screen: the 3D carousel loads `public/assets/portfolio/nda-screen.svg` (lock icon + "Screens under NDA", `role="img"` with the same label), and the no-WebGL list uses a DOM stand-in in `PhoneFrame` (`placeholder` prop; the icon is `aria-hidden`, the text is real text, gold on near-black). axe passes on `/` and all other tested pages.
 - While checking this I found the no-WebGL list's phone frames were squashed for every row (the frame's `p-[3.5%]` is a share of its wide parent, leaving a ~7px screen), so I gave only that list's frames `!p-[2px]`. That is the one change beyond the placeholder.
-- Client-name check: no legacy product or client name (the old real names recorded in the project notes) appears in any source file, filename, or in the rendered HTML of all 80 URLs (visible text, alt text, JSON-LD, meta, og:image route, search index). Only the label "B2B Wholesale Platform" is used. The one remaining string is the old URL `/portfolio/station-driver-chauffeurs`, which appears only as a redirect source in `next.config.ts`, the tests and these docs (it is the old address you asked me to redirect, never rendered). I can only check names I know: if the real client name is not one of those, send it and I will grep for it.
+- Client-name check: no legacy product or client name (the old real names recorded in the project notes) appears in any source file, filename, or in the rendered HTML of all 80 URLs (visible text, alt text, JSON-LD, meta, og:image route, search index). Only the generic label "Retail Operations Platform" is used. The one remaining string is the old URL `/portfolio/station-driver-chauffeurs`, which appears only as a redirect source in `next.config.ts`, the tests and these docs (it is the old address you asked me to redirect, never rendered). I can only check names I know: if the real client name is not one of those, send it and I will grep for it.
+
+### Store-ops platform relabel
+
+The fifth store-live app is now "Retail Operations Platform" (a retail operations / store-ops SaaS):
+
+| Field | After |
+|---|---|
+| slug | `store-ops` (old URL 301s to `/work/store-ops/`; the redirect row is the only place the old slug survives) |
+| title / card title | "Retail Operations Platform" / "Retail Operations" |
+| tagline (carousel, list) | "Digital checklists, forms, staff monitoring & training" |
+| eyebrow / industry | "Retail Operations · Name withheld (NDA)" / "Retail operations" |
+| description | "Operations platform for retail teams: digital checklists, forms, staff monitoring and training." |
+| stack | React.js · Node.js (an unconfirmed integration tag removed). **TODO(owner): confirm the real stack** (see the comment in `content/work.ts`) |
+| problem / solution / result / metrics | removed (no metrics or outcomes) |
+| status, store count, React Native count | unchanged: live in the app stores, N = 5, React Native 4 |
+
+Also reworded: the `/work/` meta description, the About and Services "Recent work" lists, the legacy extracted article in `content/pages/work.json`, `docs/URL-MAP.md`, the smoke-test comment. No store links or badges were added.
+
+**Open question:** there are now two cases titled "Retail Operations Platform" (`retail-ops` and `store-ops`). If they are the same product, the store-app count should be 4 and one case should go.
 
 ## Task 6: GA4 and bot noise
 

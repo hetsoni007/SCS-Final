@@ -33,6 +33,7 @@ const nextConfig: NextConfig = {
           ["/portfolio/retail-supply-chain", "/work/retail-ops/"],
           ["/portfolio", "/work/"],
           ["/case-study", "/work/"],
+          ["/work/b2b-wholesale", "/work/store-ops/"],
           ["/hire/fullstack-developer", "/hire/"],
           ["/estimate", "/app-cost-calculator/"],
           ["/services/enterprise-software-development", "/services/"],

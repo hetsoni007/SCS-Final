@@ -10,6 +10,7 @@ before the existing rewrite logic. Strip a trailing slash and a leading `www.` h
 | `/portfolio/attendance-salary-ledger` | `/work/hr-payroll/` |
 | `/portfolio/retail-supply-chain` | `/work/retail-ops/` |
 | `/portfolio` and any other `/portfolio/*` | `/work/` |
+| `/work/b2b-wholesale` (renamed case study) | `/work/store-ops/` |
 | `/case-study` | `/work/` |
 | `/hire/fullstack-developer` | `/hire/` |
 | `/estimate` | `/app-cost-calculator/` |
@@ -23,6 +24,7 @@ var MOVED = {
   '/portfolio/attendance-salary-ledger': '/work/hr-payroll/',
   '/portfolio/retail-supply-chain': '/work/retail-ops/',
   '/portfolio': '/work/',
+  '/work/b2b-wholesale': '/work/store-ops/',
   '/case-study': '/work/',
   '/hire/fullstack-developer': '/hire/',
   '/estimate': '/app-cost-calculator/',
