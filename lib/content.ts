@@ -4,6 +4,7 @@ import path from "node:path";
 import matter from "gray-matter";
 import type { Metadata } from "next";
 import { site } from "@/content/site";
+import { projectsDelivered, storeAppCount } from "@/content/work";
 
 const ROOT = path.join(process.cwd(), "content");
 
@@ -30,8 +31,10 @@ export type Section = { id?: string; cls?: string; blocks: Block[] };
 export type PageMeta = { title: string; description?: string; keywords?: string; robots?: string; canonical?: string; ogTitle?: string; ogDescription?: string; ogType?: string };
 export type PageContent = { slug: string; path: string; meta: PageMeta; h1: string; breadcrumb?: string; jsonLd: Record<string, unknown>[]; sections: Section[] };
 
+/** Page copy may use {{storeApps}} / {{projectsDelivered}}; they are filled from content/work.ts so the claim has one source. */
 export function getPage(slug: string): PageContent {
-  return JSON.parse(fs.readFileSync(path.join(ROOT, "pages", `${slug}.json`), "utf8"));
+  const raw = fs.readFileSync(path.join(ROOT, "pages", `${slug}.json`), "utf8");
+  return JSON.parse(raw.replaceAll("{{storeApps}}", String(storeAppCount)).replaceAll("{{projectsDelivered}}", projectsDelivered));
 }
 export function allPageSlugs(): string[] {
   return fs.readdirSync(path.join(ROOT, "pages")).filter((f) => f.endsWith(".json")).map((f) => f.replace(".json", ""));

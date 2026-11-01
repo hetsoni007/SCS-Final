@@ -113,7 +113,7 @@
     },
     {
      "t": "text",
-     "html": "Live on the App Store & Google Play · 4+ products shipped · No upfront fee to talk"
+     "html": "{{storeApps}} apps live on the App Store & Google Play · No upfront fee to talk"
     }
    ]
   },
@@ -138,8 +138,8 @@
        "blocks": [
         {
          "t": "metric",
-         "num": "4+",
-         "lbl": "Apps live on App Store & Play Store"
+         "num": "{{storeApps}}",
+         "lbl": "Apps live on the App Store & Google Play"
         }
        ]
       },

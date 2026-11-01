@@ -7,7 +7,7 @@
   "robots": "index,follow,max-image-preview:large",
   "canonical": "https://soniconsultancyservices.com/react-native-app-development/",
   "ogTitle": "React Native App Development | Soni Consultancy Services",
-  "ogDescription": "React Native app development for iOS and Android from one codebase — four apps live on the App Store and Google Play. Fixed-price proposals within 48 hours.",
+  "ogDescription": "React Native app development for iOS and Android from one codebase — {{storeApps}} apps live on the App Store and Google Play. Fixed-price proposals within 48 hours.",
   "ogType": "website"
  },
  "h1": "Hire expert React Native developers. Ship to both app stores.",
@@ -246,7 +246,7 @@
     {
      "t": "h",
      "level": 2,
-     "html": "Four React Native apps, live on the stores",
+     "html": "{{storeApps}} apps live on the App Store &amp; Google Play",
      "cls": "h2"
     },
     {

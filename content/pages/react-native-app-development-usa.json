@@ -246,7 +246,7 @@
     {
      "t": "h",
      "level": 2,
-     "html": "Four React Native apps, live on the stores",
+     "html": "{{storeApps}} apps live on the App Store &amp; Google Play",
      "cls": "h2"
     },
     {

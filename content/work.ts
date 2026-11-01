@@ -247,10 +247,15 @@ export const cases: CaseStudy[] = [
 
 export const caseBySlug = (slug: string) => cases.find((c) => c.slug === slug);
 export const liveCases = cases.filter((c) => c.kind === "live");
+/** Apps whose status says they are live on the stores. Not the same set as `liveCases` (which drives the home carousel):
+ *  B2B Wholesale is live on the stores but is a "shipped" case. This is the single source for every "N apps live" claim. */
+export const storeApps = cases.filter((c) => /^Live on the App Store/.test(c.status));
+export const storeAppCount = storeApps.length;
+/** The owner's own figure: web, enterprise and mobile projects. Never use it as a claim about store apps. */
+export const projectsDelivered = "10+";
 
 export const workStats = [
-  { num: "4", lbl: "Apps shipped", count: 4 },
-  { num: "8", lbl: "Store listings (iOS+Android)", count: 8 },
+  { num: String(storeAppCount), lbl: "Apps live on the App Store & Google Play", count: storeAppCount },
   { num: "97wk", lbl: "Combined build time", count: 97, suffix: "wk" },
   { num: "100%", lbl: "React Native + MERN", count: 100, suffix: "%" },
 ];

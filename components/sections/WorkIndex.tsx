@@ -23,7 +23,7 @@ type Filter = (typeof FILTERS)[number]["key"];
 
 export function WorkStats({ stats: workStats }: { stats: { count: number; suffix?: string; lbl: string }[] }) {
   return (
-    <section className="pb-6"><div className="wrap grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    <section className="pb-6"><div className={`wrap grid gap-4 sm:grid-cols-2 ${workStats.length === 3 ? "lg:grid-cols-3" : "lg:grid-cols-4"}`}>
       {workStats.map((s, i) => (
         <div key={s.lbl} className="glass spot p-6" data-reveal style={{ "--i": i } as React.CSSProperties}>
           <span className="font-display block text-[clamp(44px,5vw,72px)] font-bold leading-none tracking-tighter"><span className="grad-text"><Counter value={s.count} suffix={s.suffix ?? ""} /></span></span>

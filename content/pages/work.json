@@ -140,27 +140,12 @@
        "blocks": [
         {
          "t": "text",
-         "html": "4",
+         "html": "{{storeApps}}",
          "cls": "num"
         },
         {
          "t": "text",
-         "html": "Apps shipped",
-         "cls": "lbl"
-        }
-       ]
-      },
-      {
-       "cls": "metric",
-       "blocks": [
-        {
-         "t": "text",
-         "html": "8",
-         "cls": "num"
-        },
-        {
-         "t": "text",
-         "html": "Store listings (iOS+Android)",
+         "html": "Apps live on the App Store & Google Play",
          "cls": "lbl"
         }
        ]
@@ -2674,7 +2659,7 @@
     {
      "t": "form",
      "id": "leadForm",
-   "price": "Websites from $500 · app features from $1,000 · MVP apps from $2,500",
+     "price": "Websites from $500 · app features from $1,000 · MVP apps from $2,500",
      "fields": [
       {
        "name": "lbName",
