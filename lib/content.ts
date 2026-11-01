@@ -89,4 +89,6 @@ export const getPost = (slug: string) => getPosts().find((p) => p.slug === slug)
 export const readEmbed = (id: string) => { try { return fs.readFileSync(path.join(ROOT, "blog-embeds", `${id}.html`), "utf8"); } catch { return ""; } };
 export const readThumb = (slug: string) => { try { return fs.readFileSync(path.join(ROOT, "blog-embeds", `${slug}.thumb.svg`), "utf8"); } catch { return ""; } };
 export const readPostJsonLd = (slug: string): Record<string, unknown>[] => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, "blog-embeds", `${slug}.jsonld.json`), "utf8")); } catch { return []; } };
+/** "4 October 2026" from an ISO date (UTC, so the day never shifts with the server timezone). */
+export const longDate = (iso: string) => new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
 export const postDate = (p: PostMeta) => p.dateLabel || new Date(p.datePublished).toLocaleDateString("en-GB", { month: "long", year: "numeric" });

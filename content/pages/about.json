@@ -29,6 +29,7 @@
   {
    "@context": "https://schema.org",
    "@type": "Person",
+   "@id": "https://soniconsultancyservices.com/#het-soni",
    "name": "Het Soni",
    "jobTitle": "Founder & Lead Engineer",
    "url": "https://soniconsultancyservices.com/about/",

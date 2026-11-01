@@ -10,7 +10,7 @@ import { Breadcrumb } from "@/components/sections/PageView";
 import SceneBox from "@/components/sections/SceneBox";
 import { PostFeedback } from "@/components/lazy";
 import { CtaBand } from "@/components/sections/SectionHead";
-import { getPost, getPosts, postDate, readPostJsonLd } from "@/lib/content";
+import { getPost, getPosts, longDate, readPostJsonLd } from "@/lib/content";
 import { JsonLd } from "@/lib/schema";
 import { site } from "@/content/site";
 
@@ -47,9 +47,12 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
           <h1 className="h1 mt-5 !text-[clamp(34px,5vw,64px)]">{post.title}</h1>
           <p className="lead mt-6">{post.lead}</p>
           <p className="dim mt-6 flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span className="text-mid">{post.author}</span><span aria-hidden>·</span>
-            <span>{[post.readTime, postDate(post)].filter(Boolean).join(" · ")}</span>
-            <time dateTime={post.dateModified ?? post.datePublished} className="sr-only">{post.dateModified ?? post.datePublished}</time>
+            <span className="text-mid">By {post.author === site.founder.name
+              ? <a href={site.founder.linkedin} target="_blank" rel="noopener author" className="underline underline-offset-4 hover:text-hi">{post.author}</a>
+              : post.author}</span><span aria-hidden>·</span>
+            <span>Published <time dateTime={post.datePublished}>{longDate(post.datePublished)}</time></span>
+            {post.dateModified && post.dateModified !== post.datePublished && <><span aria-hidden>·</span><span>Updated <time dateTime={post.dateModified}>{longDate(post.dateModified)}</time></span></>}
+            {post.readTime && <><span aria-hidden>·</span><span>{post.readTime}</span></>}
           </p>
         </header>
         <div className="wrap grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,760px)_minmax(0,1fr)]">
@@ -61,7 +64,7 @@ export default async function PostPage({ params }: PageProps<"/blog/[slug]">) {
               <PostFeedback slug={post.slug} />
               <div className="glass flex items-center gap-5 p-6">
                 <span className="font-display grid h-14 w-14 shrink-0 place-items-center rounded-full text-[18px] font-bold text-on-accent" style={{ background: "var(--grad)" }} aria-hidden>{site.founder.initials}</span>
-                <p className="text-[15px] text-mid"><span className="block text-[16px] font-semibold text-hi">{site.founder.name}</span>{site.founder.role} at {site.name}. 5+ years building and shipping React Native, MERN and AI apps to the App Store and Google Play. <a href={site.founder.linkedin} target="_blank" rel="noopener" className="text-accent-2 underline underline-offset-4">LinkedIn</a> · <Link href="/about/" className="text-accent-2 underline underline-offset-4">About</Link></p>
+                <p className="text-[15px] text-mid"><span className="block text-[16px] font-semibold text-hi"><Link href="/about/" className="hover:underline underline-offset-4">{site.founder.name}</Link> · <a href={site.founder.linkedin} target="_blank" rel="noopener author" className="text-[14px] font-normal text-accent-2 hover:underline underline-offset-4">LinkedIn</a></span>{site.founder.role} at {site.name}. 5+ years building and shipping React Native, MERN and AI apps to the App Store and Google Play. <a href={site.founder.linkedin} target="_blank" rel="noopener" className="text-accent-2 underline underline-offset-4">LinkedIn</a> · <Link href="/about/" className="text-accent-2 underline underline-offset-4">About</Link></p>
               </div>
             </div>
           </div>

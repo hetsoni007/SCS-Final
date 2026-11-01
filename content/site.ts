@@ -29,6 +29,12 @@ export const site = {
     facebook: "https://www.facebook.com/soniconsultancyservices",
     medium: "https://medium.com/@hetsoni9398",
   },
+  /** Third-party profiles of the studio (not social accounts). Listed in the Organization schema's sameAs.
+   *  TODO: add the Clutch profile URL here once the listing exists (none is referenced anywhere in the codebase yet).
+   *  TODO: add the GitHub profile URL here; the codebase does not contain one, so it is deliberately left out. */
+  profiles: {
+    goodfirms: "https://www.goodfirms.co/company/soni-consultancy-services",
+  },
   areaServed: ["GB", "US", "AE", "IN", "CA", "AU"],
   markets: [
     { code: "GB", name: "UK", lat: 51.5, lon: -0.12 },
