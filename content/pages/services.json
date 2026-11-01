@@ -429,6 +429,10 @@
        ]
       }
      ]
+    },
+    {
+     "t": "p",
+     "html": "Industry pages: <a href=\"/fintech-app-development/\">FinTech</a>, <a href=\"/retail-app-development/\">retail</a>, <a href=\"/ride-hailing-app-development/\">ride-hailing</a> and <a href=\"/hr-payroll-app-development/\">HR &amp; payroll</a>. Case studies: <a href=\"/work/hr-payroll/\">HR &amp; Payroll Platform</a>, <a href=\"/work/retail-ops/\">Retail Operations Platform</a>, <a href=\"/work/ride-hailing/\">Ride-Hailing Platform</a>, <a href=\"/work/creator-marketplace/\">Creator–Venue Marketplace</a>, <a href=\"/work/b2b-wholesale/\">B2B Wholesale Platform</a> and <a href=\"/work/healthcare-staffing/\">Healthcare Staffing Platform</a>, plus two product and UI/UX design concepts: <a href=\"/work/web3-creator/\">Web3 Creator Platform</a> and <a href=\"/work/fan-investing/\">Fan Investment Platform</a>."
     }
    ]
   },
@@ -544,6 +548,10 @@
        ]
       }
      ]
+    },
+    {
+     "t": "p",
+     "html": "We also work with founders in the <a href=\"/react-native-app-development-uk/\">UK</a>, <a href=\"/react-native-app-development-dubai/\">Dubai</a> and <a href=\"/react-native-app-development-usa/\">USA</a>: see React Native development for each market."
     }
    ]
   },
@@ -680,7 +688,7 @@
     {
      "t": "form",
      "id": "leadForm",
-   "price": "Websites from $500 · app features from $1,000 · MVP apps from $2,500",
+     "price": "Websites from $500 · app features from $1,000 · MVP apps from $2,500",
      "fields": [
       {
        "name": "lbName",
