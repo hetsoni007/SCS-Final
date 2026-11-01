@@ -118,6 +118,12 @@ B2B Wholesale is now `kind: "live"` in `content/work.ts`, so it appears in the h
 
 Not changed, for you to know: the About meta description ("shipping apps live on the App Store & Google Play across six countries") and the "apps live on both stores" lines in meta descriptions have no number and were out of scope; the RN-page sentence "…reach full market release on both stores" is unchanged apart from the count word (Creator–Venue is App Store only).
 
+### B2B Wholesale placeholder and NDA check
+
+- B2B Wholesale has no screenshots (NDA), so its phone no longer shows a blank screen: the 3D carousel loads `public/assets/portfolio/nda-screen.svg` (lock icon + "Screens under NDA", `role="img"` with the same label), and the no-WebGL list uses a DOM stand-in in `PhoneFrame` (`placeholder` prop; the icon is `aria-hidden`, the text is real text, gold on near-black). axe passes on `/` and all other tested pages.
+- While checking this I found the no-WebGL list's phone frames were squashed for every row (the frame's `p-[3.5%]` is a share of its wide parent, leaving a ~7px screen), so I gave only that list's frames `!p-[2px]`. That is the one change beyond the placeholder.
+- Client-name check: no legacy product or client name (the old real names recorded in the project notes) appears in any source file, filename, or in the rendered HTML of all 80 URLs (visible text, alt text, JSON-LD, meta, og:image route, search index). Only the label "B2B Wholesale Platform" is used. The one remaining string is the old URL `/portfolio/station-driver-chauffeurs`, which appears only as a redirect source in `next.config.ts`, the tests and these docs (it is the old address you asked me to redirect, never rendered). I can only check names I know: if the real client name is not one of those, send it and I will grep for it.
+
 ## Task 6: GA4 and bot noise
 
 - One measurement ID only (`NEXT_PUBLIC_GA_ID`), loaded only after the visitor accepts analytics cookies. New: GA4, the GTM container and every `track()` call are skipped unless the hostname is `soniconsultancyservices.com` or `www.` (exact match; look-alike hosts are rejected). The GTM boot logic was checked for six hostnames. `<noscript>` GTM iframe cannot check the hostname; it only exists when `NEXT_PUBLIC_GTM_ID` is set at build, so do not set it for preview builds.
