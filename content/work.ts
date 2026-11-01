@@ -152,7 +152,7 @@ export const cases: CaseStudy[] = [
     slug: "store-ops",
     kind: "live",
     title: "Retail Operations Platform",
-    short: "Retail Operations",
+    short: "Store Operations",
     tagline: "Digital checklists, forms, staff monitoring & training",
     eyebrow: "Retail Operations · Name withheld (NDA)",
     industry: "Retail operations",

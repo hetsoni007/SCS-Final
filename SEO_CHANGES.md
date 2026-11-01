@@ -132,7 +132,7 @@ The fifth store-live app is now "Retail Operations Platform" (a retail operation
 | Field | After |
 |---|---|
 | slug | `store-ops` (old URL 301s to `/work/store-ops/`; the redirect row is the only place the old slug survives) |
-| title / card title | "Retail Operations Platform" / "Retail Operations" |
+| title / card title | "Retail Operations Platform" / "Store Operations" |
 | tagline (carousel, list) | "Digital checklists, forms, staff monitoring & training" |
 | eyebrow / industry | "Retail Operations · Name withheld (NDA)" / "Retail operations" |
 | description | "Operations platform for retail teams: digital checklists, forms, staff monitoring and training." |
@@ -142,7 +142,7 @@ The fifth store-live app is now "Retail Operations Platform" (a retail operation
 
 Also reworded: the `/work/` meta description, the About and Services "Recent work" lists, the legacy extracted article in `content/pages/work.json`, `docs/URL-MAP.md`, the smoke-test comment. No store links or badges were added.
 
-**Confirmed separate products:** `retail-ops` and `store-ops` are two different apps, so the store-app count stays 5. Both cards still carry the title "Retail Operations Platform"; a distinguishing short name is pending from the owner.
+**Confirmed separate products:** `retail-ops` and `store-ops` are two different apps, so the store-app count stays 5. Both cards still carry the title "Retail Operations Platform"; the `store-ops` card's short name is "Store Operations" (home carousel and list) to tell them apart.
 
 ## Task 6: GA4 and bot noise
 
