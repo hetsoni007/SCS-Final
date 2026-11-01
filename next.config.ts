@@ -25,7 +25,7 @@ const nextConfig: NextConfig = {
         { source: "/hire-developers", destination: "/hire/", permanent: true },
         { source: "/hire-developers/", destination: "/hire/", permanent: true },
         // Old-site paths Google still reports as 404 (Search Console, Page indexing). The specific /portfolio/* pages
-        // come before the catch-all so each lands on its matching case study. Every path is listed with and
+        // come before the catch-all so each lands on its matching case study. `statusCode: 301` (not `permanent`, which Next sends as 308) matches the CloudFront function. Every path is listed with and
         // without the trailing slash because skipTrailingSlashRedirect is on. Keep in step with docs/SEO-REDIRECTS.md.
         ...[
           ["/portfolio/station-driver-chauffeurs", "/work/ride-hailing/"],
@@ -37,10 +37,10 @@ const nextConfig: NextConfig = {
           ["/estimate", "/app-cost-calculator/"],
           ["/services/enterprise-software-development", "/services/"],
         ].flatMap(([from, to]) => [
-          { source: from, destination: to, permanent: true },
-          { source: `${from}/`, destination: to, permanent: true },
+          { source: from, destination: to, statusCode: 301 },
+          { source: `${from}/`, destination: to, statusCode: 301 },
         ]),
-        { source: "/portfolio/:slug*", destination: "/work/", permanent: true },
+        { source: "/portfolio/:slug*", destination: "/work/", statusCode: 301 },
       ];
     },
     async headers() {
