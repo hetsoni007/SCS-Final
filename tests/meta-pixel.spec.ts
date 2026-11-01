@@ -44,3 +44,19 @@ test("meta pixel: nothing off the production host", async ({ page }) => {
   await page.waitForTimeout(2500);
   expect(fetched()).toBe(0);
 });
+
+test("meta pixel: Lead on a submitted form and Schedule on a Calendly click, once consent is given", async ({ page }) => {
+  await setup(page, "granted");
+  await page.goto(`http://soniconsultancyservices.com:${PORT}/app-cost-calculator/`);
+  await page.getByLabel("Your name").fill("Test Founder");
+  await page.getByLabel("Work email").fill("founder@example.com");
+  await page.getByRole("button", { name: /Email me the breakdown/ }).click();
+  await expect(page.getByRole("status")).toContainText("Got it");
+  let q = await queue(page);
+  expect(q).toContainEqual(["track", "Lead"]);
+  expect(JSON.stringify(q)).not.toContain("founder@example.com");
+  await page.goto(`http://soniconsultancyservices.com:${PORT}/`);
+  await page.locator('a[href*="calendly.com"]').first().click();
+  q = await queue(page);
+  expect(q).toContainEqual(["track", "Schedule"]);
+});

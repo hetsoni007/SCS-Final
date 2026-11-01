@@ -9,8 +9,11 @@
 export type EventName = "cta_click" | "calc_complete" | "form_submit" | "guide_download" | "calendly_open" | "calendly_booked" | "calculator_estimate" | "post_feedback" | "book_call_click" | "tool_complete" | "form_start" | "scroll_depth";
 
 declare global {
-  interface Window { gtag?: (...a: unknown[]) => void; dataLayer?: unknown[]; va?: (e: string, p?: unknown) => void }
+  interface Window { fbq?: (...a: unknown[]) => void; gtag?: (...a: unknown[]) => void; dataLayer?: unknown[]; va?: (e: string, p?: unknown) => void }
 }
+
+/** Site events that map to a Meta standard event: a delivered lead form (any form), and a booked-call click. */
+const META_EVENTS: Partial<Record<EventName, string>> = { form_submit: "Lead", book_call_click: "Schedule" };
 
 export function track(name: EventName, params: Record<string, unknown> = {}) {
   if (typeof window === "undefined") return;
@@ -19,6 +22,10 @@ export function track(name: EventName, params: Record<string, unknown> = {}) {
     // the same event as a plain dataLayer object, which is the form Tag Manager triggers ("Custom Event") read
     if (process.env.NEXT_PUBLIC_GTM_ID) window.dataLayer?.push({ event: name, ...params });
     window.va?.("event", { name, data: flatten(params) });
+    // Meta Pixel standard events (the pixel itself is in consent mode, so nothing is sent until analytics cookies are accepted).
+    // No form values are sent: just the event.
+    const meta = META_EVENTS[name];
+    if (meta) window.fbq?.("track", meta);
   } catch {}
 }
 function flatten(p: Record<string, unknown>) {
