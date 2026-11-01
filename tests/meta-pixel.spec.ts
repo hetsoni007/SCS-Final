@@ -12,22 +12,35 @@ const setup = async (page: Page, consent: "granted" | "denied" | null) => {
 };
 const queue = (page: Page) => page.evaluate(() => ((window as unknown as { fbq?: Fbq }).fbq?.queue ?? []).map((a) => [...a]));
 
-test("meta pixel: loads on the production host after consent, init + PageView", async ({ page }) => {
+const pageViews = (q: unknown[][]) => q.filter((a) => a[0] === "track" && a[1] === "PageView").length;
+
+test("meta pixel: a returning visitor who accepted is granted at once", async ({ page }) => {
   const fetched = await setup(page, "granted");
   await page.goto(`http://soniconsultancyservices.com:${PORT}/`);
   await expect.poll(fetched).toBe(1);
   const q = await queue(page);
+  expect(q).toContainEqual(["consent", "grant"]);
   expect(q).toContainEqual(["init", "1437470517808016"]);
-  expect(q).toContainEqual(["track", "PageView"]);
+  expect(pageViews(q)).toBe(1);
 });
 
-test("meta pixel: nothing without consent, and nothing off the production host", async ({ page }) => {
+test("meta pixel: consent mode, revoked until the visitor accepts", async ({ page }) => {
   const fetched = await setup(page, null);
   await page.goto(`http://soniconsultancyservices.com:${PORT}/`);
-  await page.waitForTimeout(2500);
-  expect(fetched()).toBe(0);
-  const second = await setup(page, "granted");
+  await expect.poll(fetched).toBe(1); // the base code loads, so the pixel is detectable
+  let q = await queue(page);
+  expect(q).toContainEqual(["consent", "revoke"]);
+  expect(q).toContainEqual(["init", "1437470517808016"]);
+  expect(q).not.toContainEqual(["consent", "grant"]);
+  await page.getByRole("button", { name: "Accept analytics" }).click();
+  q = await queue(page);
+  expect(q).toContainEqual(["consent", "grant"]);
+  expect(pageViews(q)).toBe(2); // the held-back page view is counted on accept
+});
+
+test("meta pixel: nothing off the production host", async ({ page }) => {
+  const fetched = await setup(page, "granted");
   await page.goto("/");
   await page.waitForTimeout(2500);
-  expect(second()).toBe(0);
+  expect(fetched()).toBe(0);
 });

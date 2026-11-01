@@ -11,7 +11,6 @@ import { Analytics } from "@vercel/analytics/next";
 import { useApp } from "@/components/providers/AppProviders";
 import { prefs, serverPrefs } from "@/lib/prefs";
 import { isProdHost } from "@/lib/analytics";
-import { site } from "@/content/site";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
@@ -117,10 +116,6 @@ export default function ChromeExtras() {
       <ConsentBanner consent={consent} />
       <ExitIntent />
       {process.env.VERCEL_ANALYTICS ? <Analytics /> : null}
-      {/* Meta Pixel: same gates as GA4. The <noscript> image fallback is deliberately left out: it would fire with no consent. */}
-      {prodHost && consent === "granted" && (
-        <Script id="meta-pixel" strategy="afterInteractive">{`!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${site.metaPixelId}');fbq('track','PageView');`}</Script>
-      )}
       {GA_ID && prodHost && consent === "granted" && (
         <>
           <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />

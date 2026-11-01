@@ -169,7 +169,7 @@
       },
       {
        "t": "p",
-       "html": "If you accept analytics cookies, we also load the Meta Pixel (Meta Platforms). It sends information about your visit, such as the pages you view, to Meta, which may set its own cookies and use the data under its own policies, including to measure and optimise ads. It does not load unless you accept. See the <a href=\"https://www.facebook.com/privacy/policy/\" target=\"_blank\" rel=\"noopener\">Meta Privacy Policy</a>."
+       "html": "If you accept analytics cookies, we also load the Meta Pixel (Meta Platforms). It sends information about your visit, such as the pages you view, to Meta, which may set its own cookies and use the data under its own policies, including to measure and optimise ads. The Meta script loads on every page but runs in consent mode: until you accept, it sends no events and sets no cookies. See the <a href=\"https://www.facebook.com/privacy/policy/\" target=\"_blank\" rel=\"noopener\">Meta Privacy Policy</a>."
       },
       {
        "t": "h",
