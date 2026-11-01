@@ -37,8 +37,10 @@ const boot = `(function(){var d=document.documentElement;try{var t=localStorage.
 // visitor accepts analytics cookies (a returning visitor's stored choice is applied at once). Ad storage stays
 // denied: the banner only asks about analytics. lib/prefs.ts sends the update when the choice changes.
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+// The whole boot is skipped off the production hostname, so previews and localhost send nothing.
+const gtmHost = new URL(site.url).hostname.replace(/\./g, "\\.");
 const gtmBoot = GTM_ID
-  ? `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;(function(){var a='denied';try{if(localStorage.getItem('scs-consent')==='granted')a='granted'}catch(e){}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:a})})();(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`
+  ? `if(/^(www\\.)?${gtmHost}$/.test(location.hostname)){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;(function(){var a='denied';try{if(localStorage.getItem('scs-consent')==='granted')a='granted'}catch(e){}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:a})})();(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');}`
   : "";
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

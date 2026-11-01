@@ -202,6 +202,7 @@ export default function AppProviders({ children }: { children: ReactNode }) {
     setCalendlyLoaded(true); setCalendly(true);
     track("calendly_open", { location });
     track("book_call_click", { location });
+    track("book_call", { location, page_path: window.location.pathname });
   }, []);
   const openPalette = useCallback(() => { setPaletteLoaded(true); setPalette(true); }, []);
   useEffect(() => {

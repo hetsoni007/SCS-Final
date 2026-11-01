@@ -12,7 +12,7 @@ export const metadata = pageMetadata(page.meta, page.path);
 
 export default function BlogIndex() {
   // newest first by publish date; the first card is the featured one
-  const posts = [...getPosts()].sort((a, b) => b.datePublished.localeCompare(a.datePublished) || a.title.localeCompare(b.title));
+  const posts = [...getPosts()].sort((a, b) => b.datePublished.localeCompare(a.datePublished) || (a.indexOrder ?? 999) - (b.indexOrder ?? 999));
   const featured = posts[0];
   const rest = posts.filter((p) => p.slug !== featured.slug);
   const form = findBlock(page.sections.flatMap((s) => s.blocks), "form");

@@ -10,8 +10,11 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { useApp } from "@/components/providers/AppProviders";
 import { prefs, serverPrefs } from "@/lib/prefs";
+import { isProdHost } from "@/lib/analytics";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+
+const noSubscribe = () => () => {};
 
 function Cursor() {
   const dot = useRef<HTMLDivElement>(null), ring = useRef<HTMLDivElement>(null);
@@ -105,13 +108,15 @@ function ExitIntent() {
 
 export default function ChromeExtras() {
   const consent = useSyncExternalStore(prefs.subscribe, prefs.consent, serverPrefs.consent);
+  // GA4 loads on the production hostname only (not localhost, previews or dev hosts)
+  const prodHost = useSyncExternalStore(noSubscribe, isProdHost, () => false);
   return (
     <>
       <Cursor />
       <ConsentBanner consent={consent} />
       <ExitIntent />
       {process.env.VERCEL_ANALYTICS ? <Analytics /> : null}
-      {GA_ID && consent === "granted" && (
+      {GA_ID && prodHost && consent === "granted" && (
         <>
           <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
           <Script id="ga4" strategy="afterInteractive">{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config','${GA_ID}',{anonymize_ip:true});`}</Script>
