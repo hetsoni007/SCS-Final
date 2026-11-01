@@ -44,12 +44,12 @@
  },
  {
   "path": "/app-cost-calculator/",
-  "title": "App Cost Calculator 2026: Free Mobile App Estimator",
-  "description": "Free app cost calculator: see what your mobile app will cost and how long it takes in 60 seconds. Pick platforms and features, then get a fixed quote.",
+  "title": "App Cost Calculator 2026: Free Mobile App Cost Estimator",
+  "description": "Free app cost calculator, no signup: MVPs from $2,500, features from $1,000, websites from $500. Pick platforms and features for an instant estimate.",
   "canonical": "https://soniconsultancyservices.com/app-cost-calculator/",
-  "h1": "What will your app cost to build?",
+  "h1": "App Cost Calculator 2026: Free Mobile App Cost Estimator",
   "robots": "index,follow,max-image-preview:large",
-  "faqCount": 6,
+  "faqCount": 5,
   "jsonLd": [
    "WebApplication",
    "BreadcrumbList",
