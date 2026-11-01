@@ -29,7 +29,6 @@ Checked against the live site on 2026-11-01: it is already this Next.js build (7
 | `content/pages/{about,services,hr-payroll-app-development,ride-hailing-app-development,retail-app-development,fintech-app-development}.json` | Task 4: contextual links to case studies, industry pages and the UK / Dubai / USA pages |
 | `app/blog/page.tsx` | Task 5: newest first by `datePublished` (ties keep the old `indexOrder`); the first card is the featured one |
 | `app/blog/[slug]/page.tsx`, `lib/content.ts` | Task 5: visible "Published … · Updated …" dates, byline linking the author to LinkedIn, author box links to `/about/` and LinkedIn |
-| `content/home.ts`, `components/sections/Hero.tsx`, `content/pages/index.json` | Task 5: "4+ apps" → "10+ apps delivered" (see "Could not verify") |
 | `content/site.ts`, `lib/schema.tsx`, `content/pages/about.json` | Task 5: GoodFirms added to Organization `sameAs`; About-page Person gets the same `@id` as the home-page Person so they merge. TODOs for Clutch and GitHub |
 | `lib/analytics.ts`, `app/layout.tsx`, `components/ui/ChromeExtras.tsx` | Task 6: GA4 and GTM only run on `soniconsultancyservices.com` / `www.` |
 | `components/ui/LeadForm.tsx`, `components/providers/AppProviders.tsx`, `components/tools/Calculators.tsx` | Task 6: `generate_lead`, `book_call`, `calculator_complete` |
@@ -50,7 +49,7 @@ Checked against the live site on 2026-11-01: it is already this Next.js build (7
 | `/services/enterprise-software-development` | `/services/` | 301 already |
 | other `/portfolio/*` | `/work/` | 301 already |
 
-**Not redirected: `/work/healthcare-staffing/`.** It is a real, live case-study page (HTTP 200 today, in the sitemap, in `content/work.ts`, covered by `tests/smoke.spec.ts`). Redirecting it to `/work/` would delete a published case study. It is probably in the Search Console 404 list from an earlier crawl. Tell me if you want it redirected anyway: it is a two-line change.
+**Not redirected: `/work/healthcare-staffing/` (confirmed: stays live; it is in the sitemap and linked from `/work/`).** It is a real, live case-study page (HTTP 200 today, in the sitemap, in `content/work.ts`, covered by `tests/smoke.spec.ts`). Redirecting it to `/work/` would delete a published case study. It is probably in the Search Console 404 list from an earlier crawl. Tell me if you want it redirected anyway: it is a two-line change.
 
 Old URLs in the sitemap or internal links: none. The sitemap is generated from current pages, and a scan of all content, templates and components found no link to any old path (the only `/portfolio` strings are `/assets/portfolio/` image paths).
 
@@ -81,7 +80,7 @@ Done as specified except for one number, which is a decision for you.
 
 - Blog index is newest first. Most posts share the date 2026-10-04, so inside that date the previous manual order is kept.
 - Every post shows "By Het Soni" (linked to LinkedIn), the published date and, when different, the updated date, all visible.
-- Homepage: "4+ products shipped" (hero line) and the "4+ apps live" stat are now "10+ apps delivered". Counters already render the real value in server HTML (`Counter` outputs `{value}` and only animates after hydration); verified in the served HTML.
+- Homepage app count: **not changed** (held for your approval of one consistent wording; the inventory is in the PR conversation). Counters already render the real value in server HTML (`Counter` outputs `{value}` and only animates after hydration).
 - Organization + Person JSON-LD were already emitted on the home page and About (Organization sitewide from the layout). Changes: GoodFirms added to Organization `sameAs`; About's Person now carries `@id: …/#het-soni`.
 - **Clutch: TODO** in `content/site.ts` (`profiles`). **GitHub: also a TODO.** You listed GitHub, but no GitHub profile URL exists anywhere in the codebase and you asked for existing URLs only. Give me the URL and it is one line. Person `sameAs` stays LinkedIn + Medium (Instagram and Facebook are the company's accounts, not Het's).
 
@@ -125,7 +124,7 @@ Done as specified except for one number, which is a decision for you.
 
 - CloudFront behaviour for the new redirects: the function change is documented but I did not deploy or edit it. `tests/urls.spec.ts` with `STATIC_HOST` will fail on the new redirect test until the function is updated.
 - Search Console and GA4 data (no access): the 23 / 4 / 6 page lists, indexing status, GA4 key-event setup.
-- **"10+ apps delivered"** is your figure; nothing in the repo supports it. About still says "4+ apps live across 8 store listings", and the React Native pages say "Four React Native apps". Pick one number and I will align the rest.
+- App-count wording ("4+", "Four", "10+"): left as is, pending your decision.
 - Lighthouse / Core Web Vitals not re-run.
 - GA4 events were verified with a stubbed `gtag` on a mapped hostname, not against a live GA4 property.
 
@@ -135,4 +134,4 @@ Done as specified except for one number, which is a decision for you.
 2. Search Console: open each 404 group (`/portfolio/...`, `/hire/fullstack-developer`, `/search?q=…`) and click **Validate fix**; submit `https://soniconsultancyservices.com/sitemap.xml`; use URL Inspection → **Request indexing** for `/app-cost-calculator/`, `/mvp-development/`, `/react-native-app-development/`, `/services/`, `/hire/`, `/work/`, `/contact/`.
 3. GA4 → Admin → Events: mark `generate_lead`, `book_call` and `calculator_complete` as **key events** (they appear after the first hit; `book_call_click` can stay).
 4. Bot blocking: the WAF steps under Task 6.
-5. Send me: the real "not indexed" and "alternate canonical" URL lists, the GitHub / Clutch URLs, a decision on `/work/healthcare-staffing/`, the headline price range, and the 10+ apps source.
+5. Send me: the real "not indexed" and "alternate canonical" URL lists, the GitHub / Clutch URLs, a decision on `/work/healthcare-staffing/`, the headline price range, and the approved app-count wording.

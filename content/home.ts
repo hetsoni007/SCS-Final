@@ -20,7 +20,7 @@ export const guarantees = [
 
 /** Each headline number links to the page that backs it up. */
 export const stats = [
-  { value: 10, suffix: "+", label: "Apps delivered", href: "/work/", more: "See the apps" },
+  { value: 4, suffix: "+", label: "Apps live on App Store & Play Store", href: "/work/", more: "See the apps" },
   { value: 35, suffix: "%", label: "More downloads (creator marketplace)", href: "/work/creator-marketplace/", more: "Read the case study" },
   { value: 40, suffix: "%", label: "Less payroll admin (HR platform)", href: "/work/hr-payroll/", more: "Read the case study" },
   { value: 30, suffix: "+", label: "Countries served", href: "/about/", more: "Where we work" },

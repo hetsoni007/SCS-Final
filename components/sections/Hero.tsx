@@ -70,7 +70,7 @@ export default function Hero() {
           </div>
           <p className="dim mt-7 flex items-center gap-2">
             <span className="inline-block h-2 w-2 rounded-full bg-success shadow-[0_0_10px_var(--success)]" aria-hidden />
-            Live on the App Store &amp; Google Play · 10+ apps delivered · No upfront fee to talk
+            Live on the App Store &amp; Google Play · 4+ products shipped · No upfront fee to talk
           </p>
         </div>
         {expectGl && (
