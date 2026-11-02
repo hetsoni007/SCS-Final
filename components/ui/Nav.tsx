@@ -1,4 +1,5 @@
 "use client";
+import WhatsAppLink from "@/components/inquiry/WhatsAppLink";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -77,6 +78,7 @@ export default function Nav() {
         <div className="flex items-center gap-1.5">
           <button onClick={openPalette} aria-label="Search the site (Ctrl or Command + K)" className="hidden h-10 items-center gap-2 rounded-full border border-line px-3 text-[13px] text-mid hover:text-hi md:flex"><Search size={15} /><kbd className="mono text-[11px]">⌘K</kbd></button>
           <button onClick={toggleTheme} aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`} className="grid h-10 w-10 place-items-center rounded-full text-mid hover:text-hi">{theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}</button>
+          <WhatsAppLink loc="nav" className="btn btn-glass hidden !min-h-[42px] !gap-2 !px-4 !text-[14px] md:inline-flex" />
           <a href={site.calendly} className="btn btn-primary hidden !min-h-[42px] !px-5 !text-[14px] sm:inline-flex" data-magnetic="0.2" data-cursor="Book" data-cta>Book a Call</a>
           <button onClick={() => setOpen((o) => !o)} aria-expanded={open} aria-controls="mobile-menu" aria-label={open ? "Close menu" : "Open menu"} className="grid h-10 w-10 place-items-center rounded-full border border-line xl:hidden">{open ? <X size={18} /> : <Menu size={18} />}</button>
         </div>

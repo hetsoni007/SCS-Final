@@ -8,13 +8,12 @@ test("home: hero renders as HTML with the primary CTA @all", async ({ page }) =>
   const errors = watchConsole(page);
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toHaveAccessibleName("Build iOS & Android MVPs from 8 weeks.");
-  // the home hero carries exactly two actions: the portfolio and the contact page
+  // the home hero: proposal (in-page form), WhatsApp, and the portfolio as a small text link
   const hero = page.locator('[data-loc="hero"]');
-  await expect(hero.getByRole("link")).toHaveCount(2);
-  const cta = hero.getByRole("link", { name: "View our portfolio →" });
-  await expect(cta).toBeVisible();
-  await expect(cta).toHaveAttribute("href", "/work/");
-  await expect(hero.getByRole("link", { name: "Connect with me" })).toHaveAttribute("href", "https://www.linkedin.com/in/hetsoni/");
+  await expect(hero.getByRole("link")).toHaveCount(3);
+  await expect(hero.getByRole("link", { name: "Get my fixed-price proposal" })).toHaveAttribute("href", "#proposal");
+  await expect(hero.getByRole("link", { name: "Chat on WhatsApp" })).toHaveAttribute("href", /wa\.me/);
+  await expect(hero.getByRole("link", { name: "View our portfolio →" })).toHaveAttribute("href", "/work/");
   await page.waitForTimeout(1500);
   expect(errors, errors.join("\n")).toEqual([]);
 });
@@ -371,8 +370,8 @@ test.describe("mobile", () => {
   }
   test("menu opens, lists every destination, sticky CTA bar is visible @mobile", async ({ page }) => {
     await page.goto("/");
-    await expect(page.locator('[data-loc="mobile-bar"]').getByRole("link", { name: "View portfolio" })).toBeVisible();
-    await expect(page.locator('[data-loc="mobile-bar"]').getByRole("link", { name: "Connect with me" })).toBeVisible();
+    await expect(page.locator('[data-loc="mobile-bar"]').getByRole("link", { name: "Chat on WhatsApp" })).toBeVisible();
+    await expect(page.locator('[data-loc="mobile-bar"]').getByRole("button", { name: "Get a proposal" })).toBeVisible();
     await page.getByRole("button", { name: "Open menu" }).click();
     const menu = page.getByRole("dialog", { name: "Menu" });
     for (const l of ["Services", "Work", "Blog", "AI Apps", "DevOps & Cloud", "About", "Contact"]) await expect(menu.getByRole("link", { name: l, exact: true })).toBeVisible();

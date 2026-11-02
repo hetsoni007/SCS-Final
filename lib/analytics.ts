@@ -8,7 +8,7 @@
  * (first estimate from the app cost calculator) are the GA4 key events; each carries page_path and no personal data.
  * GA4 only loads after consent; Vercel Analytics is cookieless and always on.
  */
-export type EventName = "generate_lead" | "book_call" | "calculator_complete" | "cta_click" | "calc_complete" | "form_submit" | "guide_download" | "calendly_open" | "calendly_booked" | "calculator_estimate" | "post_feedback" | "book_call_click" | "tool_complete" | "form_start" | "scroll_depth";
+export type EventName = "generate_lead" | "book_call" | "calculator_complete" | "cta_click" | "calc_complete" | "form_submit" | "guide_download" | "calendly_open" | "calendly_booked" | "calculator_estimate" | "post_feedback" | "book_call_click" | "tool_complete" | "form_start" | "scroll_depth" | "whatsapp_click" | "form_step1_complete";
 
 import { site } from "@/content/site";
 
@@ -23,7 +23,11 @@ declare global {
 /** Site events that map to a Meta standard event: a delivered lead form (any form), and a booked-call click. */
 const META_EVENTS: Partial<Record<EventName, string>> = { form_submit: "Lead", book_call_click: "Schedule" };
 
-export function track(name: EventName, params: Record<string, unknown> = {}) {
+/** Meta ViewContent for landing pages (consent mode applies, like every other pixel call). */
+export function metaViewContent(name: string) { try { window.fbq?.("track", "ViewContent", { content_name: name }); } catch {} }
+
+/** `eventId` is passed to Meta as eventID so a later server-side Conversions API call can dedupe against the browser event. */
+export function track(name: EventName, params: Record<string, unknown> = {}, eventId?: string) {
   if (typeof window === "undefined") return;
   try {
     if (isProdHost()) {
@@ -35,7 +39,7 @@ export function track(name: EventName, params: Record<string, unknown> = {}) {
     // Meta Pixel standard events (the pixel itself is in consent mode, so nothing is sent until analytics cookies are accepted).
     // No form values are sent: just the event.
     const meta = META_EVENTS[name];
-    if (meta) window.fbq?.("track", meta);
+    if (meta) window.fbq?.(...(eventId ? ["track", meta, {}, { eventID: eventId }] : ["track", meta]));
   } catch {}
 }
 function flatten(p: Record<string, unknown>) {

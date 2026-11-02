@@ -5,7 +5,8 @@ import { usePathname } from "next/navigation";
 import { shared } from "@/lib/gl-store";
 import { detectTier } from "@/lib/gpu-tier";
 import type { Tier } from "@/lib/motion";
-import { track } from "@/lib/analytics";
+import { track, metaViewContent } from "@/lib/analytics";
+import { waHref } from "@/lib/whatsapp";
 import { site } from "@/content/site";
 import { captureAttribution } from "@/lib/attribution";
 import { prefs, serverPrefs } from "@/lib/prefs";
@@ -13,6 +14,7 @@ import { prefs, serverPrefs } from "@/lib/prefs";
 const GLRoot = dynamic(() => import("@/components/three/GLRoot"), { ssr: false });
 const CalendlyModal = dynamic(() => import("@/components/ui/CalendlyModal"), { ssr: false });
 const CommandPalette = dynamic(() => import("@/components/ui/CommandPalette"), { ssr: false });
+const InquirySheet = dynamic(() => import("@/components/inquiry/InquirySheet"), { ssr: false });
 const EasterEgg = dynamic(() => import("@/components/ui/EasterEgg"), { ssr: false });
 
 type Ctx = {
@@ -27,6 +29,7 @@ type Ctx = {
    */
   expectGl: boolean;
   openCalendly: (location?: string) => void;
+  openInquiry: (location?: string) => void;
   openPalette: () => void;
   theme: "dark" | "light";
   toggleTheme: () => void;
@@ -49,6 +52,9 @@ export default function AppProviders({ children }: { children: ReactNode }) {
   const [detected, setDetected] = useState<Tier>("none");
   const [calendly, setCalendly] = useState(false);
   const [calendlyLoaded, setCalendlyLoaded] = useState(false);
+  const [inquiryOpen, setInquiryOpen] = useState(false);
+  const [inquiryLoc, setInquiryLoc] = useState("sheet");
+  const [inquiryLoaded, setInquiryLoaded] = useState(false);
   const [palette, setPalette] = useState(false);
   const [paletteLoaded, setPaletteLoaded] = useState(false);
   const lenisRef = useRef<{ destroy: () => void; stop: () => void; start: () => void; scrollTo: (t: number | string | HTMLElement, o?: object) => void } | null>(null);
@@ -194,6 +200,10 @@ export default function AppProviders({ children }: { children: ReactNode }) {
   // ── on route change: scroll to top through Lenis, refresh ScrollTrigger
   useEffect(() => {
     captureAttribution();
+    // Meta ViewContent on the pages ads land on, once per page per session
+    if (pathname === "/" || pathname.startsWith("/app-quote")) {
+      try { const k = `scs_vc_${pathname}`; if (!sessionStorage.getItem(k)) { sessionStorage.setItem(k, "1"); metaViewContent(pathname); } } catch {}
+    }
     if (!window.location.hash) lenisRef.current?.scrollTo(0, { immediate: true });
   }, [pathname]);
 
@@ -204,11 +214,25 @@ export default function AppProviders({ children }: { children: ReactNode }) {
     track("book_call_click", { location });
     track("book_call", { location, page_path: window.location.pathname });
   }, []);
+  const openInquiry = useCallback((location = "unknown") => { setInquiryLoc(location); setInquiryLoaded(true); setInquiryOpen(true); }, []);
   const openPalette = useCallback(() => { setPaletteLoaded(true); setPalette(true); }, []);
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
-      const a = (e.target as HTMLElement).closest?.("a");
+      const el = e.target as HTMLElement;
+      const trigger = el.closest?.<HTMLElement>("[data-inquiry]");
+      if (trigger && !e.metaKey && !e.ctrlKey && !e.shiftKey && e.button === 0) {
+        e.preventDefault();
+        const loc = trigger.closest<HTMLElement>("[data-loc]")?.dataset.loc || "page";
+        track("cta_click", { location: loc, label: (trigger.textContent || "").replace(/\s+/g, " ").trim().slice(0, 80) });
+        openInquiry(loc);
+        return;
+      }
+      const a = el.closest?.("a");
       if (!a) return;
+      if (a.dataset.wa !== undefined) {
+        a.href = waHref(window.location.pathname); // current page + utm_campaign at click time
+        track("whatsapp_click", { location: a.closest<HTMLElement>("[data-loc]")?.dataset.loc || "page", page_path: window.location.pathname });
+      }
       const href = a.getAttribute("href") || "";
       const label = (a.textContent || "").replace(/\s+/g, " ").trim().slice(0, 80);
       const location = a.closest<HTMLElement>("[data-loc]")?.dataset.loc || a.closest("header,footer,nav")?.tagName.toLowerCase() || "page";
@@ -226,7 +250,7 @@ export default function AppProviders({ children }: { children: ReactNode }) {
     window.addEventListener("keydown", onKey);
     window.addEventListener("message", onMsg);
     return () => { document.removeEventListener("click", onClick); window.removeEventListener("keydown", onKey); window.removeEventListener("message", onMsg); };
-  }, [openCalendly, openPalette]);
+  }, [openCalendly, openInquiry, openPalette]);
 
   // ── scroll depth: one event per page at 50% and 90%, so a visitor who reads is not counted as a bounce
   useEffect(() => {
@@ -241,15 +265,16 @@ export default function AppProviders({ children }: { children: ReactNode }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, [pathname]);
 
-  useEffect(() => { const l = lenisRef.current; if (!l) return; if (calendly || palette) l.stop(); else l.start(); }, [calendly, palette]);
+  useEffect(() => { const l = lenisRef.current; if (!l) return; if (calendly || palette || inquiryOpen) l.stop(); else l.start(); }, [calendly, palette, inquiryOpen]);
 
-  const value = useMemo(() => ({ reduced, setReduced: prefs.setReduced, tier, gl, expectGl, openCalendly, openPalette, theme, toggleTheme: prefs.toggleTheme }), [reduced, tier, gl, expectGl, openCalendly, openPalette, theme]);
+  const value = useMemo(() => ({ reduced, setReduced: prefs.setReduced, tier, gl, expectGl, openCalendly, openInquiry, openPalette, theme, toggleTheme: prefs.toggleTheme }), [reduced, tier, gl, expectGl, openCalendly, openInquiry, openPalette, theme]);
 
   return (
     <AppCtx.Provider value={value}>
       {gl && <GLRoot tier={tier} onTier={(t) => { document.documentElement.dataset.gpu = t; setDetected(t); }} />}
       {children}
       {calendlyLoaded && <CalendlyModal open={calendly} onClose={() => setCalendly(false)} />}
+      {inquiryLoaded && <InquirySheet open={inquiryOpen} location={inquiryLoc} onClose={() => setInquiryOpen(false)} />}
       {paletteLoaded && <CommandPalette open={palette} onClose={() => setPalette(false)} />}
       {!reduced && <EasterEgg />}
     </AppCtx.Provider>

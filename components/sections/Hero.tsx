@@ -5,6 +5,7 @@ import ViewSlot from "@/components/three/ViewSlot";
 import { useApp } from "@/components/providers/AppProviders";
 import { useProgress } from "@/lib/use-progress";
 import { site } from "@/content/site";
+import WhatsAppLink from "@/components/inquiry/WhatsAppLink";
 
 const LINE1 = ["Build", "iOS", "&", "Android", "MVPs", "from"], LINE2 = ["8", "weeks."];
 // each character's position in the headline, for the staggered CSS reveal (--ci).
@@ -63,14 +64,14 @@ export default function Hero({ storeApps }: { storeApps: number }) {
           <p className="lead mt-7 max-w-[56ch]">
             We design and build <strong className="font-semibold text-hi">cross-platform iOS &amp; Android apps</strong> in React Native &amp; MERN — with AI built in. Real products, live on both stores, shipped by senior engineers.
           </p>
-          <div className="mt-9 flex flex-wrap gap-3">
-            {/* the owner asked for exactly two actions on the home hero: the portfolio, and Het's LinkedIn profile */}
-            <Link href="/work/" className="btn btn-primary btn-lg" data-magnetic="0.25" data-cursor="View" data-cta>View our portfolio →</Link>
-            <a href={site.founder.linkedin} target="_blank" rel="noopener" className="btn btn-glass btn-lg" data-magnetic="0.2" data-cta>Connect with me</a>
+          <div className="mt-9 flex flex-wrap items-center gap-3">
+            <a href="#proposal" className="btn btn-primary btn-lg" data-magnetic="0.25" data-cta>Get my fixed-price proposal</a>
+            <WhatsAppLink className="btn btn-glass btn-lg !gap-2" />
           </div>
-          <p className="dim mt-7 flex items-center gap-2">
+          <p className="mt-4"><Link href="/work/" className="text-[15px] text-mid underline-offset-4 hover:text-hi hover:underline" data-cta>View our portfolio →</Link></p>
+          <p className="dim mt-6 flex flex-wrap items-center gap-x-2 gap-y-1">
             <span className="inline-block h-2 w-2 rounded-full bg-success shadow-[0_0_10px_var(--success)]" aria-hidden />
-            {storeApps} apps live in the app stores · No upfront fee to talk
+            GoodFirms 5.0 · {storeApps} apps live in the app stores
           </p>
         </div>
         {expectGl && (
