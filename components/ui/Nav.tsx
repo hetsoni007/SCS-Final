@@ -36,6 +36,17 @@ export default function Nav() {
   }, [open]);
 
   const active = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href.replace(/\/$/, "")));
+  // /app-quote is a paid-traffic landing page: logo and one call to action, no navigation
+  if (pathname.startsWith("/app-quote")) {
+    return (
+      <header className="fixed inset-x-0 top-0 z-[100] px-3 pt-3" data-loc="nav">
+        <nav aria-label="Primary" className="glass mx-auto flex h-[var(--nav-h)] max-w-[1440px] items-center justify-between gap-3 !rounded-full px-4 md:px-6">
+          <Link href="/" aria-label={`${site.name} — home`} className="shrink-0"><Logo /></Link>
+          <button type="button" data-inquiry className="btn btn-primary !min-h-[42px] !px-5 !text-[14px]">Get my proposal</button>
+        </nav>
+      </header>
+    );
+  }
   return (
     <header className="fixed inset-x-0 top-0 z-[100] px-3 pt-3 transition-transform duration-500 ease-[var(--ease-expo)]" style={{ transform: hidden && !open && !mega ? "translateY(-120%)" : "none" }} data-loc="nav">
       <nav aria-label="Primary" className="glass mx-auto flex h-[var(--nav-h)] max-w-[1440px] items-center justify-between gap-4 !rounded-full px-4 md:px-6">
