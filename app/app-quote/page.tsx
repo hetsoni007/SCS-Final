@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import InquiryPanel from "@/components/inquiry/InquiryPanel";
 import WhatsAppLink from "@/components/inquiry/WhatsAppLink";
+import ChatLauncher from "@/components/chat/ChatLauncher";
+import { inquiry } from "@/content/inquiry";
 import { SectionHead } from "@/components/sections/SectionHead";
 import { faqs, pains, steps } from "@/content/app-quote";
 import { caseBySlug, projectsDelivered, storeAppCount } from "@/content/work";
@@ -96,6 +98,10 @@ export default function AppQuote() {
           </div>
         </div>
       </section>
+
+      {inquiry.chatEnabled && (
+        <section className="section !py-10" data-loc="chat-launcher" aria-label="Ask a question"><div className="wrap"><ChatLauncher /></div></section>
+      )}
 
       <section className="section" data-loc="final-cta">
         <div className="wrap"><InquiryPanel location="final-cta" /></div>

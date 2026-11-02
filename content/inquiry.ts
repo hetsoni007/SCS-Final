@@ -10,6 +10,9 @@ export const inquiry = {
   replyPromise: process.env.NEXT_PUBLIC_REPLY_PROMISE || "within 1 business day",
   /** Build-time URL of POST /inquiry (API Gateway -> scs-inquiry Lambda, source in backend/inquiry). Empty => dry run. */
   endpoint: process.env.NEXT_PUBLIC_INQUIRY_ENDPOINT || (process.env.NEXT_PUBLIC_LEAD_ENDPOINT ? `${process.env.NEXT_PUBLIC_LEAD_ENDPOINT.replace(/\/$/, "")}/inquiry` : ""),
+  /** Phase 3 assistant on /app-quote: off unless NEXT_PUBLIC_CHAT_ENABLED === "true" at build time. */
+  chatEnabled: process.env.NEXT_PUBLIC_CHAT_ENABLED === "true",
+  chatEndpoint: process.env.NEXT_PUBLIC_CHAT_ENDPOINT || (process.env.NEXT_PUBLIC_LEAD_ENDPOINT ? `${process.env.NEXT_PUBLIC_LEAD_ENDPOINT.replace(/\/$/, "")}/chat` : ""),
   /** Inquiry done flag read by /thanks (session only; carries no personal data). */
   doneKey: "scs_inquiry_done",
 };
