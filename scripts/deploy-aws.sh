@@ -17,6 +17,8 @@ ENDPOINT=${NEXT_PUBLIC_LEAD_ENDPOINT:-https://9cjt6qwy71.execute-api.ap-south-1.
 GA_ID=${NEXT_PUBLIC_GA_ID:-G-0J9H7CBX0Q}
 GTM_ID=${NEXT_PUBLIC_GTM_ID:-GTM-MQXMVJZW}
 TURNSTILE=${NEXT_PUBLIC_TURNSTILE_SITE_KEY:-}
+# Owner WhatsApp (digits, country code). Build-time and public (it is in the page HTML), not a secret.
+WHATSAPP=${NEXT_PUBLIC_WHATSAPP_NUMBER:-918160682186}
 AWS=${AWS:-aws}
 
 DRY=""; BUILD=1
@@ -25,12 +27,18 @@ s3() { if [ -n "$DRY" ]; then "$AWS" s3 "$@" --profile "$PROFILE" --dryrun; else
 
 if [ "$BUILD" = 1 ]; then
   rm -rf out
-  STATIC_EXPORT=1 NEXT_PUBLIC_LEAD_ENDPOINT="$ENDPOINT" NEXT_PUBLIC_GA_ID="$GA_ID" NEXT_PUBLIC_GTM_ID="$GTM_ID" NEXT_PUBLIC_TURNSTILE_SITE_KEY="$TURNSTILE" npx next build
+  STATIC_EXPORT=1 NEXT_PUBLIC_LEAD_ENDPOINT="$ENDPOINT" NEXT_PUBLIC_GA_ID="$GA_ID" NEXT_PUBLIC_GTM_ID="$GTM_ID" NEXT_PUBLIC_TURNSTILE_SITE_KEY="$TURNSTILE" NEXT_PUBLIC_WHATSAPP_NUMBER="$WHATSAPP" npx next build
   node scripts/prepare-static.mjs out dist
 fi
 
 # A build without the endpoint would accept form submissions and silently drop them.
 grep -rqF "$ENDPOINT" dist/_next || { echo "dist was built without NEXT_PUBLIC_LEAD_ENDPOINT; refusing to upload" >&2; exit 1; }
+# Every wa.me link must carry the number: a build without it would ship links that open WhatsApp's contact picker.
+for f in dist/index.html dist/app-quote/index.html dist/thanks/index.html; do
+  [ -f "$f" ] || continue
+  grep -qF "wa.me/$WHATSAPP" "$f" || { echo "$f has no wa.me/$WHATSAPP link; refusing to upload" >&2; exit 1; }
+  ! grep -oE 'wa\.me/[^"?]*' "$f" | grep -qxE 'wa\.me/' || { echo "$f has a wa.me link with an empty number; refusing to upload" >&2; exit 1; }
+done
 [ -f dist/index.html ] && [ -f dist/404.html ] || { echo "dist is incomplete; refusing to upload" >&2; exit 1; }
 
 IMMUTABLE="public,max-age=31536000,immutable"
