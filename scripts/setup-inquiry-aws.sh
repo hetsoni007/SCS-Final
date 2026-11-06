@@ -35,8 +35,16 @@ API_ID=${API_ID:-$(rd apigatewayv2 get-apis --query "Items[?Name=='$API_NAME'].A
 API_URL=$(rd apigatewayv2 get-api --api-id "$API_ID" --query ApiEndpoint --output text)
 FROM_EMAIL=$(rd lambda get-function-configuration --function-name "$LEAD_FUNC" --query 'Environment.Variables.FROM_EMAIL' --output text)
 [ -n "$FROM_EMAIL" ] && [ "$FROM_EMAIL" != None ] || { echo "$LEAD_FUNC has no FROM_EMAIL; tell the owner which verified SES sender to use." >&2; exit 1; }
-SES_OK=$(rd sesv2 get-email-identity --email-identity "$FROM_EMAIL" --query 'VerifiedForSendingStatus' --output text 2>/dev/null || echo false)
-[ "$SES_OK" = True ] || { echo "SES identity $FROM_EMAIL is not verified for sending; stopping. Ask the owner which sender to use." >&2; exit 1; }
+# (In SES sandbox the send is also authorised against the recipient identity, so the owner address is listed too.)
+# Prefer a sender on the DKIM-verified domain identity (signed, aligned mail). A single-address identity has no DKIM and Gmail can bounce it.
+DOMAIN=${OWNER_EMAIL#*@}
+if [ "$(rd sesv2 get-email-identity --email-identity "$DOMAIN" --query 'DkimAttributes.Status' --output text 2>/dev/null || echo NONE)" = SUCCESS ]; then
+  FROM_EMAIL=${INQUIRY_FROM_EMAIL:-inquiries@$DOMAIN}; SES_ARN_ID=$DOMAIN
+else
+  SES_OK=$(rd sesv2 get-email-identity --email-identity "$FROM_EMAIL" --query 'VerifiedForSendingStatus' --output text 2>/dev/null || echo false)
+  [ "$SES_OK" = True ] || { echo "SES identity $FROM_EMAIL is not verified for sending; stopping. Ask the owner which sender to use." >&2; exit 1; }
+  SES_ARN_ID=$FROM_EMAIL
+fi
 echo "account $ACCT | api $API_ID ($API_URL) | sender $FROM_EMAIL (verified) | owner $OWNER_EMAIL"
 SANDBOX=$(rd sesv2 get-account --query ProductionAccessEnabled --output text)
 [ "$SANDBOX" = True ] || echo "NOTE: SES is in sandbox. Owner emails work; visitor auto-replies to unverified addresses will fail (the Lambda ignores that failure). Request SES production access to enable them."
@@ -58,7 +66,7 @@ fi
 say "2. IAM role $ROLE (logs, ses:SendEmail, dynamodb:UpdateItem)"
 ROLE_ARN="arn:aws:iam::$ACCT:role/$ROLE"
 TRUST='{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Principal":{"Service":"lambda.amazonaws.com"},"Action":"sts:AssumeRole"}]}'
-POLICY=$(printf '{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Action":"ses:SendEmail","Resource":"arn:aws:ses:%s:%s:identity/%s"},{"Effect":"Allow","Action":"dynamodb:UpdateItem","Resource":"arn:aws:dynamodb:%s:%s:table/%s"},{"Effect":"Allow","Action":"dynamodb:PutItem","Resource":"arn:aws:dynamodb:%s:%s:table/%s"}]}' "$REGION" "$ACCT" "$FROM_EMAIL" "$REGION" "$ACCT" "$TABLE" "$REGION" "$ACCT" "$STORE")
+POLICY=$(printf '{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Action":"ses:SendEmail","Resource":["arn:aws:ses:%s:%s:identity/%s","arn:aws:ses:%s:%s:identity/%s"]},{"Effect":"Allow","Action":"dynamodb:UpdateItem","Resource":"arn:aws:dynamodb:%s:%s:table/%s"},{"Effect":"Allow","Action":"dynamodb:PutItem","Resource":"arn:aws:dynamodb:%s:%s:table/%s"}]}' "$REGION" "$ACCT" "$SES_ARN_ID" "$REGION" "$ACCT" "$OWNER_EMAIL" "$REGION" "$ACCT" "$TABLE" "$REGION" "$ACCT" "$STORE")
 NEW_ROLE=0
 if rd iam get-role --role-name "$ROLE" >/dev/null 2>&1; then echo "exists; refreshing policies"; else
   NEW_ROLE=1; do_it iam create-role --role-name "$ROLE" --assume-role-policy-document "$TRUST"
