@@ -345,7 +345,7 @@ node scripts/shots.mjs http://localhost:3000 ./shots 1440x900 "/#home" "/@[data-
 
 ## Deploying to S3 + CloudFront
 
-**WhatsApp number:** `scripts/deploy-aws.sh` builds with `NEXT_PUBLIC_WHATSAPP_NUMBER` (default `918160682186`, digits with country code; build-time and public, not a secret). Before uploading it checks that `dist/index.html`, `dist/app-quote/index.html` and `dist/thanks/index.html` contain `wa.me/<number>` and that no `wa.me` link is empty.
+**WhatsApp number:** `scripts/deploy-aws.sh` builds with `NEXT_PUBLIC_WHATSAPP_NUMBER` (default `918160682185`, digits with country code; build-time and public, not a secret). Before uploading it checks that `dist/index.html`, `dist/app-quote/index.html` and `dist/thanks/index.html` contain `wa.me/<number>` and that no `wa.me` link is empty.
 
 The live site is a static site: bucket `scs-site-prod-043174661808` behind CloudFront distribution `E3HVJHFD5CQPVI`
 (aliases `soniconsultancyservices.com`, `www.` and `portfolio.`). `npm run deploy:aws` (`scripts/deploy-aws.sh`) does

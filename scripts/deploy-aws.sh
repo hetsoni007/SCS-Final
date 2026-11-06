@@ -19,7 +19,7 @@ GA_ID=${NEXT_PUBLIC_GA_ID:-G-0J9H7CBX0Q}
 GTM_ID=${NEXT_PUBLIC_GTM_ID:-GTM-MQXMVJZW}
 TURNSTILE=${NEXT_PUBLIC_TURNSTILE_SITE_KEY:-}
 # Owner WhatsApp (digits, country code). Build-time and public (it is in the page HTML), not a secret.
-WHATSAPP=${NEXT_PUBLIC_WHATSAPP_NUMBER:-918160682186}
+WHATSAPP=${NEXT_PUBLIC_WHATSAPP_NUMBER:-918160682185}
 # Reply promise shown on /thanks and in the auto-reply copy. Build-time and public.
 REPLY_PROMISE=${NEXT_PUBLIC_REPLY_PROMISE:-"within 1 business day"}
 INQUIRY="$ENDPOINT/inquiry"
