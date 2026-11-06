@@ -1,7 +1,7 @@
 // POST /inquiry — API Gateway HTTP API -> Lambda `scs-inquiry` (Node 20, AWS SDK v3 is in the runtime).
 // Validates and sanitises the two-step inquiry, drops honeypot hits, rate-limits per IP, emails the owner and
 // auto-replies to the visitor when they gave an email. Returns NO CORS headers: API Gateway owns CORS.
-// Env: OWNER_EMAIL, FROM_EMAIL, REPLY_PROMISE, RATE_TABLE (DynamoDB, key `pk` string, TTL attribute `ttl`), RATE_LIMIT (default 5 per hour).
+// Env: INQUIRY_TABLE (optional DynamoDB table, key `id`: every valid inquiry is stored before the email is sent), OWNER_EMAIL, FROM_EMAIL, REPLY_PROMISE, RATE_TABLE (DynamoDB, key `pk` string, TTL attribute `ttl`), RATE_LIMIT (default 5 per hour).
 import { createHash } from "node:crypto";
 
 export const WHAT = ["Mobile app", "Web app", "AI feature", "Not sure"];
@@ -83,6 +83,10 @@ export function createHandler(deps) {
     const v = validate(b);
     if (!v.ok) return res(400, { ok: false, errors: v.errors });
     const d = v.data, owner = env.OWNER_EMAIL || "het.soni@soniconsultancyservices.com", from = env.FROM_EMAIL || owner;
+    // Store first: an email can be dropped (bounce/suppression/sandbox) without the Lambda noticing, the stored copy cannot.
+    if (deps.store && env.INQUIRY_TABLE) {
+      try { await deps.store(env.INQUIRY_TABLE, { id: `${now}#${d.event_id || Math.random().toString(36).slice(2)}`, ...d, ip }); } catch (err) { console.error("store failed", err?.name); }
+    }
     const om = ownerMail(d, ip);
     try {
       await deps.send({ from, to: owner, replyTo: d.email || undefined, ...om });
@@ -102,7 +106,7 @@ let handlerPromise;
 export const handler = async (event) => {
   handlerPromise ??= (async () => {
     const { SESv2Client, SendEmailCommand } = await import("@aws-sdk/client-sesv2");
-    const { DynamoDBClient, UpdateItemCommand } = await import("@aws-sdk/client-dynamodb");
+    const { DynamoDBClient, UpdateItemCommand, PutItemCommand } = await import("@aws-sdk/client-dynamodb");
     const ses = new SESv2Client({}), db = new DynamoDBClient({});
     return createHandler({
       env: process.env,
@@ -110,6 +114,7 @@ export const handler = async (event) => {
         FromEmailAddress: from, Destination: { ToAddresses: [to] }, ReplyToAddresses: replyTo ? [replyTo] : undefined,
         Content: { Simple: { Subject: { Data: subject, Charset: "UTF-8" }, Body: { Text: { Data: text, Charset: "UTF-8" }, Html: { Data: html, Charset: "UTF-8" } } } },
       })),
+      store: (table, item) => db.send(new PutItemCommand({ TableName: table, Item: Object.fromEntries(Object.entries(item).filter(([, v]) => v !== "" && v != null).map(([k, v]) => [k, { S: String(v) }])) })),
       ddb: { increment: async (table, pk, ttl) => {
         const r = await db.send(new UpdateItemCommand({ TableName: table, Key: { pk: { S: pk } }, UpdateExpression: "ADD n :one SET #t = :ttl", ExpressionAttributeNames: { "#t": "ttl" }, ExpressionAttributeValues: { ":one": { N: "1" }, ":ttl": { N: String(ttl) } }, ReturnValues: "UPDATED_NEW" }));
         return Number(r.Attributes.n.N);

@@ -13,6 +13,14 @@ test("valid inquiry emails owner with the required subject and auto-replies", as
   assert.equal(sent[0].to, "het.soni@soniconsultancyservices.com"); assert.match(sent[0].text, /utm_campaign: nov-india/);
   assert.equal(sent[1].to, "asha@example.com");
 });
+test("every valid inquiry is stored before the email, and a store failure never blocks the email", async () => {
+  const stored = [], sent = [];
+  const mkh = (store) => createHandler({ env: { INQUIRY_TABLE: "t" }, now: () => 1e12, send: async (m) => sent.push(m), store });
+  assert.equal((await mkh(async (t, i) => stored.push([t, i]))(ev(good, "4.0.0.1"))).statusCode, 200);
+  assert.equal(stored[0][0], "t"); assert.equal(stored[0][1].utm_campaign, "nov-india"); assert.equal(stored[0][1].budget, "$10-25k");
+  assert.equal((await mkh(async () => { throw new Error("ddb down"); })(ev(good, "4.0.0.2"))).statusCode, 200);
+  assert.equal(sent.length >= 2, true);
+});
 test("whatsapp only: owner mail, no auto-reply", async () => {
   const { h, sent } = mk(); const r = await h(ev({ ...good, email: "", whatsapp: "+91 98765 43210" }));
   assert.equal(r.statusCode, 200); assert.equal(sent.length, 1);

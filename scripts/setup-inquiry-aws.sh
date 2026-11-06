@@ -16,7 +16,7 @@ PROFILE=${AWS_PROFILE:-prod}; export AWS_PROFILE=$PROFILE AWS_PAGER=""
 REGION=${AWS_REGION:-ap-south-1}; AWS=${AWS:-aws}
 OWNER_EMAIL=het.soni@soniconsultancyservices.com
 REPLY_PROMISE=${REPLY_PROMISE:-"within 1 business day"}
-FUNC=scs-inquiry; ROLE=scs-inquiry-role; TABLE=scs-inquiry-rate; RATE_LIMIT=5
+FUNC=scs-inquiry; ROLE=scs-inquiry-role; TABLE=scs-inquiry-rate; STORE=scs-inquiries; RATE_LIMIT=5
 LEAD_FUNC=scs-lead-mailer; API_NAME=scs-lead-api
 ORIGINS=("https://soniconsultancyservices.com" "https://www.soniconsultancyservices.com")
 
@@ -49,10 +49,16 @@ fi
 TTL_STATE=$(rd dynamodb describe-time-to-live --table-name "$TABLE" --query 'TimeToLiveDescription.TimeToLiveStatus' --output text 2>/dev/null || echo DISABLED)
 case "$TTL_STATE" in ENABLED|ENABLING) echo "TTL already on" ;; *) do_it dynamodb update-time-to-live --table-name "$TABLE" --time-to-live-specification Enabled=true,AttributeName=ttl ;; esac
 
+say "1b. DynamoDB table $STORE (every valid inquiry is stored before the email is sent)"
+if rd dynamodb describe-table --table-name "$STORE" >/dev/null 2>&1; then echo "exists; reusing"; else
+  do_it dynamodb create-table --table-name "$STORE" --attribute-definitions AttributeName=id,AttributeType=S --key-schema AttributeName=id,KeyType=HASH --billing-mode PAY_PER_REQUEST
+  [ "$APPLY" = 1 ] && rd dynamodb wait table-exists --table-name "$STORE"
+fi
+
 say "2. IAM role $ROLE (logs, ses:SendEmail, dynamodb:UpdateItem)"
 ROLE_ARN="arn:aws:iam::$ACCT:role/$ROLE"
 TRUST='{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Principal":{"Service":"lambda.amazonaws.com"},"Action":"sts:AssumeRole"}]}'
-POLICY=$(printf '{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Action":"ses:SendEmail","Resource":"arn:aws:ses:%s:%s:identity/%s"},{"Effect":"Allow","Action":"dynamodb:UpdateItem","Resource":"arn:aws:dynamodb:%s:%s:table/%s"}]}' "$REGION" "$ACCT" "$FROM_EMAIL" "$REGION" "$ACCT" "$TABLE")
+POLICY=$(printf '{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Action":"ses:SendEmail","Resource":"arn:aws:ses:%s:%s:identity/%s"},{"Effect":"Allow","Action":"dynamodb:UpdateItem","Resource":"arn:aws:dynamodb:%s:%s:table/%s"},{"Effect":"Allow","Action":"dynamodb:PutItem","Resource":"arn:aws:dynamodb:%s:%s:table/%s"}]}' "$REGION" "$ACCT" "$FROM_EMAIL" "$REGION" "$ACCT" "$TABLE" "$REGION" "$ACCT" "$STORE")
 NEW_ROLE=0
 if rd iam get-role --role-name "$ROLE" >/dev/null 2>&1; then echo "exists; refreshing policies"; else
   NEW_ROLE=1; do_it iam create-role --role-name "$ROLE" --assume-role-policy-document "$TRUST"
@@ -63,7 +69,7 @@ if [ "$APPLY" = 1 ] && [ "$NEW_ROLE" = 1 ]; then echo "waiting for IAM propagati
 
 say "3. Lambda $FUNC (nodejs20.x, handler index.handler)"
 ZIP=$(mktemp -d)/scs-inquiry.zip; (cd backend/inquiry && zip -q -j "$ZIP" index.mjs)
-ENVJSON=$(printf '{"Variables":{"OWNER_EMAIL":"%s","FROM_EMAIL":"%s","REPLY_PROMISE":"%s","RATE_TABLE":"%s","RATE_LIMIT":"%s"}}' "$OWNER_EMAIL" "$FROM_EMAIL" "$REPLY_PROMISE" "$TABLE" "$RATE_LIMIT")
+ENVJSON=$(printf '{"Variables":{"OWNER_EMAIL":"%s","FROM_EMAIL":"%s","REPLY_PROMISE":"%s","RATE_TABLE":"%s","INQUIRY_TABLE":"%s","RATE_LIMIT":"%s"}}' "$OWNER_EMAIL" "$FROM_EMAIL" "$REPLY_PROMISE" "$TABLE" "$STORE" "$RATE_LIMIT")
 FUNC_ARN="arn:aws:lambda:$REGION:$ACCT:function:$FUNC"
 if rd lambda get-function --function-name "$FUNC" >/dev/null 2>&1; then
   do_it lambda update-function-code --function-name "$FUNC" --zip-file "fileb://$ZIP"
