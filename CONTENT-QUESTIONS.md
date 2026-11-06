@@ -10,7 +10,7 @@ Each item says where to change it once you have decided.
 
 | # | What | Where it appears | Where to change |
 |---|------|------------------|-----------------|
-| 1 | **HR metric wording.** "40% Less payroll admin" (home stats) vs "40% less payroll processing time" / "Faster payroll" (work page, case study). | Home stats; `/work/`; `/work/hr-payroll/` | `content/site.ts` (`stats`), `content/work.ts` |
+| 1 | **HR metric wording (home stat aligned 2026-11-06).** The home stat now reads "Less payroll processing time (HR platform)", matching the case study's measured "40% less payroll processing time". Still open: the case-study metric pill and the /work/ pill say "Faster payroll", and the three React Native regional pages say "40% faster payroll processing". | Home stats; `/work/`; `/work/hr-payroll/` | `content/site.ts` (`stats`), `content/work.ts` |
 | 2 | **MVP timeline.** "8 weeks" (home H1 and the LocalBusiness schema), "6–10 weeks" (home "why us" tile and the regional pages), "10–16 weeks" (MVP page title, H1 area and services page). | `/`, `/mvp-development/`, `/services/`, regional pages | `content/site.ts`, `content/pages/*.json` |
 | 3 | **How many services.** The services FAQ says "Five core services", the services page lists seven, the home page shows three. | `/services/` FAQ | `content/pages/services.json` |
 | 4 | **Countries.** "30+ Countries served" (home, about stats) next to "Six countries. One standard." (about, contact). Both may be true (clients vs markets) but they read as a contradiction. | `/`, `/about/`, `/contact/` | `content/site.ts`, `content/pages/about.json` |

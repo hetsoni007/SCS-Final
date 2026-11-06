@@ -199,7 +199,7 @@ test("home: proof tiles link to their evidence; the work index lists the live ap
   await page.goto("/");
   const stats = page.locator('[data-loc="stats"]');
   await expect(stats.getByRole("link", { name: /More downloads/ })).toHaveAttribute("href", "/work/creator-marketplace/");
-  await expect(stats.getByRole("link", { name: /Less payroll admin/ })).toHaveAttribute("href", "/work/hr-payroll/");
+  await expect(stats.getByRole("link", { name: /Less payroll processing time/ })).toHaveAttribute("href", "/work/hr-payroll/");
   await expect(page.locator('[data-loc="manifesto"]').getByText("Ship over slideware.")).toBeVisible();
   const index = page.locator('[data-loc="work"] ol');
   await expect(index.getByRole("link")).toHaveCount(5); // every app live in the stores: the four React Native apps and the store-ops platform

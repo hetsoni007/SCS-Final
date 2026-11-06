@@ -16,6 +16,7 @@ jobs:
       - run: npm run lint
       - run: npm run typecheck
       - run: npm run build
+        env: { NEXT_PUBLIC_INQUIRY_DRY_RUN: "true" } # NEXT_PUBLIC_* is inlined at build time: the e2e bundle must keep the inquiry dry run
       - name: Playwright (URL parity, smoke, mobile, axe; plus Firefox, WebKit/Safari, iPhone and a small Android profile)
         run: |
           npx playwright install --with-deps chromium firefox webkit

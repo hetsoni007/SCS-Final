@@ -7,6 +7,8 @@ export type InquiryPayload = {
 };
 export type InquiryResult = { ok: true } | { ok: false; error: string };
 
+/** Dry run (accept and log, send nothing) only outside production builds, or when NEXT_PUBLIC_INQUIRY_DRY_RUN === "true" (tests, previews). */
+const DRY_RUN = process.env.NODE_ENV !== "production" || process.env.NEXT_PUBLIC_INQUIRY_DRY_RUN === "true";
 const clip = (s: unknown, n: number) => String(s ?? "").slice(0, n);
 const device = () => (/Mobi|Android|iPhone/i.test(navigator.userAgent) ? "mobile" : "desktop") + ` ${innerWidth}x${innerHeight}`;
 
@@ -19,7 +21,11 @@ export async function sendInquiry(p: InquiryPayload): Promise<InquiryResult> {
     event_id: clip(p.event_id, 64), page: clip(p.page, 300), location: clip(p.location, 60), device: device(), ts: new Date().toISOString(),
     ...Object.fromEntries(Object.entries(p.attribution).map(([k, v]) => [clip(k, 40), clip(v, 300)])),
   };
-  if (!inquiry.endpoint) { console.info("[inquiry] dry run (no endpoint configured)"); return { ok: true }; }
+  if (!inquiry.endpoint) {
+    // A production build with no endpoint must never report success: that would drop real leads silently.
+    if (DRY_RUN) { console.info("[inquiry] dry run (no endpoint configured)"); return { ok: true }; }
+    return { ok: false, error: `Sending isn’t available right now. Please WhatsApp us or email ${site.email}.` };
+  }
   try {
     const res = await fetch(inquiry.endpoint, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body), keepalive: true, signal: AbortSignal.timeout(15_000) });
     if (res.ok) return { ok: true };

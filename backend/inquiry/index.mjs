@@ -5,7 +5,7 @@
 import { createHash } from "node:crypto";
 
 export const WHAT = ["Mobile app", "Web app", "AI feature", "Not sure"];
-export const BUDGETS = ["Not sure yet", "Under $5k", "$10-25k", "$25-60k", "$60k+"];
+export const BUDGETS = ["Not sure yet", "Under $10k", "$10-25k", "$25-60k", "$60k+"];
 export const TIMELINES = ["ASAP", "1-3 months", "3-6 months", "Just exploring"];
 const EMAIL = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 const clean = (s, n) => String(s ?? "").replace(/[\u0000-\u001f\u007f]+/g, " ").replace(/\s+/g, " ").trim().slice(0, n);

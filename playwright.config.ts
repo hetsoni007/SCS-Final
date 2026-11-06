@@ -29,7 +29,7 @@ export default defineConfig({
     url: baseURL,
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
-    env: { LEAD_DRY_RUN: "1" },
+    env: { LEAD_DRY_RUN: "1", NEXT_PUBLIC_INQUIRY_DRY_RUN: "true" }, // NEXT_PUBLIC_* is inlined at build time: build the test bundle with NEXT_PUBLIC_INQUIRY_DRY_RUN=true as well
   },
   projects: [
     { name: "desktop", testIgnore: /webgl\.spec/, use: { ...devices["Desktop Chrome"], channel, ...noGpu } },

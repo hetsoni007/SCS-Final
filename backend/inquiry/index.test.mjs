@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { createHandler, validate } from "./index.mjs";
+import { BUDGETS, createHandler, validate } from "./index.mjs";
 
 const good = { what: "Mobile app", description: "Salon booking", name: "Asha", email: "asha@example.com", whatsapp: "", budget: "$10-25k", timeline: "", consent: true, event_id: "e1", page: "/", location: "home-form", utm_campaign: "nov-india", landing: "/", device: "mobile 360x640", ts: "2026-11-03T10:00:00Z" };
 const mk = () => { const sent = []; const h = createHandler({ env: { RATE_LIMIT: "2" }, now: () => 1e12, send: async (m) => { sent.push(m); } }); return { sent, h }; };
@@ -22,6 +22,14 @@ test("needs a contact, consent, valid enums", async () => {
   assert.equal((await h(ev({ ...good, email: "" }, "2.0.0.1"))).statusCode, 400);
   assert.equal((await h(ev({ ...good, consent: false }, "2.0.0.2"))).statusCode, 400);
   assert.equal((await h(ev({ ...good, budget: "free" }, "2.0.0.3"))).statusCode, 400);
+});
+test("budget bands: Under $10k accepted, the old Under $5k rejected, and the list matches content/inquiry.ts", async () => {
+  const { h } = mk();
+  assert.equal((await h(ev({ ...good, budget: "Under $10k" }, "3.0.0.1"))).statusCode, 200);
+  assert.equal((await h(ev({ ...good, budget: "Under $5k" }, "3.0.0.2"))).statusCode, 400);
+  const { readFileSync } = await import("node:fs");
+  const m = /BUDGETS = (\[[^\]]*\])/.exec(readFileSync(new URL("../../content/inquiry.ts", import.meta.url), "utf8"));
+  assert.deepEqual(JSON.parse(m[1]), BUDGETS);
 });
 test("honeypot returns 200 and sends nothing", async () => {
   const { h, sent } = mk(); assert.equal((await h(ev({ ...good, hp: "x" }))).statusCode, 200); assert.equal(sent.length, 0);
