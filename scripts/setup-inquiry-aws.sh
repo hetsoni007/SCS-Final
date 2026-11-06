@@ -74,9 +74,9 @@ FUNC_ARN="arn:aws:lambda:$REGION:$ACCT:function:$FUNC"
 if rd lambda get-function --function-name "$FUNC" >/dev/null 2>&1; then
   do_it lambda update-function-code --function-name "$FUNC" --zip-file "fileb://$ZIP"
   [ "$APPLY" = 1 ] && rd lambda wait function-updated --function-name "$FUNC"
-  do_it lambda update-function-configuration --function-name "$FUNC" --environment "$ENVJSON" --timeout 10 --memory-size 128
+  do_it lambda update-function-configuration --function-name "$FUNC" --environment "$ENVJSON" --timeout 15 --memory-size 512
 else
-  do_it lambda create-function --function-name "$FUNC" --runtime nodejs20.x --handler index.handler --role "$ROLE_ARN" --zip-file "fileb://$ZIP" --timeout 10 --memory-size 128 --environment "$ENVJSON"
+  do_it lambda create-function --function-name "$FUNC" --runtime nodejs20.x --handler index.handler --role "$ROLE_ARN" --zip-file "fileb://$ZIP" --timeout 15 --memory-size 512 --environment "$ENVJSON"
   [ "$APPLY" = 1 ] && rd lambda wait function-active --function-name "$FUNC"
 fi
 
