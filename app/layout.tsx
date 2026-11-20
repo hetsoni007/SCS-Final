@@ -10,6 +10,7 @@ import MobileBar from "@/components/ui/MobileBar";
 import { site } from "@/content/site";
 import { preloader } from "@/lib/motion";
 import { JsonLd, organizationSchema, websiteSchema } from "@/lib/schema";
+import { ADS_TAG_ID } from "@/lib/ads";
 
 const display = Space_Grotesk({ subsets: ["latin"], variable: "--f-display", display: "swap", weight: ["500", "600", "700"] });
 const body = Inter({ subsets: ["latin"], variable: "--f-body", display: "swap" });
@@ -37,10 +38,12 @@ const boot = `(function(){var d=document.documentElement;try{var t=localStorage.
 // visitor accepts analytics cookies (a returning visitor's stored choice is applied at once). Ad storage stays
 // denied: the banner only asks about analytics. lib/prefs.ts sends the update when the choice changes.
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+// Google Ads tag (conversion tracking), loaded inside the same hostname and Consent Mode guard as GTM below.
+const ADS_ID = ADS_TAG_ID;
 // The whole boot is skipped off the production hostname, so previews and localhost send nothing.
 const gtmHost = new URL(site.url).hostname.replace(/\./g, "\\.");
 const gtmBoot = GTM_ID
-  ? `if(/^(www\\.)?${gtmHost}$/.test(location.hostname)){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;(function(){var a='denied';try{if(localStorage.getItem('scs-consent')==='granted')a='granted'}catch(e){}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:a})})();(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');}`
+  ? `if(/^(www\\.)?${gtmHost}$/.test(location.hostname)){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;(function(){var a='denied';try{if(localStorage.getItem('scs-consent')==='granted')a='granted'}catch(e){}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:a})})();(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=${ADS_ID}';document.head.appendChild(s);gtag('js',new Date());gtag('config','${ADS_ID}')})();}`
   : "";
 
 // Meta Pixel in <head> on the production hostname only. It runs in Meta's consent mode: the base code loads for every

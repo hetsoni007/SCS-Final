@@ -11,6 +11,7 @@
 export type EventName = "generate_lead" | "book_call" | "calculator_complete" | "cta_click" | "calc_complete" | "form_submit" | "guide_download" | "calendly_open" | "calendly_booked" | "calculator_estimate" | "post_feedback" | "book_call_click" | "tool_complete" | "form_start" | "scroll_depth" | "whatsapp_click" | "form_step1_complete";
 
 import { site } from "@/content/site";
+import { ADS_LEAD_CONVERSION } from "@/lib/ads";
 
 /** GA4 / Tag Manager only ever receive events from the production hostname, never localhost, previews or dev hosts. */
 const PROD_HOST = new URL(site.url).hostname;
@@ -32,6 +33,8 @@ export function track(name: EventName, params: Record<string, unknown> = {}, eve
   try {
     if (isProdHost()) {
       window.gtag?.("event", name, params);
+      // Google Ads conversion: a delivered lead form (the event snippet from Google Ads, fired where the lead is confirmed)
+      if (name === "generate_lead") window.gtag?.("event", "conversion", { send_to: ADS_LEAD_CONVERSION });
       // the same event as a plain dataLayer object, which is the form Tag Manager triggers ("Custom Event") read
       if (process.env.NEXT_PUBLIC_GTM_ID) window.dataLayer?.push({ event: name, ...params });
     }
