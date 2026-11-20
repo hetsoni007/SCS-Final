@@ -16,7 +16,7 @@ PROFILE=${AWS_PROFILE:-prod}
 ENDPOINT=${NEXT_PUBLIC_LEAD_ENDPOINT:-https://9cjt6qwy71.execute-api.ap-south-1.amazonaws.com}
 ENDPOINT=${ENDPOINT%/}   # the bundle builds "<endpoint>/inquiry", so the base must not end in a slash
 GA_ID=${NEXT_PUBLIC_GA_ID:-G-0J9H7CBX0Q}
-GTM_ID=${NEXT_PUBLIC_GTM_ID:-GTM-MQXMVJZW}
+GTM_ID=${NEXT_PUBLIC_GTM_ID:-GTM-WZZ53BL2}
 TURNSTILE=${NEXT_PUBLIC_TURNSTILE_SITE_KEY:-}
 # Owner WhatsApp (digits, country code). Build-time and public (it is in the page HTML), not a secret.
 WHATSAPP=${NEXT_PUBLIC_WHATSAPP_NUMBER:-918160682185}
