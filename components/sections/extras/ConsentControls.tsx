@@ -10,7 +10,7 @@ export default function ConsentControls() {
     <aside className="glass spot mt-10 p-7" aria-labelledby="consent-h" data-loc="consent-controls">
       <p className="eyebrow">Your choice</p>
       <h2 id="consent-h" className="h3 mt-3">Analytics cookies</h2>
-      <p className="muted mt-2 text-[15.5px]">Google Analytics, which sets cookies, loads only if you accept. You can change your choice here at any time.</p>
+      <p className="muted mt-2 text-[15.5px]">Google Analytics sets cookies only if you accept. Until then it receives only limited, cookieless signals such as a page view. You can change your choice here at any time.</p>
       <div className="mt-5 flex flex-wrap items-center gap-3">
         <button type="button" role="switch" aria-checked={on} onClick={() => prefs.setConsent(on ? "denied" : "granted")}
           className={`relative h-8 w-[58px] rounded-full border-2 transition-colors duration-300 ${on ? "border-accent bg-accent" : "border-[color:var(--text-lo)] bg-transparent"}`}>
